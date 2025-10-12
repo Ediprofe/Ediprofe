@@ -47,36 +47,39 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
   const activeTab = section.tabs.find((tab) => tab.id === activeTabId);
 
   return (
-    <div className={`tabs-system ${className}`}>
+    <div className={`tabs-system ${className} min-h-[calc(100vh-20rem)]`}>
       {/* Título de la sección */}
-      <h2 id={section.id} className="text-lg md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-gray-800 scroll-mt-20 break-words">
+      <h2 id={section.id} className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent scroll-mt-20 break-words">
         {section.title}
       </h2>
 
       {/* Navegación de tabs - Horizontal con scroll */}
-      <div className="tabs-nav-wrapper relative mb-4 md:mb-6">
+      <div className="tabs-nav-wrapper relative mb-8">
         {/* Gradient para indicar scroll horizontal en móvil */}
-        <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent pointer-events-none md:hidden z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none md:hidden z-10" />
         
-        <div className="overflow-x-auto pb-2 border-b-2 border-gray-200 -mx-4 md:mx-0 px-4 md:px-0 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
-          <div className="flex gap-1 min-w-max">
+        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-indigo-300 scrollbar-track-transparent">
+          <div className="flex gap-2 min-w-max border-b-2 border-slate-200">
             {section.tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTabId(tab.id)}
                 className={`
-                  px-3 md:px-4 py-2 md:py-3 font-medium text-xs md:text-sm lg:text-base whitespace-nowrap rounded-t-lg
-                  transition-all duration-200 border-b-2 -mb-[2px]
+                  relative px-6 py-3 font-semibold text-sm md:text-base whitespace-nowrap
+                  transition-all duration-300 rounded-t-xl
                   ${
                     activeTabId === tab.id
-                      ? 'border-blue-600 text-blue-600 bg-blue-50'
-                      : 'border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                      ? 'text-indigo-600 bg-white shadow-md -mb-[2px] border-b-2 border-indigo-600'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                   }
                 `}
                 aria-selected={activeTabId === tab.id}
                 role="tab"
               >
                 {tab.label}
+                {activeTabId === tab.id && (
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600" />
+                )}
               </button>
             ))}
           </div>
@@ -85,7 +88,7 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
 
       {/* Contenido de la tab activa */}
       <div
-        className="tab-content animate-fade-in"
+        className="tab-content animate-fade-in min-h-[60vh]"
         role="tabpanel"
         aria-labelledby={activeTabId}
       >
@@ -93,10 +96,12 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
           <>
             {/* Mostrar videos si la tab los tiene */}
             {activeTab.videos && activeTab.videos.length > 0 && (
-              <div className="videos-section mb-6 md:mb-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <div className="videos-section mb-10">
+                <div className={`grid gap-8 ${activeTab.videos.length === 1 ? 'grid-cols-1 max-w-5xl mx-auto' : 'grid-cols-1 lg:grid-cols-2'}`}>
                   {activeTab.videos.map((video, index) => (
-                    <VideoEmbed key={index} video={video} />
+                    <div key={index} className="video-wrapper">
+                      <VideoEmbed video={video} />
+                    </div>
                   ))}
                 </div>
               </div>
@@ -105,18 +110,7 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
             {/* Mostrar contenido HTML */}
             {activeTab.content && (
               <div
-                className="prose prose-sm md:prose-base lg:prose-lg max-w-none
-                  prose-headings:text-gray-800 prose-headings:break-words
-                  prose-p:text-gray-700 prose-p:break-words
-                  prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-a:break-words
-                  prose-strong:text-gray-900
-                  prose-ul:text-gray-700
-                  prose-ol:text-gray-700
-                  prose-code:text-pink-600 prose-code:bg-pink-50 prose-code:px-1 prose-code:rounded prose-code:text-xs md:prose-code:text-sm
-                  prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:text-xs md:prose-pre:text-sm prose-pre:overflow-x-auto
-                  prose-blockquote:border-blue-500 prose-blockquote:bg-blue-50 prose-blockquote:text-gray-700
-                  prose-table:text-sm md:prose-table:text-base prose-table:overflow-x-auto prose-table:block md:prose-table:table
-                "
+                className="prose prose-lg max-w-none"
                 dangerouslySetInnerHTML={{ __html: activeTab.content }}
               />
             )}

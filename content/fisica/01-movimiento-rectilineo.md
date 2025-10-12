@@ -21,10 +21,10 @@ El **movimiento** es el cambio de posición de un objeto con respecto a un punto
 - **Movimiento Rectilíneo Variado**: aceleración variable
 
 **Conceptos clave:**
-- **Posición (x)**: ubicación del objeto en el espacio
-- **Desplazamiento (Δx)**: cambio de posición
-- **Velocidad (v)**: rapidez del cambio de posición
-- **Aceleración (a)**: rapidez del cambio de velocidad
+- **Posición** ($x$): ubicación del objeto en el espacio
+- **Desplazamiento** ($\Delta x$): cambio de posición
+- **Velocidad** ($v$): rapidez del cambio de posición, $v = \frac{\Delta x}{\Delta t}$
+- **Aceleración** ($a$): rapidez del cambio de velocidad, $a = \frac{\Delta v}{\Delta t}$
 
 ### Ejercicio: Análisis de Movimiento
 
@@ -32,17 +32,17 @@ El **movimiento** es el cambio de posición de un objeto con respecto a un punto
 Un automóvil se mueve a 60 km/h durante 2 horas. ¿Qué distancia recorre?
 
 **Datos:**
-- v = 60 km/h
-- t = 2 h
-- d = ?
+- $v = 60$ km/h
+- $t = 2$ h
+- $d = ?$
 
 **Fórmula:**
-```
-d = v × t
-d = 60 km/h × 2 h = 120 km
-```
+$$d = v \times t$$
 
-**Respuesta:** El automóvil recorre 120 kilómetros.
+**Solución:**
+$$d = 60 \text{ km/h} \times 2 \text{ h} = 120 \text{ km}$$
+
+**Respuesta:** El automóvil recorre **120 kilómetros**.
 
 ---
 
@@ -50,18 +50,18 @@ d = 60 km/h × 2 h = 120 km
 Si el mismo automóvil acelera de 0 a 100 km/h en 10 segundos, ¿cuál es su aceleración?
 
 **Datos:**
-- v₀ = 0 km/h = 0 m/s
-- vf = 100 km/h = 27.78 m/s
-- t = 10 s
-- a = ?
+- $v_0 = 0$ km/h $= 0$ m/s
+- $v_f = 100$ km/h $= 27.78$ m/s
+- $t = 10$ s
+- $a = ?$
 
 **Fórmula:**
-```
-a = (vf - v₀) / t
-a = (27.78 - 0) / 10 = 2.78 m/s²
-```
+$$a = \frac{v_f - v_0}{t}$$
 
-**Respuesta:** La aceleración es 2.78 m/s².
+**Solución:**
+$$a = \frac{27.78 - 0}{10} = 2.78 \text{ m/s}^2$$
+
+**Respuesta:** La aceleración es **2.78 m/s²**.
 
 ## 🚗 Movimiento Rectilíneo Uniforme (MRU)
 
@@ -69,19 +69,17 @@ a = (27.78 - 0) / 10 = 2.78 m/s²
 
 En el MRU, un objeto se mueve con **velocidad constante**, lo que significa:
 - La velocidad no cambia con el tiempo
-- No hay aceleración (a = 0)
+- No hay aceleración ($a = 0$)
 - La distancia recorrida es proporcional al tiempo
 
 **Ecuación fundamental:**
-```
-x = x₀ + v·t
-```
+$$x = x_0 + v \cdot t$$
 
 Donde:
-- x = posición final
-- x₀ = posición inicial
-- v = velocidad constante
-- t = tiempo
+- $x$ = posición final
+- $x_0$ = posición inicial
+- $v$ = velocidad constante
+- $t$ = tiempo
 
 ### Gráficas del MRU
 
@@ -126,49 +124,46 @@ video: https://youtu.be/dQw4w9WgXcQ
 
 En el MRUA, un objeto tiene **aceleración constante**, lo que significa:
 - La velocidad cambia uniformemente con el tiempo
-- La aceleración es constante (a ≠ 0)
+- La aceleración es constante ($a \neq 0$)
 - La distancia recorrida NO es proporcional al tiempo
 
 **Ecuaciones fundamentales:**
 
 1. **Velocidad final:**
-```
-v = v₀ + a·t
-```
+$$v = v_0 + a \cdot t$$
 
 2. **Posición:**
-```
-x = x₀ + v₀·t + ½·a·t²
-```
+$$x = x_0 + v_0 \cdot t + \frac{1}{2}a \cdot t^2$$
 
 3. **Ecuación independiente del tiempo:**
-```
-v² = v₀² + 2·a·Δx
-```
+$$v^2 = v_0^2 + 2a \cdot \Delta x$$
 
 ### Caída Libre
 
 Un caso especial de MRUA es la **caída libre**, donde:
-- a = g = 9.8 m/s² (aceleración de la gravedad)
-- v₀ = 0 (si se suelta desde el reposo)
+- $a = g = 9.8$ m/s² (aceleración de la gravedad)
+- $v_0 = 0$ (si se suelta desde el reposo)
 - Dirección: hacia abajo
 
 **Ejemplo:**
 Una manzana cae de un árbol de 5 metros de altura. ¿Con qué velocidad llega al suelo?
 
 **Datos:**
-- h = 5 m
-- v₀ = 0
-- g = 9.8 m/s²
-- v = ?
+- $h = 5$ m
+- $v_0 = 0$
+- $g = 9.8$ m/s²
+- $v = ?$
 
 **Solución:**
-```
-v² = v₀² + 2·g·h
-v² = 0 + 2(9.8)(5)
-v² = 98
-v = √98 = 9.9 m/s
-```
+$$v^2 = v_0^2 + 2 \cdot g \cdot h$$
+
+$$v^2 = 0 + 2(9.8)(5)$$
+
+$$v^2 = 98$$
+
+$$v = \sqrt{98} = 9.9 \text{ m/s}$$
+
+**Respuesta:** La manzana llega al suelo con una velocidad de **9.9 m/s**.
 
 ### Actividad Práctica
 
@@ -181,25 +176,26 @@ v = √98 = 9.9 m/s
 - Calculadora
 
 **Procedimiento:**
-1. Mide una altura conocida (h = 2 metros)
+1. Mide una altura conocida ($h = 2$ metros)
 2. Suelta la pelota desde esa altura
 3. Mide el tiempo de caída (repite 5 veces)
-4. Calcula g usando: g = 2h/t²
+4. Calcula $g$ usando: $$g = \frac{2h}{t^2}$$
 5. Compara con el valor teórico (9.8 m/s²)
 
 ## 📊 Resumen y Evaluación
 
 ### Conceptos Clave
 
-**MRU:**
+**MRU (Movimiento Rectilíneo Uniforme):**
 - ✅ Velocidad constante
-- ✅ Aceleración = 0
-- ✅ x = x₀ + v·t
+- ✅ Aceleración $a = 0$
+- ✅ Ecuación: $x = x_0 + v \cdot t$
 
-**MRUA:**
+**MRUA (Movimiento Rectilíneo Uniformemente Acelerado):**
 - ✅ Aceleración constante
-- ✅ v = v₀ + a·t
-- ✅ x = x₀ + v₀·t + ½·a·t²
+- ✅ Velocidad: $v = v_0 + a \cdot t$
+- ✅ Posición: $x = x_0 + v_0 \cdot t + \frac{1}{2}a \cdot t^2$
+- ✅ Sin tiempo: $v^2 = v_0^2 + 2a \cdot \Delta x$
 
 ### Quiz Final
 

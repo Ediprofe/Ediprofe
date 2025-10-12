@@ -22,7 +22,7 @@ export async function getFullUnit(materia: string, unidad: string): Promise<Unit
   const parsed = await getMarkdownContent(materia, unidad);
   if (!parsed) return null;
 
-  const { sections, toc, allVideos } = generateTabsFromMarkdown(rawContent);
+  const { sections, toc, allVideos } = await generateTabsFromMarkdown(rawContent);
   const features = getUnitFeatures(materia, unidad);
 
   const fullUnit: Unit = {
@@ -32,7 +32,7 @@ export async function getFullUnit(materia: string, unidad: string): Promise<Unit
     materia,
     fullPath: `${materia}/${unidad}`,
     rawContent,
-    hasVideos: allVideos.length > 0 || features.hasVideos,
+    hasVideos: (allVideos?.length || 0) > 0 || features.hasVideos,
     hasExercises: features.hasExercises,
     hasActivities: features.hasActivities,
   };

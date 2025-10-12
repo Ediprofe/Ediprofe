@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import 'katex/dist/katex.min.css'; // Estilos de KaTeX para ecuaciones matemáticas
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,11 +19,17 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={inter.className}>
-        <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-          <div className="container mx-auto px-4 py-3">
-            <h1 className="text-xl md:text-2xl font-bold text-blue-600">
-              🎓 Ediprofe
-            </h1>
+        <header className="sticky top-0 z-50 glass-effect border-b border-white/20 shadow-lg">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center justify-between">
+              <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent flex items-center gap-2">
+                <span className="text-3xl">🎓</span>
+                <span>Ediprofe</span>
+              </h1>
+              <div className="hidden md:flex items-center gap-4 text-sm text-slate-600">
+                <span className="font-medium">Educación Interactiva</span>
+              </div>
+            </div>
           </div>
         </header>
 
@@ -30,9 +37,17 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="bg-gray-100 border-t border-gray-200 py-8 mt-12">
-          <div className="container mx-auto px-4 text-center text-gray-600 text-sm">
-            <p>&copy; 2025 Ediprofe. Plataforma educativa interactiva.</p>
+        <footer className="bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-900 text-white py-12 mt-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-3">🎓 Ediprofe</h3>
+              <p className="text-slate-300 mb-6">Plataforma educativa interactiva moderna</p>
+              <div className="flex justify-center gap-6 text-sm text-slate-400">
+                <span>&copy; 2025 Ediprofe</span>
+                <span>•</span>
+                <span>Todos los derechos reservados</span>
+              </div>
+            </div>
           </div>
         </footer>
       </body>

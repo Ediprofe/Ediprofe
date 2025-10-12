@@ -3,6 +3,12 @@
 
 import type { Section, Tab, VideoLink, TOCItem } from '@/types/content';
 import { slugify, getYouTubeId } from './utils';
+import { remark } from 'remark';
+import html from 'remark-html';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import rehypeStringify from 'rehype-stringify';
+import remarkRehype from 'remark-rehype';
 
 // Re-exportar para compatibilidad
 export { getYouTubeId };
@@ -38,6 +44,21 @@ function extractVideos(content: string): VideoLink[] {
 }
 
 /**
+ * Convierte contenido Markdown a HTML con soporte para ecuaciones matemáticas
+ * Usa KaTeX para renderizar ecuaciones en formato LaTeX
+ * Sintaxis: $ecuación inline$ o $$ecuación en bloque$$
+ */
+async function markdownToHtml(markdown: string): Promise<string> {
+  const result = await remark()
+    .use(remarkMath) // Parsear sintaxis matemática ($...$, $$...$$)
+    .use(remarkRehype) // Convertir a rehype (HTML AST)
+    .use(rehypeKatex) // Renderizar ecuaciones con KaTeX
+    .use(rehypeStringify) // Convertir a HTML string
+    .process(markdown);
+  return result.toString();
+}
+
+/**
  * Parsea el contenido Markdown y genera estructura de secciones y tabs
  * 
  * REGLAS SIMPLES:
@@ -50,11 +71,11 @@ function extractVideos(content: string): VideoLink[] {
  * @param rawContent - Contenido Markdown original
  * @returns Array de secciones con tabs anidadas
  */
-export function generateTabsFromMarkdown(rawContent: string): {
+export async function generateTabsFromMarkdown(rawContent: string): Promise<{
   sections: Section[];
   toc: TOCItem[];
   allVideos: VideoLink[];
-} {
+}> {
   const sections: Section[] = [];
   const toc: TOCItem[] = [];
   const allVideos: VideoLink[] = [];
@@ -67,7 +88,7 @@ export function generateTabsFromMarkdown(rawContent: string): {
   let currentContent: string[] = [];
   let sectionOrder = 0;
 
-  const flushTab = () => {
+  const flushTab = async () => {
     if (currentTab && currentSection) {
       const content = currentContent.join('\n').trim();
       
@@ -85,14 +106,18 @@ export function generateTabsFromMarkdown(rawContent: string): {
         .join('\n')
         .trim();
       
-      currentTab.content = contentWithoutVideos;
+      // Convertir Markdown a HTML
+      if (contentWithoutVideos) {
+        currentTab.content = await markdownToHtml(contentWithoutVideos);
+      }
+      
       currentSection.tabs.push(currentTab);
       currentContent = [];
     }
   };
 
-  const flushSection = () => {
-    flushTab();
+  const flushSection = async () => {
+    await flushTab();
     if (currentSection && currentSection.tabs.length > 0) {
       sections.push(currentSection);
     }
@@ -103,7 +128,7 @@ export function generateTabsFromMarkdown(rawContent: string): {
 
     // Detectar H2 (nueva sección)
     if (line.startsWith('## ')) {
-      flushSection();
+      await flushSection();
 
       const title = line.replace(/^##\s+/, '').trim();
       currentSection = {
@@ -127,7 +152,7 @@ export function generateTabsFromMarkdown(rawContent: string): {
 
     // Detectar H3 (nueva tab)
     if (line.startsWith('### ')) {
-      flushTab();
+      await flushTab();
 
       if (!currentSection) {
         // Si hay H3 sin H2 previo, crear sección por defecto
@@ -174,7 +199,7 @@ export function generateTabsFromMarkdown(rawContent: string): {
   }
 
   // Flush final
-  flushSection();
+  await flushSection();
 
   return { sections, toc, allVideos };
 }
@@ -183,12 +208,12 @@ export function generateTabsFromMarkdown(rawContent: string): {
  * Genera estructura de tabs desde contenido HTML ya procesado
  * Alternativa si ya tienes HTML en lugar de Markdown
  */
-export function generateTabsFromHTML(htmlContent: string, rawMarkdown: string): {
+export async function generateTabsFromHTML(htmlContent: string, rawMarkdown: string): Promise<{
   sections: Section[];
   toc: TOCItem[];
-} {
+}> {
   // Esta función es un wrapper que usa el raw markdown
-  const { sections, toc } = generateTabsFromMarkdown(rawMarkdown);
+  const { sections, toc } = await generateTabsFromMarkdown(rawMarkdown);
   return { sections, toc };
 }
 
