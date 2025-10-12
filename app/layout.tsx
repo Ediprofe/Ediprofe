@@ -39,15 +39,13 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-900 text-white py-12 mt-20">
+        <footer className="bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-900 text-white py-6 mt-12">
           <div className="container mx-auto px-4">
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-3">🎓 Ediprofe</h3>
-              <p className="text-slate-300 mb-6">Guía educativa para ciencias y matemáticas</p>
-              <div className="flex justify-center gap-6 text-sm text-slate-400">
+              <h3 className="text-xl font-bold mb-2">🎓 Ediprofe</h3>
+              <p className="text-slate-300 text-sm mb-3">Guía educativa para ciencias y matemáticas</p>
+              <div className="flex justify-center gap-6 text-xs text-slate-400">
                 <span>&copy; 2025 Ediprofe</span>
-                <span>•</span>
-                <span>Todos los derechos reservados</span>
               </div>
             </div>
           </div>

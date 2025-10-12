@@ -103,6 +103,92 @@ export default async function HomePage() {
           })}
         </div>
       )}
+
+      {/* Sección de Redes Sociales */}
+      <div className="mt-16 md:mt-20">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-3">
+            📱 Sígueme en mis redes
+          </h2>
+          <p className="text-slate-600 mb-8">
+            Encuentra más contenido educativo y mantente actualizado
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            {/* YouTube */}
+            <a
+              href="https://www.youtube.com/profeedi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 md:p-8 border-2 border-transparent hover:border-red-500 transform hover:scale-105"
+            >
+              {/* Fondo decorativo */}
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-red-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="relative flex flex-col items-center">
+                {/* Ícono de YouTube */}
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-red-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-10 h-10 md:w-12 md:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </div>
+
+                {/* Texto */}
+                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
+                  YouTube
+                </h3>
+                <p className="text-sm md:text-base text-slate-600 mb-3">
+                  Videos educativos y tutoriales
+                </p>
+                
+                {/* Botón */}
+                <div className="inline-flex items-center gap-2 text-red-600 font-semibold group-hover:gap-3 transition-all">
+                  <span>Visitar canal</span>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+
+            {/* TikTok */}
+            <a
+              href="https://www.tiktok.com/@ediprofe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 md:p-8 border-2 border-transparent hover:border-black transform hover:scale-105"
+            >
+              {/* Fondo decorativo */}
+              <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="relative flex flex-col items-center">
+                {/* Ícono de TikTok */}
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-black rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-10 h-10 md:w-12 md:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                  </svg>
+                </div>
+
+                {/* Texto */}
+                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 group-hover:text-black transition-colors">
+                  TikTok
+                </h3>
+                <p className="text-sm md:text-base text-slate-600 mb-3">
+                  Contenido educativo corto y dinámico
+                </p>
+                
+                {/* Botón */}
+                <div className="inline-flex items-center gap-2 text-black font-semibold group-hover:gap-3 transition-all">
+                  <span>Visitar perfil</span>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
