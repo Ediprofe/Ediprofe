@@ -51,9 +51,9 @@ function extractVideos(content: string): VideoLink[] {
 async function markdownToHtml(markdown: string): Promise<string> {
   const result = await remark()
     .use(remarkMath) // Parsear sintaxis matemática ($...$, $$...$$)
-    .use(remarkRehype) // Convertir a rehype (HTML AST)
+    .use(remarkRehype, { allowDangerousHtml: true }) // Convertir a rehype (HTML AST) con soporte completo
     .use(rehypeKatex) // Renderizar ecuaciones con KaTeX
-    .use(rehypeStringify) // Convertir a HTML string
+    .use(rehypeStringify, { allowDangerousHtml: true }) // Convertir a HTML string
     .process(markdown);
   return result.toString();
 }
