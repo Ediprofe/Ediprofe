@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
+import Navigation from '@/components/Navigation';
 import './globals.css';
 import 'katex/dist/katex.min.css'; // Estilos de KaTeX para ecuaciones matemáticas
 
@@ -22,17 +23,14 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className="sticky top-0 z-50 glass-effect border-b border-slate-200/50 shadow-md backdrop-blur-lg bg-white/95">
           <div className="container mx-auto px-4 py-3 md:py-4">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-4">
               <Link href="/">
                 <h1 className="text-xl md:text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
                   <span className="text-2xl md:text-3xl">🎓</span>
                   <span>Ediprofe</span>
                 </h1>
               </Link>
-              <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm text-slate-600">
-                <span className="font-medium hidden sm:inline">Educación Interactiva</span>
-                <span className="sm:hidden font-medium">📚</span>
-              </div>
+              <Navigation />
             </div>
           </div>
         </header>

@@ -39,10 +39,22 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
 
   const handleClick = (id: string, isTab: boolean = false) => {
     if (isTab) {
-      // Para tabs (H3), usar hash para que TabsSystem lo detecte
+      // Para tabs (H3), cambiar hash y hacer scroll a la sección padre
       window.location.hash = id;
       setActiveId(id);
       setIsOpen(false);
+      
+      // Pequeño delay para que TabsSystem procese el cambio de hash
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          // Buscar la sección padre (H2)
+          const sectionElement = element.closest('.tabs-system')?.querySelector('h2');
+          if (sectionElement) {
+            sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      }, 100);
     } else {
       // Para secciones (H2), scroll directo
       const element = document.getElementById(id);
@@ -94,7 +106,7 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
           w-full max-w-xs sm:w-72 bg-white border-r border-gray-200
           overflow-y-auto p-4 md:p-6
           transition-transform duration-300 ease-in-out
-          z-30 lg:z-20
+          z-40 lg:z-20
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
       >
@@ -162,7 +174,7 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
       {/* Overlay para móvil */}
       {isOpen && (
         <div
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
+          className="lg:hidden fixed inset-0 bg-black/30 z-20"
           onClick={() => setIsOpen(false)}
         />
       )}
