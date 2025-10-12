@@ -138,7 +138,7 @@ export default async function HomePage() {
                   YouTube
                 </h3>
                 <p className="text-sm md:text-base text-slate-600 mb-3">
-                  Videos educativos y tutoriales
+                  /profeedi
                 </p>
                 
                 {/* Botón */}
@@ -174,7 +174,7 @@ export default async function HomePage() {
                   TikTok
                 </h3>
                 <p className="text-sm md:text-base text-slate-600 mb-3">
-                  Contenido educativo corto y dinámico
+                  @ediprofe
                 </p>
                 
                 {/* Botón */}
