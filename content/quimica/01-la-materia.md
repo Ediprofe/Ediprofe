@@ -7,7 +7,7 @@ difficulty: "basico"
 tags: ["química", "materia", "estados", "propiedades"]
 ---
 
-## 1. Introducción
+## Introducción
 
 ### Qué es la materia
 
@@ -15,9 +15,22 @@ video: https://youtu.be/kYNxFuNMGoI?si=RsyfOnN57TlmexjW
 
 [Ver en Tiktok](https://youtu.be/kYNxFuNMGoI?si=RsyfOnN57TlmexjW)
 
-## 2. Fases de la materia
+La materia es **todo aquello que tiene masa y ocupa un lugar en el espacio**. Prácticamente todo lo que nos rodea clasifica como materia por el simple hecho de que tiene masa y cumple con la condición de ocupar un lugar en el espacio. Dentro de los ejemplos que clasifican como materia se incluyen un televisor, un perro, un señor, un niño, una señora, una niña, una lata, una lámpara y una planta.
 
-## 3. Propiedades de la materia
+Las fases de la materia son básicamente tres: **sólido, líquido y gas**.
+
+Los cambios entre estas fases tienen nombres específicos:
+
+- **Fusión:** Es el cambio de fase de **sólido a líquido**. Por ejemplo, el agua que se saca del congelador y se vuelve líquida experimenta este cambio.
+- **Solidificación:** Es el cambio de fase de **líquido a sólido**.
+- **Ebullición:** Es el cambio de fase de **líquido a gas**.
+- **Condensación:** Es el cambio de fase de **gas a líquido**.
+- **Sublimación:** Es el cambio de fase de **sólido a gas**.
+- **Sublimación Inversa:** Es el cambio de fase de **gas a sólido**
+
+## Fases de la materia
+
+## Propiedades de la materia
 
 ### Masa y volumen
 
@@ -55,7 +68,7 @@ video: https://youtu.be/pXHnvzJfsjk?si=JYfQsNKs2FIIVEy-
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp7Q5CQ/)
 
-## 4. Cambios de la materia
+## Cambios de la materia
 
 ### Cambio físico y cambio químico
 
@@ -63,7 +76,7 @@ video: https://youtu.be/OP3Oq7WVDh4?si=iUGFoSC91hHtEDpY
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp3jakY/)
 
-## 5. Tipos de materia
+## Tipos de materia
 
 ### De qué está hecha la materia
 
