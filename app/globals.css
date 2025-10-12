@@ -46,44 +46,108 @@ body {
   }
   
   .prose h4 {
-    @apply text-base md:text-lg font-semibold mt-6 md:mt-8 mb-3 md:mb-4 text-slate-900;
+    @apply text-base md:text-lg font-semibold mt-8 mb-4 text-slate-900;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
   }
   
   .prose h5 {
-    @apply text-sm md:text-base font-semibold mt-4 md:mt-6 mb-2 md:mb-3 text-slate-800;
+    @apply text-sm md:text-base font-semibold mt-6 mb-3 text-slate-800;
   }
   
   .prose p {
     @apply mb-4 text-slate-700;
+    line-height: 1.75;
   }
   
   .prose strong {
-    @apply font-semibold text-slate-900;
+    @apply font-semibold;
+    color: #4f46e5; /* Indigo para destacar conceptos clave */
+    font-weight: 600;
+  }
+  
+  /* Transiciones suaves para interactividad */
+  .prose p, .prose li, .prose strong {
+    transition: color 0.2s ease-in-out;
   }
   
   .prose ul, .prose ol {
-    @apply my-4 space-y-2 pl-6;
+    @apply my-5 pl-0;
   }
   
   .prose ul {
-    list-style-type: disc;
+    list-style-type: none !important;
   }
   
   .prose ol {
-    list-style-type: decimal;
+    list-style-type: none !important;
+    counter-reset: item;
   }
   
   .prose li {
-    @apply text-slate-700;
-    display: list-item;
+    @apply text-slate-700 pl-8 relative mb-3;
+    display: list-item !important;
+    line-height: 1.75;
   }
   
+  .prose li:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Iconos personalizados para listas no ordenadas */
+  .prose ul > li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #4f46e5;
+    font-weight: 700;
+    font-size: 1.25rem;
+    top: -2px;
+  }
+  
+  /* Números personalizados para listas ordenadas */
+  .prose ol > li {
+    counter-increment: item;
+  }
+  
+  .prose ol > li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    background: linear-gradient(to bottom right, #6366f1, #9333ea);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 2px;
+  }
+  
+  /* Listas anidadas - estilo diferente */
   .prose ul ul, .prose ol ul {
-    list-style-type: circle;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   
-  .prose ul ul ul, .prose ol ul ul, .prose ol ol ul {
-    list-style-type: square;
+  .prose ul ul > li::before {
+    content: "◦";
+    color: #a855f7;
+    font-size: 1.25rem;
+  }
+  
+  .prose ul ul ul > li::before {
+    content: "▪";
+    color: #818cf8;
+    font-size: 0.875rem;
+  }
+  
+  /* Hover effect en items de lista */
+  .prose li:hover {
+    color: #0f172a;
   }
   
   .prose table {
