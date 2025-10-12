@@ -7,159 +7,72 @@ difficulty: "basico"
 tags: ["química", "materia", "estados", "propiedades"]
 ---
 
-## 🧪 ¿Qué es la Materia?
+## 1. Introducción
 
-### Video
-video: https://youtu.be/dQw4w9WgXcQ
+### Qué es la materia
 
-### Descripción
+video: https://youtu.be/kYNxFuNMGoI?si=RsyfOnN57TlmexjW
 
-La materia es todo aquello que tiene masa y ocupa un lugar en el espacio. En términos simples, **todo lo que podemos tocar, ver o sentir** es materia. Desde el aire que respiramos hasta las estrellas más lejanas, todo está formado por materia. Visita [este recurso](https://ejemplo.com) para más información.
+[Ver en Tiktok](https://youtu.be/kYNxFuNMGoI?si=RsyfOnN57TlmexjW)
 
-### ✏️ Ejercicio 1: Identifica la Materia
+## 2. Fases de la materia
 
-Observa tu alrededor y anota **5 ejemplos de materia** que puedas identificar en este momento:
+## 3. Propiedades de la materia
 
-1. _______________________
-2. _______________________
-3. _______________________
-4. _______________________
-5. _______________________
+### Masa y volumen
 
-### 🔬 Actividad Práctica
+video: https://youtu.be/H1XMFH5f_x4?si=1rtYo1DI2ipnr2WO
 
-**Materiales necesarios:**
-- Un vaso con agua
-- Un cubito de hielo
-- Una vela
-- Fósforos (con supervisión de un adulto)
+[Ver en Tiktok](https://vt.tiktok.com/ZSBp743qq/)
 
-**Procedimiento:**
-1. Observa el cubito de hielo (estado sólido)
-2. Colócalo en el vaso con agua tibia
-3. Observa cómo se derrite (cambio de estado)
-4. Enciende la vela y observa el vapor de agua en el aire
+### Densidad
 
-**Preguntas:**
-- ¿Qué cambios observaste?
-- ¿Los tres estados son la misma sustancia (H₂O)?
+video: https://youtu.be/Xj922gvLsmI?si=BDd1iNlNm900ohmH
 
-## ⚗️ Estados de la Materia
+[Ver en Tiktok](https://vt.tiktok.com/ZSBp7TvLh/)
 
-Los tres estados principales de la materia son:
+### Temperatura
 
-### 📖 Teoría de Estados
+video: https://youtu.be/XLy85EFdaHY?si=VhAcxwBP1HCLmypg
 
-**Estado Sólido:**
-- Forma definida
-- Volumen definido
-- Partículas muy juntas y ordenadas
-- Ejemplo: hielo, madera, metal
+[Ver en Tiktok](https://vt.tiktok.com/ZSBp7ER6C/)
 
-**Estado Líquido:**
-- Sin forma definida (toma la del recipiente)
-- Volumen definido
-- Partículas juntas pero móviles
-- Ejemplo: agua, aceite, alcohol
+### Conductividad eléctrica
 
-**Estado Gaseoso:**
-- Sin forma definida
-- Sin volumen definido
-- Partículas separadas y en movimiento rápido
-- Ejemplo: vapor de agua, oxígeno, dióxido de carbono
+video: https://youtu.be/7k8uM22GIX4?si=mzwOX2AxUkS9YyRT
 
-### 📝 Quiz Rápido
+[Ver en Tiktok](https://vt.tiktok.com/ZSBp7CGb3/)
 
-**1. ¿Qué estado de la materia tiene forma y volumen definido?**
-a) Líquido  
-b) Sólido  
-c) Gaseoso
+### Propiedades cualitativas y cuantitativas
 
-**2. El vapor de agua es un ejemplo de:**
-a) Estado sólido  
-b) Estado líquido  
-c) Estado gaseoso
+video: https://youtu.be/tDBfaewlmFs?si=gASvLQ82b8l-WidU
 
-**3. Las partículas están más juntas en:**
-a) Gases  
-b) Líquidos  
-c) Sólidos
+[Ver en Tiktok](https://vt.tiktok.com/ZSBp7Grrr/)
 
-## 🔬 Propiedades de la Materia
+### Propiedades intensivas y extensivas
 
-video: https://vt.tiktok.com/ZS8example
+video: https://youtu.be/pXHnvzJfsjk?si=JYfQsNKs2FIIVEy-
 
-Las propiedades de la materia se dividen en dos categorías principales:
+[Ver en Tiktok](https://vt.tiktok.com/ZSBp7Q5CQ/)
 
-### 🎯 Propiedades Físicas
+## 4. Cambios de la materia
 
-Son aquellas que podemos observar sin cambiar la composición de la sustancia:
+### Cambio físico y cambio químico
 
-- **Masa:** cantidad de materia en un objeto
-- **Volumen:** espacio que ocupa
-- **Densidad:** relación entre masa y volumen
-- **Color:** percepción visual
-- **Olor:** percepción olfativa
-- **Sabor:** percepción gustativa
-- **Temperatura de fusión:** temperatura a la que se derrite
-- **Temperatura de ebullición:** temperatura a la que hierve
+video: https://youtu.be/OP3Oq7WVDh4?si=iUGFoSC91hHtEDpY
 
-### ⚗️ Propiedades Químicas
+[Ver en Tiktok](https://vt.tiktok.com/ZSBp3jakY/)
 
-Son aquellas relacionadas con la capacidad de una sustancia para transformarse en otra:
+## 5. Tipos de materia
 
-- **Combustibilidad:** capacidad de arder
-- **Oxidación:** reacción con el oxígeno
-- **Acidez/Basicidad:** nivel de pH
-- **Reactividad:** facilidad para reaccionar con otras sustancias
+### De qué está hecha la materia
 
-### 💡 Experimento Mental
+video: https://youtu.be/eFAAdk2kagI?si=FTX-aiWKBH-gKi2V
 
-Imagina que tienes un cubo de hielo:
+[Ver en Tiktok](https://vt.tiktok.com/ZSBpvdTxp/)
 
-**Propiedades físicas observables:**
-- Color: transparente
-- Estado: sólido
-- Temperatura: cerca de 0°C
-- Forma: cúbica
-- Textura: dura y fría
+### Sustancias puras y mezclas
 
-**Si lo derrites:**
-- Cambió el estado (físico)
-- Pero sigue siendo H₂O (no cambió químicamente)
+video: https://youtu.be/6BF31Hrphng?si=vlcgL_efHDL-DIze
 
-**Si agregas sal:**
-- Se acelera el derretimiento
-- Cambió el punto de fusión
-- Esto es una propiedad física modificada
-
-## 🎓 Resumen de la Unidad
-
-### 📌 Conceptos Clave
-
-1. **Materia** es todo lo que tiene masa y ocupa espacio
-2. Existen **tres estados**: sólido, líquido y gaseoso
-3. Las propiedades pueden ser **físicas** (observables) o **químicas** (de transformación)
-4. Los cambios de estado son **reversibles** y no alteran la composición química
-
-### ✅ Autoevaluación
-
-Responde estas preguntas para verificar tu aprendizaje:
-
-1. ¿Puedes definir qué es la materia con tus propias palabras?
-2. ¿Cuál es la diferencia entre propiedades físicas y químicas?
-3. ¿Qué sucede con las partículas cuando un sólido se convierte en líquido?
-
-### 📚 Para Profundizar
-
-**Lecturas recomendadas:**
-- "Química: La Ciencia Central" - Brown, LeMay, Bursten
-- "Química General" - Petrucci, Herring, Madura
-
-**Videos adicionales:**
-- Estados de la materia en acción
-- Experimentos caseros de química
-
----
-
-**¡Felicitaciones!** Has completado la unidad sobre la materia y sus propiedades. 🎉
+[Ver en Tiktok](https://vt.tiktok.com/ZSBpvDwev/)
