@@ -40,11 +40,12 @@ function extractVideos(content: string): VideoLink[] {
 /**
  * Parsea el contenido Markdown y genera estructura de secciones y tabs
  * 
- * REGLAS:
+ * REGLAS SIMPLES:
  * - H2 (##) = Nueva sección
  * - H3 (###) = Nueva tab dentro de la sección actual
- * - Si hay videos después de H2 pero antes de cualquier H3, crear tab "🎬 Videos"
- * - El nombre de la tab es EXACTAMENTE el texto del H3
+ * - TODO el contenido entre H3s pertenece a esa tab (incluyendo videos)
+ * - Si hay contenido entre H2 y el primer H3, se ignora (debe haber al menos 1 H3)
+ * - NO se crean tabs automáticas, SOLO las que están definidas con H3
  * 
  * @param rawContent - Contenido Markdown original
  * @returns Array de secciones con tabs anidadas
@@ -68,7 +69,23 @@ export function generateTabsFromMarkdown(rawContent: string): {
 
   const flushTab = () => {
     if (currentTab && currentSection) {
-      currentTab.content = currentContent.join('\n').trim();
+      const content = currentContent.join('\n').trim();
+      
+      // Extraer videos del contenido de esta tab
+      const tabVideos = extractVideos(content);
+      if (tabVideos.length > 0) {
+        currentTab.videos = tabVideos;
+        allVideos.push(...tabVideos);
+      }
+      
+      // Remover líneas de video del contenido para no duplicar
+      const contentWithoutVideos = content
+        .split('\n')
+        .filter(line => !line.trim().startsWith('video:'))
+        .join('\n')
+        .trim();
+      
+      currentTab.content = contentWithoutVideos;
       currentSection.tabs.push(currentTab);
       currentContent = [];
     }
@@ -76,7 +93,7 @@ export function generateTabsFromMarkdown(rawContent: string): {
 
   const flushSection = () => {
     flushTab();
-    if (currentSection) {
+    if (currentSection && currentSection.tabs.length > 0) {
       sections.push(currentSection);
     }
   };
@@ -105,43 +122,28 @@ export function generateTabsFromMarkdown(rawContent: string): {
 
       currentTab = null;
       currentContent = [];
-
-      // Buscar videos después de este H2 (hasta el próximo H3 o H2)
-      let videoLines: string[] = [];
-      for (let j = i + 1; j < lines.length; j++) {
-        if (lines[j].startsWith('###') || lines[j].startsWith('##')) break;
-        videoLines.push(lines[j]);
-      }
-
-      const videoContent = videoLines.join('\n');
-      const sectionVideos = extractVideos(videoContent);
-
-      if (sectionVideos.length > 0) {
-        allVideos.push(...sectionVideos);
-
-        // Crear tab automática de videos
-        const videoTab: Tab = {
-          id: `${currentSection.id}-videos`,
-          label: '🎬 Videos',
-          videos: sectionVideos,
-          type: 'videos',
-        };
-        currentSection.tabs.push(videoTab);
-      }
-
-      // Crear tab de "Teoría" para el contenido inicial
-      currentTab = {
-        id: `${currentSection.id}-teoria`,
-        label: '📖 Teoría',
-        type: 'content',
-      };
-
       continue;
     }
 
     // Detectar H3 (nueva tab)
     if (line.startsWith('### ')) {
       flushTab();
+
+      if (!currentSection) {
+        // Si hay H3 sin H2 previo, crear sección por defecto
+        currentSection = {
+          id: 'contenido',
+          title: 'Contenido',
+          tabs: [],
+          order: sectionOrder++,
+        };
+        toc.push({
+          id: currentSection.id,
+          title: 'Contenido',
+          level: 2,
+          children: [],
+        });
+      }
 
       const label = line.replace(/^###\s+/, '').trim();
       const id = slugify(label);
@@ -167,11 +169,8 @@ export function generateTabsFromMarkdown(rawContent: string): {
       continue;
     }
 
-    // Acumular contenido
-    // Saltar líneas de video (ya fueron procesadas)
-    if (!line.startsWith('video:')) {
-      currentContent.push(line);
-    }
+    // Acumular TODO el contenido (incluidas líneas video:)
+    currentContent.push(line);
   }
 
   // Flush final

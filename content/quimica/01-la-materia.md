@@ -9,7 +9,10 @@ tags: ["química", "materia", "estados", "propiedades"]
 
 ## 🧪 ¿Qué es la Materia?
 
+### Video
 video: https://youtu.be/dQw4w9WgXcQ
+
+### Descripción
 
 La materia es todo aquello que tiene masa y ocupa un lugar en el espacio. En términos simples, **todo lo que podemos tocar, ver o sentir** es materia. Desde el aire que respiramos hasta las estrellas más lejanas, todo está formado por materia.
 

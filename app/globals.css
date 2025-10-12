@@ -31,23 +31,52 @@ body {
 /* Estilos personalizados para prose (contenido Markdown) */
 @layer utilities {
   .prose h4 {
-    @apply text-lg font-semibold mt-6 mb-3;
+    @apply text-base md:text-lg font-semibold mt-4 md:mt-6 mb-2 md:mb-3;
   }
   
   .prose h5 {
-    @apply text-base font-semibold mt-4 mb-2;
+    @apply text-sm md:text-base font-semibold mt-3 md:mt-4 mb-2;
   }
   
   .prose table {
-    @apply w-full border-collapse border border-gray-300 my-4;
+    @apply w-full border-collapse border border-gray-300 my-4 text-sm md:text-base;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  @media (min-width: 768px) {
+    .prose table {
+      display: table;
+    }
   }
   
   .prose th {
-    @apply bg-gray-100 font-semibold p-2 border border-gray-300;
+    @apply bg-gray-100 font-semibold p-1.5 md:p-2 border border-gray-300 text-xs md:text-sm;
   }
   
   .prose td {
-    @apply p-2 border border-gray-300;
+    @apply p-1.5 md:p-2 border border-gray-300 text-xs md:text-sm;
+  }
+  
+  /* Mejorar legibilidad en móvil */
+  .prose {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .prose pre {
+    @apply text-xs md:text-sm;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .prose code {
+    @apply text-xs md:text-sm;
+    word-break: break-all;
+  }
+  
+  .prose img {
+    @apply max-w-full h-auto;
   }
 }
 
@@ -97,4 +126,38 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Utilidades para scrollbars finos */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 transparent;
+  }
+  
+  .scrollbar-thumb-gray-300::-webkit-scrollbar-thumb {
+    background-color: #cbd5e0;
+  }
+  
+  .scrollbar-track-transparent::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+/* Mejorar contraste y legibilidad en móvil */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Prevenir zoom automático en iOS */
+  }
+  
+  /* Hacer botones más grandes para touch */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Mejor espaciado en inputs */
+  input, textarea, select {
+    font-size: 16px; /* Prevenir zoom en iOS */
+  }
 }

@@ -18,20 +18,19 @@ export default function VideoEmbed({ video, className = '' }: VideoEmbedProps) {
 
     if (!videoId) {
       return (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
-          <p className="text-sm">⚠️ URL de YouTube inválida: {video.url}</p>
+        <div className="bg-red-50 border border-red-200 rounded-lg p-3 md:p-4 text-red-700">
+          <p className="text-xs md:text-sm break-words">⚠️ URL de YouTube inválida: {video.url}</p>
         </div>
       );
     }
 
     return (
       <div className={`youtube-embed ${className}`}>
-        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+        <div className="relative w-full rounded-lg overflow-hidden shadow-lg" style={{ paddingBottom: '56.25%' }}>
           <iframe
-            className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+            className="absolute top-0 left-0 w-full h-full border-0"
             src={`https://www.youtube.com/embed/${videoId}`}
             title="Video de YouTube"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
@@ -49,10 +48,10 @@ export default function VideoEmbed({ video, className = '' }: VideoEmbedProps) {
           target="_blank"
           rel="noopener noreferrer"
           className="
-            flex items-center justify-center gap-3
+            flex items-center justify-center gap-2 md:gap-3
             bg-gradient-to-r from-pink-500 to-purple-600
-            text-white font-medium
-            px-6 py-4 rounded-lg
+            text-white font-medium text-sm md:text-base
+            px-4 py-3 md:px-6 md:py-4 rounded-lg
             hover:from-pink-600 hover:to-purple-700
             transition-all duration-200
             shadow-md hover:shadow-lg
@@ -60,7 +59,7 @@ export default function VideoEmbed({ video, className = '' }: VideoEmbedProps) {
           "
         >
           <svg
-            className="w-6 h-6"
+            className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0"
             fill="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -75,12 +74,12 @@ export default function VideoEmbed({ video, className = '' }: VideoEmbedProps) {
 
   // Fallback para plataformas no soportadas
   return (
-    <div className="bg-gray-100 border border-gray-300 rounded-lg p-4">
+    <div className="bg-gray-100 border border-gray-300 rounded-lg p-3 md:p-4">
       <a
         href={video.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-600 hover:underline"
+        className="text-blue-600 hover:underline text-sm md:text-base break-words"
       >
         Ver video externo →
       </a>

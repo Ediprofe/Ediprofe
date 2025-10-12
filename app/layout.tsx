@@ -19,8 +19,8 @@ export default function RootLayout({
     <html lang="es">
       <body className={inter.className}>
         <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-          <div className="container mx-auto px-4 py-4">
-            <h1 className="text-2xl font-bold text-blue-600">
+          <div className="container mx-auto px-4 py-3">
+            <h1 className="text-xl md:text-2xl font-bold text-blue-600">
               🎓 Ediprofe
             </h1>
           </div>

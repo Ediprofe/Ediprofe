@@ -7,9 +7,9 @@ import { SUBJECT_CONFIG } from '@/types/content';
 import type { Metadata } from 'next';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     materia: string;
-  };
+  }>;
 }
 
 // Generar rutas estáticas
@@ -65,12 +65,12 @@ export default async function SubjectPage({ params }: PageProps) {
       </nav>
 
       {/* Header de la materia */}
-      <div className="mb-12">
-        <div className="flex items-center gap-4 mb-4">
-          <span className="text-6xl">{config.icon}</span>
-          <div>
-            <h1 className="text-4xl font-bold text-gray-900">{config.name}</h1>
-            <p className="text-lg text-gray-600 mt-2">{config.description}</p>
+      <div className="mb-8 md:mb-12">
+        <div className="flex items-start md:items-center gap-3 md:gap-4 mb-4">
+          <span className="text-4xl md:text-6xl flex-shrink-0">{config.icon}</span>
+          <div className="min-w-0 flex-1">
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-900 break-words">{config.name}</h1>
+            <p className="text-sm md:text-lg text-gray-600 mt-2">{config.description}</p>
           </div>
         </div>
       </div>
@@ -84,11 +84,11 @@ export default async function SubjectPage({ params }: PageProps) {
         </div>
       ) : (
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 md:mb-6">
             📚 Unidades disponibles ({units.length})
           </h2>
 
-          <div className="grid gap-4">
+          <div className="grid gap-3 md:gap-4">
             {units.map((unit) => (
               <Link
                 key={unit.slug}
@@ -100,23 +100,23 @@ export default async function SubjectPage({ params }: PageProps) {
                     bg-white rounded-lg border-2 border-gray-200
                     hover:border-blue-500 hover:shadow-lg
                     transition-all duration-200
-                    p-6
+                    p-4 md:p-6
                   "
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base md:text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 break-words">
                         {unit.metadata.title}
                       </h3>
 
                       {unit.metadata.description && (
-                        <p className="text-gray-600 mb-4">
+                        <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                           {unit.metadata.description}
                         </p>
                       )}
 
                       {/* Indicadores de contenido */}
-                      <div className="flex flex-wrap gap-3 text-sm">
+                      <div className="flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm">
                         {unit.features.hasVideos && (
                           <span className="flex items-center gap-1 text-purple-600 bg-purple-50 px-3 py-1 rounded-full">
                             <span>🎬</span>

@@ -37,12 +37,20 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
     return () => observer.disconnect();
   }, [items]);
 
-  const handleClick = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const handleClick = (id: string, isTab: boolean = false) => {
+    if (isTab) {
+      // Para tabs (H3), usar hash para que TabsSystem lo detecte
+      window.location.hash = id;
       setActiveId(id);
-      setIsOpen(false); // Cerrar en móvil después de click
+      setIsOpen(false);
+    } else {
+      // Para secciones (H2), scroll directo
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setActiveId(id);
+        setIsOpen(false);
+      }
     }
   };
 
@@ -54,15 +62,17 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="
-          lg:hidden fixed bottom-6 right-6 z-50
+          lg:hidden fixed bottom-4 right-4 z-50
           bg-blue-600 text-white
-          p-4 rounded-full shadow-lg
+          p-3 md:p-4 rounded-full shadow-lg
           hover:bg-blue-700 transition-colors
+          min-w-[48px] min-h-[48px]
+          flex items-center justify-center
         "
         aria-label="Abrir tabla de contenidos"
       >
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5 md:w-6 md:h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -80,19 +90,19 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
       <aside
         className={`
           table-of-contents ${className}
-          fixed lg:sticky top-20 left-0 h-[calc(100vh-5rem)]
-          w-72 bg-white border-r border-gray-200
-          overflow-y-auto p-6
+          fixed lg:sticky top-16 md:top-20 left-0 h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)]
+          w-full max-w-xs sm:w-72 bg-white border-r border-gray-200
+          overflow-y-auto p-4 md:p-6
           transition-transform duration-300 ease-in-out
           z-40
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
       >
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-bold text-gray-800">Contenido</h3>
+        <div className="flex items-center justify-between mb-4 md:mb-6">
+          <h3 className="text-base md:text-lg font-bold text-gray-800">Contenido</h3>
           <button
             onClick={() => setIsOpen(false)}
-            className="lg:hidden text-gray-500 hover:text-gray-700"
+            className="lg:hidden text-gray-500 hover:text-gray-700 p-2"
             aria-label="Cerrar"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,10 +116,10 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
             {items.map((item) => (
               <li key={item.id}>
                 <button
-                  onClick={() => handleClick(item.id)}
+                  onClick={() => handleClick(item.id, false)}
                   className={`
-                    w-full text-left px-3 py-2 rounded-md text-sm
-                    transition-colors duration-150
+                    w-full text-left px-3 py-2 rounded-md text-xs md:text-sm
+                    transition-colors duration-150 break-words
                     ${
                       activeId === item.id
                         ? 'bg-blue-100 text-blue-700 font-medium'
@@ -120,16 +130,16 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
                   {item.title}
                 </button>
 
-                {/* Subsecciones (H3) */}
+                {/* Subsecciones (H3) - Tabs */}
                 {item.children && item.children.length > 0 && (
-                  <ul className="ml-4 mt-1 space-y-1 border-l-2 border-gray-200 pl-3">
+                  <ul className="ml-3 md:ml-4 mt-1 space-y-1 border-l-2 border-gray-200 pl-2 md:pl-3">
                     {item.children.map((child) => (
                       <li key={child.id}>
                         <button
-                          onClick={() => handleClick(child.id)}
+                          onClick={() => handleClick(child.id, true)}
                           className={`
-                            w-full text-left px-2 py-1 rounded text-xs
-                            transition-colors duration-150
+                            w-full text-left px-2 py-1 rounded text-[10px] md:text-xs
+                            transition-colors duration-150 break-words
                             ${
                               activeId === child.id
                                 ? 'text-blue-600 font-medium'
