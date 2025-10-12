@@ -106,6 +106,11 @@ export interface ParsedMarkdown {
 }
 
 /**
+ * Orden de visualización de las materias
+ */
+export const SUBJECT_ORDER = ['quimica', 'fisica', 'ciencias', 'matematicas', 'biologia', 'historia'];
+
+/**
  * Configuración de colores por materia
  */
 export const SUBJECT_CONFIG: Record<string, { name: string; icon: string; color: string; description: string }> = {

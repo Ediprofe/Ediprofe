@@ -6,7 +6,7 @@ import 'server-only';
 import { getMarkdownContent, getRawMarkdown, getUnitMetadata, getUnitFeatures, getAllSubjects as getAllSubjectsFromFs, getUnitsForSubject } from './markdown';
 import { generateTabsFromMarkdown } from './tabs-generator';
 import type { Unit, Subject } from '@/types/content';
-import { SUBJECT_CONFIG } from '@/types/content';
+import { SUBJECT_CONFIG, SUBJECT_ORDER } from '@/types/content';
 import { cache, getCacheKey } from './cache';
 
 // Re-exportar para uso externo
@@ -81,7 +81,25 @@ export async function getAllSubjectsWithUnits(): Promise<Subject[]> {
       });
     }
 
-    return subjects.filter((s) => s.unitCount > 0);
+    // Filtrar materias con contenido y ordenar según SUBJECT_ORDER
+    const filteredSubjects = subjects.filter((s) => s.unitCount > 0);
+    
+    return filteredSubjects.sort((a, b) => {
+      const indexA = SUBJECT_ORDER.indexOf(a.slug);
+      const indexB = SUBJECT_ORDER.indexOf(b.slug);
+      
+      // Si ambos están en el orden, usar ese orden
+      if (indexA !== -1 && indexB !== -1) {
+        return indexA - indexB;
+      }
+      
+      // Si solo uno está en el orden, ese va primero
+      if (indexA !== -1) return -1;
+      if (indexB !== -1) return 1;
+      
+      // Si ninguno está en el orden, orden alfabético
+      return a.slug.localeCompare(b.slug);
+    });
   });
 }
 
