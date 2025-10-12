@@ -13,7 +13,6 @@ const nextConfig = {
   // Optimizar imágenes
   images: {
     formats: ['image/avif', 'image/webp'],
-    unoptimized: true,
   },
 }
 
