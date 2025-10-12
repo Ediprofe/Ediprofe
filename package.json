@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
+    "build:static": "cross-env OUTPUT_EXPORT=true next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -29,6 +30,7 @@
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.0",
+    "cross-env": "10.1.0",
     "eslint": "^8",
     "eslint-config-next": "^15.5.0",
     "postcss": "^8.4.0",

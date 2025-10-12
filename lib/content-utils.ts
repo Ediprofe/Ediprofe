@@ -7,6 +7,7 @@ import { getMarkdownContent, getRawMarkdown, getUnitMetadata, getUnitFeatures, g
 import { generateTabsFromMarkdown } from './tabs-generator';
 import type { Unit, Subject } from '@/types/content';
 import { SUBJECT_CONFIG } from '@/types/content';
+import { cache, getCacheKey } from './cache';
 
 // Re-exportar para uso externo
 export { getAllSubjectsFromFs as getAllSubjects };
@@ -16,28 +17,33 @@ export { getAllSubjectsFromFs as getAllSubjects };
  * Esta es la función principal que combina markdown + tabs
  */
 export async function getFullUnit(materia: string, unidad: string): Promise<Unit | null> {
-  const rawContent = getRawMarkdown(materia, unidad);
-  if (!rawContent) return null;
+  // Usar caché en desarrollo para acelerar navegación
+  const cacheKey = getCacheKey('unit', materia, unidad);
+  
+  return cache.getOrCompute(cacheKey, async () => {
+    const rawContent = getRawMarkdown(materia, unidad);
+    if (!rawContent) return null;
 
-  const parsed = await getMarkdownContent(materia, unidad);
-  if (!parsed) return null;
+    const parsed = await getMarkdownContent(materia, unidad);
+    if (!parsed) return null;
 
-  const { sections, toc, allVideos } = await generateTabsFromMarkdown(rawContent);
-  const features = getUnitFeatures(materia, unidad);
+    const { sections, toc, allVideos } = await generateTabsFromMarkdown(rawContent);
+    const features = getUnitFeatures(materia, unidad);
 
-  const fullUnit: Unit = {
-    slug: unidad,
-    metadata: parsed.metadata,
-    sections,
-    materia,
-    fullPath: `${materia}/${unidad}`,
-    rawContent,
-    hasVideos: (allVideos?.length || 0) > 0 || features.hasVideos,
-    hasExercises: features.hasExercises,
-    hasActivities: features.hasActivities,
-  };
+    const fullUnit: Unit = {
+      slug: unidad,
+      metadata: parsed.metadata,
+      sections,
+      materia,
+      fullPath: `${materia}/${unidad}`,
+      rawContent,
+      hasVideos: (allVideos?.length || 0) > 0 || features.hasVideos,
+      hasExercises: features.hasExercises,
+      hasActivities: features.hasActivities,
+    };
 
-  return fullUnit;
+    return fullUnit;
+  });
 }
 
 /**
@@ -45,33 +51,38 @@ export async function getFullUnit(materia: string, unidad: string): Promise<Unit
  * Usado para la página principal (catálogo)
  */
 export async function getAllSubjectsWithUnits(): Promise<Subject[]> {
-  const subjectSlugs = getAllSubjectsFromFs();
-  const subjects: Subject[] = [];
+  // Usar caché para toda la estructura
+  const cacheKey = getCacheKey('all-subjects');
+  
+  return cache.getOrCompute(cacheKey, async () => {
+    const subjectSlugs = getAllSubjectsFromFs();
+    const subjects: Subject[] = [];
 
-  for (const slug of subjectSlugs) {
-    const config = SUBJECT_CONFIG[slug];
-    if (!config) continue; // Saltar carpetas no configuradas
+    for (const slug of subjectSlugs) {
+      const config = SUBJECT_CONFIG[slug];
+      if (!config) continue; // Saltar carpetas no configuradas
 
-    const unitSlugs = getUnitsForSubject(slug);
-    const units: Unit[] = [];
+      const unitSlugs = getUnitsForSubject(slug);
+      const units: Unit[] = [];
 
-    for (const unitSlug of unitSlugs) {
-      const unit = await getFullUnit(slug, unitSlug);
-      if (unit) units.push(unit);
+      for (const unitSlug of unitSlugs) {
+        const unit = await getFullUnit(slug, unitSlug);
+        if (unit) units.push(unit);
+      }
+
+      subjects.push({
+        slug,
+        name: config.name,
+        icon: config.icon,
+        description: config.description,
+        color: config.color,
+        units,
+        unitCount: units.length,
+      });
     }
 
-    subjects.push({
-      slug,
-      name: config.name,
-      icon: config.icon,
-      description: config.description,
-      color: config.color,
-      units,
-      unitCount: units.length,
-    });
-  }
-
-  return subjects.filter((s) => s.unitCount > 0);
+    return subjects.filter((s) => s.unitCount > 0);
+  });
 }
 
 /**
