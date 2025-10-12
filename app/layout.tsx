@@ -19,15 +19,16 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={inter.className}>
-        <header className="sticky top-0 z-50 glass-effect border-b border-white/20 shadow-lg">
-          <div className="container mx-auto px-4 py-4">
+        <header className="sticky top-0 z-50 glass-effect border-b border-slate-200/50 shadow-md backdrop-blur-lg bg-white/95">
+          <div className="container mx-auto px-4 py-3 md:py-4">
             <div className="flex items-center justify-between">
-              <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent flex items-center gap-2">
-                <span className="text-3xl">🎓</span>
+              <h1 className="text-xl md:text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent flex items-center gap-2">
+                <span className="text-2xl md:text-3xl">🎓</span>
                 <span>Ediprofe</span>
               </h1>
-              <div className="hidden md:flex items-center gap-4 text-sm text-slate-600">
-                <span className="font-medium">Educación Interactiva</span>
+              <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm text-slate-600">
+                <span className="font-medium hidden sm:inline">Educación Interactiva</span>
+                <span className="sm:hidden font-medium">📚</span>
               </div>
             </div>
           </div>

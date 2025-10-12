@@ -6,6 +6,7 @@ import { getFullUnit, generateAllRouteParams } from '@/lib/content-utils';
 import { SUBJECT_CONFIG } from '@/types/content';
 import TabsSystem from '@/components/TabsSystem';
 import TableOfContents from '@/components/TableOfContents';
+import Breadcrumb from '@/components/Breadcrumb';
 import type { Metadata } from 'next';
 
 interface PageProps {
@@ -71,26 +72,28 @@ export default async function UnitPage({ params }: PageProps) {
       })),
   }));
 
+  // Breadcrumb items personalizados
+  const breadcrumbItems = [
+    {
+      label: 'Inicio',
+      href: '/',
+      icon: '🏠',
+    },
+    {
+      label: config.name,
+      href: `/${materia}`,
+      icon: config.icon,
+    },
+    {
+      label: unit.metadata.title,
+      href: `/${materia}/${unidad}`,
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50/30">
-      {/* Breadcrumb moderno */}
-      <div className="glass-effect sticky top-16 z-40 border-b border-white/20">
-        <div className="container mx-auto px-4 py-3 md:py-4">
-          <nav className="text-xs md:text-sm text-slate-600 flex items-center gap-2 overflow-x-auto">
-            <Link href="/" className="hover:text-indigo-600 transition-colors whitespace-nowrap font-medium">
-              <span className="hidden sm:inline">Inicio</span>
-              <span className="sm:hidden">🏠</span>
-            </Link>
-            <span className="flex-shrink-0 text-slate-400">/</span>
-            <Link href={`/${materia}`} className="hover:text-indigo-600 transition-colors whitespace-nowrap font-medium">
-              <span>{config.icon}</span>
-              <span className="hidden sm:inline ml-2">{config.name}</span>
-            </Link>
-            <span className="flex-shrink-0 text-slate-400">/</span>
-            <span className="text-slate-900 font-semibold truncate">{unit.metadata.title}</span>
-          </nav>
-        </div>
-      </div>
+      {/* Breadcrumb sticky mejorado */}
+      <Breadcrumb items={breadcrumbItems} />
 
       {/* Layout con sidebar + contenido */}
       <div className="container mx-auto flex gap-0 lg:gap-8 px-0 md:px-4 py-6 md:py-10">

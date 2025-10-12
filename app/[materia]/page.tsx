@@ -4,6 +4,7 @@
 import Link from 'next/link';
 import { getAllSubjects, getUnitsInfoForSubject } from '@/lib/content-utils';
 import { SUBJECT_CONFIG } from '@/types/content';
+import Breadcrumb from '@/components/Breadcrumb';
 import type { Metadata } from 'next';
 
 interface PageProps {
@@ -53,19 +54,28 @@ export default async function SubjectPage({ params }: PageProps) {
     );
   }
 
-  return (
-    <div className="container mx-auto px-4 py-8">
-      {/* Breadcrumb */}
-      <nav className="mb-6 text-sm text-gray-600">
-        <Link href="/" className="hover:text-blue-600">
-          Inicio
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-gray-900 font-medium">{config.name}</span>
-      </nav>
+  // Breadcrumb items
+  const breadcrumbItems = [
+    {
+      label: 'Inicio',
+      href: '/',
+      icon: '🏠',
+    },
+    {
+      label: config.name,
+      href: `/${materia}`,
+      icon: config.icon,
+    },
+  ];
 
-      {/* Header de la materia */}
-      <div className="mb-8 md:mb-12">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50/30">
+      {/* Breadcrumb sticky */}
+      <Breadcrumb items={breadcrumbItems} />
+
+      <div className="container mx-auto px-4 py-8">
+        {/* Header de la materia */}
+        <div className="mb-8 md:mb-12">
         <div className="flex items-start md:items-center gap-3 md:gap-4 mb-4">
           <span className="text-4xl md:text-6xl flex-shrink-0">{config.icon}</span>
           <div className="min-w-0 flex-1">
@@ -177,6 +187,7 @@ export default async function SubjectPage({ params }: PageProps) {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 }

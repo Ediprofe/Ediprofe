@@ -90,11 +90,11 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
       <aside
         className={`
           table-of-contents ${className}
-          fixed lg:sticky top-16 md:top-20 left-0 h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)]
+          fixed lg:sticky top-[140px] md:top-[148px] left-0 h-[calc(100vh-140px)] md:h-[calc(100vh-148px)]
           w-full max-w-xs sm:w-72 bg-white border-r border-gray-200
           overflow-y-auto p-4 md:p-6
           transition-transform duration-300 ease-in-out
-          z-40
+          z-30 lg:z-20
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
       >
