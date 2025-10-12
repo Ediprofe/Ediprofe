@@ -6,6 +6,7 @@
 import { useState, useEffect } from 'react';
 import type { Section } from '@/types/content';
 import VideoEmbed from './VideoEmbed';
+import MarkdownContent from './MarkdownContent';
 
 interface TabsSystemProps {
   section: Section;
@@ -109,9 +110,9 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
 
             {/* Mostrar contenido HTML */}
             {activeTab.content && (
-              <div
+              <MarkdownContent
+                content={activeTab.content}
                 className="prose prose-lg max-w-none"
-                dangerouslySetInnerHTML={{ __html: activeTab.content }}
               />
             )}
           </>

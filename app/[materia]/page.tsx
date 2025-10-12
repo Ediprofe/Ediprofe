@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { getAllSubjects, getUnitsInfoForSubject } from '@/lib/content-utils';
-import { SUBJECT_CONFIG } from '@/types/content';
+import { SUBJECT_CONFIG, SUBJECT_COLORS } from '@/types/content';
 import Breadcrumb from '@/components/Breadcrumb';
 import type { Metadata } from 'next';
 
@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function SubjectPage({ params }: PageProps) {
   const { materia } = await params;
   const config = SUBJECT_CONFIG[materia];
+  const colors = SUBJECT_COLORS[config?.color as keyof typeof SUBJECT_COLORS];
   const units = getUnitsInfoForSubject(materia);
 
   if (!config) {
@@ -98,7 +99,7 @@ export default async function SubjectPage({ params }: PageProps) {
             📚 Unidades disponibles ({units.length})
           </h2>
 
-          <div className="grid gap-3 md:gap-4">
+          <div className="grid gap-4 md:gap-5">
             {units.map((unit) => (
               <Link
                 key={unit.slug}
@@ -106,66 +107,38 @@ export default async function SubjectPage({ params }: PageProps) {
                 className="group"
               >
                 <div
-                  className="
-                    bg-white rounded-lg border-2 border-gray-200
-                    hover:border-blue-500 hover:shadow-lg
-                    transition-all duration-200
-                    p-4 md:p-6
-                  "
+                  className="relative bg-white rounded-xl border-2 border-gray-200 hover:shadow-xl transition-all duration-300 p-5 md:p-6 overflow-hidden"
+                  style={{
+                    borderColor: colors?.light,
+                  }}
                 >
-                  <div className="flex items-start justify-between gap-2">
+                  {/* Barra lateral de color */}
+                  <div 
+                    className="absolute left-0 top-0 bottom-0 w-1.5 group-hover:w-2 transition-all duration-300"
+                    style={{ backgroundColor: colors?.primary }}
+                  />
+                  
+                  <div className="flex items-start justify-between gap-3 ml-3">
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-base md:text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 break-words">
+                      <h3 
+                        className="text-base md:text-xl font-bold mb-2 break-words transition-colors duration-200"
+                        style={{ color: colors?.dark }}
+                      >
                         {unit.metadata.title}
                       </h3>
 
                       {unit.metadata.description && (
-                        <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
+                        <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                           {unit.metadata.description}
                         </p>
                       )}
-
-                      {/* Indicadores de contenido */}
-                      <div className="flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm">
-                        {unit.features.hasVideos && (
-                          <span className="flex items-center gap-1 text-purple-600 bg-purple-50 px-3 py-1 rounded-full">
-                            <span>🎬</span>
-                            <span>Videos</span>
-                          </span>
-                        )}
-
-                        {unit.features.hasExercises && (
-                          <span className="flex items-center gap-1 text-green-600 bg-green-50 px-3 py-1 rounded-full">
-                            <span>✏️</span>
-                            <span>Ejercicios</span>
-                          </span>
-                        )}
-
-                        {unit.features.hasActivities && (
-                          <span className="flex items-center gap-1 text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
-                            <span>🔬</span>
-                            <span>Actividades</span>
-                          </span>
-                        )}
-
-                        {unit.metadata.duration && (
-                          <span className="flex items-center gap-1 text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                            <span>⏱️</span>
-                            <span>{unit.metadata.duration}</span>
-                          </span>
-                        )}
-
-                        {unit.metadata.difficulty && (
-                          <span className="flex items-center gap-1 text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
-                            <span>📊</span>
-                            <span className="capitalize">{unit.metadata.difficulty}</span>
-                          </span>
-                        )}
-                      </div>
                     </div>
 
-                    {/* Flecha indicadora */}
-                    <div className="ml-4 text-gray-400 group-hover:text-blue-600 transition-colors">
+                    {/* Flecha indicadora con color de materia */}
+                    <div 
+                      className="ml-4 transition-all duration-200 group-hover:translate-x-1"
+                      style={{ color: colors?.primary }}
+                    >
                       <svg
                         className="w-6 h-6"
                         fill="none"
@@ -175,12 +148,18 @@ export default async function SubjectPage({ params }: PageProps) {
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={2}
+                          strokeWidth={2.5}
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
                     </div>
                   </div>
+
+                  {/* Efecto de fondo en hover */}
+                  <div 
+                    className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none"
+                    style={{ backgroundColor: colors?.primary }}
+                  />
                 </div>
               </Link>
             ))}

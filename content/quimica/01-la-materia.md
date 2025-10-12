@@ -1,5 +1,5 @@
 ---
-title: "La Materia y sus Propiedades"
+title: "La Materia y sus propiedades"
 description: "Introducción al estudio de la materia, sus estados y propiedades fundamentales"
 author: "Prof. Edilberto Suárez"
 duration: "45 min"
@@ -14,7 +14,7 @@ video: https://youtu.be/dQw4w9WgXcQ
 
 ### Descripción
 
-La materia es todo aquello que tiene masa y ocupa un lugar en el espacio. En términos simples, **todo lo que podemos tocar, ver o sentir** es materia. Desde el aire que respiramos hasta las estrellas más lejanas, todo está formado por materia.
+La materia es todo aquello que tiene masa y ocupa un lugar en el espacio. En términos simples, **todo lo que podemos tocar, ver o sentir** es materia. Desde el aire que respiramos hasta las estrellas más lejanas, todo está formado por materia. Visita [este recurso](https://ejemplo.com) para más información.
 
 ### ✏️ Ejercicio 1: Identifica la Materia
 

@@ -111,43 +111,85 @@ export interface ParsedMarkdown {
 export const SUBJECT_ORDER = ['quimica', 'fisica', 'ciencias', 'matematicas', 'biologia', 'historia'];
 
 /**
+ * Sistema de colores centralizado por materia
+ */
+export const SUBJECT_COLORS = {
+  quimica: {
+    primary: '#FF6B35',
+    light: '#FFE5DC',
+    dark: '#CC5529',
+    gradient: 'from-orange-500 to-orange-600',
+  },
+  fisica: {
+    primary: '#007BFF',
+    light: '#CCE5FF',
+    dark: '#0056B3',
+    gradient: 'from-blue-500 to-blue-600',
+  },
+  ciencias: {
+    primary: '#28A745',
+    light: '#D4EDDA',
+    dark: '#1E7E34',
+    gradient: 'from-green-500 to-green-600',
+  },
+  matematicas: {
+    primary: '#DC3545',
+    light: '#F8D7DA',
+    dark: '#A71D2A',
+    gradient: 'from-red-500 to-red-600',
+  },
+  biologia: {
+    primary: '#17A2B8',
+    light: '#D1ECF1',
+    dark: '#117A8B',
+    gradient: 'from-cyan-500 to-cyan-600',
+  },
+  historia: {
+    primary: '#6C757D',
+    light: '#E2E3E5',
+    dark: '#545B62',
+    gradient: 'from-gray-500 to-gray-600',
+  },
+} as const;
+
+/**
  * Configuración de colores por materia
  */
-export const SUBJECT_CONFIG: Record<string, { name: string; icon: string; color: string; description: string }> = {
+export const SUBJECT_CONFIG: Record<string, { name: string; icon: string; color: keyof typeof SUBJECT_COLORS; description: string }> = {
   quimica: {
     name: 'Química',
     icon: '🧪',
-    color: 'materia-quimica',
+    color: 'quimica',
     description: 'Estudio de la materia, sus propiedades y transformaciones',
   },
   fisica: {
     name: 'Física',
     icon: '⚛️',
-    color: 'materia-fisica',
+    color: 'fisica',
     description: 'Estudio de las leyes fundamentales del universo',
   },
   matematicas: {
     name: 'Matemáticas',
     icon: '📐',
-    color: 'materia-matematicas',
+    color: 'matematicas',
     description: 'Números, álgebra, geometría y cálculo',
   },
   ciencias: {
     name: 'Ciencias Naturales',
     icon: '🌍',
-    color: 'materia-ciencias',
+    color: 'ciencias',
     description: 'Biología, geología y ecología',
   },
   biologia: {
     name: 'Biología',
     icon: '🧬',
-    color: 'materia-biologia',
+    color: 'biologia',
     description: 'Estudio de los seres vivos',
   },
   historia: {
     name: 'Historia',
     icon: '📚',
-    color: 'materia-historia',
+    color: 'historia',
     description: 'Eventos y procesos históricos',
   },
 };

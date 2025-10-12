@@ -8,8 +8,8 @@ import 'katex/dist/katex.min.css'; // Estilos de KaTeX para ecuaciones matemáti
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Ediprofe - Plataforma Educativa',
-  description: 'Plataforma educativa interactiva con contenido en Markdown y sistema de tabs',
+  title: 'Ediprofe',
+  description: 'Guía educativa para ciencias y matemáticas',
   keywords: ['educación', 'química', 'física', 'matemáticas', 'ciencias'],
 };
 
@@ -43,7 +43,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-3">🎓 Ediprofe</h3>
-              <p className="text-slate-300 mb-6">Plataforma educativa interactiva moderna</p>
+              <p className="text-slate-300 mb-6">Guía educativa para ciencias y matemáticas</p>
               <div className="flex justify-center gap-6 text-sm text-slate-400">
                 <span>&copy; 2025 Ediprofe</span>
                 <span>•</span>

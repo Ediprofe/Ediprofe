@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --foreground-rgb: 15, 23, 42;
@@ -122,7 +121,17 @@ body {
   }
   
   .prose a {
-    @apply text-indigo-600 hover:text-indigo-800 underline decoration-2 underline-offset-2 transition-colors;
+    @apply text-indigo-600 hover:text-indigo-800 font-medium underline decoration-indigo-400 decoration-2 underline-offset-4 transition-all duration-200;
+  }
+  
+  .prose a:hover {
+    @apply decoration-indigo-600 underline-offset-2;
+  }
+  
+  /* Icono de enlace externo */
+  .prose a[href^="http"]::after {
+    content: " ↗";
+    @apply text-indigo-400 text-sm ml-1;
   }
   
   /* Estilos para ecuaciones matemáticas (KaTeX) */
@@ -273,4 +282,47 @@ body {
 .neumorphic-inset {
   background: linear-gradient(145deg, #f0f0f0, #ffffff);
   box-shadow: inset 8px 8px 16px #d1d1d1, inset -8px -8px 16px #ffffff;
+}
+
+/* === SISTEMA DE COLORES POR MATERIA === */
+@layer utilities {
+  /* Fondos por categoría */
+  .bg-quimica { background-color: #FF6B35; }
+  .bg-fisica { background-color: #007BFF; }
+  .bg-ciencias { background-color: #28A745; }
+  .bg-matematicas { background-color: #DC3545; }
+  .bg-biologia { background-color: #17A2B8; }
+  .bg-historia { background-color: #6C757D; }
+  
+  /* Fondos claros por categoría */
+  .bg-quimica-light { background-color: #FFE5DC; }
+  .bg-fisica-light { background-color: #CCE5FF; }
+  .bg-ciencias-light { background-color: #D4EDDA; }
+  .bg-matematicas-light { background-color: #F8D7DA; }
+  .bg-biologia-light { background-color: #D1ECF1; }
+  .bg-historia-light { background-color: #E2E3E5; }
+  
+  /* Colores de texto por categoría */
+  .text-quimica { color: #FF6B35; }
+  .text-fisica { color: #007BFF; }
+  .text-ciencias { color: #28A745; }
+  .text-matematicas { color: #DC3545; }
+  .text-biologia { color: #17A2B8; }
+  .text-historia { color: #6C757D; }
+  
+  /* Colores de texto oscuros */
+  .text-quimica-dark { color: #CC5529; }
+  .text-fisica-dark { color: #0056B3; }
+  .text-ciencias-dark { color: #1E7E34; }
+  .text-matematicas-dark { color: #A71D2A; }
+  .text-biologia-dark { color: #117A8B; }
+  .text-historia-dark { color: #545B62; }
+  
+  /* Bordes por categoría */
+  .border-quimica { border-color: #FF6B35; }
+  .border-fisica { border-color: #007BFF; }
+  .border-ciencias { border-color: #28A745; }
+  .border-matematicas { border-color: #DC3545; }
+  .border-biologia { border-color: #17A2B8; }
+  .border-historia { border-color: #6C757D; }
 }
