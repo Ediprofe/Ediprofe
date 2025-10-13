@@ -31,6 +31,12 @@ Las fases de la materia son básicamente **sólido, líquido y gas**.
 - Gas $\rightarrow$ Sólido: **Sublimación inversa**.
 - Las fases de la materia son básicamente tres: **sólido, líquido y gas**.
 
+| **Diferencia de electronegatividad (*Δ*EN)** | **Tipo de enlace** | **Características** | **Ejemplo de cálculo** |
+| --- | --- | --- | --- |
+| **De 0 a 0,4** | **Covalente no polar** | Los átomos comparten los electrones de forma **equitativa**. La diferencia es cero o muy pequeña, por lo que **no se forman polos eléctricos**. | H2: *Δ*EN = 2, 20 − 2, 20 = 0. |
+| **Mayor de 0,4 y hasta 1,7** | **Covalente polar** | Hay **una diferencia moderada** de electronegatividad. El átomo más electronegativo **atrae con mayor fuerza** el par de electrones, generando **polo positivo y negativo parcial**. | NH3: *Δ*EN = 3, 04 − 2, 20 = 0, 84. |
+| **Mayor de 1,7** | **Iónico** | La diferencia es **grande**; ya no se comparten electrones, sino que ocurre una **transferencia (robo)**. Se forman **iones** con carga positiva y negativa. | NaCl: *Δ*EN = 3, 16 − 0, 93 = 2, 23. |
+
 ## Fases de la materia
 
 ## Propiedades de la materia
