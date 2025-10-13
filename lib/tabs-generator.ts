@@ -5,6 +5,7 @@ import type { Section, Tab, VideoLink, TOCItem, ExternalResource } from '@/types
 import { slugify, getYouTubeId } from './utils';
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
@@ -118,12 +119,14 @@ function extractVideos(content: string): VideoLink[] {
 }
 
 /**
- * Convierte contenido Markdown a HTML con soporte para ecuaciones matemáticas
+ * Convierte contenido Markdown a HTML con soporte para ecuaciones matemáticas y tablas
  * Usa KaTeX para renderizar ecuaciones en formato LaTeX
+ * Usa GFM (GitHub Flavored Markdown) para tablas, strikethrough, etc.
  * Sintaxis: $ecuación inline$ o $$ecuación en bloque$$
  */
 async function markdownToHtml(markdown: string): Promise<string> {
   const result = await remark()
+    .use(remarkGfm) // Soporte para tablas, strikethrough, task lists, etc.
     .use(remarkMath) // Parsear sintaxis matemática ($...$, $$...$$)
     .use(remarkRehype, { allowDangerousHtml: true }) // Convertir a rehype (HTML AST) con soporte completo
     .use(rehypeKatex) // Renderizar ecuaciones con KaTeX

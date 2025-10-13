@@ -150,24 +150,35 @@ body {
     color: #0f172a;
   }
   
-  .prose table {
-    @apply w-full border-collapse rounded-lg overflow-hidden shadow-sm my-6 text-sm md:text-base;
-    display: block;
-    overflow-x: auto;
+  /* Contenedor responsive para tablas */
+  .table-responsive-wrapper {
+    @apply w-full overflow-x-auto my-6 rounded-lg shadow-md;
+    -webkit-overflow-scrolling: touch;
+    background: linear-gradient(90deg, white 30%, rgba(255,255,255,0)),
+                linear-gradient(90deg, rgba(255,255,255,0), white 70%) 100% 0,
+                radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.1), rgba(0,0,0,0)),
+                radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.1), rgba(0,0,0,0)) 100% 0;
+    background-repeat: no-repeat;
+    background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+    background-attachment: local, local, scroll, scroll;
   }
-  
-  @media (min-width: 768px) {
-    .prose table {
-      display: table;
-    }
+
+  .prose table {
+    @apply w-full border-collapse text-sm md:text-base;
+    min-width: 100%;
+    margin: 0;
   }
   
   .prose th {
-    @apply bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold p-3 md:p-4 text-xs md:text-sm;
+    @apply bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold p-3 md:p-4 text-xs md:text-sm whitespace-nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
   
   .prose td {
     @apply p-3 md:p-4 border-b border-slate-200 text-xs md:text-sm bg-white;
+    min-width: 100px;
   }
   
   .prose tr:last-child td {
@@ -176,6 +187,29 @@ body {
   
   .prose tr:hover td {
     @apply bg-slate-50;
+  }
+  
+  /* Indicador visual de scroll en móvil */
+  @media (max-width: 768px) {
+    .table-responsive-wrapper::after {
+      content: "← Desliza →";
+      display: block;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #94a3b8;
+      padding: 0.5rem;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .table-responsive-wrapper:has(table:not([style*="transform"])):not(:hover)::after {
+      animation: pulse 2s ease-in-out infinite;
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
   }
   
   .prose pre {

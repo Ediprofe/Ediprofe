@@ -45,6 +45,15 @@ Una **propiedad** es una **característica o atributo de las sustancias** que no
 
 Ejemplos de propiedades que ayudan a describir una sustancia son la **textura** (ej. cremosa), el **sabor** (ej. dulce), el **color** (ej. blanco), la **temperatura** (ej. 25°C), el **volumen** (ej. 5 litros), entre otras.
 
+| **Propiedad** | **Definición / Concepto** | **Descripción** | **Instrumentos de Medición** | **Unidades de Medición** | **Ejemplo** |
+| --- | --- | --- | --- | --- | --- |
+| **Masa** | Cantidad de materia que posee un cuerpo. | Describe cuánta materia tiene un objeto. | Balanza | - Gramos (g)  - Kilogramos (kg)  - Libras  - Onzas  - Toneladas | Una piedra tiene una masa de 2500 g. |
+| **Volumen** | Espacio que ocupa un cuerpo. | Se refiere al tamaño o espacio ocupado por la materia. | Vaso medidor, pipetas, matraz aforado, probeta, Erlenmeyer, baker *(El tubo de ensayo y el gotero no se usan para medir volumen).* | - Litros (L)  - Mililitros (mL)  - Galones  - Metros cúbicos (m³) | El agua dentro de un frasco puede ocupar un volumen de 1,5 L. |
+| **Masa** | Cantidad de materia que posee un cuerpo. | Describe cuánta materia tiene un objeto. | Balanza | - Gramos (g)  - Kilogramos (kg)  - Libras  - Onzas  - Toneladas | Una piedra tiene una masa de 2500 g. |
+| **Volumen** | Espacio que ocupa un cuerpo. | Se refiere al tamaño o espacio ocupado por la materia. | Vaso medidor, pipetas, matraz aforado, probeta, Erlenmeyer, baker *(El tubo de ensayo y el gotero no se usan para medir volumen).* | - Litros (L)  - Mililitros (mL)  - Galones  - Metros cúbicos (m³) | El agua dentro de un frasco puede ocupar un volumen de 1,5 L. |
+| **Masa** | Cantidad de materia que posee un cuerpo. | Describe cuánta materia tiene un objeto. | Balanza | - Gramos (g)  - Kilogramos (kg)  - Libras  - Onzas  - Toneladas | Una piedra tiene una masa de 2500 g. |
+| **Volumen** | Espacio que ocupa un cuerpo. | Se refiere al tamaño o espacio ocupado por la materia. | Vaso medidor, pipetas, matraz aforado, probeta, Erlenmeyer, baker *(El tubo de ensayo y el gotero no se usan para medir volumen).* | - Litros (L)  - Mililitros (mL)  - Galones  - Metros cúbicos (m³) | El agua dentro de un frasco puede ocupar un volumen de 1,5 L. |
+
 **Masa:**
 
 - La **masa** es una propiedad de la materia.
