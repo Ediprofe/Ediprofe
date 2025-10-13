@@ -31,12 +31,6 @@ Las fases de la materia son básicamente **sólido, líquido y gas**.
 - Gas $\rightarrow$ Sólido: **Sublimación inversa**.
 - Las fases de la materia son básicamente tres: **sólido, líquido y gas**.
 
-| **Diferencia de electronegatividad (*Δ*EN)** | **Tipo de enlace** | **Características** | **Ejemplo de cálculo** |
-| --- | --- | --- | --- |
-| **De 0 a 0,4** | **Covalente no polar** | Los átomos comparten los electrones de forma **equitativa**. La diferencia es cero o muy pequeña, por lo que **no se forman polos eléctricos**. | H2: *Δ*EN = 2, 20 − 2, 20 = 0. |
-| **Mayor de 0,4 y hasta 1,7** | **Covalente polar** | Hay **una diferencia moderada** de electronegatividad. El átomo más electronegativo **atrae con mayor fuerza** el par de electrones, generando **polo positivo y negativo parcial**. | NH3: *Δ*EN = 3, 04 − 2, 20 = 0, 84. |
-| **Mayor de 1,7** | **Iónico** | La diferencia es **grande**; ya no se comparten electrones, sino que ocurre una **transferencia (robo)**. Se forman **iones** con carga positiva y negativa. | NaCl: *Δ*EN = 3, 16 − 0, 93 = 2, 23. |
-
 ## Fases de la materia
 
 ## Propiedades de la materia
@@ -50,15 +44,6 @@ video: https://youtu.be/H1XMFH5f_x4?si=1rtYo1DI2ipnr2WO
 Una **propiedad** es una **característica o atributo de las sustancias** que nos ayuda a describirlas.
 
 Ejemplos de propiedades que ayudan a describir una sustancia son la **textura** (ej. cremosa), el **sabor** (ej. dulce), el **color** (ej. blanco), la **temperatura** (ej. 25°C), el **volumen** (ej. 5 litros), entre otras.
-
-| **Propiedad** | **Definición / Concepto** | **Descripción** | **Instrumentos de Medición** | **Unidades de Medición** | **Ejemplo** |
-| --- | --- | --- | --- | --- | --- |
-| **Masa** | Cantidad de materia que posee un cuerpo. | Describe cuánta materia tiene un objeto. | Balanza | - Gramos (g)  - Kilogramos (kg)  - Libras  - Onzas  - Toneladas | Una piedra tiene una masa de 2500 g. |
-| **Volumen** | Espacio que ocupa un cuerpo. | Se refiere al tamaño o espacio ocupado por la materia. | Vaso medidor, pipetas, matraz aforado, probeta, Erlenmeyer, baker *(El tubo de ensayo y el gotero no se usan para medir volumen).* | - Litros (L)  - Mililitros (mL)  - Galones  - Metros cúbicos (m³) | El agua dentro de un frasco puede ocupar un volumen de 1,5 L. |
-| **Masa** | Cantidad de materia que posee un cuerpo. | Describe cuánta materia tiene un objeto. | Balanza | - Gramos (g)  - Kilogramos (kg)  - Libras  - Onzas  - Toneladas | Una piedra tiene una masa de 2500 g. |
-| **Volumen** | Espacio que ocupa un cuerpo. | Se refiere al tamaño o espacio ocupado por la materia. | Vaso medidor, pipetas, matraz aforado, probeta, Erlenmeyer, baker *(El tubo de ensayo y el gotero no se usan para medir volumen).* | - Litros (L)  - Mililitros (mL)  - Galones  - Metros cúbicos (m³) | El agua dentro de un frasco puede ocupar un volumen de 1,5 L. |
-| **Masa** | Cantidad de materia que posee un cuerpo. | Describe cuánta materia tiene un objeto. | Balanza | - Gramos (g)  - Kilogramos (kg)  - Libras  - Onzas  - Toneladas | Una piedra tiene una masa de 2500 g. |
-| **Volumen** | Espacio que ocupa un cuerpo. | Se refiere al tamaño o espacio ocupado por la materia. | Vaso medidor, pipetas, matraz aforado, probeta, Erlenmeyer, baker *(El tubo de ensayo y el gotero no se usan para medir volumen).* | - Litros (L)  - Mililitros (mL)  - Galones  - Metros cúbicos (m³) | El agua dentro de un frasco puede ocupar un volumen de 1,5 L. |
 
 **Masa:**
 
