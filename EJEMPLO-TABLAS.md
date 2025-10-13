@@ -74,3 +74,24 @@ Tu workflow sigue siendo:
 5. `git push`
 
 ¡Las tablas se ven bonitas automáticamente! 🎉
+
+---
+
+## 🎨 Personalización (Opcional)
+
+Si quieres cambiar los colores de las tablas en el futuro, solo edita las variables CSS en `app/globals.css`:
+
+```css
+:root {
+  /* Colores para tablas - Una sola fuente de verdad */
+  --table-header-bg: linear-gradient(135deg, #4338ca 0%, #6b21a8 100%);
+  --table-header-text: #ffffff;
+  --table-header-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+```
+
+**Ventajas de este enfoque:**
+- ✅ Una sola fuente de verdad (DRY principle)
+- ✅ Fácil de mantener
+- ✅ Cambios globales en un solo lugar
+- ✅ Sin hardcodeo de colores

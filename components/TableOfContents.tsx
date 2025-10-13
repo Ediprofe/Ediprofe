@@ -75,9 +75,9 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
         onClick={() => setIsOpen(!isOpen)}
         className="
           lg:hidden fixed bottom-4 right-4 z-50
-          bg-blue-600 text-white
+          bg-gradient-to-r from-indigo-600 to-purple-600 text-white
           p-3 md:p-4 rounded-full shadow-lg
-          hover:bg-blue-700 transition-colors
+          hover:from-indigo-700 hover:to-purple-700 transition-all duration-300
           min-w-[48px] min-h-[48px]
           flex items-center justify-center
         "
@@ -134,7 +134,7 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
                     transition-colors duration-150 break-words
                     ${
                       activeId === item.id
-                        ? 'bg-blue-100 text-blue-700 font-medium'
+                        ? 'bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 font-medium border-l-4 border-indigo-600'
                         : 'text-gray-700 hover:bg-gray-100'
                     }
                   `}
@@ -144,7 +144,7 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
 
                 {/* Subsecciones (H3) - Tabs */}
                 {item.children && item.children.length > 0 && (
-                  <ul className="ml-3 md:ml-4 mt-1 space-y-1 border-l-2 border-gray-200 pl-2 md:pl-3">
+                  <ul className="ml-3 md:ml-4 mt-1 space-y-1 border-l-2 border-indigo-200 pl-2 md:pl-3">
                     {item.children.map((child) => (
                       <li key={child.id}>
                         <button
@@ -154,7 +154,7 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
                             transition-colors duration-150 break-words
                             ${
                               activeId === child.id
-                                ? 'text-blue-600 font-medium'
+                                ? 'text-indigo-600 font-medium bg-indigo-50'
                                 : 'text-gray-600 hover:text-gray-900'
                             }
                           `}
