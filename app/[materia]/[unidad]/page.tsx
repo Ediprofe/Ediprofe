@@ -97,12 +97,12 @@ export default async function UnitPage({ params }: PageProps) {
       <Breadcrumb items={breadcrumbItems} />
 
       {/* Layout con sidebar + contenido */}
-      <div className="container mx-auto flex gap-0 lg:gap-8 px-0 md:px-4 py-6 md:py-10">
+      <div className="w-full mx-auto flex gap-0 lg:gap-8 px-0 md:px-4 py-6 md:py-10 max-w-[1920px]">
         {/* Tabla de contenidos (sidebar izquierdo) */}
         <TableOfContents items={toc} />
 
         {/* Contenido principal */}
-        <div className="flex-1 max-w-6xl mx-auto lg:mx-0 min-w-0 px-4 md:px-0">
+        <div className="flex-1 w-full lg:w-auto min-w-0 px-4 md:px-0">
           {/* Header de la unidad con gradiente */}
           <div className="card-modern p-6 md:p-10 mb-8 md:mb-12 relative overflow-hidden">
             {/* Decoración de fondo */}

@@ -103,7 +103,7 @@ export default function TableOfContents({ items, className = '' }: TableOfConten
         className={`
           table-of-contents ${className}
           fixed lg:sticky top-[140px] md:top-[148px] left-0 h-[calc(100vh-140px)] md:h-[calc(100vh-148px)]
-          w-full max-w-xs sm:w-72 bg-white border-r border-gray-200
+          w-72 lg:w-80 flex-shrink-0 bg-white border-r border-gray-200
           overflow-y-auto p-4 md:p-6
           transition-transform duration-300 ease-in-out
           z-40 lg:z-20
