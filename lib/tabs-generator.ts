@@ -1,7 +1,7 @@
 // lib/tabs-generator.ts
 // Generador automático de tabs desde H2/H3
 
-import type { Section, Tab, VideoLink, TOCItem } from '@/types/content';
+import type { Section, Tab, VideoLink, TOCItem, ExternalResource } from '@/types/content';
 import { slugify, getYouTubeId } from './utils';
 import { remark } from 'remark';
 import html from 'remark-html';
@@ -12,6 +12,80 @@ import remarkRehype from 'remark-rehype';
 
 // Re-exportar para compatibilidad
 export { getYouTubeId };
+
+/**
+ * Extrae recursos externos (Google Drive, YouTube Playlists) de la sección "Recursos de la unidad"
+ * Busca específicamente dentro de un H2 con ese título
+ */
+export function extractExternalResources(content: string): {
+  resources: ExternalResource[];
+  cleanedContent: string;
+} {
+  const resources: ExternalResource[] = [];
+  const lines = content.split('\n');
+  const cleanedLines: string[] = [];
+  let inResourcesSection = false;
+  let skipSection = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    // Detectar inicio de sección "Recursos de la unidad"
+    if (line.startsWith('## ')) {
+      const title = line.replace(/^##\s+/, '').trim().toLowerCase();
+      
+      if (title === 'recursos de la unidad') {
+        inResourcesSection = true;
+        skipSection = true; // No incluir esta sección en el contenido final
+        continue; // No agregar el H2 al contenido limpio
+      } else {
+        inResourcesSection = false;
+        skipSection = false;
+      }
+    }
+
+    // Si estamos en la sección de recursos, extraer enlaces
+    if (inResourcesSection) {
+      // Detectar Google Drive
+      if (trimmed.startsWith('https://drive.google.com/')) {
+        resources.push({
+          type: 'google-drive',
+          url: trimmed,
+          label: 'Carpeta de la unidad',
+          icon: '📁',
+        });
+        continue; // No agregar esta línea al contenido limpio
+      }
+
+      // Detectar YouTube Playlist
+      if (trimmed.includes('youtube.com/playlist') || trimmed.includes('youtu.be/playlist')) {
+        resources.push({
+          type: 'youtube-playlist',
+          url: trimmed,
+          label: 'Lista de reproducción',
+          icon: '📺',
+        });
+        continue; // No agregar esta línea al contenido limpio
+      }
+
+      // Saltar líneas vacías en la sección de recursos
+      if (trimmed === '') {
+        continue;
+      }
+    }
+
+    // Si no estamos saltando la sección, mantener la línea
+    if (!skipSection) {
+      cleanedLines.push(line);
+    }
+  }
+
+  return {
+    resources,
+    cleanedContent: cleanedLines.join('\n'),
+  };
+}
 
 /**
  * Detecta videos en el contenido
@@ -118,6 +192,42 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
 
   const flushSection = async () => {
     await flushTab();
+    
+    // Si la sección no tiene tabs pero tiene contenido acumulado, crear una tab automática
+    // SOLO si hay contenido real (no solo líneas vacías)
+    if (currentSection && currentSection.tabs.length === 0 && currentContent.length > 0) {
+      // Verificar si hay contenido real (no solo líneas vacías)
+      const hasRealContent = currentContent.some(line => line.trim() !== '');
+      
+      if (hasRealContent) {
+        // Extraer videos del contenido
+        const contentText = currentContent.join('\n');
+        const videos = extractVideos(contentText);
+        
+        // Remover líneas de video del contenido
+        const contentWithoutVideos = currentContent
+          .filter(line => !line.trim().startsWith('video:'))
+          .join('\n')
+          .trim();
+        
+        // Solo crear la tab si hay contenido o videos
+        if (contentWithoutVideos || videos.length > 0) {
+          const autoTab: Tab = {
+            id: currentSection.id,
+            label: currentSection.title,
+            type: videos.length > 0 && contentWithoutVideos ? 'mixed' : videos.length > 0 ? 'videos' : 'content',
+            videos: videos.length > 0 ? videos : undefined,
+          };
+          
+          if (contentWithoutVideos) {
+            autoTab.content = await markdownToHtml(contentWithoutVideos);
+          }
+          
+          currentSection.tabs.push(autoTab);
+        }
+      }
+    }
+    
     if (currentSection && currentSection.tabs.length > 0) {
       sections.push(currentSection);
     }

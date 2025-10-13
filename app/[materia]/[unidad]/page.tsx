@@ -7,6 +7,7 @@ import { SUBJECT_CONFIG } from '@/types/content';
 import TabsSystem from '@/components/TabsSystem';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumb from '@/components/Breadcrumb';
+import ExternalResources from '@/components/ExternalResources';
 import type { Metadata } from 'next';
 
 interface PageProps {
@@ -125,6 +126,11 @@ export default async function UnitPage({ params }: PageProps) {
                 <p className="text-base md:text-lg text-slate-600 mb-6 leading-relaxed">
                   {unit.metadata.description}
                 </p>
+              )}
+
+              {/* Recursos externos (Google Drive, YouTube Playlists) */}
+              {unit.externalResources && (
+                <ExternalResources resources={unit.externalResources} />
               )}
 
             </div>

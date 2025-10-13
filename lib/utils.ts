@@ -22,17 +22,35 @@ export function getYouTubeId(url: string): string | null {
 }
 
 /**
- * Genera slug a partir de un texto
- * @param text - Texto a convertir
- * @returns Slug normalizado
+ * Convierte texto a slug (URL-friendly)
+ * Elimina acentos, convierte a minúsculas, reemplaza espacios por guiones
  */
 export function slugify(text: string): string {
   return text
+    .toString()
     .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '') // Remover acentos
-    .replace(/[^\w\s-]/g, '') // Remover caracteres especiales (excepto -, _)
-    .replace(/\s+/g, '-') // Espacios a guiones
-    .replace(/-+/g, '-') // Múltiples guiones a uno
-    .trim();
+    .normalize('NFD') // Descomponer caracteres acentuados
+    .replace(/[\u0300-\u036f]/g, '') // Eliminar diacríticos
+    .replace(/[^\w\s-]/g, '') // Eliminar caracteres especiales
+    .replace(/\s+/g, '-') // Reemplazar espacios por guiones
+    .replace(/--+/g, '-') // Reemplazar múltiples guiones por uno solo
+    .replace(/^-+/, '') // Eliminar guiones al inicio
+    .replace(/-+$/, ''); // Eliminar guiones al final
+}
+
+/**
+ * Remueve el prefijo numérico de un slug de unidad
+ * Ejemplo: "01-la-materia" -> "la-materia"
+ */
+export function removeNumberPrefix(slug: string): string {
+  return slug.replace(/^\d+-/, '');
+}
+
+/**
+ * Extrae el número de orden de un slug de unidad
+ * Ejemplo: "01-la-materia" -> 1
+ */
+export function extractOrderNumber(slug: string): number {
+  const match = slug.match(/^(\d+)-/);
+  return match ? parseInt(match[1], 10) : 0;
 }

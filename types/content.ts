@@ -26,6 +26,16 @@ export interface VideoLink {
 }
 
 /**
+ * Recurso externo (Google Drive, YouTube Playlist, etc.)
+ */
+export interface ExternalResource {
+  type: 'google-drive' | 'youtube-playlist';
+  url: string;
+  label: string;
+  icon: string;
+}
+
+/**
  * Tab individual dentro de una sección
  * Puede contener contenido HTML o videos
  */
@@ -61,6 +71,7 @@ export interface Unit {
   hasVideos: boolean;
   hasExercises: boolean;
   hasActivities: boolean;
+  externalResources?: ExternalResource[]; // Recursos externos (Drive, Playlists)
 }
 
 /**

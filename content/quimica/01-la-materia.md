@@ -1,11 +1,13 @@
 ---
 title: "La materia y sus propiedades"
-description: "Introducción al estudio de la materia, sus estados y propiedades fundamentales"
-author: "Prof. Edilberto Suárez"
-duration: "45 min"
-difficulty: "basico"
-tags: ["química", "materia", "estados", "propiedades"]
+description: "Introducción al estudio de la materia, sus estados y propiedades fundamentales."
 ---
+
+## Recursos de la unidad
+
+https://drive.google.com/drive/folders/1dJD70oJDpW7OWXNKLv1TVwQ5YUTw9C3y?usp=drive_link
+
+https://youtube.com/playlist?list=PLvciGh3Wfg78yznh409A47pmh3UV7o7am&si=SVEJJR5WDPpayOaW
 
 ## Introducción
 
@@ -41,7 +43,7 @@ video: https://youtu.be/H1XMFH5f_x4?si=1rtYo1DI2ipnr2WO
 
 Una **propiedad** es una **característica o atributo de las sustancias** que nos ayuda a describirlas.
 
-Ejemplos de propiedades que ayudan a describir una sustancia son la **textura** (ej. cremosa), el **sabor** (ej. dulce) y el **color** (ej. blanco).
+Ejemplos de propiedades que ayudan a describir una sustancia son la **textura** (ej. cremosa), el **sabor** (ej. dulce), el **color** (ej. blanco), la **temperatura** (ej. 25°C), el **volumen** (ej. 5 litros), entre otras.
 
 **Masa:**
 

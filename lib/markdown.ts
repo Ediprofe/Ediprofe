@@ -166,4 +166,22 @@ export function getRawMarkdown(materia: string, unidad: string): string | null {
 }
 
 // Exportar slugify desde utils (re-export para compatibilidad)
-export { slugify } from './utils';
+export { slugify, removeNumberPrefix } from './utils';
+
+/**
+ * Encuentra el archivo real de una unidad a partir de su slug limpio (sin número)
+ * @param materia - Nombre de la materia
+ * @param cleanSlug - Slug sin prefijo numérico (ej: "la-materia")
+ * @returns Slug completo con número (ej: "01-la-materia") o null si no existe
+ */
+export function findUnitFileByCleanSlug(materia: string, cleanSlug: string): string | null {
+  const units = getUnitsForSubject(materia);
+  
+  // Buscar la unidad que coincida con el slug limpio
+  const found = units.find(unit => {
+    const unitWithoutNumber = unit.replace(/^\d+-/, '');
+    return unitWithoutNumber === cleanSlug;
+  });
+  
+  return found || null;
+}
