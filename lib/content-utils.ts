@@ -94,10 +94,8 @@ export async function getAllSubjectsWithUnits(): Promise<Subject[]> {
       });
     }
 
-    // Filtrar materias con contenido y ordenar según SUBJECT_ORDER
-    const filteredSubjects = subjects.filter((s) => s.unitCount > 0);
-    
-    return filteredSubjects.sort((a, b) => {
+    // Ordenar según SUBJECT_ORDER (mostrar todas las materias, incluso sin contenido)
+    return subjects.sort((a, b) => {
       const indexA = SUBJECT_ORDER.indexOf(a.slug);
       const indexB = SUBJECT_ORDER.indexOf(b.slug);
       
