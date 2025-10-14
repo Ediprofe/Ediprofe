@@ -23,13 +23,14 @@ Las fases de la materia son básicamente **sólido, líquido y gas**.
 
 **Cambios de fase:**
 
-- Sólido $\rightarrow$ Líquido: **Fusión**.
-- Líquido $\rightarrow$ Sólido: **Solidificación**.
-- Líquido $\rightarrow$ Gas: **Ebullición**.
-- Gas $\rightarrow$ Líquido: **Condensación**.
-- Sólido $\rightarrow$ Gas: **Sublimación**.
-- Gas $\rightarrow$ Sólido: **Sublimación inversa**.
-- Las fases de la materia son básicamente tres: **sólido, líquido y gas**.
+| **Estado inicial** | **Estado final** | **Nombre del cambio de fase** | **Descripción breve** |
+| --- | --- | --- | --- |
+| **Sólido** | **Líquido** | **Fusión** | El sólido se derrite y pasa a líquido. |
+| **Líquido** | **Sólido** | **Solidificación** | El líquido se enfría y pasa a sólido. |
+| **Líquido** | **Gas** | **Ebullición** | El líquido hierve y pasa a gas. |
+| **Gas** | **Líquido** | **Condensación** | El gas se enfría y pasa a líquido. |
+| **Sólido** | **Gas** | **Sublimación** | El sólido pasa directamente a gas sin pasar por el líquido. |
+| **Gas** | **Sólido** | **Sublimación inversa** | El gas pasa directamente a sólido sin pasar por el líquido. |
 
 ## Fases de la materia
 
@@ -41,23 +42,44 @@ video: https://youtu.be/H1XMFH5f_x4?si=1rtYo1DI2ipnr2WO
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp743qq/)
 
-Una **propiedad** es una **característica o atributo de las sustancias** que nos ayuda a describirlas.
+```markdown
+Propiedades de las sustancias
+│
+├── Una PROPIEDAD es una CARACTERÍSTICA o ATRIBUTO que describe una sustancia
+│   └── Ejemplos:
+│       ├── Textura → cremosa
+│       ├── Sabor → dulce
+│       ├── Color → blanco
+│       ├── Temperatura → 25 °C
+│       └── Volumen → 5 litros
+│
+├── Masa
+│   ├── Es una PROPIEDAD DE LA MATERIA
+│   ├── Describe la CANTIDAD DE MATERIAL que posee un cuerpo
+│   ├── Se mide con una BALANZA
+│   └── Unidades:
+│       ├── Gramos (g)
+│       ├── Kilogramos (kg)
+│       ├── Libras
+│       ├── Onzas
+│       └── Toneladas
+│
+└── Volumen
+    ├── Es el ESPACIO OCUPADO por un cuerpo
+    ├── Se mide con:
+    │   ├── Vaso medidor
+    │   ├── Pipetas
+    │   ├── Matraz aforado
+    │   ├── Probeta
+    │   ├── Erlenmeyer
+    │   └── Beaker
+    └── Unidades:
+        ├── Litros (L)
+        ├── Mililitros (mL)
+        ├── Galones
+        └── Metros cúbicos (m³)
 
-Ejemplos de propiedades que ayudan a describir una sustancia son la **textura** (ej. cremosa), el **sabor** (ej. dulce), el **color** (ej. blanco), la **temperatura** (ej. 25°C), el **volumen** (ej. 5 litros), entre otras.
-
-**Masa:**
-
-- La **masa** es una propiedad de la materia.
-- Describe la **cantidad de material que posee un cuerpo**.
-- Se mide con una **balanza**.
-- Las unidades de medición para la masa son **gramos (g)**, **kilogramos (kg)**, **libras**, **onzas** o **toneladas,** entre otras.
-
-**Volumen:**
-
-- Es el **espacio ocupado por un cuerpo**; se debe pensar en el espacio ocupado o el tamaño.
-- Se mide con instrumentos como el **vaso medidor**, **pipetas**, **matraz aforado**, **probeta**, **erlenmeyer** o **beakers**.
-- El **tubo de ensayo** y el **gotero** no se usan propiamente para medir un volumen específico, sino más bien para almacenar o dispensar un poco de líquido.
-- Las unidades de medición del volumen son **litros (L)**, **mililitros (mL)**, **galones** o **metros cúbicos, etc.**
+```
 
 ### Densidad
 
@@ -65,19 +87,41 @@ video: https://youtu.be/Xj922gvLsmI?si=BDd1iNlNm900ohmH
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp7TvLh/)
 
-La densidad es una **propiedad de la materia** que indica c**uánta masa hay en cierto volumen**. La fórmula se usa para calcular esta relación:
+La **densidad** es una **propiedad de la materia** que indica **cuánta masa hay en cierto volumen:**
 
-$$\text{Densidad} = \text{Masa} / \text{Volumen}$$
+$$
 
-**La densidad es específica**
+\text{Densidad} = \frac{\text{Masa}}{\text{Volumen}}
 
-La densidad **depende de la sustancia** de la que se esté hablando. Es importante notar que la densidad no cambia con el tamaño del material (no importa si es un frasco pequeño o uno grande). 
+$$
 
-Diferentes sustancias tienen densidades diferentes: el **aceite** de cocina es **menos denso** que el agua, con densidad de 0,92 g/mL, mientras que una **piedra** es más densa, con aproximadamente 2,5 g/mLn de densidad.
+---
 
-**Densidad y flotación**
+```
+Densidad
+│
+├── Es una PROPIEDAD DE LA MATERIA
+│   └── Indica cuánta masa hay en cierto volumen
+│
+├── La densidad es ESPECÍFICA
+│   ├── DEPENDE de la sustancia
+│   ├── NO CAMBIA con el tamaño del material
+│   └── Ejemplos:
+│       ├── Aceite → 0,92 g/mL (menos denso que el agua)
+│       ├── Agua → 1,00 g/mL
+│       └── Piedra → 2,5 g/mL (más densa que el agua)
+│
+└── Densidad y flotación
+    ├── Los cuerpos MENOS DENSOS flotan sobre los más densos
+    ├── Comparaciones:
+    │   ├── Aceite (0,92 g/mL) flota sobre agua (1,00 g/mL)
+    │   ├── Agua (1,00 g/mL) flota sobre piedra (2,5 g/mL)
+    │   └── Pelota playera (0,4 g/mL) flota fácilmente en el agua
+    └── Conclusión:
+        ├── Menor densidad → FLOTA
+        └── Mayor densidad → SE HUNDE
 
-Los **cuerpos menos densos flotan sobre los más densos**. Dado que el aceite tiene 0,92 g/mL y el agua tiene 1 g/mL, el aceite flota sobre el agua. A su vez, el agua es menos densa que la piedra (2,5 g/mL), por lo que el agua flota sobre la piedra, y la piedra se va al fondo. Una **pelota playera** es muy poco densa (0,4 g/mL) y, por lo tanto, flota en el agua.
+```
 
 ### Temperatura
 
@@ -96,9 +140,9 @@ La **temperatura** es una propiedad que nos dice **qué tan caliente o qué tan 
 
 | **Sustancia** | **Temperatura de fusión (°C)** | **Cambio de fase (fusión)** | **Temperatura de ebullición (°C)** | **Cambio de fase (ebullición)** |
 | --- | --- | --- | --- | --- |
-| **Agua** | 0 | De sólido a líquido | 100 | De líquido a gas |
-| **Hierro** | 1,535 | De sólido a líquido | — | — |
-| **Alcohol** | — | — | 78 | De líquido a gas |
+| Agua | 0 | De sólido a líquido | 100 | De líquido a gas |
+| Hierro | 1538 | De sólido a líquido | 2861 | De líquido a gas |
+| Alcohol (etanol) | −114 | De sólido a líquido | ~ 78,5 | De líquido a gas |
 
 ### Conductividad eléctrica
 
@@ -106,28 +150,29 @@ video: https://youtu.be/7k8uM22GIX4?si=mzwOX2AxUkS9YyRT
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp7CGb3/)
 
-La **conductividad eléctrica** es una propiedad que nos dice **qué tan buen conductor es un material**. Es decir, qué tan fácil o difícil una sustancia **conduce la corriente eléctrica**.
+```markdown
+Conductividad eléctrica
+│
+├── Medición y capacidad
+│   ├── Mide la CAPACIDAD de conducir electricidad
+│   ├── Se mide con un CONDUCTÍMETRO
+│   └── Unidad: MICROSIEMENS POR CENTÍMETRO (µS/cm)
+│
+├── Comparación de materiales
+│   ├── El COBRE es un EXCELENTE CONDUCTOR
+│   ├── Es el conductor de electricidad por excelencia
+│   └── Tiene una conductividad MUY ALTA
+│
+└── El agua como conductor
+    ├── El AGUA es un conductor REGULAR
+    ├── Puede causar daño si está en contacto con corriente eléctrica
+    ├── Diferencias:
+    │   ├── AGUA DE MAR → mejor conductora
+    │   └── AGUA POTABLE → menos conductora
+    └── Razón:
+        └── El AGUA DE MAR contiene SAL (NaCl), que mejora la conductividad
 
-**I. Medición y Capacidad**
-
-- La conductividad mide la **capacidad de una sustancia para conducir la corriente eléctrica**.
-- El instrumento usado para medirla es el **conductímetro**.
-- Las unidades en que se mide la conductividad son **microsiemens por centímetro** (microsim/cm).
-
-**II. Comparación de Materiales**
-
-- El **cobre** es un **excelente conductor de electricidad**, siendo el conductor de electricidad **por excelencia**.
-- El cobre tiene una medida de conductividad extremadamente alta.
-
-**III. El Agua como conductor**
-
-- El **agua** es un **regular** conductor de electricidad.
-- Aunque no es tan buen conductor como el cobre, el agua es suficiente para causar mucho daño si entra en contacto con aparatos conectados a la corriente, como un secador.
-- Existen diferencias de conductividad en el agua:
-    - El **agua de mar** conduce mejor la electricidad que el **agua potable**.
-    - Esto se debe a que el agua de mar contiene **sal** (NaCl, compuesto de sodio y cloro). La sal es la responsable de que el agua de mar conduzca más la electricidad.
-
-Al comparar las medidas, se observa que el cobre conduce **muchísimo más** la electricidad que el agua de mar, y más aún si se compara con el agua potable.
+```
 
 ### Propiedades cualitativas y cuantitativas
 
@@ -135,20 +180,32 @@ video: https://youtu.be/tDBfaewlmFs?si=gASvLQ82b8l-WidU
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp7Grrr/)
 
-Las propiedades de la materia se pueden clasificar en dos grandes tipos: cualitativas y cuantitativas.
+```markdown
+Propiedades de la materia
+│
+├── Se clasifican en dos grandes tipos:
+│
+├── Propiedades cualitativas
+│   ├── Describen una CUALIDAD del material
+│   ├── NO incluyen datos numéricos ni unidades de medida
+│   ├── Se basan en la OBSERVACIÓN SENSORIAL
+│   └── Ejemplos:
+│       ├── Sabor → dulce (como la leche)
+│       ├── Color → blanco (como la leche)
+│       └── Textura → cremosa (como la leche)
+│
+└── Propiedades cuantitativas
+    ├── Describen una CANTIDAD del material
+    ├── Incluyen NÚMERO y UNIDAD de medida
+    ├── Se obtienen mediante MEDICIÓN
+    └── Ejemplos:
+        ├── Masa → 2300 g
+        ├── Volumen → 1,5 L
+        ├── Densidad → 1 g/L
+        ├── Temperatura → 36,3 °C
+        └── Conductividad → 500 µS/cm
 
-| **Tipo de Propiedad** | **Descripción** | **Características** | **Ejemplos** |
-| --- | --- | --- | --- |
-| **Cualitativa** | Describen los cuerpos o materiales a través de una **cualidad**. | - No incluyen datos numéricos.
-- No usan unidades de medida.
-- Se basan en la **observación sensorial**. | - **Sabor:** dulce (como la leche).
-- **Color:** blanco (como la leche).
-- **Textura:** cremosa (como la leche). |
-| **Cuantitativa** | Describen los cuerpos mediante una **cantidad**. | - Incluyen un **número** y una **unidad de medida**.
-- Se basan en una **medición**. | - **Masa:** 2300 g.- **Volumen:** 1,5 L.
-- **Densidad: 1** g/L
-**** - **Temperatura:** 36,3 °C.
- - **Conductividad:** 500 uS/cm |
+```
 
 ### Propiedades intensivas y extensivas
 
@@ -156,12 +213,27 @@ video: https://youtu.be/pXHnvzJfsjk?si=JYfQsNKs2FIIVEy-
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp7Q5CQ/)
 
-Las propiedades de la materia se comparan según si dependen o no de la cantidad de material.
+```markdown
+Propiedades de la materia
+│
+├── Se comparan según SI DEPENDEN o NO de la cantidad de material
+│
+├── Propiedades extensivas
+│   ├── DEPENDEN de la cantidad de material
+│   ├── Si aumenta la materia, la medida CAMBIA
+│   └── Ejemplos:
+│       ├── Masa → cambia al variar la cantidad
+│       └── Volumen → cambia al aumentar o disminuir (500 mL vs 1000 mL)
+│
+└── Propiedades intensivas
+    ├── NO DEPENDEN de la cantidad de material
+    ├── La medida se mantiene igual aunque cambie el tamaño o cantidad
+    └── Ejemplos:
+        ├── Temperatura → igual en frascos grandes o pequeños
+        ├── Conductividad eléctrica → igual sin importar la cantidad
+        └── Densidad → constante (1 g/mL tanto en poca como en mucha cantidad)
 
-| **Tipo de propiedad** | **Descripción** | **Ejemplos** |
-| --- | --- | --- |
-| **Extensiva** | Son aquellas que **dependen de la cantidad de material**. Si se aumenta la cantidad de materia, **la medida cambia o aumenta**. | - **Masa:** cambia al variar la cantidad de material.- **Volumen:**cambia al aumentar o disminuir la cantidad (ejemplo: 500 mL vs 1000 mL). |
-| **Intensiva** | Son aquellas que **no dependen de la cantidad de material**. La medida se mantiene igual, aunque cambie el tamaño o cantidad. | - **Temperatura:** igual en frascos grandes o pequeños.- **Conductividad eléctrica:** se mantiene igual sin importar la cantidad de agua.- **Densidad:** constante (por ejemplo, el agua tiene 1 g/mL tanto en poca como en mucha cantidad). |
+```
 
 ## Cambios de la materia
 
@@ -171,12 +243,22 @@ video: https://youtu.be/OP3Oq7WVDh4?si=iUGFoSC91hHtEDpY
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp3jakY/)
 
-La diferencia fundamental entre los cambios físicos y los cambios químicos radica en si aparecen o no nuevas sustancias después de que ocurre la transformación.
-
-| **Tipo de cambio** | **Descripción** | **Fórmula química** | **Ejemplos** |
-| --- | --- | --- | --- |
-| **Físico** | No aparecen nuevas sustancias. La materia **solo cambia de forma, estado o tamaño**, pero **sigue siendo la misma sustancia**. | 🔹 **No cambia**: la fórmula química es la misma antes y después. | - **Cambio de fase:** el agua sólida (hielo) se vuelve líquida, pero sigue siendo **H₂O**.- **Recortar papel:**el papel cortado sigue siendo papel, solo cambia su forma. |
-| **Químico** | Aparecen **nuevas sustancias**diferentes a las originales. Ocurre una transformación interna que cambia la **composición química**. | 🔸 **Sí cambia**: la fórmula química es diferente antes y después. | - **Quemar papel:** produce **ceniza**, una sustancia nueva con fórmula distinta.- **Oxidación de un clavo:** se forma **óxido de hierro**, una sustancia nueva que recubre el metal. |
+```markdown
+Cambios de la materia
+│
+├── Cambio físico
+│   ├── NO aparecen nuevas sustancias
+│   ├── Las sustancias SON LAS MISMAS antes y después
+│   └── Ejemplos:
+│       ├── Hielo que se derrite → sigue siendo H₂O
+│       └── Recortar papel → sigue siendo papel
+│
+└── Cambio químico
+    ├── Aparecen NUEVAS SUSTANCIAS o NUEVA(S) FÓRMULA(S)
+    └── Ejemplos:
+        ├── Quemar papel → aparece ceniza
+        └── Oxidar un clavo → aparece óxido
+```
 
 ## Tipos de materia
 
@@ -186,26 +268,26 @@ video: https://youtu.be/eFAAdk2kagI?si=FTX-aiWKBH-gKi2V
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBpvdTxp/)
 
-```
-Materia
+```markdown
+MATERIA
 └── Es todo lo que tiene masa y ocupa un lugar en el espacio.
-└── Está formada por → átomos
+└── Está formada por → ÁTOMOS
 
-Átomos
+ÁTOMOS
 └── Son las piezas básicas de la materia.
 └── Se pueden comparar con → piezas de un rompecabezas
-└── Hay diferentes tipos de átomos → llamados elementos
+└── Hay diferentes tipos de átomos → llamados ELEMENTOS
 
-Elementos
+ELEMENTOS
 └── Son los distintos tipos de átomos.
 ├── Cada uno tiene un símbolo químico (H, O, Fe, etc.)
-└── Se organizan en → la Tabla Periódica
+└── Se organizan en → LA TABLA PERIÓDICA
 └── Ejemplos:
-    ├── Hidrógeno (H)
-    ├── Oxígeno (O)
-    └── Hierro (Fe)
+├── Hidrógeno (H)
+├── Oxígeno (O)
+└── Hierro (Fe)
 
-Compuestos
+COMPUESTOS
 └── Se forman cuando los átomos de diferentes elementos se combinan.
 ├── Ejemplo 1: Agua (H₂O)
 │   └── 2 átomos de hidrógeno + 1 de oxígeno
