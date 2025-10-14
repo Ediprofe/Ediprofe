@@ -33,6 +33,10 @@ export default function MarkdownContent({ content, className = '' }: MarkdownCon
           wrapper.appendChild(table);
         }
       });
+
+      // Los bloques de código con mapas conceptuales ya se renderizan correctamente
+      // con el estilo estándar de código (fondo oscuro, texto claro)
+      // No necesitamos procesamiento adicional
     }
   }, [content]);
 

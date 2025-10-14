@@ -92,14 +92,13 @@ La **temperatura** es una propiedad que nos dice **qué tan caliente o qué tan 
 - El instrumento usado para medir la temperatura se llama **termómetro**.
 - Las unidades para medir la temperatura son los **grados Celsius (°C)**, los **grados Fahrenheit (°F)**, los **Kelvin** **(K)** y los **Rankine (°R).**
 
-**Temperaturas específicas (dependen de la sustancia)**
+**Algunas temperaturas específicas (dependen de la sustancia)**
 
-- **Temperatura de fusión:** Es la temperatura a la cual un cuerpo pasa de la **fase sólida a la fase líquida**.
-    - El **agua** tiene una temperatura de fusión de **0 °C**.
-    - El **hierro** tiene una temperatura de fusión de **1,535 °C** (necesita mucho más calor que el agua para volverse líquido).
-- **Temperatura de ebullición:** Es la temperatura a la cual un cuerpo pasa de la **fase líquida a la fase gaseosa**.
-    - El **agua** pasa de fase líquida a gaseosa a **100 °C**.
-    - El **alcohol** pasa de fase líquida a gaseosa a **78 °C** (hay que aplicarle más calor al agua para que ebulla).
+| **Sustancia** | **Temperatura de fusión (°C)** | **Cambio de fase (fusión)** | **Temperatura de ebullición (°C)** | **Cambio de fase (ebullición)** |
+| --- | --- | --- | --- | --- |
+| **Agua** | 0 | De sólido a líquido | 100 | De líquido a gas |
+| **Hierro** | 1,535 | De sólido a líquido | — | — |
+| **Alcohol** | — | — | 78 | De líquido a gas |
 
 ### Conductividad eléctrica
 
@@ -118,7 +117,7 @@ La **conductividad eléctrica** es una propiedad que nos dice **qué tan buen co
 **II. Comparación de Materiales**
 
 - El **cobre** es un **excelente conductor de electricidad**, siendo el conductor de electricidad **por excelencia**.
-- El cobre tiene una medida de conductividad extremadamente alta: **58 mil millones de microsim por centímetro**.
+- El cobre tiene una medida de conductividad extremadamente alta.
 
 **III. El Agua como conductor**
 
@@ -127,9 +126,6 @@ La **conductividad eléctrica** es una propiedad que nos dice **qué tan buen co
 - Existen diferencias de conductividad en el agua:
     - El **agua de mar** conduce mejor la electricidad que el **agua potable**.
     - Esto se debe a que el agua de mar contiene **sal** (NaCl, compuesto de sodio y cloro). La sal es la responsable de que el agua de mar conduzca más la electricidad.
-- **Valores de conductividad del agua (aproximados)**:
-    - Agua potable: **200 microsiemens por centímetro**.
-    - Agua de mar: **50,000 microsiemens por centímetro**.
 
 Al comparar las medidas, se observa que el cobre conduce **muchísimo más** la electricidad que el agua de mar, y más aún si se compara con el agua potable.
 
@@ -141,26 +137,18 @@ video: https://youtu.be/tDBfaewlmFs?si=gASvLQ82b8l-WidU
 
 Las propiedades de la materia se pueden clasificar en dos grandes tipos: cualitativas y cuantitativas.
 
-**I. Propiedades Cualitativas**
-
-- Las propiedades **cualitativas** son aquellas que **describen los cuerpos o materiales a través de una cualidad**.
-- No incluyen un dato numérico.
-- Describen los cuerpos con una cualidad, sin número ni unidad de medida.
-- **Ejemplos de propiedades cualitativas:**
-    - **Sabor** (ejemplo: dulce, como en la leche).
-    - **Color** (ejemplo: blanco, como en la leche).
-    - **Textura** (ejemplo: cremosa, como en la leche).
-
-**II. Propiedades Cuantitativas**
-
-- Las propiedades **cuantitativas** son aquellas que **describen los cuerpos con una cantidad**.
-- Se describen con un **numerito y una unidad de medida**.
-- **Ejemplos de propiedades cuantitativas:**
-    - **Masa:** Describe la cantidad de material y se expresa con una medida numérica (ejemplo: 2300 g).
-    - **Volumen:** Describe el espacio ocupado con una cantidad numérica y una unidad de medida (ejemplo: 1,5 L).
-    - **Densidad:** Se describe con un número y una unidad de medida, por lo que clasifica como cuantitativa.
-    - **Temperatura:** Es una propiedad cuantitativa que incluye un numerito con la unidad de medida (ejemplo: 36,3 °C).
-    - **Conductividad:** Es una propiedad cuantitativa que se expresa con un número y una unidad de medida.
+| **Tipo de Propiedad** | **Descripción** | **Características** | **Ejemplos** |
+| --- | --- | --- | --- |
+| **Cualitativa** | Describen los cuerpos o materiales a través de una **cualidad**. | - No incluyen datos numéricos.
+- No usan unidades de medida.
+- Se basan en la **observación sensorial**. | - **Sabor:** dulce (como la leche).
+- **Color:** blanco (como la leche).
+- **Textura:** cremosa (como la leche). |
+| **Cuantitativa** | Describen los cuerpos mediante una **cantidad**. | - Incluyen un **número** y una **unidad de medida**.
+- Se basan en una **medición**. | - **Masa:** 2300 g.- **Volumen:** 1,5 L.
+- **Densidad: 1** g/L
+**** - **Temperatura:** 36,3 °C.
+ - **Conductividad:** 500 uS/cm |
 
 ### Propiedades intensivas y extensivas
 
@@ -170,22 +158,10 @@ video: https://youtu.be/pXHnvzJfsjk?si=JYfQsNKs2FIIVEy-
 
 Las propiedades de la materia se comparan según si dependen o no de la cantidad de material.
 
-**Propiedades Extensivas**
-
-- Las propiedades **extensivas** son aquellas que **dependen de la cantidad de material**.
-- Si hay poco material, se tiene una medida; si hay más material, la medida cambia o aumenta.
-- **Ejemplos de propiedades extensivas:**
-    - **Masa:** Es extensiva porque depende de la cantidad de material; si hay más material, la medida de masa cambia.
-    - **Volumen:** Es extensiva porque depende del tamaño o la cantidad de materia. Si se tiene un frasco pequeño de agua (500 mL) y uno grande (1000 mL), el volumen cambia.
-
-Propiedades Intensivas
-
-- Las propiedades **intensivas** son aquellas que **no dependen de la cantidad de material** que haya.
-- La medida no cambia independientemente de si se tiene mucho material o poco material.
-- **Ejemplos de propiedades intensivas:**
-    - **Temperatura:** No depende de cuánto material se tenga. La temperatura de un frasco pequeño de agua es la misma que la de un frasco grande (ejemplo: 36,3 °C en ambos).
-    - **Conductividad eléctrica:** La medida de conductividad es la misma sin importar si se toma un frasco pequeño o uno grande de agua.
-    - **Densidad:** Es una propiedad intensiva porque **no depende de la cantidad de materia** o el tamaño del frasco. La densidad del agua, por ejemplo, es 1 G por cada 1 ML tanto en un frasco pequeño como en uno grande. Si una piedra, sin importar su tamaño, va al fondo del agua, es porque la densidad no depende de su tamaño.
+| **Tipo de propiedad** | **Descripción** | **Ejemplos** |
+| --- | --- | --- |
+| **Extensiva** | Son aquellas que **dependen de la cantidad de material**. Si se aumenta la cantidad de materia, **la medida cambia o aumenta**. | - **Masa:** cambia al variar la cantidad de material.- **Volumen:**cambia al aumentar o disminuir la cantidad (ejemplo: 500 mL vs 1000 mL). |
+| **Intensiva** | Son aquellas que **no dependen de la cantidad de material**. La medida se mantiene igual, aunque cambie el tamaño o cantidad. | - **Temperatura:** igual en frascos grandes o pequeños.- **Conductividad eléctrica:** se mantiene igual sin importar la cantidad de agua.- **Densidad:** constante (por ejemplo, el agua tiene 1 g/mL tanto en poca como en mucha cantidad). |
 
 ## Cambios de la materia
 
@@ -197,21 +173,10 @@ video: https://youtu.be/OP3Oq7WVDh4?si=iUGFoSC91hHtEDpY
 
 La diferencia fundamental entre los cambios físicos y los cambios químicos radica en si aparecen o no nuevas sustancias después de que ocurre la transformación.
 
-**I. Cambios Físicos**
-
-- Son aquellos donde **no aparecen nuevas sustancias** entre el antes y el después del cambio.
-- La **fórmula química es la misma** antes y después del cambio, porque es la misma sustancia.
-- **Ejemplos de cambios físicos:**
-    - **Cambio de fase:** Si tenemos agua congelada (hielo) y se vuelve agua líquida, hay un cambio (de agua sólida a agua líquida), pero **sigue siendo agua**. La fórmula química es la misma en ambos estados.
-    - **Recortar papel:** Cuando se recorta un papel entero en dos o cuatro trozos, **sigue siendo papel**. La fórmula química es la misma, por lo tanto, no hay cambio químico, sino cambio físico.
-
-**II. Cambios Químicos**
-
-- Son aquellos donde **sí aparecen nuevas sustancias** entre el antes y el después del cambio.
-- Las nuevas sustancias tienen una **fórmula química diferente** a la sustancia original. Se produce un cambio químico precisamente porque cambia la fórmula química.
-- **Ejemplos de cambios químicos:**
-    - **Quemar papel:** Si se quema papel, aparece **ceniza**. La ceniza es una nueva sustancia con una fórmula química diferente a la del papel.
-    - **Oxidación de un clavo:** Si un clavo (metálico) se deja al aire libre o se moja, se **oxida**. Aunque el metal sigue presente, aparece una nueva sustancia que es el **óxido** que rodea al metal. Esto clasifica como cambio químico porque apareció una nueva sustancia (el óxido).
+| **Tipo de cambio** | **Descripción** | **Fórmula química** | **Ejemplos** |
+| --- | --- | --- | --- |
+| **Físico** | No aparecen nuevas sustancias. La materia **solo cambia de forma, estado o tamaño**, pero **sigue siendo la misma sustancia**. | 🔹 **No cambia**: la fórmula química es la misma antes y después. | - **Cambio de fase:** el agua sólida (hielo) se vuelve líquida, pero sigue siendo **H₂O**.- **Recortar papel:**el papel cortado sigue siendo papel, solo cambia su forma. |
+| **Químico** | Aparecen **nuevas sustancias**diferentes a las originales. Ocurre una transformación interna que cambia la **composición química**. | 🔸 **Sí cambia**: la fórmula química es diferente antes y después. | - **Quemar papel:** produce **ceniza**, una sustancia nueva con fórmula distinta.- **Oxidación de un clavo:** se forma **óxido de hierro**, una sustancia nueva que recubre el metal. |
 
 ## Tipos de materia
 
@@ -221,21 +186,33 @@ video: https://youtu.be/eFAAdk2kagI?si=FTX-aiWKBH-gKi2V
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBpvdTxp/)
 
-La materia está hecha de **átomos**. Los átomos son las **piezas básicas de la materia**. Se puede imaginar que la materia es un gran rompecabezas y los átomos son las diferentes piezas que lo arman.
+```
+Materia
+└── Es todo lo que tiene masa y ocupa un lugar en el espacio.
+└── Está formada por → átomos
 
-**Elementos**
+Átomos
+└── Son las piezas básicas de la materia.
+└── Se pueden comparar con → piezas de un rompecabezas
+└── Hay diferentes tipos de átomos → llamados elementos
 
-- Los átomos los hay de **diferentes tipos** o **elementos**.
-- Los elementos son los diferentes tipos de átomos.
-- Los diferentes elementos se encuentran en una tabla conocida como **tabla periódica**.
+Elementos
+└── Son los distintos tipos de átomos.
+├── Cada uno tiene un símbolo químico (H, O, Fe, etc.)
+└── Se organizan en → la Tabla Periódica
+└── Ejemplos:
+    ├── Hidrógeno (H)
+    ├── Oxígeno (O)
+    └── Hierro (Fe)
 
-**Compuestos**
-
-- Cuando los átomos **se combinan**, forman lo que se conoce como **compuestos**.
-- Un compuesto se forma cuando se combinan **átomos de diferentes elementos**.
-- **Ejemplos de compuestos:**
-    - **Agua ($\text{H}_2\text{O}$):** Esta sustancia clasifica como compuesto porque combina átomos de diferentes elementos: dos átomos de hidrógeno ($\text{H}$) y uno de oxígeno ($\text{O}$).
-    - **Óxido de hierro ($\text{Fe}_2\text{O}_3$):** Este compuesto se forma por la combinación de dos átomos del elemento hierro ($\text{Fe}$) y tres átomos del elemento oxígeno ($\text{O}$). El óxido de hierro es muy común en estructuras metálicas como los puentes.
+Compuestos
+└── Se forman cuando los átomos de diferentes elementos se combinan.
+├── Ejemplo 1: Agua (H₂O)
+│   └── 2 átomos de hidrógeno + 1 de oxígeno
+├── Ejemplo 2: Óxido de hierro (Fe₂O₃)
+│   └── 2 átomos de hierro + 3 de oxígeno
+└── Los compuestos forman la mayoría de las sustancias de la naturaleza.
+```
 
 ### Sustancias puras y mezclas
 
