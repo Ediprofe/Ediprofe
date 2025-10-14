@@ -1,6 +1,6 @@
 ---
-title: "Separación de mezclas"
-description: "Métodos físicos y químicos para separar los componentes de una mezcla"
+title: "Estructura atómica"
+description: "Composición, estructura de los átomos y organización en la tabla periódica"
 ---
 
 ## Recursos de la unidad
@@ -53,7 +53,11 @@ Estructura atómica
     └── Permite identificar el número de PROTONES de cada elemento
 ```
 
-### Practica
+### Completa la tabla
+
+video: https://youtu.be/JN-802f841Y?si=Ix7FVALfXJFKgv01
+
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJPDnqf/)
 
 Completa la siguiente tabla:
 
@@ -63,10 +67,6 @@ Completa la siguiente tabla:
 | Átomo 2 | 22 |  | Titanio |
 | Átomo 3 | 88 |  | Radio |
 | Átomo 4 | 82 |  | Plomo |
-
-video: https://youtu.be/JN-802f841Y?si=Ix7FVALfXJFKgv01
-
-[Ver en Tiktok](https://vt.tiktok.com/ZSBJPDnqf/)
 
 ## Átomos neutros e iones
 
