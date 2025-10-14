@@ -53,11 +53,7 @@ Estructura atómica
     └── Permite identificar el número de PROTONES de cada elemento
 ```
 
-### Completa la tabla
-
-video: https://youtu.be/JN-802f841Y?si=Ix7FVALfXJFKgv01
-
-[Ver en Tiktok](https://vt.tiktok.com/ZSBJPDnqf/)
+### Practica
 
 Completa la siguiente tabla:
 
@@ -67,6 +63,10 @@ Completa la siguiente tabla:
 | Átomo 2 | 22 |  | Titanio |
 | Átomo 3 | 88 |  | Radio |
 | Átomo 4 | 82 |  | Plomo |
+
+video: https://youtu.be/JN-802f841Y?si=Ix7FVALfXJFKgv01
+
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJPDnqf/)
 
 ## Átomos neutros e iones
 

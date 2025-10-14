@@ -176,16 +176,40 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
         allVideos.push(...tabVideos);
       }
       
-      // Remover líneas de video del contenido para no duplicar
-      const contentWithoutVideos = content
-        .split('\n')
-        .filter(line => !line.trim().startsWith('video:'))
-        .join('\n')
-        .trim();
+      // Dividir contenido en: antes del video y después del video
+      const lines = content.split('\n');
+      const videoLineIndex = lines.findIndex(line => line.trim().startsWith('video:'));
       
-      // Convertir Markdown a HTML
-      if (contentWithoutVideos) {
-        currentTab.content = await markdownToHtml(contentWithoutVideos);
+      let contentBeforeVideo = '';
+      let contentAfterVideo = '';
+      
+      if (videoLineIndex !== -1) {
+        // Hay video: dividir contenido
+        contentBeforeVideo = lines.slice(0, videoLineIndex).join('\n').trim();
+        contentAfterVideo = lines.slice(videoLineIndex + 1).join('\n').trim();
+      } else {
+        // No hay video: todo el contenido va antes
+        contentBeforeVideo = content;
+      }
+      
+      // Convertir ambas partes a HTML
+      let htmlContent = '';
+      
+      if (contentBeforeVideo) {
+        htmlContent += await markdownToHtml(contentBeforeVideo);
+      }
+      
+      // Marcador especial para indicar dónde va el video
+      if (tabVideos.length > 0) {
+        htmlContent += '\n<!-- VIDEO_PLACEHOLDER -->\n';
+      }
+      
+      if (contentAfterVideo) {
+        htmlContent += await markdownToHtml(contentAfterVideo);
+      }
+      
+      if (htmlContent.trim()) {
+        currentTab.content = htmlContent;
       }
       
       currentSection.tabs.push(currentTab);
@@ -207,23 +231,48 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
         const contentText = currentContent.join('\n');
         const videos = extractVideos(contentText);
         
-        // Remover líneas de video del contenido
-        const contentWithoutVideos = currentContent
-          .filter(line => !line.trim().startsWith('video:'))
-          .join('\n')
-          .trim();
+        // Dividir contenido en: antes del video y después del video
+        const videoLineIndex = currentContent.findIndex(line => line.trim().startsWith('video:'));
+        
+        let contentBeforeVideo = '';
+        let contentAfterVideo = '';
+        
+        if (videoLineIndex !== -1) {
+          // Hay video: dividir contenido
+          contentBeforeVideo = currentContent.slice(0, videoLineIndex).join('\n').trim();
+          contentAfterVideo = currentContent.slice(videoLineIndex + 1).join('\n').trim();
+        } else {
+          // No hay video: todo el contenido va antes
+          contentBeforeVideo = contentText;
+        }
+        
+        // Convertir ambas partes a HTML
+        let htmlContent = '';
+        
+        if (contentBeforeVideo) {
+          htmlContent += await markdownToHtml(contentBeforeVideo);
+        }
+        
+        // Marcador especial para indicar dónde va el video
+        if (videos.length > 0) {
+          htmlContent += '\n<!-- VIDEO_PLACEHOLDER -->\n';
+        }
+        
+        if (contentAfterVideo) {
+          htmlContent += await markdownToHtml(contentAfterVideo);
+        }
         
         // Solo crear la tab si hay contenido o videos
-        if (contentWithoutVideos || videos.length > 0) {
+        if (htmlContent.trim() || videos.length > 0) {
           const autoTab: Tab = {
             id: currentSection.id,
             label: currentSection.title,
-            type: videos.length > 0 && contentWithoutVideos ? 'mixed' : videos.length > 0 ? 'videos' : 'content',
+            type: videos.length > 0 && htmlContent ? 'mixed' : videos.length > 0 ? 'videos' : 'content',
             videos: videos.length > 0 ? videos : undefined,
           };
           
-          if (contentWithoutVideos) {
-            autoTab.content = await markdownToHtml(contentWithoutVideos);
+          if (htmlContent.trim()) {
+            autoTab.content = htmlContent;
           }
           
           currentSection.tabs.push(autoTab);

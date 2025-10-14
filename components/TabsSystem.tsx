@@ -95,25 +95,66 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
       >
         {activeTab && (
           <>
-            {/* Mostrar videos si la tab los tiene */}
-            {activeTab.videos && activeTab.videos.length > 0 && (
-              <div className="videos-section mb-10">
-                <div className={`grid gap-8 ${activeTab.videos.length === 1 ? 'grid-cols-1 max-w-5xl mx-auto' : 'grid-cols-1 lg:grid-cols-2'}`}>
-                  {activeTab.videos.map((video, index) => (
-                    <div key={index} className="video-wrapper">
-                      <VideoEmbed video={video} />
+            {activeTab.content && activeTab.videos && activeTab.videos.length > 0 ? (
+              // Si hay contenido Y videos, dividir por el marcador
+              (() => {
+                const parts = activeTab.content.split('<!-- VIDEO_PLACEHOLDER -->');
+                const contentBefore = parts[0]?.trim();
+                const contentAfter = parts[1]?.trim();
+                
+                return (
+                  <>
+                    {/* Contenido antes del video */}
+                    {contentBefore && (
+                      <MarkdownContent
+                        content={contentBefore}
+                        className="prose prose-lg max-w-none mb-10"
+                      />
+                    )}
+                    
+                    {/* Videos */}
+                    <div className="videos-section mb-10">
+                      <div className={`grid gap-8 ${activeTab.videos.length === 1 ? 'grid-cols-1 max-w-5xl mx-auto' : 'grid-cols-1 lg:grid-cols-2'}`}>
+                        {activeTab.videos.map((video, index) => (
+                          <div key={index} className="video-wrapper">
+                            <VideoEmbed video={video} />
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Mostrar contenido HTML */}
-            {activeTab.content && (
-              <MarkdownContent
-                content={activeTab.content}
-                className="prose prose-lg max-w-none"
-              />
+                    
+                    {/* Contenido después del video */}
+                    {contentAfter && (
+                      <MarkdownContent
+                        content={contentAfter}
+                        className="prose prose-lg max-w-none"
+                      />
+                    )}
+                  </>
+                );
+              })()
+            ) : (
+              // Si solo hay contenido O solo videos, mostrar normalmente
+              <>
+                {activeTab.content && (
+                  <MarkdownContent
+                    content={activeTab.content}
+                    className="prose prose-lg max-w-none mb-10"
+                  />
+                )}
+                
+                {activeTab.videos && activeTab.videos.length > 0 && (
+                  <div className="videos-section mb-10">
+                    <div className={`grid gap-8 ${activeTab.videos.length === 1 ? 'grid-cols-1 max-w-5xl mx-auto' : 'grid-cols-1 lg:grid-cols-2'}`}>
+                      {activeTab.videos.map((video, index) => (
+                        <div key={index} className="video-wrapper">
+                          <VideoEmbed video={video} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
             )}
           </>
         )}
