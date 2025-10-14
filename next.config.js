@@ -5,6 +5,9 @@ const nextConfig = {
   // Usar SSG con generateStaticParams
   trailingSlash: true,
   
+  // Forzar rebuild completo - mostrar todas las materias
+  // Última actualización: 2025-10-14
+  
   // Configuración de compilación
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production', // Remover console.log en producción
