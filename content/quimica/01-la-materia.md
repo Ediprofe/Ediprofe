@@ -316,7 +316,7 @@ Clasificación de la materia
 │   ├── Se dividen en:
 │   │
 │   ├── 1. ELEMENTOS
-│   │   ├── Formados por un solo tipo de ÁTOMO o ELEMENTO
+│   │   ├── Formados por 1 TIPO DE ÁTOMO (1 ELEMENTO)
 │   │   ├── Ejemplos:
 │   │   │   ├── H₂ → solo hidrógeno
 │   │   │   ├── O₂ → solo oxígeno
