@@ -269,31 +269,33 @@ video: https://youtu.be/eFAAdk2kagI?si=FTX-aiWKBH-gKi2V
 [Ver en Tiktok](https://vt.tiktok.com/ZSBpvdTxp/)
 
 ```markdown
-MATERIA
-└── Es todo lo que tiene masa y ocupa un lugar en el espacio.
-└── Está formada por → ÁTOMOS
+Materia
+│
+├── Es todo lo que TIENE MASA y OCUPA UN LUGAR en el espacio
+└── Está formada por ÁTOMOS
+    │
+    ├── Átomos
+    │   ├── Son las PIEZAS BÁSICAS de la materia
+    │   ├── Se pueden comparar con piezas de un ROMPECABEZAS
+    │   └── Existen diferentes tipos → llamados ELEMENTOS
+    │
+    ├── Elementos
+    │   ├── Son los distintos TIPOS DE ÁTOMOS
+    │   ├── Cada uno tiene un SÍMBOLO QUÍMICO (H, O, Fe, etc.)
+    │   ├── Se organizan en la TABLA PERIÓDICA
+    │   └── Ejemplos:
+    │       ├── Hidrógeno (H)
+    │       ├── Oxígeno (O)
+    │       └── Hierro (Fe)
+    │
+    └── Compuestos
+        ├── Se forman al COMBINARSE átomos de diferentes elementos
+        ├── Ejemplo 1: Agua (H₂O)
+        │   └── 2 átomos de hidrógeno + 1 de oxígeno
+        ├── Ejemplo 2: Óxido de hierro (Fe₂O₃)
+        │   └── 2 átomos de hierro + 3 de oxígeno
+        └── Los COMPUESTOS forman la mayoría de las SUSTANCIAS de la naturaleza
 
-ÁTOMOS
-└── Son las piezas básicas de la materia.
-└── Se pueden comparar con → piezas de un rompecabezas
-└── Hay diferentes tipos de átomos → llamados ELEMENTOS
-
-ELEMENTOS
-└── Son los distintos tipos de átomos.
-├── Cada uno tiene un símbolo químico (H, O, Fe, etc.)
-└── Se organizan en → LA TABLA PERIÓDICA
-└── Ejemplos:
-├── Hidrógeno (H)
-├── Oxígeno (O)
-└── Hierro (Fe)
-
-COMPUESTOS
-└── Se forman cuando los átomos de diferentes elementos se combinan.
-├── Ejemplo 1: Agua (H₂O)
-│   └── 2 átomos de hidrógeno + 1 de oxígeno
-├── Ejemplo 2: Óxido de hierro (Fe₂O₃)
-│   └── 2 átomos de hierro + 3 de oxígeno
-└── Los compuestos forman la mayoría de las sustancias de la naturaleza.
 ```
 
 ### Sustancias puras y mezclas
@@ -302,50 +304,52 @@ video: https://youtu.be/6BF31Hrphng?si=vlcgL_efHDL-DIze
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBpvDwev/)
 
-La materia puede clasificarse como **uniforme** o **no uniforme**.
-
-**Sustancias puras (materia uniforme)**
-
-- La materia **uniforme** es aquella que tiene un **único componente** o se describe con una **única fórmula**.
-- Se llama **sustancia pura**.
-- Las sustancias puras pueden ser de dos tipos: **elementos** o **compuestos**.
-    
-    **1. Elementos:**
-    
-    - Son sustancias puras con una sola fórmula que contienen **un solo tipo de átomo** o un **solo elemento**.
-    - Ejemplos de elementos:
-        - $\text{H}_2$ (dos de hidrógeno, pero de un solo tipo de átomo).
-        - $\text{O}_2$ (dos de oxígeno, pero solo de oxígeno).
-        - $\text{N}_2$ (dos de nitrógeno, pero solo de nitrógeno).
-        - $\text{C}$ (carbono), $\text{Na}$ (sodio), $\text{Fe}$ (hierro).
-    - Los elementos se encuentran en la **tabla periódica**.
-    
-    **2. Compuestos:**
-    
-    - Son sustancias puras con una **única fórmula** que contienen **átomos de diferentes elementos**.
-    - Ejemplos de compuestos:
-        - **Agua ($\text{H}_2\text{O}$):** Contiene átomos de hidrógeno ($\text{H}$) y oxígeno ($\text{O}$).
-        - Sodio y cloro ($\text{NaCl}$), la sal de cocina.
-        - **Dióxido de carbono ($\text{CO}_2$):** Contiene carbono ($\text{C}$) y oxígeno ($\text{O}$).
-        - Óxido de silicio ($\text{SiO}_2$), que es el componente mayoritario de la arena.
-        - Amoníaco ($\text{NH}_3$).
-
-**Mezclas (materia no uniforme)**
-
-- La materia **no uniforme** significa que hay **dos o más componentes** o **dos o más fórmulas**.
-- Cuando hay dos o más componentes (sean elementos o compuestos), se le llama **mezcla**.
-- **Ejemplos de mezclas:**
-    - **Aire:** Contiene, por ejemplo, oxígeno ($\text{O}_2$), agua ($\text{H}_2\text{O}$) y nitrógeno ($\text{N}_2$), lo que suma tres componentes/fórmulas (dos elementos y un compuesto).
-    - **Agua salada:** Es una mezcla de agua ($\text{H}_2\text{O}$) y sal ($\text{NaCl}$), sumando dos compuestos.
-    - Una mezcla de agua y óxido de silicio ($\text{SiO}_2$), que sería agua y arena.
-
-**Tipos de Mezclas**
-
-- **Mezclas homogéneas:** No se distinguen sus componentes **a simple vista** (ej. el aire o el agua salada bien mezclada).
-- **Mezclas heterogéneas:** **Sí se distinguen sus componentes a simple vista** (ej. el agua y el aceite, o el agua y la arena, ya que la arena no es soluble en agua).
-
-**Cambios en las Mezclas**
-
-- Los procesos de **separación de mezclas** (ej. separar el agua de la sal) son **procesos físicos** porque las fórmulas ($\text{H}_2\text{O}$ y $\text{NaCl}$) **siguen siendo las mismas** antes y después de la separación; no aparecen nuevas sustancias.
-- Los procesos de **formación de mezclas** (ej. mezclar el agua y la sal) también son **procesos físicos**, porque las sustancias siguen siendo las mismas, solo que están combinadas.
-- En contraste, la **formación de un compuesto a partir de sus elementos** (ej. $\text{H}_2$ y $\text{O}_2$ formando $\text{H}_2\text{O}$) es un **proceso químico** porque aparece una **nueva fórmula** o sustancia (el agua) que no estaba presente antes.
+```markdown
+Clasificación de la materia
+│
+├── La materia puede ser:
+│   ├── UNIFORME → Sustancia pura
+│   └── NO UNIFORME → Mezcla
+│
+├── Sustancias puras (materia uniforme)
+│   ├── Tienen un ÚNICO COMPONENTE o una ÚNICA FÓRMULA
+│   ├── Se dividen en:
+│   │
+│   ├── 1. ELEMENTOS
+│   │   ├── Formados por un solo tipo de ÁTOMO o ELEMENTO
+│   │   ├── Ejemplos:
+│   │   │   ├── H₂ → solo hidrógeno
+│   │   │   ├── O₂ → solo oxígeno
+│   │   │   ├── N₂ → solo nitrógeno
+│   │   │   ├── C → carbono
+│   │   │   ├── Na → sodio
+│   │   │   └── Fe → hierro
+│   │   └── Se encuentran en la TABLA PERIÓDICA
+│   │
+│   └── 2. COMPUESTOS
+│       ├── Formados por ÁTOMOS de DIFERENTES ELEMENTOS
+│       ├── Tienen una ÚNICA FÓRMULA
+│       ├── Ejemplos:
+│       │   ├── Agua (H₂O) → hidrógeno + oxígeno
+│       │   ├── Sal (NaCl) → sodio + cloro
+│       │   ├── Dióxido de carbono (CO₂) → carbono + oxígeno
+│       │   ├── Óxido de silicio (SiO₂) → componente de la arena
+│       │   └── Amoníaco (NH₃)
+│
+├── Mezclas (materia no uniforme)
+│   ├── Contienen DOS O MÁS COMPONENTES o FÓRMULAS
+│   ├── Se forman al combinar sustancias SIN reaccionar químicamente
+│   ├── Ejemplos:
+│   │   ├── Aire → O₂ + H₂O + N₂
+│   │   ├── Agua salada → H₂O + NaCl
+│   │   └── Agua con arena → H₂O + SiO₂
+│   │
+│   └── Tipos de mezclas
+│       ├── HOMOGÉNEAS → No se distinguen los componentes (ej. aire, agua salada)
+│       └── HETEROGÉNEAS → Sí se distinguen los componentes (ej. agua y aceite, agua y arena)
+│
+└── Cambios en las mezclas
+    ├── SEPARACIÓN DE MEZCLAS → Proceso FÍSICO (las fórmulas NO cambian)
+    ├── FORMACIÓN DE MEZCLAS → Proceso FÍSICO (las sustancias se combinan sin reaccionar)
+    └── FORMACIÓN DE COMPUESTOS → Proceso QUÍMICO (aparecen NUEVAS sustancias y fórmulas)
+```
