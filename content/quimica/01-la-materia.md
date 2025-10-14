@@ -129,12 +129,25 @@ video: https://youtu.be/XLy85EFdaHY?si=VhAcxwBP1HCLmypg
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp7ER6C/)
 
-La **temperatura** es una propiedad que nos dice **qué tan caliente o qué tan frío se encuentra un cuerpo**. Más calor implica más temperatura, y más frío significa menos temperatura.
-
-**Medición y Unidades**
-
-- El instrumento usado para medir la temperatura se llama **termómetro**.
-- Las unidades para medir la temperatura son los **grados Celsius (°C)**, los **grados Fahrenheit (°F)**, los **Kelvin** **(K)** y los **Rankine (°R).**
+```markdown
+Temperatura
+│
+├── Es una PROPIEDAD DE LA MATERIA
+│   └── Indica qué tan CALIENTE o FRÍO está un cuerpo
+│
+├── Relación
+│   ├── MÁS calor → MAYOR temperatura
+│   └── MENOS calor → MENOR temperatura
+│
+├── Medición
+│   └── Se mide con un TERMÓMETRO
+│
+└── Unidades
+    ├── Grados Celsius (°C)
+    ├── Grados Fahrenheit (°F)
+    ├── Kelvin (K)
+    └── Rankine (°R)
+```
 
 **Algunas temperaturas específicas (dependen de la sustancia)**
 
