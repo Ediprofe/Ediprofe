@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import type { Section } from '@/types/content';
 import VideoEmbed from './VideoEmbed';
 import MarkdownContent from './MarkdownContent';
+import CollapsibleContent from './CollapsibleContent';
 
 interface TabsSystemProps {
   section: Section;
@@ -123,11 +124,11 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
                       </div>
                     </div>
                     
-                    {/* Contenido después del video */}
+                    {/* Contenido después del video (plegado por defecto) */}
                     {contentAfter && (
-                      <MarkdownContent
+                      <CollapsibleContent
                         content={contentAfter}
-                        className="prose prose-lg max-w-none"
+                        className="mt-4"
                       />
                     )}
                   </>
