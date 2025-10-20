@@ -119,7 +119,7 @@ export interface ParsedMarkdown {
 /**
  * Orden de visualización de las materias
  */
-export const SUBJECT_ORDER = ['quimica', 'fisica', 'ciencias', 'matematicas', 'biologia', 'historia'];
+export const SUBJECT_ORDER = ['quimica', 'fisica', 'ciencias', 'matematicas'];
 
 /**
  * Sistema de colores centralizado por materia
@@ -190,17 +190,5 @@ export const SUBJECT_CONFIG: Record<string, { name: string; icon: string; color:
     icon: '🌍',
     color: 'ciencias',
     description: 'Biología, geología y ecología',
-  },
-  biologia: {
-    name: 'Biología',
-    icon: '🧬',
-    color: 'biologia',
-    description: 'Estudio de los seres vivos',
-  },
-  historia: {
-    name: 'Historia',
-    icon: '📚',
-    color: 'historia',
-    description: 'Eventos y procesos históricos',
   },
 };
