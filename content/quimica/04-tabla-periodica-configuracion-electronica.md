@@ -2,6 +2,7 @@
 title: "Tabla periódica y configuración electrónica"
 description: "Ubicación de elementos en la tabla periódica y relación con la distribución de sus electrones en capas electrónicas"
 ---
+
 ## Recursos de la unidad
 
 https://youtube.com/playlist?list=PLvciGh3Wfg788agS3kKgJ1OZVGgvyyXzC&si=r0YQG4Iqmgh5TpJe
@@ -109,21 +110,19 @@ video: https://youtu.be/Pna6jAm9fBE?si=0Jw901ZD5lH9G02p
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBsYMC8Y/)
 
-```markdown
-CONFIGURACIÓN ELECTRÓNICA, FILAS Y PERIODOS
-│
-├── DISTRIBUCIÓN DE ELECTRONES
-│   ├── Los ELECTRONES se encuentran en la PERIFERIA, rodeando el NÚCLEO.
-│   ├── Se organizan en CAPAS, ÓRBITAS o NIVELES DE ENERGÍA.
-│   └── Cada capa o nivel es una ÓRBITA, similar a cómo los PLANETAS orbitan el SOL.
-│
-├── PRINCIPIO CLAVE (RELACIÓN)
-│   ├── El NÚMERO DE ÓRBITAS o NIVELES DE ENERGÍA
-│   └── COINCIDE con el NÚMERO DE SU FILA o PERIODO en la TABLA PERIÓDICA.
-│
-└── PERIODO
-    └── Es la FILA horizontal en la tabla periódica.
-```
+A. Distribución de electrones
+
+1. Los **electrones** se encuentran en la **periferia**, rodeando el **núcleo**.
+2. Se organizan en **capas**, **órbitas** o **niveles de energía**.
+3. Cada capa o nivel es una órbita, similar a cómo los **planetas** orbitan el **sol**.
+
+B. Principio clave: Nivel de energía y periodo
+
+1. El **periodo** es la **fila horizontal** en la tabla periódica.
+2. El **número de órbitas** o **niveles de energía** de un elemento **coincide** con el **número de su fila** o **periodo** en la tabla periódica.
+    - Este principio es fundamental: por ejemplo, si un átomo de **potasio** tiene **cuatro capas** de electrones (nivel 1, 2, 3 y 4), se ubica en el p**eriodo cuatro**.
+    - Otro ejemplo es el **oxígeno**, que tiene **dos capas** o niveles de energía, por lo que se ubica en el p**eriodo dos**.
+    - Un elemento con **una capa** de electrones, como el **hidrógeno**, está en el p**eriodo uno**.
 
 ## Distribución de los electrones
 
