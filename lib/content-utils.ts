@@ -67,7 +67,8 @@ export async function getAllSubjectsWithUnits(): Promise<Subject[]> {
   const cacheKey = getCacheKey('all-subjects');
   
   return cache.getOrCompute(cacheKey, async () => {
-    const subjectSlugs = getAllSubjectsFromFs();
+    // Incluir todas las materias configuradas, aunque la carpeta no exista
+    const subjectSlugs = Object.keys(SUBJECT_CONFIG);
     const subjects: Subject[] = [];
 
     for (const slug of subjectSlugs) {
