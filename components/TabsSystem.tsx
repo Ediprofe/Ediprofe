@@ -16,6 +16,8 @@ interface TabsSystemProps {
 
 export default function TabsSystem({ section, className = '' }: TabsSystemProps) {
   const [activeTabId, setActiveTabId] = useState(section.tabs[0]?.id || '');
+  // Estado de plegado por pestaña (granular, persistente dentro del H2)
+  const [expandedMap, setExpandedMap] = useState<Record<string, boolean>>({});
 
   // Observar cambios en el hash de la URL para activar tabs
   useEffect(() => {
@@ -129,6 +131,8 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
                       <CollapsibleContent
                         content={contentAfter}
                         className="mt-4"
+                        expanded={!!expandedMap[activeTabId]}
+                        onToggle={() => setExpandedMap((m) => ({ ...m, [activeTabId]: !m[activeTabId] }))}
                       />
                     )}
                   </>
