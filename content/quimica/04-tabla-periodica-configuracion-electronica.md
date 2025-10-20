@@ -113,7 +113,7 @@ video: https://youtu.be/Pna6jAm9fBE?si=0Jw901ZD5lH9G02p
 A. Distribución de electrones
 
 1. Los **electrones** se encuentran en la **periferia**, rodeando el **núcleo**.
-2. Se organizan en **capas**, **órbitas** o **niveles de energía**.
+2. Se organizan en **capas**, **órb itas** o **niveles de energía**.
 3. Cada capa o nivel es una órbita, similar a cómo los **planetas** orbitan el **sol**.
 
 B. Principio clave: Nivel de energía y periodo
