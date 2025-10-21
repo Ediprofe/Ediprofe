@@ -175,13 +175,13 @@ export const SUBJECT_CONFIG: Record<string, { name: string; icon: string; color:
   },
   fisica: {
     name: 'Física',
-    icon: '🧲',
+    icon: '🚀',
     color: 'fisica',
     description: 'Estudio de las leyes fundamentales del universo',
   },
   matematicas: {
     name: 'Matemáticas',
-    icon: '🔢',
+    icon: '🧮',
     color: 'matematicas',
     description: 'Números, álgebra, geometría y cálculo',
   },
