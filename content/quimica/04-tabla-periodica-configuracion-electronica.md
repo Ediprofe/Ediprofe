@@ -453,3 +453,67 @@ video: https://youtu.be/pz3yrSXOQNc?si=WAPuwm6nERxBFKjL
     - **Na⁺** y **N³⁻** → configuración **idéntica a la del neón ([Ne])**.
 2. **Iones que terminan con 18 electrones:**
     - **Ca²⁺** y **S²⁻** → configuración **idéntica a la del argón ([Ar])**.
+
+## Propiedades periódicas
+
+## Propiedades periódicas
+
+video: https://youtu.be/0HSvEEy9aWk?si=Iu7PYtE_71Zla1SJ
+
+[Ver en Tiktok](https://vt.tiktok.com/ZSSa4TAwn/)
+
+**A. Definición**
+
+1. **Propiedades periódicas:** Son **características de los elementos químicos** que **varían de forma predecible** a lo largo de la tabla periódica.
+2. **Ejemplos:** Incluyen el radio o tamaño atómico, la electronegatividad, la afinidad electrónica y la energía de ionización.
+
+---
+
+**B. Radio o tamaño atómico**
+
+1. **Definición:** Es la distancia entre el **núcleo** y la **última capa de electrones**, también conocida como **capa de valencia**.
+    - Mide **qué tan grande o chiquito es el átomo**.
+2. **Tendencia en la tabla periódica:**
+    - El tamaño atómico **aumenta hacia abajo** en la tabla periódica.
+    - El tamaño atómico **aumenta hacia la izquierda** en la tabla periódica.
+3. **Análisis:**
+    - Al moverse hacia abajo en un grupo (columna), los átomos tienen **más capas de electrones**.
+    - Más capas de electrones resultan en un átomo más grande. Por ejemplo, el Sodio tiene tres capas, el Potasio tiene cuatro, y el Rubidio tiene cinco.
+
+---
+
+**C. Electronegatividad**
+
+1. **Definición:** Es la medida de **cuánto atraen los electrones** los átomos cuando están participando en un enlace químico.
+2. **Tendencia en la tabla periódica:**
+    - **Aumenta hacia la derecha**.
+    - **Aumenta hacia arriba**.
+3. **Relación con la estructura electrónica:**
+    - La electronegatividad es mayor donde están los **no metales** (a la derecha), ya que estos tienden a **ganar electrones** para cumplir la regla del octeto (parecerse a los gases nobles).
+    - El aumento hacia arriba se debe a que, con **menos capas de electrones**, los electrones están **más cerca del núcleo positivo** y tienen **más atracción**.
+
+---
+
+**D. Afinidad electrónica**
+
+1. **Definición:** Se refiere al **gusto o afinidad que tienen los átomos por los electrones**. Es la **energía liberada** por un átomo neutro cuando se le entrega un electrón.
+2. **Tendencia en la tabla periódica:**
+    - Se comporta de **igual manera que la electronegatividad**.
+    - **Aumenta hacia la derecha** (hacia los no metales).
+    - **Aumenta hacia arriba**.
+
+---
+
+**E. Energía de ionización**
+
+1. **Definición:** Es la **energía necesaria para quitarle o robarle un electrón** a un átomo. También es la energía requerida para **formar un catión** (átomo con carga positiva al perder un electrón).
+2. **Tendencia y justificación:**
+    - **Aumenta hacia la derecha**. Esto es porque se necesita **mucha energía** para quitar un electrón a un **no metal**(ya que a ellos les gusta ganar electrones).
+    - **Aumenta hacia arriba**. No se necesita mucha energía para robar un electrón a un metal, ya que a estos les gusta perderlos.
+
+---
+
+**F. Resumen de las tendencias generales**
+
+1. **Radio atómico:** Aumenta en dirección **hacia abajo y hacia la izquierda**.
+2. **Electronegatividad, energía de ionización y afinidad electrónica:** Aumentan en dirección **hacia arriba y hacia la derecha**.
