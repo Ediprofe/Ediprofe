@@ -5,266 +5,309 @@ description: "Métodos físicos y químicos para separar los componentes de una 
 
 ## Recursos de la unidad
 
-https://youtube.com/playlist?list=PLvciGh3Wfg78vZUGljsfv07Ub0D_Mh36H&si=Mkb0iae0JXsdvN3D
+https://drive.google.com/drive/folders/1IFK_fajTjTI7XGdSh7XVemZp-dJ_HNeZ
 
-https://drive.google.com/drive/folders/1OOaJxFVj5hbTbGkbEAnOpynTr6Z6hmd_?usp=drive_link
+https://www.youtube.com/playlist?list=PLvciGh3Wfg79aeFuQjc_uTRlO0tbBfaq8&si=5I6HfgNxUkVI2PI-
 
-## Número atómico
+## Introducción
 
-### Partículas subatómicas y número atómico
+### Introducción
 
-video: https://youtu.be/efOK-ZVm0NI
+video: https://youtu.be/T--EeLCHf9M?si=jQ6GZ6PL2M5ETkb-
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSBJPBDcg/)
+**A. Definición**
 
-```markdown
-Estructura atómica
-│
-├── Los ÁTOMOS se dividen en DOS ZONAS PRINCIPALES:
-│   ├── Zona interna → NÚCLEO
-│   └── Zona externa → PERIFERIA
-│
-├── Núcleo
-│   ├── Es la parte CENTRAL del átomo
-│   ├── Contiene las partículas subatómicas:
-│   │   ├── PROTONES → carga POSITIVA (+)
-│   │   └── NEUTRONES → carga NEUTRA (0)
-│
-├── Periferia
-│   ├── Es la zona que RODEA al núcleo
-│   └── Contiene ELECTRONES → carga NEGATIVA (−)
-│
-├── Número atómico (Z)
-│   ├── Representa el NÚMERO DE PROTONES del átomo
-│   ├── Se simboliza con la letra Z
-│   ├── Z = número de PROTONES en el núcleo
-│   └── Identifica a qué ELEMENTO pertenece un átomo
-│
-├── Ejemplos de número atómico
-│   ├── Z = 1 → HIDRÓGENO → 1 protón
-│   ├── Z = 2 → HELIO → 2 protones
-│   ├── Z = 3 → LITIO → 3 protones
-│   ├── Z = 4 → BERILIO → 4 protones
-│   └── Z = 5 → BORO → 5 protones
-│
-└── Tabla periódica
-    ├── Organiza los ELEMENTOS por su NÚMERO ATÓMICO (Z)
-    ├── Se lee de IZQUIERDA a DERECHA y de ARRIBA hacia ABAJO
-    └── Permite identificar el número de PROTONES de cada elemento
-```
+1. Las **mezclas** son **combinaciones de dos o más componentes.**
+2. Se **diferencian de las sustancias puras**, ya que estas últimas tienen **un solo componente.**
 
-### Practica
+---
 
-Completa la siguiente tabla:
+**B. Tipos de mezclas**
 
-| Átomo | Número de protones | Número atómico ($Z$) | Elemento al que pertenece |
-| --- | --- | --- | --- |
-| Átomo 1 | 7 |  | Nitrógeno |
-| Átomo 2 | 22 |  | Titanio |
-| Átomo 3 | 88 |  | Radio |
-| Átomo 4 | 82 |  | Plomo |
+1. **Homogéneas:**
+    - Los **componentes no se distinguen.**
+    - Tienen **apariencia uniforme.**
+    - **Ejemplo:** aire, agua salada.
+2. **Heterogéneas:**
+    - Los **componentes sí se distinguen.**
+    - No tienen una apariencia uniforme.
+    - **Ejemplo:** agua con arena, ensalada, granito.
 
-video: https://youtu.be/JN-802f841Y?si=Ix7FVALfXJFKgv01
+---
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSBJPDnqf/)
+**C. Métodos de separación**
 
-## Átomos neutros e iones
+1. Se utilizan para **separar los componentes** de una mezcla.
+2. Son **procesos físicos**, ya que **no cambian las sustancias** originales.
 
-### Atómos neutros e iones
+## Tamizado
 
-video: https://youtu.be/ruLNzfexcJs?si=OPLqe79z7F6xUHVR
+video: https://youtu.be/ZB3H8VlNBWY?si=3B_hjKvUYd8S8DZV
 
-[Ver en Titkok](https://vt.tiktok.com/ZSBJPmqD9/)
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJDCbPR/)
 
-```markdown
-Clasificación de los átomos
-│
-├── Se basa en la COMPARACIÓN entre:
-│   ├── PROTONES → carga POSITIVA (+), ubicados en el NÚCLEO
-│   └── ELECTRONES → carga NEGATIVA (−), ubicados en la PERIFERIA
-│
-├── ÁTOMOS NEUTROS
-│   ├── Tienen IGUAL cantidad de PROTONES y ELECTRONES
-│   ├── Carga total = 0
-│   ├── Fórmula: CARGA = PROTONES − ELECTRONES = 0
-│   ├── Ejemplos:
-│   │   ├── Hidrógeno → 1p⁺ y 1e⁻ → 1−1=0
-│   │   ├── Helio → 2p⁺ y 2e⁻ → 2−2=0
-│   │   ├── Litio → 3p⁺ y 3e⁻ → 3−3=0
-│   │   └── Flúor → 9p⁺ y 9e⁻ → 9−9=0
-│   └── Identificación: El ELEMENTO depende del NÚMERO DE PROTONES (Z)
-│
-├── IONES
-│   ├── Tienen DIFERENTE cantidad de PROTONES y ELECTRONES
-│   ├── Carga ≠ 0
-│   ├── Fórmula: CARGA = PROTONES − ELECTRONES
-│   ├── Tipos:
-│   │
-│   │   ├── CATIONES
-│   │   │   ├── Más PROTONES que ELECTRONES
-│   │   │   ├── Carga POSITIVA
-│   │   │   ├── Se forman cuando el átomo PIERDE ELECTRONES
-│   │   │   └── Ejemplo: Litio con 3p⁺ y 2e⁻ → 3−2=+1
-│   │
-│   │   └── ANIONES
-│   │       ├── Más ELECTRONES que PROTONES
-│   │       ├── Carga NEGATIVA
-│   │       ├── Se forman cuando el átomo GANA ELECTRONES
-│   │       └── Ejemplo: Flúor con 9p⁺ y 10e⁻ → 9−10=−1
-│
-└── Nota:
-    ├── La ganancia o pérdida de ELECTRONES es común (forma iones)
-    └── La ganancia o pérdida de PROTONES ocurre solo en REACCIONES NUCLEARES
-```
+**A. Definición**
 
-### Practica
+1. Se aplica a **mezclas heterogéneas de sólidos.**
 
-video: https://youtu.be/1dJPk9jfq8U?si=_bwzC6P7aKxtAFen
+---
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSBJPGVK7/)
+**B. Principio de separación**
 
-## Número másico
+1. Se basa en la **diferencia de tamaño de partículas.**
+2. Permite **clasificar o separar** los componentes según su **granulometría** (tamaño de grano).
 
-### Masa de las partículas subatómicas
+---
 
-video: https://youtu.be/DfW2qM_bGjw?si=J__6_y6qNYQT7HQw
+**C. Herramienta utilizada**
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSBJPHrqp/)
+1. Se utiliza un **tamiz o colador** para realizar la separación.
 
-```markdown
-Masa de las partículas subatómicas
-│
-├── Las partículas subatómicas son:
-│   ├── PROTONES → carga POSITIVA (+)
-│   ├── NEUTRONES → carga NEUTRA (0)
-│   └── ELECTRONES → carga NEGATIVA (−)
-│
-├── Concentración de la masa
-│   ├── La masa del átomo se concentra en el NÚCLEO
-│   ├── El núcleo contiene PROTONES y NEUTRONES → “PESOS PESADOS”
-│   └── Los ELECTRONES en la periferia tienen masa DESPRECIABLE
-│
-├── Comparación de masas
-│   ├── PROTÓN y NEUTRÓN tienen masas casi IGUALES
-│   └── NEUTRÓN es ligeramente más pesado que el PROTÓN
-│
-└── Valores aproximados de masa
-    ├── PROTÓN → 1,6 × 10⁻²⁷ kg → ≈ 1 uma
-    ├── NEUTRÓN → 1,6 × 10⁻²⁷ kg → ≈ 1 uma
-    └── ELECTRÓN → 9,1 × 10⁻³¹ kg → ≈ 0 uma
-        └── Su masa es tan pequeña que se considera DESPRECIABLE
-```
+---
 
-### Número másico
+**D. Proceso**
 
-video: https://youtu.be/WmrfBrkxrPo?si=9_i325DSHGypPgpG
+1. Las **partículas pequeñas** **pasan a través del tamiz.**
+    1. Las **partículas grandes** **quedan retenidas** en el tamiz.
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSBJPaBty/)
+## Filtración
 
-```markdown
-Número másico (A)
-│
-├── Es una PROPIEDAD de los ÁTOMOS
-│   └── Representa la SUMA de:
-│       ├── PROTONES (Z)
-│       └── NEUTRONES (N)
-│
-├── Cálculo
-│   ├── Fórmula:
-│   │   A = Z + N
-│   └── Involucra solo las partículas del NÚCLEO
-│
-├── Partículas consideradas
-│   ├── PROTONES → carga POSITIVA (+)
-│   ├── NEUTRONES → carga NEUTRA (0)
-│   └── Ambas llamadas NUCLEONES
-│
-├── ELECTRONES
-│   └── NO se consideran en el cálculo (masa ≈ 0 uma)
-│
-├── Significado físico
-│   ├── Casi toda la MASA del átomo está en el NÚCLEO
-│   ├── Por eso el número másico representa la MASA ATÓMICA en uma
-│   └── Ejemplo: A = 4 → masa atómica ≈ 4 uma
-│
-├── Notación atómica
-│   ├── Se escribe con:
-│   │   ├── Número másico (A) arriba a la izquierda
-│   │   ├── Número atómico (Z) abajo a la izquierda
-│   │   └── Símbolo del elemento a la derecha
-│
-└── Cálculo de neutrones
-    ├── Fórmula:
-    │   N = A − Z
-    └── Ejemplo:
-        Cloro → A = 35, Z = 17 → N = 18
-```
+video: https://youtu.be/ugGqsxTNGnM?si=TatKnD3L4dEkZJyA
 
-Ejemplo de notación atómica
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJDkqwh/)
 
-$$
+**A. Definición**
 
-^{4}_{2}\mathrm{He}
+1. Se utiliza para **separar sólidos insolubles en líquidos.**
 
-$$
+---
 
-Este ejemplo representa al **helio**, con **2 protones** y **2 neutrones**, por lo que su número másico es **4**.
+**B. Principio de separación**
 
-## Isótopos
+1. Se basa en la **diferencia de tamaño de partículas.**
+2. El **filtro** permite el paso de las partículas **pequeñas (líquido)** y **retiene las grandes (sólido).**
 
-### Isótopos
+---
 
-video: https://youtu.be/wG--J1nGOnU?si=9E9G7-NkrLjG5-3Y
+**C. Herramienta utilizada**
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSBJP9GXT/)
+1. Se utiliza un **filtro**, que puede ser de **papel, tela o material poroso.**
 
-```markdown
-ISÓTOPOS
-│
-├── Son ÁTOMOS del MISMO ELEMENTO
-│   ├── Tienen IGUAL cantidad de PROTONES
-│   └── Tienen DIFERENTE cantidad de NEUTRONES
-│
-├── CONSECUENCIA
-│   └── Tienen DIFERENTE NÚMERO MÁSICO (masa diferente)
-│
-├── IMPORTANCIA
-│   ├── Siguen siendo del MISMO ELEMENTO
-│   └── Se distinguen por su MASA
-│
-├── EJEMPLOS
-│   ├── HIDRÓGENO
-│   │   ├── Todos tienen 1 protón
-│   │   ├── PROTIO → 0 neutrones → el más abundante
-│   │   └── DEUTERIO → 1 neutrón → menos abundante
-│   │
-│   └── CARBONO
-│       ├── Todos tienen 6 protones
-│       ├── CARBONO 12 → 6 neutrones → muy abundante
-│       └── CARBONO 13 → 7 neutrones → menos abundante
-│
-└── CONCLUSIÓN
-    ├── Los isótopos SON del mismo elemento
-    └── Pero DIFEREN en su número de NEUTRONES y en su MASA
-```
+---
 
-Isótopos del hidrógeno:
+**D. Proceso**
 
-| **Isótopo** | **Protones** | **Neutrones** | **Número Másico ($A$)** | **Notación** | **Abundancia en la naturaleza** |
-| --- | --- | --- | --- | --- | --- |
-| **Protio** | 1 | 0 | $1 + 0 = 1$ | $^{1}_{1}\mathrm{H}$ | $99,985%$ |
-| **Deuterio** | 1 | 1 | $1 + 1 = 2$ | $^{2}_{1}\mathrm{H}$ | $0,015%$ |
-| **Tritio** | 1 | 2 | $1 + 2 = 3$ | $^{3}_{1}\mathrm{H}$ | **Muy escaso (radiactivo)** |
+1. El **líquido** (partículas pequeñas) **pasa a través del filtro.**
+2. El **sólido** (partículas grandes) **queda retenido en el filtro.**
 
-Isótopos del carbono:
+## Decantación
 
-| **Isótopo** | **Protones** | **Neutrones** | **Número Másico ($A$)** | **Notación** | **Abundancia en la naturaleza** |
-| --- | --- | --- | --- | --- | --- |
-| **Carbono-12** | 6 | 6 | $6 + 6 = 12$ | $^{12}_{6}\mathrm{C}$ | $\approx 98,9%$ |
-| **Carbono-13** | 6 | 7 | $6 + 7 = 13$ | $^{13}_{6}\mathrm{C}$ | $\approx 1,1%$ |
+video: https://youtu.be/o-9FgONyDc0?si=ecGeKK1ty_Y_GwkJ
 
-## Ejercicios
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJD5k4q/)
 
-video: https://youtu.be/z1rPv4uQvnY?si=Zh017-wK0GcbWEnz
+**A. Definición**
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSBJPyTM4/)
+1. Se utiliza para **separar líquidos inmiscibles**, es decir, que **no se mezclan entre sí.**
+
+---
+
+**B. Líquidos inmiscibles**
+
+1. Son líquidos que **no se disuelven entre sí.**
+2. Forman una **mezcla heterogénea**, donde los **componentes son visibles.**
+
+---
+
+**C. Principio de separación**
+
+1. Se basa en la **diferencia de densidades** de los líquidos.
+
+---
+
+**D. Comportamiento de los líquidos**
+
+1. El **líquido menos denso** queda **arriba** (flota).
+2. El **líquido más denso** queda **abajo.**
+
+---
+
+**E. Instrumento utilizado**
+
+1. Se utiliza un **embudo de decantación.**
+
+---
+
+**F. Mecanismo**
+
+1. Se **colocan los líquidos** en el embudo de decantación.
+2. Se **abre la llave o válvula** inferior.
+3. El **líquido más denso** se **recupera en un recipiente.**
+4. El **líquido menos denso** **queda retenido en el embudo.**
+
+## Evaporación
+
+video: https://youtu.be/cveN7g7CEOs?si=tfPn1DZyk6HWuY2O
+
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJDSyJo/)
+
+**A. Definición**
+
+1. La **evaporación** es un **método de separación.**
+2. Se utiliza para **separar sólidos solubles en líquidos.**
+
+---
+
+**B. Naturaleza de la mezcla**
+
+1. El **sólido se disuelve** en el líquido.
+2. Se forma una **mezcla homogénea.**
+
+---
+
+**C. Ejemplo**
+
+1. **Agua + sal de cocina.**
+
+---
+
+**D. Principio de separación**
+
+1. Se basa en la **diferencia de punto de ebullición** entre las sustancias.
+
+---
+
+**E. Comportamiento de las sustancias**
+
+1. El **líquido (agua)** tiene un **menor punto de ebullición** y se **evapora primero.**
+2. El **sólido (sal)** tiene un **mayor punto de ebullición** y **queda en el recipiente.**
+
+---
+
+**F. Proceso**
+
+1. Se **aplica calor** al sistema.
+2. El **líquido se evapora** y pasa al estado gaseoso.
+3. El **sólido queda retenido** en el recipiente.
+
+## Destilación
+
+video: https://youtu.be/e30igE4CNdA?si=XUzLAYhvA3LdNNpk
+
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJDCUJ9/)
+
+**A. Definición**
+
+1. La **destilación** es un **método de separación.**
+2. Se utiliza para **separar líquidos miscibles**, es decir, que **se mezclan completamente entre sí.**
+
+---
+
+**B. Líquidos miscibles**
+
+1. **Se mezclan en cualquier proporción.**
+2. Forman una **mezcla homogénea.**
+
+---
+
+**C. Ejemplo**
+
+1. **Alcohol + agua.**
+
+---
+
+**D. Principio de separación**
+
+1. Se basa en la **diferencia de punto de ebullición** de los líquidos.
+
+---
+
+**E. Puntos de ebullición**
+
+1. **Alcohol:** 78.5 °C
+2. **Agua:** 100 °C
+
+---
+
+**F. Proceso**
+
+1. Se **aplica calor** a la mezcla.
+2. El **alcohol**, con **menor punto de ebullición**, **se evapora primero.**
+3. El **agua**, con **mayor punto de ebullición**, **permanece en el recipiente.**
+4. El **vapor de alcohol se refrigera.**
+5. El **gas de alcohol se condensa** y **vuelve a ser líquido.**
+6. **Resultado:**
+    - El **alcohol** se **recupera en otro recipiente.**
+    - El **agua** **permanece en el recipiente inicial.**
+
+## Cromatografía
+
+video: https://youtu.be/IOPG9Qflci0?si=BUSK3f5Gy63-lA5I
+
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJDXFQm/)
+
+**A. Definición**
+
+1. La **cromatografía en papel** es un **método de separación.**
+2. Se utiliza para **separar mezclas homogéneas de líquidos.**
+
+---
+
+**B. Fases del proceso**
+
+1. **Fase fija:** el **papel**, que **permanece inmóvil.**
+2. **Fase móvil:** un **líquido** (por ejemplo, alcohol) que **arrastra la mezcla** a lo largo del papel.
+
+---
+
+**C. Principio de separación**
+
+1. Se basa en la **diferencia de afinidad** de los componentes con la **fase móvil.**
+2. Cada componente se **mueve a distinta velocidad** según su afinidad con el solvente.
+
+---
+
+**D. Ejemplo de afinidad**
+
+1. Si el **alcohol arrastra más rápido el color azul**, significa que el **color azul tiene mayor afinidad** con el alcohol.
+
+---
+
+**E. Mecanismo**
+
+1. La **fase móvil** toma los **componentes de la mezcla.**
+2. Los **arrastra por el papel a diferente velocidad.**
+3. **Ejemplo:** una **mezcla verde** puede estar compuesta por **azul y amarillo.**
+4. **Objetivo:**
+    - **Identificar** los componentes de la mezcla.
+    - **Visualizarlos** en el papel después de la separación.
+
+## Taller 1
+
+### Taller
+
+[Descarga el taller](https://drive.google.com/file/d/1eF8fIkoXQY8QNYv0y0kjboW5jEmqTs4c/view?usp=drive_link)
+
+### Ejercicio 1
+
+video: https://youtu.be/1Zz_tC_MMpQ?si=58nJ0bbwnSCsaQ1g
+
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJDCHsu/)
+
+### Ejercicio 2
+
+video: https://youtu.be/FJWxFYQF4G4?si=iYEpTI-18wcGImzv
+
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJDyt12/)
+
+### Ejercicio 3
+
+video: https://youtu.be/IZ9WgmuQyEA?si=Cxf7qdAE4sNGsh6Y
+
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJD9HHE/)
+
+### Ejercicio 4
+
+video: https://youtu.be/Jrfyd8zLDyA?si=FTic-8gYsGZN4yH4
+
+[Ver en Tiktok](https://vt.tiktok.com/ZSBJDqNUT/)

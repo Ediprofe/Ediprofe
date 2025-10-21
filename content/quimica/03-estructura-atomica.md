@@ -17,41 +17,54 @@ video: https://youtu.be/efOK-ZVm0NI
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBJPBDcg/)
 
-```markdown
-Estructura atómica
-│
-├── Los ÁTOMOS se dividen en DOS ZONAS PRINCIPALES:
-│   ├── Zona interna → NÚCLEO
-│   └── Zona externa → PERIFERIA
-│
-├── Núcleo
-│   ├── Es la parte CENTRAL del átomo
-│   ├── Contiene las partículas subatómicas:
-│   │   ├── PROTONES → carga POSITIVA (+)
-│   │   └── NEUTRONES → carga NEUTRA (0)
-│
-├── Periferia
-│   ├── Es la zona que RODEA al núcleo
-│   └── Contiene ELECTRONES → carga NEGATIVA (−)
-│
-├── Número atómico (Z)
-│   ├── Representa el NÚMERO DE PROTONES del átomo
-│   ├── Se simboliza con la letra Z
-│   ├── Z = número de PROTONES en el núcleo
-│   └── Identifica a qué ELEMENTO pertenece un átomo
-│
-├── Ejemplos de número atómico
-│   ├── Z = 1 → HIDRÓGENO → 1 protón
-│   ├── Z = 2 → HELIO → 2 protones
-│   ├── Z = 3 → LITIO → 3 protones
-│   ├── Z = 4 → BERILIO → 4 protones
-│   └── Z = 5 → BORO → 5 protones
-│
-└── Tabla periódica
-    ├── Organiza los ELEMENTOS por su NÚMERO ATÓMICO (Z)
-    ├── Se lee de IZQUIERDA a DERECHA y de ARRIBA hacia ABAJO
-    └── Permite identificar el número de PROTONES de cada elemento
-```
+**A. División general del átomo**
+
+1. Los **átomos** se dividen en **dos zonas principales:**
+    - **Zona interna → Núcleo.**
+    - **Zona externa → Periferia.**
+
+---
+
+**B. Núcleo**
+
+1. Es la **parte central del átomo.**
+2. Contiene las **partículas subatómicas**:
+    - **Protones → carga positiva (+).**
+    - **Neutrones → carga neutra (0).**
+
+---
+
+**C. Periferia**
+
+1. Es la **zona que rodea al núcleo.**
+2. Contiene los **electrones → carga negativa (−).**
+
+---
+
+**D. Número atómico (Z)**
+
+1. Representa el **número de protones** del átomo.
+2. Se **simboliza con la letra Z.**
+3. **Z = número de protones** en el núcleo.
+4. El número atómico **identifica el elemento** al que pertenece un átomo.
+
+---
+
+**E. Ejemplos de número atómico**
+
+1. **Z = 1 → Hidrógeno → 1 protón.**
+2. **Z = 2 → Helio → 2 protones.**
+3. **Z = 3 → Litio → 3 protones.**
+4. **Z = 4 → Berilio → 4 protones.**
+5. **Z = 5 → Boro → 5 protones.**
+
+---
+
+**F. Tabla periódica**
+
+1. **Organiza los elementos** según su **número atómico (Z).**
+2. Se **lee de izquierda a derecha** y de **arriba hacia abajo.**
+3. Permite **identificar el número de protones** de cada elemento.
 
 ### Practica
 
@@ -76,46 +89,64 @@ video: https://youtu.be/ruLNzfexcJs?si=OPLqe79z7F6xUHVR
 
 [Ver en Titkok](https://vt.tiktok.com/ZSBJPmqD9/)
 
-```markdown
-Clasificación de los átomos
-│
-├── Se basa en la COMPARACIÓN entre:
-│   ├── PROTONES → carga POSITIVA (+), ubicados en el NÚCLEO
-│   └── ELECTRONES → carga NEGATIVA (−), ubicados en la PERIFERIA
-│
-├── ÁTOMOS NEUTROS
-│   ├── Tienen IGUAL cantidad de PROTONES y ELECTRONES
-│   ├── Carga total = 0
-│   ├── Fórmula: CARGA = PROTONES − ELECTRONES = 0
-│   ├── Ejemplos:
-│   │   ├── Hidrógeno → 1p⁺ y 1e⁻ → 1−1=0
-│   │   ├── Helio → 2p⁺ y 2e⁻ → 2−2=0
-│   │   ├── Litio → 3p⁺ y 3e⁻ → 3−3=0
-│   │   └── Flúor → 9p⁺ y 9e⁻ → 9−9=0
-│   └── Identificación: El ELEMENTO depende del NÚMERO DE PROTONES (Z)
-│
-├── IONES
-│   ├── Tienen DIFERENTE cantidad de PROTONES y ELECTRONES
-│   ├── Carga ≠ 0
-│   ├── Fórmula: CARGA = PROTONES − ELECTRONES
-│   ├── Tipos:
-│   │
-│   │   ├── CATIONES
-│   │   │   ├── Más PROTONES que ELECTRONES
-│   │   │   ├── Carga POSITIVA
-│   │   │   ├── Se forman cuando el átomo PIERDE ELECTRONES
-│   │   │   └── Ejemplo: Litio con 3p⁺ y 2e⁻ → 3−2=+1
-│   │
-│   │   └── ANIONES
-│   │       ├── Más ELECTRONES que PROTONES
-│   │       ├── Carga NEGATIVA
-│   │       ├── Se forman cuando el átomo GANA ELECTRONES
-│   │       └── Ejemplo: Flúor con 9p⁺ y 10e⁻ → 9−10=−1
-│
-└── Nota:
-    ├── La ganancia o pérdida de ELECTRONES es común (forma iones)
-    └── La ganancia o pérdida de PROTONES ocurre solo en REACCIONES NUCLEARES
-```
+**A. Base de clasificación**
+
+1. La **clasificación de los átomos** se basa en la **comparación entre:**
+    - **Protones (p⁺)** → carga **positiva (+)**, ubicados en el **núcleo.**
+    - **Electrones (e⁻)** → carga **negativa (−)**, ubicados en la **periferia.**
+
+---
+
+**B. Átomos neutros**
+
+1. Tienen **igual cantidad de protones y electrones.**
+2. Su **carga total es 0.**
+3. **Fórmula:**
+    - **Carga = Protones − Electrones = 0.**
+4. **Ejemplos:**
+    - **Hidrógeno:** 1p⁺ y 1e⁻ → 1−1=0.
+    - **Helio:** 2p⁺ y 2e⁻ → 2−2=0.
+    - **Litio:** 3p⁺ y 3e⁻ → 3−3=0.
+    - **Flúor:** 9p⁺ y 9e⁻ → 9−9=0.
+5. **Identificación:**
+    - El **elemento** depende del **número de protones (Z).**
+
+---
+
+**C. Iones**
+
+1. Tienen **diferente cantidad de protones y electrones.**
+2. Su **carga es distinta de cero (≠ 0).**
+3. **Fórmula:**
+    - **Carga = Protones − Electrones.**
+4. **Tipos de iones:**
+
+---
+
+**1. Cationes**
+
+1. Tienen **más protones que electrones.**
+2. Presentan **carga positiva.**
+3. Se forman cuando el átomo **pierde electrones.**
+4. **Ejemplo:**
+    - **Litio (Li):** 3p⁺ y 2e⁻ → 3−2=+1.
+
+---
+
+**2. Aniones**
+
+1. Tienen **más electrones que protones.**
+2. Presentan **carga negativa.**
+3. Se forman cuando el átomo **gana electrones.**
+4. **Ejemplo:**
+    - **Flúor (F):** 9p⁺ y 10e⁻ → 9−10=−1.
+
+---
+
+**D. Nota final**
+
+1. La **ganancia o pérdida de electrones** es **común** (forma iones).
+2. La **ganancia o pérdida de protones** ocurre **solo en reacciones nucleares,** no comunes en la experiencia cotidiana.
 
 ### Practica
 
@@ -131,29 +162,36 @@ video: https://youtu.be/DfW2qM_bGjw?si=J__6_y6qNYQT7HQw
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBJPHrqp/)
 
-```markdown
-Masa de las partículas subatómicas
-│
-├── Las partículas subatómicas son:
-│   ├── PROTONES → carga POSITIVA (+)
-│   ├── NEUTRONES → carga NEUTRA (0)
-│   └── ELECTRONES → carga NEGATIVA (−)
-│
-├── Concentración de la masa
-│   ├── La masa del átomo se concentra en el NÚCLEO
-│   ├── El núcleo contiene PROTONES y NEUTRONES → “PESOS PESADOS”
-│   └── Los ELECTRONES en la periferia tienen masa DESPRECIABLE
-│
-├── Comparación de masas
-│   ├── PROTÓN y NEUTRÓN tienen masas casi IGUALES
-│   └── NEUTRÓN es ligeramente más pesado que el PROTÓN
-│
-└── Valores aproximados de masa
-    ├── PROTÓN → 1,6 × 10⁻²⁷ kg → ≈ 1 uma
-    ├── NEUTRÓN → 1,6 × 10⁻²⁷ kg → ≈ 1 uma
-    └── ELECTRÓN → 9,1 × 10⁻³¹ kg → ≈ 0 uma
-        └── Su masa es tan pequeña que se considera DESPRECIABLE
-```
+**A. Partículas subatómicas**
+
+1. Las **partículas subatómicas** son:
+    - **Protones → carga positiva (+).**
+    - **Neutrones → carga neutra (0).**
+    - **Electrones → carga negativa (−).**
+
+---
+
+**B. Concentración de la masa**
+
+1. La **masa del átomo se concentra en el núcleo.**
+2. El **núcleo contiene protones y neutrones**, considerados los **“pesos pesados”** del átomo.
+3. Los **electrones**, ubicados en la periferia, tienen una **masa despreciable.**
+
+---
+
+**C. Comparación de masas**
+
+1. El **protón y el neutrón** tienen **masas casi iguales.**
+2. El **neutrón** es **ligeramente más pesado** que el protón.
+
+---
+
+**D. Valores aproximados de masa**
+
+1. **Protón:** 1,6 × 10⁻²⁷ kg → ≈ **1 uma.**
+2. **Neutrón:** 1,6 × 10⁻²⁷ kg → ≈ **1 uma.**
+3. **Electrón:** 9,1 × 10⁻³¹ kg → ≈ **0 uma.**
+    - Su masa es tan pequeña que se considera **despreciable.**
 
 ### Número másico
 
@@ -161,44 +199,67 @@ video: https://youtu.be/WmrfBrkxrPo?si=9_i325DSHGypPgpG
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBJPaBty/)
 
-```markdown
-Número másico (A)
-│
-├── Es una PROPIEDAD de los ÁTOMOS
-│   └── Representa la SUMA de:
-│       ├── PROTONES (Z)
-│       └── NEUTRONES (N)
-│
-├── Cálculo
-│   ├── Fórmula:
-│   │   A = Z + N
-│   └── Involucra solo las partículas del NÚCLEO
-│
-├── Partículas consideradas
-│   ├── PROTONES → carga POSITIVA (+)
-│   ├── NEUTRONES → carga NEUTRA (0)
-│   └── Ambas llamadas NUCLEONES
-│
-├── ELECTRONES
-│   └── NO se consideran en el cálculo (masa ≈ 0 uma)
-│
-├── Significado físico
-│   ├── Casi toda la MASA del átomo está en el NÚCLEO
-│   ├── Por eso el número másico representa la MASA ATÓMICA en uma
-│   └── Ejemplo: A = 4 → masa atómica ≈ 4 uma
-│
-├── Notación atómica
-│   ├── Se escribe con:
-│   │   ├── Número másico (A) arriba a la izquierda
-│   │   ├── Número atómico (Z) abajo a la izquierda
-│   │   └── Símbolo del elemento a la derecha
-│
-└── Cálculo de neutrones
-    ├── Fórmula:
-    │   N = A − Z
-    └── Ejemplo:
-        Cloro → A = 35, Z = 17 → N = 18
-```
+**A. Definición**
+
+1. El **número másico (A)** es una **propiedad de los átomos.**
+2. Representa la **suma de:**
+    - **Protones (Z).**
+    - **Neutrones (N).**
+
+---
+
+**B. Cálculo**
+
+1. **Fórmula:**
+    - **A = Z + N.**
+2. Involucra **solo las partículas del núcleo.**
+
+---
+
+**C. Partículas consideradas**
+
+1. **Protones → carga positiva (+).**
+2. **Neutrones → carga neutra (0).**
+3. Ambas se denominan **nucleones.**
+
+---
+
+**D. Electrones**
+
+1. **No se consideran** en el cálculo del número másico.
+2. Su **masa ≈ 0 uma**, por lo que es **despreciable.**
+
+---
+
+**E. Significado físico**
+
+1. **Casi toda la masa** del átomo se encuentra en el **núcleo.**
+2. Por eso, el **número másico representa la masa atómica en uma.**
+3. **Ejemplo:**
+    - **A = 4 → masa atómica ≈ 4 uma.**
+
+---
+
+**F. Notación atómica**
+
+1. Se representa de la siguiente forma:
+    - **Número másico (A):** arriba a la izquierda.
+    - **Número atómico (Z):** abajo a la izquierda.
+    - **Símbolo del elemento:** a la derecha.
+    
+    📘 Ejemplo:
+    
+    ^{35}_{17}\text{Cl}
+    
+
+---
+
+**G. Cálculo de neutrones**
+
+1. **Fórmula:**
+    - **N = A − Z.**
+2. **Ejemplo:**
+    - **Cloro → A = 35, Z = 17 → N = 18.**
 
 Ejemplo de notación atómica
 
@@ -218,35 +279,43 @@ video: https://youtu.be/wG--J1nGOnU?si=9E9G7-NkrLjG5-3Y
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBJP9GXT/)
 
-```markdown
-ISÓTOPOS
-│
-├── Son ÁTOMOS del MISMO ELEMENTO
-│   ├── Tienen IGUAL cantidad de PROTONES
-│   └── Tienen DIFERENTE cantidad de NEUTRONES
-│
-├── CONSECUENCIA
-│   └── Tienen DIFERENTE NÚMERO MÁSICO (masa diferente)
-│
-├── IMPORTANCIA
-│   ├── Siguen siendo del MISMO ELEMENTO
-│   └── Se distinguen por su MASA
-│
-├── EJEMPLOS
-│   ├── HIDRÓGENO
-│   │   ├── Todos tienen 1 protón
-│   │   ├── PROTIO → 0 neutrones → el más abundante
-│   │   └── DEUTERIO → 1 neutrón → menos abundante
-│   │
-│   └── CARBONO
-│       ├── Todos tienen 6 protones
-│       ├── CARBONO 12 → 6 neutrones → muy abundante
-│       └── CARBONO 13 → 7 neutrones → menos abundante
-│
-└── CONCLUSIÓN
-    ├── Los isótopos SON del mismo elemento
-    └── Pero DIFEREN en su número de NEUTRONES y en su MASA
-```
+**A. Definición**
+
+1. Los **isótopos** son **átomos del mismo elemento.**
+2. Tienen **igual cantidad de protones**, pero **diferente cantidad de neutrones.**
+
+---
+
+**B. Consecuencia**
+
+1. Los isótopos tienen **diferente número másico**, es decir, **masa diferente.**
+
+---
+
+**C. Importancia**
+
+1. **Siguen siendo del mismo elemento.**
+2. Se **distinguen por su masa.**
+
+---
+
+**D. Ejemplos**
+
+1. **Hidrógeno:**
+    - Todos tienen **1 protón.**
+    - **Protio:** 0 neutrones → el más abundante.
+    - **Deuterio:** 1 neutrón → menos abundante.
+2. **Carbono:**
+    - Todos tienen **6 protones.**
+    - **Carbono-12:** 6 neutrones → muy abundante.
+    - **Carbono-13:** 7 neutrones → menos abundante.
+
+---
+
+**E. Conclusión**
+
+1. Los **isótopos** pertenecen al **mismo elemento.**
+2. **Difieren en su número de neutrones** y, por lo tanto, **en su masa.**
 
 Isótopos del hidrógeno:
 

@@ -42,44 +42,47 @@ video: https://youtu.be/H1XMFH5f_x4?si=1rtYo1DI2ipnr2WO
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp743qq/)
 
-```markdown
-Propiedades de las sustancias
-│
-├── Una PROPIEDAD es una CARACTERÍSTICA o ATRIBUTO que describe una sustancia
-│   └── Ejemplos:
-│       ├── Textura → cremosa
-│       ├── Sabor → dulce
-│       ├── Color → blanco
-│       ├── Temperatura → 25 °C
-│       └── Volumen → 5 litros
-│
-├── Masa
-│   ├── Es una PROPIEDAD DE LA MATERIA
-│   ├── Describe la CANTIDAD DE MATERIAL que posee un cuerpo
-│   ├── Se mide con una BALANZA
-│   └── Unidades:
-│       ├── Gramos (g)
-│       ├── Kilogramos (kg)
-│       ├── Libras
-│       ├── Onzas
-│       └── Toneladas
-│
-└── Volumen
-    ├── Es el ESPACIO OCUPADO por un cuerpo
-    ├── Se mide con:
-    │   ├── Vaso medidor
-    │   ├── Pipetas
-    │   ├── Matraz aforado
-    │   ├── Probeta
-    │   ├── Erlenmeyer
-    │   └── Beaker
-    └── Unidades:
-        ├── Litros (L)
-        ├── Mililitros (mL)
-        ├── Galones
-        └── Metros cúbicos (m³)
+**A. Propiedades de las sustancias**
 
-```
+1. Una **propiedad** es una **característica o atributo** que **describe una sustancia**.
+2. **Ejemplos de propiedades:**
+    - **Textura:** cremosa
+    - **Sabor:** dulce
+    - **Color:** blanco
+    - **Temperatura:** 25 °C
+    - **Volumen:** 5 litros
+
+---
+
+**B. Masa**
+
+1. Es una **propiedad de la materia**.
+2. Describe la **cantidad de material** que posee un cuerpo.
+3. Se **mide con una balanza**.
+4. **Unidades de medida:**
+    - **Gramos (g)**
+    - **Kilogramos (kg)**
+    - **Libras**
+    - **Onzas**
+    - **Toneladas**
+
+---
+
+**C. Volumen**
+
+1. Es el **espacio ocupado** por un cuerpo.
+2. Se **mide con instrumentos** como:
+    - Vaso medidor
+    - Pipetas
+    - Matraz aforado
+    - Probeta
+    - Erlenmeyer
+    - Beaker
+3. **Unidades de medida:**
+    - **Litros (L)**
+    - **Mililitros (mL)**
+    - **Galones**
+    - **Metros cúbicos (m³)**
 
 ### Densidad
 
@@ -95,33 +98,30 @@ $$
 
 $$
 
+**A. La densidad es específica**
+
+1. La **densidad** es una **propiedad específica** de cada sustancia.
+2. **Depende de la sustancia**, no del tamaño o cantidad del material.
+3. **No cambia** si se toma una muestra más grande o más pequeña del mismo material.
+4. **Ejemplos:**
+    - **Aceite:** 0,92 g/mL → **menos denso** que el agua.
+    - **Agua:** 1,00 g/mL.
+    - **Piedra:** 2,5 g/mL → **más densa** que el agua.
+
 ---
 
-```
-Densidad
-│
-├── Es una PROPIEDAD DE LA MATERIA
-│   └── Indica cuánta masa hay en cierto volumen
-│
-├── La densidad es ESPECÍFICA
-│   ├── DEPENDE de la sustancia
-│   ├── NO CAMBIA con el tamaño del material
-│   └── Ejemplos:
-│       ├── Aceite → 0,92 g/mL (menos denso que el agua)
-│       ├── Agua → 1,00 g/mL
-│       └── Piedra → 2,5 g/mL (más densa que el agua)
-│
-└── Densidad y flotación
-    ├── Los cuerpos MENOS DENSOS flotan sobre los más densos
-    ├── Comparaciones:
-    │   ├── Aceite (0,92 g/mL) flota sobre agua (1,00 g/mL)
-    │   ├── Agua (1,00 g/mL) flota sobre piedra (2,5 g/mL)
-    │   └── Pelota playera (0,4 g/mL) flota fácilmente en el agua
-    └── Conclusión:
-        ├── Menor densidad → FLOTA
-        └── Mayor densidad → SE HUNDE
+**B. Densidad y flotación**
 
-```
+1. Los **cuerpos menos densos** **flotan** sobre los **más densos**.
+2. **Comparaciones:**
+    - **Aceite (0,92 g/mL)** flota sobre **agua (1,00 g/mL)**.
+    - **Agua (1,00 g/mL)** flota sobre **piedra (2,5 g/mL)**.
+    - **Pelota playera (0,4 g/mL)** flota fácilmente en el agua.
+3. **Conclusión:**
+    - **Menor densidad → flota.**
+    - **Mayor densidad → se hunde.**
+
+---
 
 ### Temperatura
 
@@ -129,25 +129,31 @@ video: https://youtu.be/XLy85EFdaHY?si=VhAcxwBP1HCLmypg
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp7ER6C/)
 
-```markdown
-Temperatura
-│
-├── Es una PROPIEDAD DE LA MATERIA
-│   └── Indica qué tan CALIENTE o FRÍO está un cuerpo
-│
-├── Relación
-│   ├── MÁS calor → MAYOR temperatura
-│   └── MENOS calor → MENOR temperatura
-│
-├── Medición
-│   └── Se mide con un TERMÓMETRO
-│
-└── Unidades
-    ├── Grados Celsius (°C)
-    ├── Grados Fahrenheit (°F)
-    ├── Kelvin (K)
-    └── Rankine (°R)
-```
+**A. Noción**
+
+1. Indica **qué tan caliente o frío está un cuerpo**.
+
+---
+
+**B. Relación**
+
+1. **Más calor → mayor temperatura.**
+2. **Menos calor → menor temperatura.**
+
+---
+
+**C. Medición**
+
+1. La temperatura se **mide con un termómetro.**
+
+---
+
+**D. Unidades**
+
+1. **Grados Celsius (°C)**
+2. **Grados Fahrenheit (°F)**
+3. **Kelvin (K)**
+4. **Rankine (°R)**
 
 **Algunas temperaturas específicas (dependen de la sustancia)**
 
@@ -163,29 +169,31 @@ video: https://youtu.be/7k8uM22GIX4?si=mzwOX2AxUkS9YyRT
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp7CGb3/)
 
-```markdown
-Conductividad eléctrica
-│
-├── Medición y capacidad
-│   ├── Mide la CAPACIDAD de conducir electricidad
-│   ├── Se mide con un CONDUCTÍMETRO
-│   └── Unidad: MICROSIEMENS POR CENTÍMETRO (µS/cm)
-│
-├── Comparación de materiales
-│   ├── El COBRE es un EXCELENTE CONDUCTOR
-│   ├── Es el conductor de electricidad por excelencia
-│   └── Tiene una conductividad MUY ALTA
-│
-└── El agua como conductor
-    ├── El AGUA es un conductor REGULAR
-    ├── Puede causar daño si está en contacto con corriente eléctrica
-    ├── Diferencias:
-    │   ├── AGUA DE MAR → mejor conductora
-    │   └── AGUA POTABLE → menos conductora
-    └── Razón:
-        └── El AGUA DE MAR contiene SAL (NaCl), que mejora la conductividad
+**A. Medición y capacidad**
 
-```
+1. La **conductividad eléctrica** mide la **capacidad de un material para conducir electricidad.**
+2. Se **mide con un conductímetro.**
+3. **Unidad de medida:** **microsiemens por centímetro (µS/cm).**
+
+---
+
+**B. Comparación de materiales**
+
+1. El **cobre** es un **excelente conductor** de la electricidad.
+2. Es el **conductor por excelencia**, utilizado en cables y circuitos eléctricos.
+3. Posee una **conductividad muy alta.**
+
+---
+
+**C. El agua como conductor**
+
+1. El **agua** es un **conductor regular** de la electricidad.
+2. Puede **causar daño** si entra en contacto con corriente eléctrica.
+3. **Diferencias según el tipo de agua:**
+    - **Agua de mar:** mejor conductora.
+    - **Agua potable:** menos conductora.
+4. **Razón:**
+    - El **agua de mar contiene sal (NaCl)**, y los **iones disueltos** **mejoran la conductividad.**
 
 ### Propiedades cualitativas y cuantitativas
 
@@ -193,32 +201,37 @@ video: https://youtu.be/tDBfaewlmFs?si=gASvLQ82b8l-WidU
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp7Grrr/)
 
-```markdown
-Propiedades de la materia
-│
-├── Se clasifican en dos grandes tipos:
-│
-├── Propiedades cualitativas
-│   ├── Describen una CUALIDAD del material
-│   ├── NO incluyen datos numéricos ni unidades de medida
-│   ├── Se basan en la OBSERVACIÓN SENSORIAL
-│   └── Ejemplos:
-│       ├── Sabor → dulce (como la leche)
-│       ├── Color → blanco (como la leche)
-│       └── Textura → cremosa (como la leche)
-│
-└── Propiedades cuantitativas
-    ├── Describen una CANTIDAD del material
-    ├── Incluyen NÚMERO y UNIDAD de medida
-    ├── Se obtienen mediante MEDICIÓN
-    └── Ejemplos:
-        ├── Masa → 2300 g
-        ├── Volumen → 1,5 L
-        ├── Densidad → 1 g/L
-        ├── Temperatura → 36,3 °C
-        └── Conductividad → 500 µS/cm
+**A. Clasificación general**
 
-```
+1. Las **propiedades de la materia** se **clasifican en dos grandes tipos:**
+    - **Propiedades cualitativas**
+    - **Propiedades cuantitativas**
+
+---
+
+**B. Propiedades cualitativas**
+
+1. **Describen una cualidad** del material.
+2. **No incluyen datos numéricos** ni unidades de medida.
+3. Se **basan en la observación sensorial.**
+4. **Ejemplos:**
+    - **Sabor:** dulce (como la leche).
+    - **Color:** blanco (como la leche).
+    - **Textura:** cremosa (como la leche).
+
+---
+
+**C. Propiedades cuantitativas**
+
+1. **Describen una cantidad** del material.
+2. **Incluyen número y unidad de medida.**
+3. Se **obtienen mediante medición.**
+4. **Ejemplos:**
+    - **Masa:** 2300 g.
+    - **Volumen:** 1,5 L.
+    - **Densidad:** 1 g/L.
+    - **Temperatura:** 36,3 °C.
+    - **Conductividad:** 500 µS/cm.
 
 ### Propiedades intensivas y extensivas
 
@@ -226,27 +239,28 @@ video: https://youtu.be/pXHnvzJfsjk?si=JYfQsNKs2FIIVEy-
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp7Q5CQ/)
 
-```markdown
-Propiedades de la materia
-│
-├── Se comparan según SI DEPENDEN o NO de la cantidad de material
-│
-├── Propiedades extensivas
-│   ├── DEPENDEN de la cantidad de material
-│   ├── Si aumenta la materia, la medida CAMBIA
-│   └── Ejemplos:
-│       ├── Masa → cambia al variar la cantidad
-│       └── Volumen → cambia al aumentar o disminuir (500 mL vs 1000 mL)
-│
-└── Propiedades intensivas
-    ├── NO DEPENDEN de la cantidad de material
-    ├── La medida se mantiene igual aunque cambie el tamaño o cantidad
-    └── Ejemplos:
-        ├── Temperatura → igual en frascos grandes o pequeños
-        ├── Conductividad eléctrica → igual sin importar la cantidad
-        └── Densidad → constante (1 g/mL tanto en poca como en mucha cantidad)
+**A. Clasificación según la cantidad de material**
 
-```
+1. Las **propiedades de la materia** se **comparan según dependan o no de la cantidad de material**.
+2. Se dividen en:
+    - **Propiedades extensivas**
+    - **Propiedades intensivas**
+
+---
+
+**B. Propiedades extensivas**
+
+1. **Dependen de la cantidad de material.**
+2. Si **aumenta la materia**, la **medida cambia.**
+3. **Ejemplos: masa, volumen.**
+
+---
+
+**C. Propiedades intensivas**
+
+1. **No dependen de la cantidad de material.**
+2. La **medida se mantiene igual** aunque cambie el tamaño o la cantidad de sustancia.
+3. **Ejemplos: temperatura, conductividad, densidad.**
 
 ## Cambios de la materia
 
@@ -256,22 +270,23 @@ video: https://youtu.be/OP3Oq7WVDh4?si=iUGFoSC91hHtEDpY
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBp3jakY/)
 
-```markdown
-Cambios de la materia
-│
-├── Cambio físico
-│   ├── NO aparecen nuevas sustancias
-│   ├── Las sustancias SON LAS MISMAS antes y después
-│   └── Ejemplos:
-│       ├── Hielo que se derrite → sigue siendo H₂O
-│       └── Recortar papel → sigue siendo papel
-│
-└── Cambio químico
-    ├── Aparecen NUEVAS SUSTANCIAS o NUEVA(S) FÓRMULA(S)
-    └── Ejemplos:
-        ├── Quemar papel → aparece ceniza
-        └── Oxidar un clavo → aparece óxido
-```
+**A. Cambio físico**
+
+1. En un **cambio físico no aparecen nuevas sustancias.**
+2. Las **sustancias son las mismas** antes y después del cambio.
+3. **Ejemplos:**
+    - **Hielo que se derrite** → sigue siendo **H₂O**.
+    - **Recortar papel** → sigue siendo **papel**.
+
+---
+
+**B. Cambio químico**
+
+1. En un **cambio químico** **aparecen nuevas sustancias** o **nuevas fórmulas químicas.**
+2. La **materia se transforma** en otra diferente con nuevas propiedades.
+3. **Ejemplos:**
+    - **Quemar papel** → aparece **ceniza.**
+    - **Oxidar un clavo** → aparece **óxido.**
 
 ## Tipos de materia
 
@@ -281,35 +296,41 @@ video: https://youtu.be/eFAAdk2kagI?si=FTX-aiWKBH-gKi2V
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBpvdTxp/)
 
-```markdown
-Materia
-│
-├── Es todo lo que TIENE MASA y OCUPA UN LUGAR en el espacio
-└── Está formada por ÁTOMOS
-    │
-    ├── Átomos
-    │   ├── Son las PIEZAS BÁSICAS de la materia
-    │   ├── Se pueden comparar con piezas de un ROMPECABEZAS
-    │   └── Existen diferentes tipos → llamados ELEMENTOS
-    │
-    ├── Elementos
-    │   ├── Son los distintos TIPOS DE ÁTOMOS
-    │   ├── Cada uno tiene un SÍMBOLO QUÍMICO (H, O, Fe, etc.)
-    │   ├── Se organizan en la TABLA PERIÓDICA
-    │   └── Ejemplos:
-    │       ├── Hidrógeno (H)
-    │       ├── Oxígeno (O)
-    │       └── Hierro (Fe)
-    │
-    └── Compuestos
-        ├── Se forman al COMBINARSE átomos de diferentes elementos
-        ├── Ejemplo 1: Agua (H₂O)
-        │   └── 2 átomos de hidrógeno + 1 de oxígeno
-        ├── Ejemplo 2: Óxido de hierro (Fe₂O₃)
-        │   └── 2 átomos de hierro + 3 de oxígeno
-        └── Los COMPUESTOS forman la mayoría de las SUSTANCIAS de la naturaleza
+**A. Definición de materia**
 
-```
+1. La **materia** es **todo lo que tiene masa y ocupa un lugar en el espacio.**
+2. Está **formada por átomos**, las **unidades básicas de toda sustancia.**
+
+---
+
+**B. Átomos**
+
+1. Los **átomos** son las **piezas básicas de la materia.**
+2. Se pueden comparar con **piezas de un rompecabezas**, ya que se unen para formar estructuras más grandes.
+3. Existen diferentes tipos de átomos llamados **elementos.**
+
+---
+
+**C. Elementos**
+
+1. Los **elementos** son los **distintos tipos de átomos.**
+2. Cada elemento tiene un **símbolo químico** (por ejemplo: H, O, Fe, etc.).
+3. Los elementos se **organizan en la tabla periódica.**
+4. **Ejemplos:**
+    - **Hidrógeno (H)**
+    - **Oxígeno (O)**
+    - **Hierro (Fe)**
+
+---
+
+**D. Compuestos**
+
+1. Los **compuestos** se forman al **combinarse átomos de diferentes elementos.**
+2. **Ejemplo 1: Agua (H₂O)**
+    - Formada por **2 átomos de hidrógeno** y **1 de oxígeno.**
+3. **Ejemplo 2: Óxido de hierro (Fe₂O₃)**
+    - Formado por **2 átomos de hierro** y **3 de oxígeno.**
+4. Los **compuestos forman la mayoría de las sustancias de la naturaleza.**
 
 ### Sustancias puras y mezclas
 
@@ -317,52 +338,78 @@ video: https://youtu.be/6BF31Hrphng?si=vlcgL_efHDL-DIze
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBpvDwev/)
 
-```markdown
-Clasificación de la materia
-│
-├── La materia puede ser:
-│   ├── UNIFORME → Sustancia pura
-│   └── NO UNIFORME → Mezcla
-│
-├── Sustancias puras (materia uniforme)
-│   ├── Tienen un ÚNICO COMPONENTE o una ÚNICA FÓRMULA
-│   ├── Se dividen en:
-│   │
-│   ├── 1. ELEMENTOS
-│   │   ├── Formados por 1 TIPO DE ÁTOMO (1 ELEMENTO)
-│   │   ├── Ejemplos:
-│   │   │   ├── H₂ → solo hidrógeno
-│   │   │   ├── O₂ → solo oxígeno
-│   │   │   ├── N₂ → solo nitrógeno
-│   │   │   ├── C → carbono
-│   │   │   ├── Na → sodio
-│   │   │   └── Fe → hierro
-│   │   └── Se encuentran en la TABLA PERIÓDICA
-│   │
-│   └── 2. COMPUESTOS
-│       ├── Formados por ÁTOMOS de DIFERENTES ELEMENTOS
-│       ├── Tienen una ÚNICA FÓRMULA
-│       ├── Ejemplos:
-│       │   ├── Agua (H₂O) → hidrógeno + oxígeno
-│       │   ├── Sal (NaCl) → sodio + cloro
-│       │   ├── Dióxido de carbono (CO₂) → carbono + oxígeno
-│       │   ├── Óxido de silicio (SiO₂) → componente de la arena
-│       │   └── Amoníaco (NH₃)
-│
-├── Mezclas (materia no uniforme)
-│   ├── Contienen DOS O MÁS COMPONENTES o FÓRMULAS
-│   ├── Se forman al combinar sustancias SIN reaccionar químicamente
-│   ├── Ejemplos:
-│   │   ├── Aire → O₂ + H₂O + N₂
-│   │   ├── Agua salada → H₂O + NaCl
-│   │   └── Agua con arena → H₂O + SiO₂
-│   │
-│   └── Tipos de mezclas
-│       ├── HOMOGÉNEAS → No se distinguen los componentes (ej. aire, agua salada)
-│       └── HETEROGÉNEAS → Sí se distinguen los componentes (ej. agua y aceite, agua y arena)
-│
-└── Cambios en las mezclas
-    ├── SEPARACIÓN DE MEZCLAS → Proceso FÍSICO (las fórmulas NO cambian)
-    ├── FORMACIÓN DE MEZCLAS → Proceso FÍSICO (las sustancias se combinan sin reaccionar)
-    └── FORMACIÓN DE COMPUESTOS → Proceso QUÍMICO (aparecen NUEVAS sustancias y fórmulas)
-```
+**A. Clasificación de la materia**
+
+1. La **materia** puede ser:
+    - **Uniforme** → **Sustancia pura**
+    - **No uniforme** → **Mezcla**
+
+---
+
+**B. Sustancias puras (materia uniforme)**
+
+1. Tienen un **único componente** o una **única fórmula química.**
+2. Se dividen en dos tipos:
+
+---
+
+**1. Elementos**
+
+1. Formados por **un solo tipo de átomo** (un elemento).
+2. **Ejemplos:**
+    - **H₂** → solo hidrógeno
+    - **O₂** → solo oxígeno
+    - **N₂** → solo nitrógeno
+    - **C** → carbono
+    - **Na** → sodio
+    - **Fe** → hierro
+3. Los **elementos** se encuentran en la **tabla periódica.**
+
+---
+
+**2. Compuestos**
+
+1. Formados por **átomos de diferentes elementos.**
+2. Poseen una **única fórmula química.**
+3. **Ejemplos:**
+    - **Agua (H₂O)** → hidrógeno + oxígeno
+    - **Sal (NaCl)** → sodio + cloro
+    - **Dióxido de carbono (CO₂)** → carbono + oxígeno
+    - **Óxido de silicio (SiO₂)** → componente de la arena
+    - **Amoníaco (NH₃)**
+
+---
+
+**C. Mezclas (materia no uniforme)**
+
+1. Contienen **dos o más componentes o fórmulas.**
+2. Se forman al **combinar sustancias sin reaccionar químicamente.**
+3. **Ejemplos:**
+    - **Aire:** O₂ + H₂O + N₂
+    - **Agua salada:** H₂O + NaCl
+    - **Agua con arena:** H₂O + SiO₂
+
+---
+
+**Tipos de mezclas**
+
+1. **Homogéneas:**
+    - No se distinguen los componentes.
+    - **Ejemplos:** aire, agua salada.
+2. **Heterogéneas:**
+    - Sí se distinguen los componentes.
+    - **Ejemplos:** agua y aceite, agua y arena.
+
+---
+
+**D. Cambios en las mezclas**
+
+1. **Separación de mezclas:**
+    - Es un **proceso físico.**
+    - Las **fórmulas no cambian.**
+2. **Formación de mezclas:**
+    - Es un **proceso físico.**
+    - Las sustancias se **combinan sin reaccionar.**
+3. **Formación de compuestos:**
+    - Es un **proceso químico.**
+    - **Aparecen nuevas sustancias y fórmulas.**
