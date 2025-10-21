@@ -19,6 +19,9 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
   // Estado de plegado por pestaña (granular, persistente dentro del H2)
   const [expandedMap, setExpandedMap] = useState<Record<string, boolean>>({});
 
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [showFloating, setShowFloating] = useState(false);
+
   // Observar cambios en el hash de la URL para activar tabs
   useEffect(() => {
     const handleHashChange = () => {
@@ -48,6 +51,22 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
     };
   }, [section]);
 
+  // Mostrar/ocultar botones flotantes según visibilidad de la sección
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setShowFloating(entry.isIntersecting);
+        });
+      },
+      { rootMargin: '0px', threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const activeTab = section.tabs.find((tab) => tab.id === activeTabId);
   const tabIds = section.tabs.map((t) => t.id);
   const activeIndex = Math.max(0, tabIds.indexOf(activeTabId));
@@ -72,23 +91,11 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
     if (next) activateTab(next.id);
   };
 
-  // Atajos de teclado: ← → para cambiar pestaña dentro de la sección
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1));
-      } else if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        goToIndex(Math.max(activeIndex - 1, 0));
-      }
-    };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
-  }, [activeIndex, section.tabs.length]);
+  // Navegación por teclado deshabilitada a petición.
+  // Usa los botones Anterior/Siguiente para cambiar de pestaña.
 
   return (
-    <div className={`tabs-system ${className} min-h-[calc(100vh-20rem)]`}>
+    <div ref={sectionRef} className={`tabs-system ${className} min-h-[calc(100vh-20rem)]`}>
       {/* Título de la sección */}
       <h2 id={section.id} className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent scroll-mt-20 break-words">
         {section.title}
@@ -224,6 +231,35 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
           </>
         )}
       </div>
+
+      {/* Botones flotantes de navegación dentro de la sección */}
+      {showFloating && (
+        <div className="fixed bottom-4 right-4 z-40">
+          <div className="flex items-center gap-2 bg-white/90 backdrop-blur-md border border-slate-200 shadow-xl rounded-full p-1.5">
+            <button
+              className="px-3 py-2 text-sm font-semibold rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={() => goToIndex(Math.max(activeIndex - 1, 0))}
+              disabled={activeIndex <= 0}
+              aria-label="Anterior pestaña"
+              title="Anterior pestaña"
+            >
+              ←
+            </button>
+            <div className="px-3 text-xs text-slate-700 max-w-[40vw] truncate">
+              {section.title} · {activeTab?.label || ''}
+            </div>
+            <button
+              className="px-3 py-2 text-sm font-semibold rounded-full bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={() => goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1))}
+              disabled={activeIndex >= section.tabs.length - 1}
+              aria-label="Siguiente pestaña"
+              title="Siguiente pestaña"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
