@@ -183,7 +183,7 @@ export const SUBJECT_CONFIG: Record<string, { name: string; icon: string; color:
     name: 'Matemáticas',
     icon: '🧮',
     color: 'matematicas',
-    description: 'Números, álgebra, geometría y cálculo',
+    description: 'Aritmética, álgebra, geometría y cálculo',
   },
   ciencias: {
     name: 'Ciencias Naturales',
