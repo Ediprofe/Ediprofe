@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import MarkdownContent from './MarkdownContent';
 
 interface CollapsibleContentProps {
@@ -19,18 +19,36 @@ export default function CollapsibleContent({
   onToggle,
 }: CollapsibleContentProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isOverflowingRef = useRef<boolean>(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+
+  // Detectar si el HTML contiene texto significativo (no solo etiquetas vacías/espacios)
+  const hasMeaningfulText = useMemo(() => {
+    const textOnly = content
+      // quitar etiquetas
+      .replace(/<[^>]*>/g, '')
+      // reemplazar entidades no-break-space
+      .replace(/&nbsp;/g, ' ')
+      // normalizar espacios
+      .replace(/\s+/g, ' ')
+      .trim();
+    return textOnly.length > 0;
+  }, [content]);
 
   useEffect(() => {
+    if (!hasMeaningfulText) {
+      setIsOverflowing(false);
+      return;
+    }
     const el = containerRef.current;
     if (!el) return;
     const t = setTimeout(() => {
-      isOverflowingRef.current = el.scrollHeight > collapsedHeight + 8;
+      setIsOverflowing(el.scrollHeight > collapsedHeight + 8);
     }, 0);
     return () => clearTimeout(t);
-  }, [content, collapsedHeight]);
+  }, [content, collapsedHeight, hasMeaningfulText]);
 
   const handleClickContainer = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!hasMeaningfulText) return;
     // No alternar si el click viene de elementos interactivos
     const target = e.target as Element;
     if (target.closest('a, button, input, textarea, select, video, iframe')) {
@@ -40,11 +58,17 @@ export default function CollapsibleContent({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (!hasMeaningfulText) return;
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       onToggle?.();
     }
   };
+
+  // Si no hay texto real, no renderizar nada
+  if (!hasMeaningfulText) {
+    return null;
+  }
 
   return (
     <div className={`collapsible-content ${className}`}>
@@ -60,13 +84,13 @@ export default function CollapsibleContent({
         aria-label={expanded ? 'Ocultar texto' : 'Mostrar texto'}
       >
         <MarkdownContent content={content} />
-        {!expanded && isOverflowingRef.current && (
+        {!expanded && isOverflowing && (
           <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none" />
         )}
       </div>
 
-      {/* Botón explícito para accesibilidad */}
-      {isOverflowingRef.current && (
+      {/* Botón explícito para accesibilidad: solo si hay overflow */}
+      {isOverflowing && (
         <div className="mt-3">
           <button
             type="button"
