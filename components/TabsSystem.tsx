@@ -134,27 +134,7 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
           </div>
         </div>
 
-        {/* Controles Anterior/Siguiente */}
-        <div className="mt-3 flex items-center justify-end gap-2">
-          <button
-            className="px-3 py-2 text-sm font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
-            onClick={() => goToIndex(Math.max(activeIndex - 1, 0))}
-            disabled={activeIndex <= 0}
-            aria-label="Anterior pestaña"
-            title="Anterior pestaña (←)"
-          >
-            ← Anterior
-          </button>
-          <button
-            className="px-3 py-2 text-sm font-semibold rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
-            onClick={() => goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1))}
-            disabled={activeIndex >= section.tabs.length - 1}
-            aria-label="Siguiente pestaña"
-            title="Siguiente pestaña (→)"
-          >
-            Siguiente →
-          </button>
-        </div>
+        {/* Controles Anterior/Siguiente (eliminados: ahora usamos overlay flotante) */}
       </div>
 
       {/* Contenido de la tab activa */}
@@ -234,32 +214,35 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
 
       {/* Botones flotantes de navegación dentro de la sección */}
       {showFloating && (
-        <div className="fixed bottom-4 right-4 z-40">
-          <div className="flex items-center gap-2 bg-white/90 backdrop-blur-md border border-slate-200 shadow-xl rounded-full p-1.5">
-            <button
-              className="px-3 py-2 text-sm font-semibold rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
-              onClick={() => goToIndex(Math.max(activeIndex - 1, 0))}
-              disabled={activeIndex <= 0}
-              aria-label="Anterior pestaña"
-              title="Anterior pestaña"
-            >
-              ←
-            </button>
-            <div className="px-3 text-xs text-slate-700 max-w-[40vw] truncate">
-              {section.title} · {activeTab?.label || ''}
-            </div>
-            <button
-              className="px-3 py-2 text-sm font-semibold rounded-full bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
-              onClick={() => goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1))}
-              disabled={activeIndex >= section.tabs.length - 1}
-              aria-label="Siguiente pestaña"
-              title="Siguiente pestaña"
-            >
-              →
-            </button>
-          </div>
-        </div>
-      )}
+         <div
+           className="fixed z-40 right-[5rem] md:right-4"
+           style={{ bottom: 'calc(1rem + env(safe-area-inset-bottom))' }}
+         >
+           <div className="flex items-center gap-2 bg-white/90 backdrop-blur-md border border-slate-200 shadow-xl rounded-full p-1.5">
+             <button
+               className="px-3 py-2 text-sm font-semibold rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
+               onClick={() => goToIndex(Math.max(activeIndex - 1, 0))}
+               disabled={activeIndex <= 0}
+               aria-label="Anterior pestaña"
+               title="Anterior pestaña"
+             >
+               ←
+             </button>
+             <div className="px-3 text-xs text-slate-700 max-w-[55vw] md:max-w-[40vw] truncate">
+               {section.title} · {activeTab?.label || ''}
+             </div>
+             <button
+               className="px-3 py-2 text-sm font-semibold rounded-full bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
+               onClick={() => goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1))}
+               disabled={activeIndex >= section.tabs.length - 1}
+               aria-label="Siguiente pestaña"
+               title="Siguiente pestaña"
+             >
+               →
+             </button>
+           </div>
+         </div>
+       )}
     </div>
   );
 }
