@@ -169,19 +169,19 @@ export const SUBJECT_COLORS = {
 export const SUBJECT_CONFIG: Record<string, { name: string; icon: string; color: keyof typeof SUBJECT_COLORS; description: string }> = {
   quimica: {
     name: 'Química',
-    icon: '🧪',
+    icon: '⚛️',
     color: 'quimica',
     description: 'Estudio de la materia, sus propiedades y transformaciones',
   },
   fisica: {
     name: 'Física',
-    icon: '⚛️',
+    icon: '🧲',
     color: 'fisica',
     description: 'Estudio de las leyes fundamentales del universo',
   },
   matematicas: {
     name: 'Matemáticas',
-    icon: '📐',
+    icon: '🔢',
     color: 'matematicas',
     description: 'Números, álgebra, geometría y cálculo',
   },
