@@ -3,7 +3,7 @@
 // components/TabsSystem.tsx
 // Sistema de tabs interactivo con estado client-side
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import type { Section } from '@/types/content';
 import VideoEmbed from './VideoEmbed';
 import MarkdownContent from './MarkdownContent';
@@ -49,6 +49,43 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
   }, [section]);
 
   const activeTab = section.tabs.find((tab) => tab.id === activeTabId);
+  const tabIds = section.tabs.map((t) => t.id);
+  const activeIndex = Math.max(0, tabIds.indexOf(activeTabId));
+
+  const navRef = useRef<HTMLDivElement>(null);
+
+  const activateTab = (id: string) => {
+    setActiveTabId(id);
+    // Actualiza el hash para navegación directa y persistencia
+    if (typeof window !== 'undefined') {
+      window.location.hash = id;
+    }
+    // Desplaza el botón activo a la vista
+    setTimeout(() => {
+      const btn = navRef.current?.querySelector<HTMLButtonElement>(`[data-tab-id="${id}"]`);
+      btn?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }, 0);
+  };
+
+  const goToIndex = (idx: number) => {
+    const next = section.tabs[idx];
+    if (next) activateTab(next.id);
+  };
+
+  // Atajos de teclado: ← → para cambiar pestaña dentro de la sección
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1));
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goToIndex(Math.max(activeIndex - 1, 0));
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [activeIndex, section.tabs.length]);
 
   return (
     <div className={`tabs-system ${className} min-h-[calc(100vh-20rem)]`}>
@@ -63,11 +100,12 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
         <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none md:hidden z-10" />
         
         <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-indigo-300 scrollbar-track-transparent">
-          <div className="flex gap-2 min-w-max border-b-2 border-slate-200">
+          <div ref={navRef} className="flex gap-2 min-w-max border-b-2 border-slate-200">
             {section.tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTabId(tab.id)}
+                data-tab-id={tab.id}
+                onClick={() => activateTab(tab.id)}
                 className={`
                   relative px-6 py-3 font-semibold text-sm md:text-base whitespace-nowrap
                   transition-all duration-300 rounded-t-xl
@@ -87,6 +125,28 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
               </button>
             ))}
           </div>
+        </div>
+
+        {/* Controles Anterior/Siguiente */}
+        <div className="mt-3 flex items-center justify-end gap-2">
+          <button
+            className="px-3 py-2 text-sm font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            onClick={() => goToIndex(Math.max(activeIndex - 1, 0))}
+            disabled={activeIndex <= 0}
+            aria-label="Anterior pestaña"
+            title="Anterior pestaña (←)"
+          >
+            ← Anterior
+          </button>
+          <button
+            className="px-3 py-2 text-sm font-semibold rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            onClick={() => goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1))}
+            disabled={activeIndex >= section.tabs.length - 1}
+            aria-label="Siguiente pestaña"
+            title="Siguiente pestaña (→)"
+          >
+            Siguiente →
+          </button>
         </div>
       </div>
 
