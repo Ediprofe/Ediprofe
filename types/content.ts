@@ -171,13 +171,13 @@ export const SUBJECT_CONFIG: Record<string, { name: string; icon: string; color:
     name: 'Química',
     icon: '⚛️',
     color: 'quimica',
-    description: 'Estudio de la materia, sus propiedades y transformaciones',
+    description: 'La materia, sus propiedades y transformaciones',
   },
   fisica: {
     name: 'Física',
     icon: '🚀',
     color: 'fisica',
-    description: 'Estudio de las leyes fundamentales del universo',
+    description: 'Leyes fundamentales de la naturaleza',
   },
   matematicas: {
     name: 'Matemáticas',
