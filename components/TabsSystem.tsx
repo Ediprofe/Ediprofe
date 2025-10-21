@@ -217,6 +217,31 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
             )}
           </>
         )}
+
+        {/* Navegación inferior Anterior/Siguiente */}
+        <div
+          className="mt-8 flex items-center justify-end gap-2 pr-[5rem] md:pr-0"
+          style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+        >
+          <button
+            className="px-3 py-2 text-sm font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            onClick={() => goToIndex(Math.max(activeIndex - 1, 0))}
+            disabled={activeIndex <= 0}
+            aria-label="Anterior"
+            title="Anterior"
+          >
+            Anterior
+          </button>
+          <button
+            className="px-3 py-2 text-sm font-semibold rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            onClick={() => goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1))}
+            disabled={activeIndex >= section.tabs.length - 1}
+            aria-label="Siguiente"
+            title="Siguiente"
+          >
+            Siguiente
+          </button>
+        </div>
       </div>
 
       {/* Navegación flotante eliminada */}
