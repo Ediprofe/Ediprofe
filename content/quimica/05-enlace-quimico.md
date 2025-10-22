@@ -48,23 +48,22 @@ video: https://youtu.be/GSLfI-fvUVo?si=itoCwBOorU_hcNRq
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSSaXu9AR/)
 
-**A. Naturaleza y mecanismo**
+**A. Naturaleza y propósito**
 
 1. El **enlace iónico** es aquel que se produce debido a un **robo de electrones**.
-2. Generalmente, este enlace se da entre un **metal y un no metal**.
-3. Los átomos se enlazan con el objetivo de alcanzar la **regla del octeto**, buscando completar **ocho electrones** en su última capa.
-4. La **diferencia de electronegatividad** en los enlaces iónicos es **alta**, siendo típicamente **mayor a 1,7**. Esta gran diferencia causa que un átomo (el más electronegativo) **robe** el electrón al otro.
+2. Se da generalmente entre un **metal** (como el Sodio o el Potasio) y un **no metal** (como el Cloro).
+3. Los átomos se enlazan con el fin de cumplir la **regla del octeto.**
+
+**B. Representación**
 
 ---
 
-**B. Propiedades**
-
-1. **Estado físico ambiente:** Típicamente, las sustancias iónicas son **sólidos cristalinos** (por ejemplo, la sal de cocina, $\text{NaCl}$, o el fluoruro de sodio, $\text{NaF}$).
-2. **Puntos de fusión y ebullición:** Poseen puntos de fusión y ebullición **altos**, lo que implica que se necesita mucha temperatura para fundirlas o volverlas gas.
-3. **Solubilidad:** Presentan **alta solubilidad en agua**; la sal de cocina, por ejemplo, se disuelve de muy buena manera.
-4. **Conductividad eléctrica:** Tienen **alta conductividad eléctrica**; al echar sal al agua, esta incrementa su conductividad.
+1. Para la representación, solo se anotan o dibujan los electrones de la **última capa**.
+2. En el caso del Potasio ($\text{K}$) y Cloro ($\text{Cl}$): a. El Potasio tiene un solo electrón de valencia, y el Cloro tiene siete electrones de valencia. b. El Potasio cede su electrón al Cloro. c. El Potasio queda con carga positiva (por entregar el electrón) y el Cloro con carga negativa (por recibirlo), quedando enlazados en forma de $\text{KCl}$ (cloruro de potasio).
 
 ## Enlace covalente
+
+### Enlace covalente
 
 video: https://youtu.be/Ybe7NJocdPc?si=Dv9j6uKxZqib5bw4
 
@@ -89,8 +88,6 @@ video: https://youtu.be/Ybe7NJocdPc?si=Dv9j6uKxZqib5bw4
 
 1. El enlace covalente coordinado o **dativo** es un tipo especial de enlace covalente.
 2. Se define porque **el par de electrones que se comparte es aportado por uno solo de los átomos**.
-3. *Ejemplo:* En el ion amonio ($\text{NH}_4^+$), el nitrógeno dona los dos electrones para el enlace con un hidrógeno. El signo positivo del $\text{NH}_4^+$ indica que el hidrógeno en ese enlace llegó sin un electrón.
-4. *Ejemplo:* En el **monóxido de carbono** ($\text{CO}$), para que el carbono complete su octeto, el oxígeno pone o comparte los dos electrones necesarios para el tercer enlace, siendo este enlace de tipo dativo.
 
 ### Enlace covalente doble
 
@@ -117,10 +114,6 @@ video: https://youtu.be/Qlxxerax9i0?si=sOg_yodwx513WEgN
     - El carbono tiene **cuatro electrones de valencia**, y el oxígeno tiene **seis**.
     - El carbono forma **dos enlaces dobles** (uno con cada átomo de oxígeno).
     - De esta manera, el carbono (4 electrones propios + 4 compartidos = 8) y cada oxígeno (6 electrones propios + 2 compartidos = 8) cumplen la ley del octeto.
-3. **$\text{C}_2\text{H}_4$ (Dos de carbono y cuatro de hidrógeno):**
-    - Los cuatro hidrógenos (cada uno con un electrón de valencia) se enlazan de forma simple con los carbonos para cumplir su dueto (dos electrones).
-    - Para que los carbonos cumplan su octeto, los dos átomos de carbono deben **compartir dos pares de electrones** entre sí, formando un enlace doble.
-    - Al final, cada carbono queda con ocho electrones de valencia (cuatro propios + dos de hidrógeno + dos del otro carbono).
 
 ### Enlace covalente triple
 
@@ -132,33 +125,6 @@ video: https://youtu.be/HXu3l8IPkTw?si=rgl9ZAo0awbuMiyh
 
 1. El **enlace covalente triple** ocurre cuando los átomos que se enlazan se comparten **tres pares de electrones**.
 2. Esto implica que se están compartiendo un total de **seis electrones**.
-
----
-
-**B. Ejemplos de enlace triple convencional**
-
-1. **Molécula de nitrógeno ($\text{N}_2$):**
-    - Cada átomo de nitrógeno tiene **cinco electrones de valencia**.
-    - Cada uno necesita tres electrones adicionales para completar la **regla del octeto** (llegar a ocho).
-    - Para cumplir el octeto, los dos átomos de nitrógeno se comparten **tres pares de electrones**.
-    - Al verificar, cada nitrógeno queda con ocho electrones de valencia, cumpliendo su octeto.
-2. **$\text{C}_2\text{H}_2$ (Dos de carbono y dos de hidrógeno):**
-    - El carbono maneja **cuatro electrones de valencia**.
-    - El hidrógeno maneja **un solo electrón de valencia** y busca cumplir el dueto.
-    - Cada hidrógeno se enlaza de forma simple con un carbono para cumplir su dueto.
-    - Para que los carbonos cumplan su octeto, deben establecer un **enlace covalente triple** entre sí, compartiendo tres pares de electrones.
-
----
-
-**C. Enlace covalente triple dativo**
-
-1. **Monóxido de carbono ($\text{CO}$):**
-    - El carbono tiene **cuatro electrones de valencia** y el oxígeno tiene **seis electrones de valencia**.
-    - El objetivo es que ambos cumplan el octeto (ocho electrones).
-    - Después de formar enlaces dobles, el oxígeno puede quedar cumpliendo su octeto (ocho) mientras que al carbono le pueden faltar dos electrones (quedando con seis).
-    - Para completar el octeto del carbono, el oxígeno debe **prestar o compartir** un par de electrones adicional para un tercer enlace.
-    - Este tercer enlace, donde **los dos electrones son aportados por uno solo de los átomos** (el oxígeno), se clasifica como **enlace covalente dativo** o **coordinado**.
-    - El resultado final es un **enlace triple** que permite que tanto el oxígeno como el carbono cumplan con el octeto.
 
 ## Enlace metálico
 
@@ -178,25 +144,6 @@ video: https://youtu.be/xhe4-iKOaIE?si=mh9Qdz9nkzBuSlZB
 
 1. La idea del enlace metálico no es convencional, como en los enlaces covalentes donde se ven claramente los pares de electrones compartidos entre uno y otro átomo. En el enlace metálico se comparten **muchos pares, muchos electrones**.
 
----
-
-**C. Propiedades Típicas**
-
-1. **Estado físico ambiente:** Típicamente, los enlaces metálicos son **sólidos** a condición ambiente.
-2. **Puntos de fusión y ebullición:** Los metales tienen puntos de fusión y ebullición **muy altos**.
-3. **Solubilidad en agua:** Los compuestos con enlaces metálicos son **insolubles** o **no solubles** en general en agua.
-4. **Conductividad eléctrica:** Los metales tienen una **muy alta conductividad eléctrica**.
-    - Esta gran conductividad se explica por el **movimiento deslocalizado de los electrones**.
-    - La electricidad es, básicamente, electrones en movimiento.
-
----
-
-**D. Relación con la electronegatividad**
-
-1. El enlace metálico **no se incluye** en la escala de electronegatividad.
-2. Esto se debe a que la escala de electronegatividad se basa en la resta de las electronegatividades de **dos átomos enlazados**.
-3. En los enlaces metálicos, no son solo un par de electrones o de átomos puntualmente los que comparten, sino que son **muchos átomos** que comparten sus electrones deslocalizados. Por esta razón, el enlace metálico no entra en esa escala.
-
 ## Escala de electronegatividad
 
 ### Escala de electronegativad
@@ -207,13 +154,15 @@ video: https://youtu.be/XunxWycF4Q8?si=zCtVlG5prejIghHX
 
 **A. Clasificación según la diferencia de electronegatividad**
 
-La **diferencia de electronegatividad** ($\Delta$) es la resta entre las electronegatividades de dos átomos enlazados, e indica qué tan equitativamente comparten los electrones. La $\Delta$ permite clasificar los enlaces en tres tipos principales, dependiendo de la intensidad con la que un átomo atrae los electrones compartidos.
+La **diferencia de electronegatividad** (**ΔEₙ**) es la resta entre las electronegatividades de dos átomos enlazados, e indica qué tan equitativamente comparten los electrones. La **ΔEₙ** permite clasificar los enlaces en tres tipos principales, dependiendo de la intensidad con la que un átomo atrae los electrones compartidos.
 
-| TIPO DE ENLACE | RANGO DE $\Delta$ | MECANISMO Y SIGNIFICADO | CITA(S) |
-| --- | --- | --- | --- |
-| **Covalente no polar** | **0 hasta 0,4** | Se da cuando la diferencia es **cero o muy cercana a cero**. Los átomos atraen los electrones con una fuerza muy similar. Los electrones se comparten de forma **muy pareja**(no buscan un polo específico). *Ejemplos:* $\text{H}_2$ ($\Delta$ = 0); $\text{CH}_4$ ($\Delta$ = 0,35). |  |
-| **Covalente polar** | **0,4 hasta 1,7** | Hay más diferencia de electronegatividad. Un átomo atrae el par de electrones con **más fuerza**. El par de electrones se ubica **más cerca de un polo** (el átomo más electronegativo). *Ejemplo:* Nitrógeno con Hidrógeno ($\Delta$ = 0,84). |  |
-| **Iónico** | **Mayor a 1,7** | Hay **mucha diferencia** de electronegatividad. El átomo más electronegativo **roba** el electrón al otro átomo, lo que no es un compartimiento. *Ejemplo:* Sodio ($\text{Na}$) con Cloro ($\text{Cl}$) ($\Delta$ = 2,23). |  |
+| TIPO DE ENLACE | RANGO DE **ΔEₙ** | MECANISMO Y SIGNIFICADO |
+| --- | --- | --- |
+| **Covalente no polar** | **0 hasta 0,4** | Se da cuando la diferencia es **cero o muy cercana a cero**. Los átomos atraen los electrones con una fuerza muy similar. Los electrones se comparten de forma **muy pareja** (no buscan un polo específico). *Ejemplos:* $\text{H}_2$ (**ΔEₙ** = 0); $\text{CH}_4$ (**ΔEₙ** = 0,35). |
+| **Covalente polar** | **0,4 hasta 1,7** | Hay más diferencia de electronegatividad. Un átomo atrae el par de electrones con **más fuerza**. El par de electrones se ubica **más cerca de un polo** (el átomo más electronegativo). *Ejemplo:*Nitrógeno con Hidrógeno (**ΔEₙ** = 0,84). |
+| **Iónico** | **Mayor a 1,7** | Hay **mucha diferencia** de electronegatividad. El átomo más electronegativo **roba** el electrón al otro átomo, lo que no es un compartimiento. *Ejemplo:* Sodio ($\text{Na}$) con Cloro ($\text{Cl}$) (**ΔEₙ** = 2,23). |
+
+---
 
 **B. La exclusión del enlace metálico**
 
@@ -227,7 +176,7 @@ video: https://youtu.be/qV4P3PJCiFE?si=2j9ZfCI5YMWzhzOm
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSSaXxCXs/)
 
-| ASPECTO DE COMPARACIÓN | ENLACE IÓNICO | ENLACE COVALENTE | ENLACE METÁLICO |
+| ASPECTO | ENLACE IÓNICO | ENLACE COVALENTE | ENLACE METÁLICO |
 | --- | --- | --- | --- |
 | **Participantes** | Metales y no metales | Entre no metales | Entre metales |
 | **Mecanismo** | Robo de electrones | Compartimiento de electrones | Compartimiento de muchos electrones |
