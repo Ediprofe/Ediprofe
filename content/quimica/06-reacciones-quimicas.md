@@ -18,62 +18,86 @@ video: https://youtu.be/tAFBXzA31V0?si=OHwOBm6YusR6Z4ey
 [Ver en Tiktok](https://vt.tiktok.com/ZSSa7o2Vo/)
 
 ```markdown
-# ⚗️ Reacciones químicas y ecuaciones balanceadas
+# ⚗️ Reacciones y ecuaciones químicas
 
-## 🧩 Concepto general
-- Transformación de **sustancias → nuevas sustancias**
-- Representación: **ecuación química**
-- Conserva la **masa**
-- Ejemplo:
-  - $$\text{H}_2 + \tfrac{1}{2}\text{O}_2 → \text{H}_2\text{O}$$
+---
 
-## 🔬 Tipos de reacciones
+## 🧩 Reacción química (RXN) y cambio químico
 
-### 🧱 Síntesis (combinación)
-- Reactivos → un solo producto
-- Ej: $$2\text{H}_2 + \text{O}_2 → 2\text{H}_2\text{O}$$
-- ↓ moléculas | ↑ energía liberada
+ ↳ Una **reacción química (RXN)** es un **cambio químico**  
+ ↳ En una reacción aparecen **nuevas sustancias** y desaparecen las iniciales  
+ ↳ El resultado son **sustancias diferentes** a las del principio  
 
-### 💥 Descomposición
-- Un compuesto → sustancias simples  
-- Ej: $$2\text{H}_2\text{O} → 2\text{H}_2 + \text{O}_2$$
-- Causas: calor | electricidad | luz
+**Ejemplos:**  
+ • 🔥 **Quema de papel** → el papel se convierte en **ceniza**  
+ • 🧲 **Oxidación** → un **clavo o un aguacate** se cubren de **óxido**
 
-### 🔁 Desplazamiento simple
-- Un elemento reemplaza a otro  
-- Ej: $$\text{Zn} + 2\text{HCl} → \text{ZnCl}_2 + \text{H}_2$$
-- Metales ↔ Hidrógeno | Halógenos ↔ Halógenos
+---
 
-### 🔄 Doble desplazamiento
-- Intercambio de iones  
-- Ej: $$\text{NaOH} + \text{HCl} → \text{NaCl} + \text{H}_2\text{O}$$
-- Tipos:
-  - Neutralización
-  - Precipitación
+## ⚙️ Ecuación química: representación y componentes
 
-## ⚖️ Balanceo de ecuaciones
-- Ajuste de **coeficientes** → conserva átomos
-- Ej:
-  - $$\text{Fe} + \text{O}_2 → \text{Fe}_2\text{O}_3$$  
-  - ✅ $$4\text{Fe} + 3\text{O}_2 → 2\text{Fe}_2\text{O}_3$$
+ ↳ Una **ecuación química** representa una reacción mediante **símbolos químicos**  
 
-## 🧠 Conceptos clave
-- **Ley de conservación**: masa reactivos = masa productos  
-- **Coeficiente**: cantidad de moléculas  
-- **Subíndice**: cantidad de átomos en la fórmula  
+**Elementos clave:**  
+ ↳ **Flecha (→):** se lee como “produce”  
+ ↳ **Reactivos:** sustancias **antes de la flecha** (lado izquierdo)  
+ ↳ **Productos:** sustancias **después de la flecha** (lado derecho)  
 
-## 🌱 Aplicaciones
-- 🔥 Combustión: $$\text{CH}_4 + 2\text{O}_2 → \text{CO}_2 + 2\text{H}_2\text{O}$$
-- 🌞 Fotosíntesis:  
-  $$6\text{CO}_2 + 6\text{H}_2\text{O} \xrightarrow{\text{luz}} \text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2$$
-- 💨 Respiración celular:  
-  $$\text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2 → 6\text{CO}_2 + 6\text{H}_2\text{O} + \text{energía}$$
+**Ejemplo:**
 
-## 🧩 Repaso rápido
-- 🔹 ¿Qué conserva el balanceo?
-- 🔹 Diferencia entre síntesis ↔ descomposición
-- 🔹 Reacción del amoníaco:  
-  $$\text{N}_2 + 3\text{H}_2 → 2\text{NH}_3$$
+$$
+\mathrm{H_2O \rightarrow H_2 + O_2}
+$$
+
+ ↳ **Reactivo:** H₂O (agua)  
+ ↳ **Productos:** H₂ y O₂  
+ ↳ El agua (H₂O) contiene **2 átomos de hidrógeno** y **1 de oxígeno**  
+ ↳ *(Si no hay número abajo, se sobreentiende que es 1)*
+
+---
+
+## ⚖️ Balanceo o ajuste de la ecuación
+
+ ↳ El **balanceo** asegura que haya la **misma cantidad de átomos** de cada elemento  
+ ↳ Los **átomos no desaparecen** ni se crean, solo se **reorganizan**  
+ ↳ Para ajustar, se modifican los **números al frente** de cada fórmula (**coeficientes**)  
+
+---
+
+### 🔢 Método rápido para contar átomos
+
+1. Ubica el elemento.  
+2. Multiplica el **número de adelante (coeficiente)** por el **número de abajo (subíndice)**.  
+3. Si no hay número, se asume que es **1**.  
+4. El **coeficiente** afecta a todos los elementos en la fórmula.
+
+---
+
+### 💡 Ejemplo de balanceo
+
+$$
+\mathrm{H_2O \rightarrow H_2 + O_2}
+$$
+
+**Paso 1:** Ajustar los coeficientes →  
+
+$$
+\mathrm{2H_2O \rightarrow 2H_2 + O_2}
+$$
+
+**Paso 2:** Verificar conteo de átomos  
+
+| Elemento | Reactivos | Productos |
+|-----------|------------|-----------|
+| **H** | 2 × 2 = 4 | 2 × 2 = 4 |
+| **O** | 2 × 1 = 2 | 1 × 2 = 2 |
+
+✅ **Ecuación balanceada:**
+
+$$
+\mathrm{2H_2O \rightarrow 2H_2 + O_2}
+$$
+
 ```
 
 ### Coeficiente y subíndice
