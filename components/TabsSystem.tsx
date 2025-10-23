@@ -60,71 +60,52 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
   const hasNotesContent = (html: string): boolean => {
     if (!html) return false;
 
-    const fenceRegex = /<code[^>]*class=["'][^"']*(?:language-)?(?:markdown|md)[^"']*["'][^>]*>([\s\S]*?)<\/code>/i;
-    const fenceMatch = fenceRegex.exec(html);
-    if (fenceMatch && fenceMatch[1].trim().length > 0) return true;
+    // 1) Bloques de notas (fences) renderizados como <pre><code class="language-markdown|md">...</code></pre>
+    const fencePattern = /<pre>\s*<code[^>]*class=["'][^"']*(?:language-)?(?:markdown|md)[^"']*["'][^>]*>[\s\S]*?<\/code>\s*<\/pre>/i;
+    if (fencePattern.test(html)) return true;
 
-    try {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      doc.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((el) => el.remove());
-      const candidates = Array.from(doc.querySelectorAll('p, li'));
-      for (const el of candidates) {
-        const text = (el.textContent || '').trim();
-        if (!text) continue;
-        const anchors = Array.from(el.querySelectorAll('a'));
-        if (anchors.length === 0) return true;
-        let residual = text;
-        anchors.forEach((a) => {
-          const t = (a.textContent || '').trim();
-          if (t) residual = residual.replace(new RegExp(t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '');
-        });
-        residual = residual.replace(/[\s\-–—→↗↘↙↖…:;,.!?()]+/g, '');
-        if (residual.length > 0) return true;
-      }
-      return false;
-    } catch {
-      return false;
-    }
+    // 2) Quitar headings y enlaces para detectar texto residual significativo
+    let stripped = html
+      .replace(/<h[1-6][^>]*>[\s\S]*?<\/h[1-6]>/gi, '')
+      .replace(/<a[^>]*>[\s\S]*?<\/a>/gi, '')
+      .replace(/<[^>]+>/g, ' ') // eliminar el resto de etiquetas
+      .replace(/[\s\-–—→↗↘↙↖…:;,.!?()]+/g, ' ')
+      .trim();
+
+    return /[A-Za-z0-9áéíóúüñ]/i.test(stripped);
   };
 
   // Limpia del HTML los bloques de notas (fences markdown/md) para que NO aparezcan en la página
   const stripMarkdownFences = (html?: string): string => {
     if (!html) return '';
-    try {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      // Eliminar <pre><code class="language-markdown|md">...</code></pre> y variantes
-      doc
-        .querySelectorAll('pre > code[class*="language-markdown"], pre > code[class*="language-md"], code[class*="language-markdown"], code[class*="language-md"]')
-        .forEach((code) => {
-          const pre = code.parentElement && code.parentElement.tagName.toLowerCase() === 'pre' ? code.parentElement : code;
-          pre.remove();
-        });
-      return doc.body.innerHTML.trim();
-    } catch {
-      // Si falla el parseo, retornar el HTML original para no romper
-      return html;
-    }
+    return html
+      .replace(/<pre>\s*<code[^>]*class=["'][^"']*(?:language-)?(?:markdown|md)[^"']*["'][^>]*>[\s\S]*?<\/code>\s*<\/pre>/gi, '')
+      .replace(/<code[^>]*class=["'][^"']*(?:language-)?(?:markdown|md)[^"']*["'][^>]*>[\s\S]*?<\/code>/gi, '')
+      .trim();
   };
 
-  // Extrae (y remueve) el primer enlace a TikTok del HTML
+  // Extrae (y remueve) el primer enlace a TikTok del HTML (SSR-safe)
   const extractTikTokLink = (html?: string): { href: string; label: string; cleaned: string } | null => {
     if (!html) return null;
-    try {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const anchors = Array.from(doc.querySelectorAll<HTMLAnchorElement>('a[href*="tiktok.com"], a[href*="vt.tiktok.com"]'));
-      if (anchors.length === 0) return null;
-      // Priorizar el que tenga texto
-      const a = anchors.find((n) => (n.textContent || '').trim().length > 0) || anchors[0];
-      const href = a.getAttribute('href') || '#';
-      const label = (a.textContent || 'Ver en TikTok').trim();
-      a.remove();
-      return { href, label, cleaned: doc.body.innerHTML.trim() };
-    } catch {
-      return null;
+    const anchorRegex = /<a[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+    let match: RegExpExecArray | null;
+    let first: { href: string; label: string; index: number; length: number } | null = null;
+
+    while ((match = anchorRegex.exec(html)) !== null) {
+      const href = match[1];
+      const text = (match[2] || '').trim();
+      const isTikTok = /tiktok\.com/i.test(href) || /ver\s+en\s+tiktok/i.test(text);
+      if (isTikTok) {
+        first = { href, label: text || 'Ver en TikTok', index: match.index, length: match[0].length };
+        break;
+      }
     }
+
+    if (!first) return null;
+    const before = html.slice(0, first.index);
+    const after = html.slice(first.index + first.length);
+    const cleaned = (before + after).trim();
+    return { href: first.href, label: first.label, cleaned };
   };
 
   const getTikTokFromVideos = (videos?: Section['tabs'][number]['videos']): { href: string; label: string } | null => {

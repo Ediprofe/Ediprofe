@@ -22,9 +22,9 @@ video: https://youtu.be/tAFBXzA31V0?si=OHwOBm6YusR6Z4ey
 
 ---
 
-## 🧩 Reacción química (RXN) y cambio químico
+## 🧩 Reacción química y cambio químico
 
- ↳ Una **reacción química (RXN)** es un **cambio químico**  
+ ↳ Una **reacción química (rxn)** es un **cambio químico**  
  ↳ En una reacción aparecen **nuevas sustancias** y desaparecen las iniciales  
  ↳ El resultado son **sustancias diferentes** a las del principio  
 
@@ -97,7 +97,6 @@ $$
 $$
 \mathrm{2H_2O \rightarrow 2H_2 + O_2}
 $$
-
 ```
 
 ### Coeficiente y subíndice
@@ -106,34 +105,79 @@ video: https://youtu.be/_ZvWp6TL2ho?si=6yQ-kc8PLBnhTWeJ
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSSav6gFa/)
 
-**A. El coeficiente: cantidad**
+```markdown
+# ⚗️ Coeficiente y subíndice en las ecuaciones químicas  
 
-1. **Definición:** 
-    - Es el número que se encuentra **adelante** de la fórmula química de la sustancia (ej., el 1 o el 2 en $\text{H}_2\text{O}$).
-    - Si no se anota ningún número delante, se sobreentiende que el coeficiente es **un uno**.
-2. **Significado:** 
-    - El coeficiente habla de la **cantidad** de la sustancia.
-    - Cambiar el coeficiente implica cambiar la cantidad de esa sustancia.
-    - Ejemplo: Cambiar el coeficiente de uno a dos implica que ya no se tiene una de agua, sino el doble de esa sustancia.
+---
 
-**B. El subíndice: identidad**
+## 🧩 El coeficiente: cantidad  
 
-1. **Definición:**
-    - Es el número que está **abajo** en la fórmula.
-    - El subíndice se aplica a **cada uno de los elementos** (ej., en $\text{H}_2\text{O}$, el 2 es para el hidrógeno, y el 1 se sobreentiende para el oxígeno).
-2. **Significado:** 
-    - El subíndice se relaciona con la **identidad** de la sustancia.
-    - Si se cambia el subíndice (ej., cambiar $\text{H}_2\text{O}$ por $\text{H}_3\text{O}$), se cambia la **fórmula química**.
-    - Cambiar el subíndice implica que la sustancia ha cambiado su **identidad** (deja de ser agua y se convierte en otra sustancia).
+ ↳ El **coeficiente** es el **número que se coloca al frente** de la fórmula química.  
+ ↳ Indica **cuántas moléculas o moles** de una sustancia participan en la reacción.  
+ ↳ Si **no aparece ningún número**, se **sobreentiende que es 1**.  
 
-**C. Consideraciones para el balanceo**
+**Ejemplo:**  
+$$
+\mathrm{2H_2O}
+$$  
+ ↳ El **2** indica **dos moléculas de agua**.  
+ ↳ Si fuera solo $\mathrm{H_2O}$, habría **una molécula**.  
 
-1. **Propósito del Ajuste:** 
-    - El balanceo se realiza para que haya el **mismo conteo** de átomos de cada elementos a ambos lados de la ecuación química.
-2. **Reglas:**
-    - Para balancear o ajustar la ecuación, solo se tocan o se cambian los **coeficientes** (los números de adelante).
-    - El ajuste de los coeficientes determina **cuánto se agrega** de cada sustancia (la cantidad).
-    - **Nunca** se tocan los **subíndices** durante el balanceo, ya que esto alteraría la identidad de la sustancia.
+**Importante:**  
+ ↳ Cambiar el **coeficiente** modifica la **cantidad de sustancia**,  
+ pero **no cambia su identidad química**.  
+
+---
+
+## ⚛️ El subíndice: identidad  
+
+ ↳ El **subíndice** es el número que aparece **abajo** de un símbolo químico.  
+ ↳ Indica **cuántos átomos de ese elemento** hay en la molécula.  
+
+**Ejemplo:**  
+$$
+\mathrm{H_2O}
+$$  
+ ↳ El **2** aplica al **hidrógeno (H)** → hay **dos átomos de H**.  
+ ↳ El **oxígeno (O)** no tiene número, así que se **sobreentiende un 1**.  
+
+**Significado:**  
+ ↳ El subíndice determina la **identidad** de la sustancia.  
+ ↳ Si cambias el subíndice, **cambias la fórmula** y por tanto **otra sustancia**.  
+
+**Ejemplo de cambio de identidad:**  
+$$
+\mathrm{H_2O \neq H_3O}
+$$  
+ ↳ $\mathrm{H_2O}$ → **agua**  
+ ↳ $\mathrm{H_3O}$ → **ión hidronio**, sustancia diferente.  
+
+---
+
+## ⚖️ Consideraciones para el balanceo  
+
+**Propósito:**  
+ ↳ Asegurar que haya la **misma cantidad de átomos** de cada elemento  
+  en los **reactivos** y en los **productos**.  
+
+**Reglas básicas:**  
+1. Solo se pueden modificar los **coeficientes** (números delante de las fórmulas).  
+2. **Nunca** se deben cambiar los **subíndices**, ya que alteran la **identidad** química.  
+3. Los coeficientes indican **cuánto se agrega o produce** de cada sustancia.  
+
+**Ejemplo:**  
+
+$$
+\mathrm{2H_2 + O_2 \rightarrow 2H_2O}
+$$  
+
+| Elemento | Reactivos | Productos |
+|-----------|------------|-----------|
+| **H** | 2 × 2 = 4 | 2 × 2 = 4 |
+| **O** | 2 × 1 = 2 | 1 × 2 = 2 |
+
+✅ **Ecuación balanceada:** misma cantidad de átomos a ambos lados.  
+```
 
 ## Balanceo de ecuaciones
 
@@ -143,37 +187,115 @@ video: https://youtu.be/bmHEl-XBaV8?si=uJSjhvKMsRHPDeVQ
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSSacyaBw/)
 
-**A. Balanceo de ecuaciones químicas**
+```markdown
+# ⚗️ Balanceo de ecuaciones químicas y sases de las sustancias  
 
-1. **Verificación:**
-    - La tarea principal del balanceo es **verificar** si la ecuación química está ajustada.
-    - Se requiere tener la **misma cantidad** de todos los elementos (ej., nitrógeno e hidrógeno) a ambos lados: reactivos (izquierda) y productos (derecha).
-2. **Conteo:**
-    - Para contar el número de átomos de un elemento, se multiplica el **número de adelante**(coeficiente) por el **número de abajo** (subíndice).
-        - **Ejemplo de ajuste ($\text{N}_2 + \text{H}_2 \to \text{NH}_3$):**
-        - **Conteo inicial:** Nitrógeno: 2 (reactivos) contra 1 (productos). La ecuación no estaba balanceada.
-        - **Ajuste de Nitrógeno:** Para que el conteo de nitrógeno en productos diera 2, se cambió el coeficiente de $\text{NH}_3$ a 2.
-        - **Ajuste de Hidrógeno:** Al colocar el coeficiente 2, el hidrógeno en productos se convirtió en 6 ($2 \times 3$). Para igualarlo en reactivos, el coeficiente de $\text{H}_2$ se ajustó a 3, logrando 6 hidrógenos ($3 \times 2$).
-        - **Ecuación final ajustada:** $\text{N}_2 + 3\text{H}_2 \to 2\text{NH}_3$, quedando balanceada con 2 nitrógenos y 6 hidrógenos a ambos lados.
-    - **Regla clave:** Lo **único** que se puede tocar para ajustar o balancear una ecuación es el **número de adelante** (el coeficiente).
+---
 
-**B. Fases de las sustancias**
+## 🧩 Balanceo de ecuaciones químicas  
 
-1. **Notación:** 
-    - (g): gas.
-    - (l): líquido.
-    - (ac): acuoso.
-    - (s): sólido
+ ↳ El **balanceo** busca asegurar que haya **igual número de átomos** de cada elemento en los **reactivos** (lado izquierdo) y en los **productos** (lado derecho).  
+ ↳ Su función principal es **verificar** y **ajustar** la ecuación hasta que cumpla con la **Ley de la Conservación de la Materia**.  
+
+---
+
+### 🔍 Verificación  
+
+ ↳ La **verificación** consiste en comprobar que **cada elemento** tenga la **misma cantidad de átomos** a ambos lados.  
+ ↳ Si algún elemento no está equilibrado, se deben **modificar los coeficientes** hasta lograr la igualdad.  
+
+**Ejemplo:**
+
+$$
+\mathrm{N_2 + H_2 \rightarrow NH_3}
+$$  
+
+**Conteo inicial:**  
+| Elemento | Reactivos | Productos |
+|-----------|------------|-----------|
+| **N** | 2 | 1 |
+| **H** | 2 | 3 |
+
+❌ No está balanceada.
+
+---
+
+### ⚙️ Ajuste paso a paso  
+
+1. **Ajuste del Nitrógeno (N):**  
+ ↳ En productos hay 1 N, pero en reactivos hay 2.  
+ ↳ Se coloca un **2 delante de $\mathrm{NH_3}$** para igualar:  
+
+$$
+\mathrm{N_2 + H_2 \rightarrow 2NH_3}
+$$  
+
+2. **Ajuste del Hidrógeno (H):**  
+ ↳ Ahora hay $2 \times 3 = 6$ H en productos.  
+ ↳ Para igualar, se coloca un **3 delante de $\mathrm{H_2}$**:  
+
+$$
+\mathrm{N_2 + 3H_2 \rightarrow 2NH_3}
+$$  
+
+**Conteo final:**  
+| Elemento | Reactivos | Productos |
+|-----------|------------|-----------|
+| **N** | 2 | 2 |
+| **H** | 6 | 6 |
+
+✅ **Ecuación balanceada:**  
+$$
+\mathrm{N_2 + 3H_2 \rightarrow 2NH_3}
+$$  
+
+---
+
+### 💡 Regla clave  
+
+ ↳ Lo **único que se puede cambiar** al balancear una ecuación son los **coeficientes** (números delante de las fórmulas).  
+ ↳ Los **subíndices no se modifican**, ya que cambiarían la **identidad química** de las sustancias.  
+
+---
+
+## 🌡️ Fases de las sustancias  
+
+ ↳ En las ecuaciones químicas, se indican las **fases físicas** de las sustancias mediante **símbolos entre paréntesis**.  
+
+**Notación:**  
+| Símbolo | Estado físico | Ejemplo |
+|----------|----------------|----------|
+| **(g)** | Gas | $\mathrm{H_2(g)}$ |
+| **(l)** | Líquido | $\mathrm{H_2O(l)}$ |
+| **(s)** | Sólido | $\mathrm{NaCl(s)}$ |
+| **(ac)** | Acuoso (disuelto en agua) | $\mathrm{NaCl(ac)}$ |
+
+---
+
+💡 **Ejemplo completo con fases:**  
+
+$$
+\mathrm{N_2(g) + 3H_2(g) \rightarrow 2NH_3(g)}
+$$  
+
+ ↳ Todos los compuestos en esta reacción son **gases**.  
+ ↳ El balanceo respeta tanto la **cantidad de átomos** como el **estado físico** de cada sustancia.  
+
+```
 
 ### Balanceo - ejemplo 2
-
-Balancea la siguiente ecuación química:
-
-$$ \text{CH}_4 + \text{O}_2 \to \text{CO}_2 + \text{H}_2\text{O} $$
 
 video: https://youtu.be/omcm_uRhd2E?si=PTR-Y1ZknvFuC4mA
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSSacyaBw/)
+
+```markdown
+Balancea la siguiente ecuación química:
+
+$$
+\mathrm{CH_4 + O_2 \rightarrow CO_2 + H_2O}
+$$
+```
 
 ## Tipos de reacciones químicas
 
@@ -183,20 +305,92 @@ video: https://youtu.be/O1768cWh3Ls?si=8AJLklVbpKDvuNOJ
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSSacRmXB/)
 
-**A. Criterios de clasificación:**
+```markdown
+# ⚛️ Clasificación de las reacciones químicas
 
-1. **Adición:**
-    - Dos o más sustancias se combinan para formar **un solo producto**.
-    - $$\text{Sustancia A} + \text{Sustancia B} \to \text{SustanciaAB}$$
-2. **Descomposición:**
-    - Una sustancia compleja se descompone en **dos o más sustancias simples**.
-    - $$\text{Sustancia Compleja} \to \text{Sustancia simple} + \text{Sustancia simple}$$
-3. **Sustitución simple o reemplazo:** 
-    - Un elemento **reemplaza a otro** elemento que se encuentra en un compuesto.
-    - $$\text{Elemento A} + \text{Compuesto BC} \to \text{Compuesto AC} + \text{Elemento B}$$
-4. **Sustitución Doble o Intercambio:** Dos compuestos **intercambian partes** entre sí. 
-    - **Diferencia Clave:** A diferencia de la sustitución simple, en este caso **nadie queda solo**; es un intercambio de parejas.
-    - $$\text{Compuesto AB} + \text{Compuesto CD} \to \text{Compuesto AD} + \text{Compuesto CB}$$
+---
+
+## 🧩 Criterios de clasificación  
+
+Las reacciones químicas se pueden **clasificar según la forma en que se combinan o transforman las sustancias** durante el proceso.  
+
+---
+
+### ➕ Reacción de adición (o síntesis)  
+
+ ↳ **Dos o más sustancias** se combinan para formar **un solo producto**.  
+ ↳ Es el tipo más simple de reacción: las sustancias se **unen** para crear algo nuevo.  
+
+**Ejemplo general:**  
+$$
+\mathrm{Sustancia~A + Sustancia~B \rightarrow Sustancia~AB}
+$$  
+
+**Ejemplo real:**  
+$$
+\mathrm{2H_2 + O_2 \rightarrow 2H_2O}
+$$  
+
+💡 El hidrógeno y el oxígeno se combinan para formar **agua**.  
+
+---
+
+### ⚡ Reacción de descomposición  
+
+ ↳ Una **sustancia compleja se rompe** en **dos o más sustancias más simples**.  
+ ↳ Es el proceso inverso a la adición.  
+
+**Ejemplo general:**  
+$$
+\mathrm{Sustancia~Compleja \rightarrow Sustancia~simple + Sustancia~simple}
+$$  
+
+**Ejemplo real:**  
+$$
+\mathrm{2H_2O \rightarrow 2H_2 + O_2}
+$$  
+
+💡 El agua se descompone en **hidrógeno** y **oxígeno**.  
+
+---
+
+### 🔁 Sustitución simple (o reemplazo simple)  
+
+ ↳ Un **elemento libre** reemplaza a **otro elemento** dentro de un compuesto.  
+ ↳ El elemento desplazado **queda libre** después de la reacción.  
+
+**Ejemplo general:**  
+$$
+\mathrm{Elemento~A + Compuesto~BC \rightarrow Compuesto~AC + Elemento~B}
+$$  
+
+**Ejemplo real:**  
+$$
+\mathrm{Zn + 2HCl \rightarrow ZnCl_2 + H_2}
+$$  
+
+💡 El **zinc** reemplaza al **hidrógeno** del ácido clorhídrico.  
+
+---
+
+### 🔄 Sustitución doble (o intercambio doble)  
+
+ ↳ **Dos compuestos intercambian partes** entre sí, formando **dos nuevos compuestos**.  
+ ↳ **Diferencia clave:** A diferencia de la sustitución simple, aquí **ningún elemento queda solo**.  
+
+**Ejemplo general:**  
+$$
+\mathrm{Compuesto~AB + Compuesto~CD \rightarrow Compuesto~AD + Compuesto~CB}
+$$  
+
+**Ejemplo real:**  
+$$
+\mathrm{NaCl + AgNO_3 \rightarrow NaNO_3 + AgCl}
+$$  
+
+💡 El **Na** cambia de pareja con el **Ag**, generando **dos nuevos compuestos**.  
+
+```
 
 ### Redox y neutralización
 
@@ -204,18 +398,106 @@ video: https://youtu.be/_IlLieVBvhY?si=3ZQfyzg-iXrfsnHi
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSSacr3kn/)
 
-**A. Reacciones de óxido - reducción**
+```markdown
+# ⚡ Reacciones de óxido-reducción y neutralización  
 
-1. **Definición:** Las reacciones de óxido - reducción, también conocidas como reacciones **redox, s**on reacciones en las cuales ocurre una **transferencia de electrones** entre diferentes sustancias.
-2. **El número de oxidación:** La transferencia de electrones se evidencia por el **cambio en el número de oxidación** (el número que se encuentra arriba de cada elemento). El número de oxidación **indica cuántos electrones gana o pierde un elemento en la reacción.**
-3. **Proceso de oxidación:** Ocurre cuando el número de oxidación **aumenta** o se vuelve **más positivo**. Si el número de oxidación se vuelve más positivo (ej., de 0 a +2, como en el cobre), el átomo **pierde electrones**. El elemento que perdió electrones se dice que **se oxidó.**
-4. **Proceso de reducción:** Ocurre cuando el número de oxidación **disminuye** o se vuelve **más negativo**. Si el número de oxidación disminuye (ej., la plata, $\text{Ag}$, pasó de +1 a 0), el elemento **gana electrones**. El elemento que ganó electrones se dice que se **redujo.**
+---
 
-**B. Reacciones de neutralización**
+## 🔋 Reacciones de óxido - reducción (Redox)  
 
-1. **Mecanismo:** Son aquellas reacciones en las cuales un **ácido reacciona con una base, produciendo una sal y agua**
-2. **Identificación:** El **ácido** se suele identificar con el grupo $\text{H}$, y la **base,** con el grupo $\text{OH}$.
-3. **Ecuación:** $$\text{Ácido} + \text{Base} \to \text{Sal} + \text{Agua}$$ 
+ ↳ Las **reacciones redox** son procesos en los que ocurre una **transferencia de electrones** entre sustancias.  
+ ↳ Este intercambio genera **cambios en los números de oxidación** de los elementos involucrados.  
+
+---
+
+### ⚙️ Definición  
+
+ ↳ En una reacción redox, **una sustancia pierde electrones** (oxidación) y **otra los gana** (reducción).  
+ ↳ Ambas ocurren **simultáneamente**: no puede haber oxidación sin reducción.  
+
+**Ejemplo general:**  
+$$
+\mathrm{A^0 + B^{+n} \rightarrow A^{+m} + B^0}
+$$  
+
+💡 El elemento **A se oxida** (pierde electrones) y **B se reduce** (gana electrones).  
+
+---
+
+### 🔢 Número de oxidación  
+
+ ↳ El **número de oxidación** indica **cuántos electrones ha perdido o ganado** un átomo en una reacción.  
+ ↳ Se representa con un número **arriba del símbolo químico**.  
+
+**Ejemplo:**  
+$$
+\mathrm{Cu^0 \rightarrow Cu^{+2} + 2e^-}
+$$  
+
+ ↳ El **cobre** pasó de **0 a +2**, lo que significa que **perdió dos electrones**.  
+
+---
+
+### 🔺 Proceso de oxidación  
+
+ ↳ Ocurre cuando el **número de oxidación aumenta** (se vuelve más positivo).  
+ ↳ El elemento que **pierde electrones** se **oxida**.  
+
+**Ejemplo:**  
+$$
+\mathrm{Fe^0 \rightarrow Fe^{+3} + 3e^-}
+$$  
+
+ ↳ El **hierro** perdió 3 electrones → **se oxidó**.  
+
+---
+
+### 🔻 Proceso de reducción  
+
+ ↳ Ocurre cuando el **número de oxidación disminuye** (se vuelve más negativo).  
+ ↳ El elemento que **gana electrones** se **reduce**.  
+
+**Ejemplo:**  
+$$
+\mathrm{Ag^{+1} + e^- \rightarrow Ag^0}
+$$  
+
+ ↳ La **plata** ganó un electrón → **se redujo**.  
+
+---
+
+## ⚗️ Reacciones de neutralización  
+
+ ↳ Son reacciones en las que un **ácido reacciona con una base**, produciendo **una sal y agua**.  
+ ↳ Representan un **equilibrio químico** entre sustancias de naturaleza opuesta.  
+
+---
+
+### 💧 Mecanismo  
+
+**Ecuación general:**  
+$$
+\mathrm{Ácido + Base \rightarrow Sal + Agua}
+$$  
+
+**Ejemplo real:**  
+$$
+\mathrm{HCl + NaOH \rightarrow NaCl + H_2O}
+$$  
+
+---
+
+### 🧪 Identificación  
+
+| Tipo de sustancia | Grupo característico | Ejemplo |
+|--------------------|----------------------|----------|
+| **Ácido** | Contiene **H** al inicio | $\mathrm{HCl}$ |
+| **Base** | Contiene **OH** | $\mathrm{NaOH}$ |
+| **Sal** | Resultado del intercambio entre el **H del ácido** y el **OH de la base** | $\mathrm{NaCl}$ |
+| **Agua** | Producto final de la reacción | $\mathrm{H_2O}$ |
+
+💡 En toda reacción de neutralización se forman **agua y una sal** como productos.  
+```
 
 ### Endotérmicas y exotérmicas
 
@@ -223,22 +505,79 @@ video: https://youtu.be/liWjNcdfY8o?si=39w6gvPH8Q0u5BUC
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSSacTkf3/)
 
-**A. Reacciones exotérmicas**
+```markdown
+# 🔥 Reacciones exotérmicas y endotérmicas  
 
-1. **Naturaleza:** Son aquellas reacciones que **liberan calor** al entorno, y se sienten **calientes al tacto**.
-2. **Ecuación:** El **calor** se anota del lado de los **productos** (lo que se produce). $$\text{Reactivos} \to \text{Producto} + \text{Calor}$$
-3. **Conservación de la energía(nivel energético):** La energía se conserva; la energía de los reactivos debe ser igual a la energía de los productos más el calor liberado.
-    
-    $$\text{E_Reactivos} \to \text{E_Producto} + \text{Calor_liberado}$$
-    
-4. **Gráfico de Energía (Energía vs. Avance de la Reacción):** • Los **reactivos** aparecen en un **nivel más alto de energía**. • Los **productos** aparecen en un **nivel más bajo de energía**. • La diferencia entre el nivel de energía de los reactivos y los productos es el **calor**. • El calor es lo que se debe sumar a la energía de los productos para igualar el nivel de energía de los reactivos.
+---
 
-B. Reacciones Endotérmicas
+## 🌋 Reacciones exotérmicas  
 
-1. **Naturaleza y Percepción:** • Son reacciones que **absorben calor**. • No liberan calor como las exotérmicas.
-2. **Representación en la Ecuación:** • El **calor** se anota del lado de los **reactivos**. $$\text{Reactivo} + \text{Calor} \to \text{Productos}$$
-3. **Conservación de la Energía (Nivel Energético):** • Se cumple el principio de conservación de la energía. • La energía de los reactivos, sumada al calor, debe ser igual a la energía de los productos. • Los **productos tienen más energía** que los reactivos. • El calor debe sumarse a los reactivos para que igualen en energía a los productos.
-4. **Gráfico de Energía (Energía vs. Avance de la Reacción):** • Los **productos** aparecen en un **nivel más alto de energía**. • Los **reactivos** aparecen en un **nivel más bajo de energía**. • El **calor** es la franja que separa el nivel de energía de los reactivos (abajo) del nivel de energía de los productos (arriba).
+ ↳ Son aquellas reacciones que **liberan calor** al entorno y se sienten **calientes al tacto**.  
+
+---
+
+### ⚙️ Ecuación  
+
+$$
+\mathrm{Reactivos \rightarrow Producto + Calor}
+$$  
+
+ ↳ El **calor** se anota del lado de los **productos** (lo que se produce).  
+
+---
+
+### ⚖️ Conservación de la energía (nivel energético)  
+
+ ↳ La **energía se conserva**:  
+  la energía de los **reactivos** debe ser igual a la energía de los **productos** más el **calor liberado**.  
+
+$$
+\mathrm{E_{Reactivos} \rightarrow E_{Producto} + Calor_{liberado}}
+$$  
+
+---
+
+### 📈 Gráfico de energía (energía vs. avance de la reacción)  
+
+ • Los **reactivos** aparecen en un **nivel más alto de energía**.  
+ • Los **productos** aparecen en un **nivel más bajo de energía**.  
+ • La **diferencia** entre ambos niveles representa el **calor liberado**.  
+ • El **calor** es lo que se debe sumar a la energía de los productos para igualar la de los reactivos.  
+
+---
+
+## 🧊 Reacciones endotérmicas  
+
+ ↳ Son reacciones que **absorben calor** y **no liberan calor** como las exotérmicas.  
+
+---
+
+### ⚙️ Representación en la ecuación  
+
+$$
+\mathrm{Reactivo + Calor \rightarrow Productos}
+$$  
+
+ ↳ El **calor** se anota del lado de los **reactivos**.  
+
+---
+
+### ⚖️ Conservación de la energía (nivel energético)  
+
+ ↳ Se cumple el **principio de conservación de la energía**:  
+  la energía de los **reactivos**, sumada al **calor**, debe ser igual a la de los **productos**.  
+ ↳ Los **productos tienen más energía** que los reactivos.  
+ ↳ El **calor** debe sumarse a los reactivos para igualar su energía con la de los productos.  
+
+---
+
+### 📈 Gráfico de energía (energía vs. avance de la reacción)  
+
+ • Los **productos** aparecen en un **nivel más alto de energía**.  
+ • Los **reactivos** aparecen en un **nivel más bajo de energía**.  
+ • El **calor** es la franja que separa el nivel de energía de los reactivos (abajo) del de los productos (arriba).  
+
+```
 
 ### Reversibles e irreversibles
 
@@ -246,16 +585,48 @@ video: https://youtu.be/_XhyclY8c4Q?si=kxIrE5JouABFJeu_
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSSoe8G67/)
 
-**A. Criterios de Clasificación**
+```markdown
+# 🔄 Clasificación según el sentido de la reacción  
 
-1. **Base de la división:** Al clasificarlas según el sentido,  los dos tipos son: reacciones **irreversibles** y reacciones **reversibles**.
+---
 
-**B. Reacciones irreversibles**
+## 🧩 Criterios de clasificación
 
-1. **Definición:** Son aquellas reacciones donde los reactivos se convierten en productos, pero los productos **no pueden volver a formar los reactivos**.
-2. **Representación:** Se representan con una **flecha en un solo sentido**. Esta flecha está dirigida **hacia los productos**. Si se intenta ir del producto de vuelta a los reactivos, **no será posible** porque es irreversible. $$\text{Reactivos} \to \text{Producto}$$
+ ↳ Al clasificarlas según su **sentido**, existen dos tipos de reacciones:  
+  • **Reacciones irreversibles**  
+  • **Reacciones reversibles**  
 
-**C. Reacciones Reversibles**
+---
 
-1. **Definición:** Son aquellas reacciones donde **sí se pueden devolver**. • El producto también puede formar de vuelta los reactivos.
-2. **Representación:** Se representan con una **doble flecha**. Una flecha va en el sentido hacia los productos (a la derecha) y la otra flecha va en el sentido hacia los reactivos (a la izquierda). $$\text{Reactivos} \rightleftharpoons \text{Producto}$$
+## ⛔ Reacciones irreversibles
+
+ ↳ Son aquellas reacciones donde los **reactivos se convierten en productos**,  
+  pero los **productos no pueden volver a formar los reactivos**.  
+
+### ⚙️ Representación
+
+$$
+\mathrm{Reactivos \rightarrow Producto}
+$$  
+
+ ↳ Se representan con una **flecha en un solo sentido**, dirigida **hacia los productos**.  
+ ↳ Si se intenta ir del producto de vuelta a los reactivos, **no será posible**,  
+  ya que la reacción es **irreversible**.  
+
+---
+
+## ♻️ Reacciones reversibles
+
+ ↳ Son aquellas reacciones donde los **productos pueden transformarse nuevamente** en los **reactivos**.  
+ ↳ Esto significa que la reacción **puede ir en ambos sentidos**.  
+
+### ⚙️ Representación
+
+$$
+\mathrm{Reactivos \rightleftharpoons Producto}
+$$  
+
+ ↳ Se representan con una **doble flecha**:
+  • Una apunta **hacia los productos** (derecha).  
+  • La otra apunta **hacia los reactivos** (izquierda).  
+```

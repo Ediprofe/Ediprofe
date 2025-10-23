@@ -28,7 +28,7 @@ video: https://youtu.be/Q4ObzTpgVBI?si=Utjbde6LtTmybxB7
 **Ejemplos de formación:**  
  ↳ **Na + Cl → NaCl**  
  ↳ **Cl + Cl → Cl₂**  
- ↳ **H + O → H₂O**
+ ↳ **H₂ + O₂ → H₂O**
 
 ---
 
@@ -56,7 +56,7 @@ video: https://youtu.be/Q4ObzTpgVBI?si=Utjbde6LtTmybxB7
 
 **Ejemplos:**  
  ↳ **H + H → H₂**  
- ↳ **H + O → H₂O**
+ ↳ **H + O₂ → H₂O**
 
 ---
 
