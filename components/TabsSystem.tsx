@@ -187,12 +187,13 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
             {showNotesButton && (
               <button
                 type="button"
-                className="px-4 py-2.5 text-sm font-bold rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 shadow-md hover:shadow-lg transition-all duration-300"
+                className="px-4 py-2 text-sm font-semibold rounded-lg border-2 border-amber-400 bg-amber-50 text-amber-900 hover:bg-amber-100 hover:border-amber-500 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
                 onClick={() => setIsNotesOpen(true)}
                 aria-label="Ver notas de clase"
                 title="Ver notas de clase"
               >
-                📝 Ver notas de clase
+                <span className="text-base">📝</span>
+                <span>Ver notas de clase</span>
               </button>
             )}
           </div>
