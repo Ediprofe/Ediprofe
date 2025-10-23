@@ -12,8 +12,8 @@ export default function ExternalResources({ resources }: ExternalResourcesProps)
   }
 
   return (
-    <div className="mb-8 md:mb-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         {resources.map((resource, index) => (
           <a
             key={index}
