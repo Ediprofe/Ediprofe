@@ -56,7 +56,84 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
   const tabIds = section.tabs.map((t) => t.id);
   const activeIndex = Math.max(0, tabIds.indexOf(activeTabId));
 
+  // Detecta si hay notas de clase: bloque ```markdown``` o texto no solo hipervínculo (basado en HTML)
+  const hasNotesContent = (html: string): boolean => {
+    if (!html) return false;
 
+    const fenceRegex = /<code[^>]*class=["'][^"']*(?:language-)?(?:markdown|md)[^"']*["'][^>]*>([\s\S]*?)<\/code>/i;
+    const fenceMatch = fenceRegex.exec(html);
+    if (fenceMatch && fenceMatch[1].trim().length > 0) return true;
+
+    try {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      doc.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((el) => el.remove());
+      const candidates = Array.from(doc.querySelectorAll('p, li'));
+      for (const el of candidates) {
+        const text = (el.textContent || '').trim();
+        if (!text) continue;
+        const anchors = Array.from(el.querySelectorAll('a'));
+        if (anchors.length === 0) return true;
+        let residual = text;
+        anchors.forEach((a) => {
+          const t = (a.textContent || '').trim();
+          if (t) residual = residual.replace(new RegExp(t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '');
+        });
+        residual = residual.replace(/[\s\-–—→↗↘↙↖…:;,.!?()]+/g, '');
+        if (residual.length > 0) return true;
+      }
+      return false;
+    } catch {
+      return false;
+    }
+  };
+
+  // Limpia del HTML los bloques de notas (fences markdown/md) para que NO aparezcan en la página
+  const stripMarkdownFences = (html?: string): string => {
+    if (!html) return '';
+    try {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      // Eliminar <pre><code class="language-markdown|md">...</code></pre> y variantes
+      doc
+        .querySelectorAll('pre > code[class*="language-markdown"], pre > code[class*="language-md"], code[class*="language-markdown"], code[class*="language-md"]')
+        .forEach((code) => {
+          const pre = code.parentElement && code.parentElement.tagName.toLowerCase() === 'pre' ? code.parentElement : code;
+          pre.remove();
+        });
+      return doc.body.innerHTML.trim();
+    } catch {
+      // Si falla el parseo, retornar el HTML original para no romper
+      return html;
+    }
+  };
+
+  // Extrae (y remueve) el primer enlace a TikTok del HTML
+  const extractTikTokLink = (html?: string): { href: string; label: string; cleaned: string } | null => {
+    if (!html) return null;
+    try {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const anchors = Array.from(doc.querySelectorAll<HTMLAnchorElement>('a[href*="tiktok.com"], a[href*="vt.tiktok.com"]'));
+      if (anchors.length === 0) return null;
+      // Priorizar el que tenga texto
+      const a = anchors.find((n) => (n.textContent || '').trim().length > 0) || anchors[0];
+      const href = a.getAttribute('href') || '#';
+      const label = (a.textContent || 'Ver en TikTok').trim();
+      a.remove();
+      return { href, label, cleaned: doc.body.innerHTML.trim() };
+    } catch {
+      return null;
+    }
+  };
+
+  const getTikTokFromVideos = (videos?: Section['tabs'][number]['videos']): { href: string; label: string } | null => {
+    const tik = videos?.find((v) => v.platform === 'tiktok');
+    if (!tik) return null;
+    return { href: tik.url, label: 'Ver en TikTok' };
+  };
+
+  const showNotesButton = hasNotesContent(activeTab?.content || '');
 
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -123,26 +200,41 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
           </div>
         </div>
 
-        {/* Controles Anterior/Siguiente */}
-        <div className="mt-3 flex items-center justify-end gap-2">
-        <button
-        className="px-3 py-2 text-sm font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
-        onClick={() => goToIndex(Math.max(activeIndex - 1, 0))}
-        disabled={activeIndex <= 0}
-        aria-label="Anterior"
-        title="Anterior"
-        >
-        Anterior
-        </button>
-        <button
-        className="px-3 py-2 text-sm font-semibold rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
-        onClick={() => goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1))}
-        disabled={activeIndex >= section.tabs.length - 1}
-        aria-label="Siguiente"
-        title="Siguiente"
-        >
-        Siguiente
-        </button>
+        {/* Controles superiores: notas + navegación */}
+        <div className="mt-3 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            {showNotesButton && (
+              <button
+                type="button"
+                className="px-3 py-2 text-sm font-semibold rounded-lg bg-indigo-600 text-white hover:bg-indigo-700"
+                onClick={() => setIsNotesOpen(true)}
+                aria-label="Ver notas de clase"
+                title="Ver notas de clase"
+              >
+                Ver notas de clase
+              </button>
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              className="px-3 py-2 text-sm font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={() => goToIndex(Math.max(activeIndex - 1, 0))}
+              disabled={activeIndex <= 0}
+              aria-label="Anterior"
+              title="Anterior"
+            >
+              Anterior
+            </button>
+            <button
+              className="px-3 py-2 text-sm font-semibold rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={() => goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1))}
+              disabled={activeIndex >= section.tabs.length - 1}
+              aria-label="Siguiente"
+              title="Siguiente"
+            >
+              Siguiente
+            </button>
+          </div>
         </div>
       </div>
 
@@ -158,13 +250,28 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
               // Si hay contenido Y videos, dividir por el marcador
               (() => {
                 const parts = activeTab.content.split('<!-- VIDEO_PLACEHOLDER -->');
-                const contentBefore = parts[0]?.trim();
-                const contentAfter = parts[1]?.trim();
+                const rawBefore = parts[0]?.trim();
+                const rawAfter = parts[1]?.trim();
+
+                const exBefore = extractTikTokLink(rawBefore);
+                const exAfter = extractTikTokLink(rawAfter);
+                const link = exBefore || exAfter || getTikTokFromVideos(activeTab.videos);
+
+                const contentBefore = stripMarkdownFences(exBefore ? exBefore.cleaned : rawBefore);
+                const contentAfterRaw = exAfter ? exAfter.cleaned : rawAfter;
+                const contentAfter = stripMarkdownFences(contentAfterRaw);
                 
                 return (
                   <>
+                    {contentBefore && (
+                      <MarkdownContent
+                        content={contentBefore}
+                        className="prose prose-lg max-w-none mb-10"
+                      />
+                    )}
+
                     {/* Videos */}
-                    <div className="videos-section mb-10">
+                    <div className="videos-section mb-4">
                       <div className={`grid gap-8 ${activeTab.videos.length === 1 ? 'grid-cols-1 max-w-5xl mx-auto' : 'grid-cols-1 lg:grid-cols-2'}`}>
                         {activeTab.videos.map((video, index) => (
                           <div key={index} className="video-wrapper">
@@ -173,42 +280,61 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
                         ))}
                       </div>
                     </div>
-                    
-                    {/* Botón para abrir notas de clase en modal */}
-                    {activeTab.content && (
-                      <div className="mt-4 flex items-center gap-3">
-                        <button
-                          type="button"
-                          className="btn-primary"
-                          onClick={() => setIsNotesOpen(true)}
-                          aria-label="Ver notas de clase"
-                          title="Ver notas de clase"
+
+                    {/* Enlace (uniforme) debajo del video */}
+                    {link && (
+                      <div className="mt-2 mb-6">
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-indigo-600 hover:underline font-semibold"
                         >
-                          Ver notas de clase
-                        </button>
+                          {link.label}
+                        </a>
                       </div>
                     )}
 
-                    {/* Modal de notas con todo el contenido de la pestaña */}
-                    <NotesModal
-                      isOpen={isNotesOpen}
-                      onClose={() => setIsNotesOpen(false)}
-                      content={activeTab.content || ''}
-                      title="Notas de clase"
+                    {contentAfter && (
+                      <MarkdownContent
+                        content={contentAfter}
+                        className="prose prose-lg max-w-none"
+                      />
+                    )}
+
+                    {/* Modal centralizado arriba */}
+                  </>
+                );
+              })()
+            ) : activeTab.content && !activeTab.videos ? (
+              // Solo contenido: mostrar contenido, y el enlace (si existe) debajo
+              (() => {
+                const ex = extractTikTokLink(activeTab.content);
+                const cleaned = stripMarkdownFences(ex ? ex.cleaned : activeTab.content);
+                return (
+                  <>
+                    <MarkdownContent
+                      content={cleaned}
+                      className="prose prose-lg max-w-none mb-6"
                     />
+                    {ex && (
+                      <div className="mt-2 mb-10">
+                        <a
+                          href={ex.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-indigo-600 hover:underline font-semibold"
+                        >
+                          {ex.label}
+                        </a>
+                      </div>
+                    )}
                   </>
                 );
               })()
             ) : (
-              // Si solo hay contenido O solo videos, mostrar normalmente
+              // Solo videos: mostrar videos y (si hay TikTok por video) un enlace uniforme
               <>
-                {activeTab.content && (
-                  <MarkdownContent
-                    content={activeTab.content}
-                    className="prose prose-lg max-w-none mb-10"
-                  />
-                )}
-                
                 {activeTab.videos && activeTab.videos.length > 0 && (
                   <div className="videos-section mb-10">
                     <div className={`grid gap-8 ${activeTab.videos.length === 1 ? 'grid-cols-1 max-w-5xl mx-auto' : 'grid-cols-1 lg:grid-cols-2'}`}>
@@ -218,6 +344,18 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
                         </div>
                       ))}
                     </div>
+                    {getTikTokFromVideos(activeTab.videos) && (
+                      <div className="mt-4">
+                        <a
+                          href={getTikTokFromVideos(activeTab.videos)!.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-indigo-600 hover:underline font-semibold"
+                        >
+                          {getTikTokFromVideos(activeTab.videos)!.label}
+                        </a>
+                      </div>
+                    )}
                   </div>
                 )}
               </>
@@ -229,6 +367,14 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
       </div>
 
       {/* Navegación flotante eliminada */}
+
+      {/* Modal de notas con el contenido de la pestaña activa */}
+      <NotesModal
+        isOpen={isNotesOpen}
+        onClose={() => setIsNotesOpen(false)}
+        content={activeTab?.content || ''}
+        title="Notas de clase"
+      />
     </div>
   );
 }

@@ -17,68 +17,77 @@ video: https://youtu.be/LEMh0iTMrFU?si=9C3ZcDv4_RDaYd55
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSUu1eWXU/)
 
-**A. Clasificación histórica (vitalismo)**
-
-1. **Periodo:** Siglos XVI a principios del XIX.
-2. **Criterio:** **Procedencia u origen** (vivo vs. no vivo).
-3. **Sustancias orgánicas (vitalismo):**
-    - Tenían un **origen exclusivamente vivo**, como **grasas**, **aceites** (por ejemplo, aceite de oliva), **proteínas** y **carbohidratos.**
-4. **Fuerza vital:**
-    - Concepto que otorgaba a los seres vivos la **exclusividad** de producir sustancias orgánicas.
-5. **Caída del vitalismo (1828):**
-    - **Científico:** Friedrich Wöhler (alemán).
-    - **Evento:** Sintetizó **urea** (sustancia orgánica de la orina) **a partir de una sustancia inorgánica.**
-    - Este experimento marcó el **fin de la idea del vitalismo** y de la supuesta **“fuerza vital.”**
+```markdown
+# ⚗️ Sustancias orgánicas e inorgánicas
 
 ---
 
-**B. Clasificación rigurosa (estructura)**
+## 🕰️ Clasificación histórica (Vitalismo)
 
-1. **Criterio:** Se definió según la **estructura química** después del experimento de 1828.
+ ↳ **Periodo:** Siglos XVI a principios del XIX  
+ ↳ **Criterio:** Procedencia u origen (vivo vs. no vivo)
 
----
+**Sustancias orgánicas (vitalismo):**  
+ ↳ Solo podían provenir de **seres vivos**  
+ ↳ Ejemplos: grasas, aceites (aceite de oliva), proteínas, carbohidratos  
 
-**1. Sustancias orgánicas**
+**Fuerza vital:**  
+ ↳ Idea que atribuía a los seres vivos la **exclusividad** de crear sustancias orgánicas  
 
-1. **Criterio riguroso:** Su **estructura está dominada por el átomo de carbono (C).**
-2. **Enlace principal:** Generalmente se enlazan con **hidrógeno (H)**, formando **enlaces carbono-hidrógeno (CH).**
-3. **Capacidad estructural:**
-    - Tienen la capacidad de formar **moléculas muy grandes**, con muchos átomos de carbono, como el **ADN** o la **hemoglobina.**
-4. **Ejemplos:**
-    - **Metano (CH₄)**
-    - **Glucosa**
-    - **Gasolina o diésel**
-    - **Plásticos**
-
----
-
-**2. Sustancias inorgánicas**
-
-1. **Criterio riguroso:** No poseen **carbono** en su estructura.
-2. Si lo poseen, deben cumplir **dos condiciones:**
-    - El **carbono no domina** la estructura.
-    - No forman **enlaces carbono-hidrógeno (CH).**
-3. **Estructura:** Usualmente contienen **menos átomos.**
-4. **Ejemplos:**
-    - **Sal de cocina (NaCl)**
-    - **Dióxido de carbono (CO₂)**
-    - **Carbonato de calcio (CaCO₃)**
-    - **Amoníaco (NH₃).**
+**Caída del vitalismo (1828):**  
+ ↳ **Científico:** Friedrich Wöhler (alemán)  
+ ↳ **Experimento:** sintetizó **urea** (orgánica) a partir de una sustancia **inorgánica**  
+ ↳ **Resultado:** se descartó la existencia de la “**fuerza vital**”  
 
 ---
 
-C. Comparativo (hay excepciones)
+## 🧩 Clasificación rigurosa (estructura química)
+
+ ↳ Surge después del experimento de Wöhler (1828)  
+ ↳ **Criterio:** estructura y composición química  
+
+---
+
+### 🧬 Sustancias Orgánicas
+
+ ↳ Su estructura está **dominada por el carbono (C)**  
+ ↳ Forman **enlaces carbono-hidrógeno (CH)**  
+ ↳ Pueden formar **moléculas grandes y complejas**  
+ ↳ Ejemplos:  
+  • Metano (CH₄)  
+  • Glucosa  
+  • Gasolina o diésel  
+  • Plásticos  
+
+---
+
+### 🧪 Sustancias Inorgánicas
+
+ ↳ **No poseen carbono** o este **no domina la estructura**  
+ ↳ No presentan **enlaces carbono-hidrógeno (CH)**  
+ ↳ Contienen **menos átomos** por molécula  
+ ↳ Ejemplos:  
+  • Sal de cocina (NaCl)  
+  • Dióxido de carbono (CO₂)  
+  • Carbonato de calcio (CaCO₃)  
+  • Amoníaco (NH₃)
+
+---
+
+## ⚖️ Comparativo General
 
 | **Características** | **Orgánicas** | **Inorgánicas** |
-| --- | --- | --- |
-| **Ejemplos** | Gasolina, aceites, azúcar, alcohol… | Sal, agua, tiza… |
+|----------------------|---------------|-----------------|
+| **Ejemplos** | Gasolina, aceites, azúcar, alcohol | Sal, agua, tiza |
 | **Origen** | Biológico o del petróleo | Mineral o geológico |
-| **Número de átomos** | Compuestos con muchos átomos | Compuestos con menos átomos |
-| **Puntos de fusión y ebullición** | Bajos | Altos |
+| **Número de átomos** | Muchos átomos por molécula | Pocos átomos por molécula |
+| **Punto de fusión y ebullición** | Bajos | Altos |
 | **Conductividad eléctrica** | Baja | Alta |
 | **Combustibilidad** | Combustibles | No combustibles |
-| **Solubilidad en agua** | No solubles en agua | Solubles en agua |
-| **Tipo de enlace predominante** | Enlaces covalentes | Enlaces iónicos |
+| **Solubilidad en agua** | No solubles | Solubles |
+| **Tipo de enlace predominante** | Covalente | Iónico |
+
+```
 
 ### Estructuras de Lewis
 

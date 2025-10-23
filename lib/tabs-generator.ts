@@ -164,6 +164,11 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
   let currentTab: Tab | null = null;
   let currentContent: string[] = [];
   let sectionOrder = 0;
+  // Nuevo: asegurar IDs de sección únicos para H2 duplicados
+  const usedSectionIds: Record<string, number> = {};
+  // Nuevo: ignorar detección de H2/H3 dentro de fences ```markdown/```md
+  let inFence = false;
+  let fenceLang: string | null = null;
 
   const flushTab = async () => {
     if (currentTab && currentSection) {
@@ -287,21 +292,44 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
+    const trimmed = line.trim();
 
-    // Detectar H2 (nueva sección)
-    if (line.startsWith('## ')) {
+    // Detectar apertura/cierre de fence de código
+    if (trimmed.startsWith('```')) {
+      const openMatch = trimmed.match(/^```\s*(\w+)?/);
+      // Toggle fence
+      if (!inFence) {
+        inFence = true;
+        fenceLang = (openMatch?.[1] || '').toLowerCase() || null;
+      } else {
+        // cierre
+        inFence = false;
+        fenceLang = null;
+      }
+      currentContent.push(line);
+      continue;
+    }
+
+    // Detectar H2 (nueva sección) SOLO si no estamos dentro de fence markdown/md
+    if (!inFence && line.startsWith('## ')) {
       await flushSection();
 
       const title = line.replace(/^##\s+/, '').trim();
+      // Asegurar ID único
+      const baseId = slugify(title);
+      const count = (usedSectionIds[baseId] || 0) + 1;
+      usedSectionIds[baseId] = count;
+      const uniqueId = count === 1 ? baseId : `${baseId}-${count}`;
+
       currentSection = {
-        id: slugify(title),
+        id: uniqueId,
         title,
         tabs: [],
         order: sectionOrder++,
       };
 
       toc.push({
-        id: currentSection.id,
+        id: uniqueId,
         title,
         level: 2,
         children: [],
@@ -312,8 +340,8 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
       continue;
     }
 
-    // Detectar H3 (nueva tab)
-    if (line.startsWith('### ')) {
+    // Detectar H3 (nueva tab) SOLO si no estamos dentro de fence markdown/md
+    if (!inFence && line.startsWith('### ')) {
       await flushTab();
 
       if (!currentSection) {
@@ -356,7 +384,7 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
       continue;
     }
 
-    // Acumular TODO el contenido (incluidas líneas video:)
+    // Acumular TODO el contenido (incluidas líneas video:) y líneas dentro de fences
     currentContent.push(line);
   }
 

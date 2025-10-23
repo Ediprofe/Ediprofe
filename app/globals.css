@@ -59,6 +59,32 @@ body {
   .prose h5 {
     @apply text-sm md:text-base font-semibold mt-6 mb-3 text-slate-800;
   }
+
+  /* Nuevos estilos de títulos principales */
+  .prose h1 {
+    @apply text-2xl md:text-3xl font-bold mt-6 mb-4;
+    color: #4f46e5; /* Morado de marca */
+  }
+  .prose h2 {
+    @apply text-xl md:text-2xl font-bold mt-6 mb-3;
+    color: #4f46e5; /* Morado de marca */
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .prose h3 {
+    @apply text-lg md:text-xl font-semibold mt-5 mb-2;
+    color: #4f46e5; /* Morado de marca */
+  }
+
+  /* Tamaños ajustables para el modal de notas */
+  .prose-sm {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .prose-lg {
+    font-size: 1.15rem;
+    line-height: 1.9;
+  }
   
   .prose p {
     @apply mb-4 text-slate-700;
@@ -77,23 +103,42 @@ body {
   }
   
   .prose ul, .prose ol {
-    @apply my-5 pl-0;
+    @apply my-5;
   }
   
   .prose ul {
     list-style-type: none !important;
+    padding-left: 0;
+    margin-left: 0;
   }
   
   .prose ol {
-    list-style-type: none !important;
-    counter-reset: item;
+    list-style-type: decimal !important;
+    padding-left: 1.5rem;
   }
   
   .prose li {
-    @apply text-slate-700 pl-8 relative mb-3;
-    display: list-item !important;
+    @apply text-slate-700 mb-3;
     line-height: 1.75;
   }
+  /* Estilo compacto por indentación para listas no ordenadas */
+  .prose ul > li {
+    @apply pl-4 mb-2;
+    border-left: 2px solid #e5e7eb; /* slate-200 */
+  }
+  .prose ul > li:hover {
+    border-left-color: #a5b4fc; /* indigo-300 */
+  }
+  .prose ul ul { /* anidadas */
+    margin-left: 0.75rem;
+  }
+  .prose ol { /* mantener numeración pero compacta */
+    @apply my-4;
+    list-style-type: decimal !important;
+    padding-left: 1rem;
+  }
+  .prose ol > li { @apply mb-2; }
+
   
   .prose li:last-child {
     margin-bottom: 0;
@@ -154,6 +199,16 @@ body {
   .prose li:hover {
     color: #0f172a;
   }
+
+  /* Desactivar iconos y números personalizados de listas; usar marcadores nativos */
+  .prose ul > li::before,
+  .prose ol > li::before,
+  .prose ul ul > li::before,
+  .prose ul ul ul > li::before {
+    content: none;
+  }
+  .prose ol > li { counter-increment: none; }
+
   
   /* Contenedor responsive para tablas */
   .table-responsive-wrapper {

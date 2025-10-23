@@ -3,6 +3,8 @@ title: "Estructura atómica"
 description: "Composición, estructura de los átomos y organización en la tabla periódica"
 ---
 
+# Estructura atómica
+
 ## Recursos de la unidad
 
 https://youtube.com/playlist?list=PLvciGh3Wfg78vZUGljsfv07Ub0D_Mh36H&si=Mkb0iae0JXsdvN3D
@@ -17,54 +19,60 @@ video: https://youtu.be/efOK-ZVm0NI
 
 [Ver en Tiktok](https://vt.tiktok.com/ZSBJPBDcg/)
 
-**A. División general del átomo**
-
-1. Los **átomos** se dividen en **dos zonas principales:**
-    - **Zona interna → Núcleo.**
-    - **Zona externa → Periferia.**
+```markdown
+# ⚛️ Estructura del átomo
 
 ---
 
-**B. Núcleo**
+## 🧩 División general del átomo
 
-1. Es la **parte central del átomo.**
-2. Contiene las **partículas subatómicas**:
-    - **Protones → carga positiva (+).**
-    - **Neutrones → carga neutra (0).**
-
----
-
-**C. Periferia**
-
-1. Es la **zona que rodea al núcleo.**
-2. Contiene los **electrones → carga negativa (−).**
+ ↳ Los **átomos** se dividen en **dos zonas principales:**  
+  • **Zona interna → Núcleo**  
+  • **Zona externa → Periferia**
 
 ---
 
-**D. Número atómico (Z)**
+## 🔹 Núcleo
 
-1. Representa el **número de protones** del átomo.
-2. Se **simboliza con la letra Z.**
-3. **Z = número de protones** en el núcleo.
-4. El número atómico **identifica el elemento** al que pertenece un átomo.
-
----
-
-**E. Ejemplos de número atómico**
-
-1. **Z = 1 → Hidrógeno → 1 protón.**
-2. **Z = 2 → Helio → 2 protones.**
-3. **Z = 3 → Litio → 3 protones.**
-4. **Z = 4 → Berilio → 4 protones.**
-5. **Z = 5 → Boro → 5 protones.**
+ ↳ Es la **parte central del átomo**  
+ ↳ Contiene las **partículas subatómicas:**
+  • **Protones → carga positiva (+)**  
+  • **Neutrones → carga neutra (0)**
 
 ---
 
-**F. Tabla periódica**
+## 🔸 Periferia
 
-1. **Organiza los elementos** según su **número atómico (Z).**
-2. Se **lee de izquierda a derecha** y de **arriba hacia abajo.**
-3. Permite **identificar el número de protones** de cada elemento.
+ ↳ Es la **zona que rodea al núcleo**  
+ ↳ Contiene los **electrones → carga negativa (−)**
+
+---
+
+## 🧮 Número átómico (Z)
+
+ ↳ Representa el **número de protones** del átomo  
+ ↳ Se **simboliza con la letra Z**  
+ ↳ **Z = número de protones** en el núcleo  
+ ↳ El **número atómico identifica el elemento**
+
+---
+
+## 🔢 Ejemplos de número átómico
+
+ ↳ **Z = 1 → Hidrógeno → 1 protón**  
+ ↳ **Z = 2 → Helio → 2 protones**  
+ ↳ **Z = 3 → Litio → 3 protones**  
+ ↳ **Z = 4 → Berilio → 4 protones**  
+ ↳ **Z = 5 → Boro → 5 protones**
+
+---
+
+## 🧭 Tabla periódica
+
+ ↳ **Organiza los elementos** según su **número atómico (Z)**  
+ ↳ Se **lee de izquierda a derecha** y de **arriba hacia abajo**  
+ ↳ Permite **identificar el número de protones** de cada elemento
+```
 
 ### Practica
 
@@ -248,7 +256,8 @@ video: https://youtu.be/WmrfBrkxrPo?si=9_i325DSHGypPgpG
     - **Símbolo del elemento:** a la derecha.
     
     📘 Ejemplo:
-    ^{35}_{17}\mathrm{Cl}
+    
+    ^{35}_{17}\text{Cl}
     
 
 ---
