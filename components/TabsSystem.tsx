@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from 'react';
 import type { Section } from '@/types/content';
 import VideoEmbed from './VideoEmbed';
 import MarkdownContent from './MarkdownContent';
-import CollapsibleContent from './CollapsibleContent';
+import NotesModal from './NotesModal';
 
 interface TabsSystemProps {
   section: Section;
@@ -16,8 +16,8 @@ interface TabsSystemProps {
 
 export default function TabsSystem({ section, className = '' }: TabsSystemProps) {
   const [activeTabId, setActiveTabId] = useState(section.tabs[0]?.id || '');
-  // Estado de plegado por pestaña (granular, persistente dentro del H2)
-  const [expandedMap, setExpandedMap] = useState<Record<string, boolean>>({});
+  // Modal de notas de clase por pestaña activa
+  const [isNotesOpen, setIsNotesOpen] = useState(false);
 
 
 
@@ -163,14 +163,6 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
                 
                 return (
                   <>
-                    {/* Contenido antes del video */}
-                    {contentBefore && (
-                      <MarkdownContent
-                        content={contentBefore}
-                        className="prose prose-lg max-w-none mb-10"
-                      />
-                    )}
-                    
                     {/* Videos */}
                     <div className="videos-section mb-10">
                       <div className={`grid gap-8 ${activeTab.videos.length === 1 ? 'grid-cols-1 max-w-5xl mx-auto' : 'grid-cols-1 lg:grid-cols-2'}`}>
@@ -182,15 +174,28 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
                       </div>
                     </div>
                     
-                    {/* Contenido después del video (plegado por defecto) */}
-                    {contentAfter && (
-                      <CollapsibleContent
-                        content={contentAfter}
-                        className="mt-4"
-                        expanded={!!expandedMap[activeTabId]}
-                        onToggle={() => setExpandedMap((m) => ({ ...m, [activeTabId]: !m[activeTabId] }))}
-                      />
+                    {/* Botón para abrir notas de clase en modal */}
+                    {activeTab.content && (
+                      <div className="mt-4 flex items-center gap-3">
+                        <button
+                          type="button"
+                          className="btn-primary"
+                          onClick={() => setIsNotesOpen(true)}
+                          aria-label="Ver notas de clase"
+                          title="Ver notas de clase"
+                        >
+                          Ver notas de clase
+                        </button>
+                      </div>
                     )}
+
+                    {/* Modal de notas con todo el contenido de la pestaña */}
+                    <NotesModal
+                      isOpen={isNotesOpen}
+                      onClose={() => setIsNotesOpen(false)}
+                      content={activeTab.content || ''}
+                      title="Notas de clase"
+                    />
                   </>
                 );
               })()
