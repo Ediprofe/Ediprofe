@@ -82,10 +82,10 @@ video: https://youtu.be/JN-802f841Y?si=Ix7FVALfXJFKgv01
 Completa la siguiente tabla:
 | Átomo   | Número de protones | Número atómico ($Z$) | Elemento al que pertenece |
 |----------|--------------------|----------------------|----------------------------|
-| Átomo 1  | 7                  | 7                    | Nitrógeno                 |
-| Átomo 2  | 22                 | 22                   | Titanio                   |
-| Átomo 3  | 88                 | 88                   | Radio                     |
-| Átomo 4  | 82                 | 82                   | Plomo                     |
+| Átomo 1  | 7                  |                      | Nitrógeno                 |
+| Átomo 2  | 22                 |                      | Titanio                   |
+| Átomo 3  | 88                 |                      | Radio                     |
+| Átomo 4  | 82                 |                      | Plomo                     |
 
 ```
 
