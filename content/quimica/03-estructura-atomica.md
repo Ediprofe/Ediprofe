@@ -248,8 +248,7 @@ video: https://youtu.be/WmrfBrkxrPo?si=9_i325DSHGypPgpG
     - **Símbolo del elemento:** a la derecha.
     
     📘 Ejemplo:
-    
-    ^{35}_{17}\text{Cl}
+    ^{35}_{17}\mathrm{Cl}
     
 
 ---

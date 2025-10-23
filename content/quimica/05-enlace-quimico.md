@@ -5,182 +5,198 @@ description: "Enlace químico y sus tipos."
 
 ## Recursos de la unidad
 
-https://youtube.com/playlist?list=PLvciGh3Wfg7-A9BJ3Qds4U0FXG5kly3Aa&si=LVkhqt40Ug4iU25R
+https://www.youtube.com/playlist?list=PLvciGh3Wfg78N7--IFgjLgviePGBLwGuB
 
-https://drive.google.com/drive/folders/1wfs82dNO8elM4KXco5oFf1w_0LLRggSw?usp=drive_link
+https://drive.google.com/drive/folders/1f_RMWYwK94U9ZsQfuMiQtorpI6N9FDOO?usp=drive_link
 
 ## Introducción
 
-video: https://youtu.be/Q4ObzTpgVBI?si=Utjbde6LtTmybxB7
+### Introducción
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSSaXmwnj/)
+video: https://youtu.be/tAFBXzA31V0?si=OHwOBm6YusR6Z4ey
 
-**A. Definición**
+[Ver en Tiktok](https://vt.tiktok.com/ZSSa7o2Vo/)
 
-1. El **enlace químico** es la **unión entre átomos** que tiene como resultado la formación de **sustancias nuevas**.
-2. Se le concibe como el **"pegamento"** que mantiene unidos a los diferentes átomos.
-3. Existen ejemplos de enlaces químicos que mantienen unidos:
-    - Un átomo de sodio ($\text{Na}$) con uno de cloro ($\text{Cl}$) para formar $\text{NaCl}$.
-    - Dos átomos de cloro ($\text{Cl}$) para formar $\text{Cl}_2$.
-    - Los átomos de hidrógeno ($\text{H}$) y oxígeno ($\text{O}$) para formar agua ($\text{H}_2\text{O}$).
+**A. Concepto**
 
----
+1. **Naturaleza:** 
+    - Una reacción química es un **cambio químico**.
+    - La diferencia principal es que las sustancias **antes** de la reacción son distintas a las sustancias **después**.
+    - En este proceso, **aparecen nuevas sustancias** (o desaparecen sustancias).
+2. **Ejemplos:** 
+    - La quema de un papel produce ceniza (sustancia diferente al papel).
+    - La **oxidación** de un clavo o de un aguacate hace que aparezca un óxido, que es una nueva sustancia.
+3. **La Ecuación química:** 
+    - La reacción química se **representa** mediante una ecuación química.
+        - **Partes:** Las sustancias se dividen por una flecha que se lee como "**produce**". • **Reactivos** (Sustancias a la izquierda / Antes) $\to$ **Productos** (sustancias a la derecha / después).
 
-**B. Tipos**
+B. El balanceo y conteo de átomos
 
-1. Los tipos de enlace químico son: **iónico, covalente y metálico**.
-2. **Enlace iónico:**
-    - Mecanismo: Se produce por el **robo de electrones**.
-    - Participantes: Se da, en términos generales, entre un **metal y un no metal**.
-    - *Ejemplos:* Cloruro de sodio ($\text{NaCl}$), donde el $\text{Na}$ es el metal y el $\text{Cl}$ es el no metal; y óxido de potasio ($\text{K}_2\text{O}$), donde el potasio ($\text{K}$) es el metal y el oxígeno ($\text{O}$) es el no metal.
-3. **Enlace covalente:**
-    - Mecanismo: Se produce por el **compartimiento de electrones**.
-    - Participantes: Se da, en términos generales, entre un **no metal con otro no metal**.
-    - *Ejemplos:* Dos átomos de hidrógeno ($\text{H}$ con $\text{H}$), o hidrógeno con oxígeno ($\text{H}$ con $\text{O}$) en la molécula de agua.
-4. **Enlace metálico:**
-    - Mecanismo: Se produce por el **compartimiento de muchos electrones**.
-    - Participantes: Ocurre **entre metales**.
-    - *Ejemplos:* Cobre metálico, aluminio metálico o aleaciones de metales.
+1. **Necesidad del ajuste o balanceo:** La cantidad de átomos de cada elemento debe ser **la misma a ambos lados**(reactivos y productos), para cumplir el **principio de conservación de la masa.**
+2. **Fórmula:** 
+- La fórmula química (ej. $\text{H}_2\text{O}$) muestra la composición: si no hay subíndice (número de abajo), se sobreentiende un uno.
+- El conteo rápido de átomos se hace **multiplicando** el número de adelante (coeficiente) por el número de abajo (subíndice).
+1. **Reglas de balanceo:** 
+    - Para balancear una ecuación, **solo se pueden cambiar los números de adelante** (los coeficientes).
+    - El coeficiente afecta a **todos** los elementos dentro de la sustancia que lo precede.
+    - Ejemplo: En $\mathbf{2}\text{H}_2\text{O}$, el 2 afecta tanto al hidrógeno como al oxígeno.
 
-## Enlace iónico
+### Coeficiente y subíndice
 
-video: https://youtu.be/GSLfI-fvUVo?si=itoCwBOorU_hcNRq
+video: https://youtu.be/_ZvWp6TL2ho?si=6yQ-kc8PLBnhTWeJ
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSSaXu9AR/)
+[Ver en Tiktok](https://vt.tiktok.com/ZSSav6gFa/)
 
-**A. Naturaleza y propósito**
+**A. El coeficiente: cantidad**
 
-1. El **enlace iónico** es aquel que se produce debido a un **robo de electrones**.
-2. Se da generalmente entre un **metal** (como el Sodio o el Potasio) y un **no metal** (como el Cloro).
-3. Los átomos se enlazan con el fin de cumplir la **regla del octeto.**
+1. **Definición:** 
+    - Es el número que se encuentra **adelante** de la fórmula química de la sustancia (ej., el 1 o el 2 en $\text{H}_2\text{O}$).
+    - Si no se anota ningún número delante, se sobreentiende que el coeficiente es **un uno**.
+2. **Significado:** 
+    - El coeficiente habla de la **cantidad** de la sustancia.
+    - Cambiar el coeficiente implica cambiar la cantidad de esa sustancia.
+    - Ejemplo: Cambiar el coeficiente de uno a dos implica que ya no se tiene una de agua, sino el doble de esa sustancia.
 
-**B. Representación**
+**B. El subíndice: identidad**
 
----
+1. **Definición:**
+    - Es el número que está **abajo** en la fórmula.
+    - El subíndice se aplica a **cada uno de los elementos** (ej., en $\text{H}_2\text{O}$, el 2 es para el hidrógeno, y el 1 se sobreentiende para el oxígeno).
+2. **Significado:** 
+    - El subíndice se relaciona con la **identidad** de la sustancia.
+    - Si se cambia el subíndice (ej., cambiar $\text{H}_2\text{O}$ por $\text{H}_3\text{O}$), se cambia la **fórmula química**.
+    - Cambiar el subíndice implica que la sustancia ha cambiado su **identidad** (deja de ser agua y se convierte en otra sustancia).
 
-1. Para la representación, solo se anotan o dibujan los electrones de la **última capa**.
-2. En el caso del Potasio ($\text{K}$) y Cloro ($\text{Cl}$): a. El Potasio tiene un solo electrón de valencia, y el Cloro tiene siete electrones de valencia. b. El Potasio cede su electrón al Cloro. c. El Potasio queda con carga positiva (por entregar el electrón) y el Cloro con carga negativa (por recibirlo), quedando enlazados en forma de $\text{KCl}$ (cloruro de potasio).
+**C. Consideraciones para el balanceo**
 
-## Enlace covalente
+1. **Propósito del Ajuste:** 
+    - El balanceo se realiza para que haya el **mismo conteo** de átomos de cada elementos a ambos lados de la ecuación química.
+2. **Reglas:**
+    - Para balancear o ajustar la ecuación, solo se tocan o se cambian los **coeficientes** (los números de adelante).
+    - El ajuste de los coeficientes determina **cuánto se agrega** de cada sustancia (la cantidad).
+    - **Nunca** se tocan los **subíndices** durante el balanceo, ya que esto alteraría la identidad de la sustancia.
 
-### Enlace covalente
+## Balanceo de ecuaciones
 
-video: https://youtu.be/Ybe7NJocdPc?si=Dv9j6uKxZqib5bw4
+### Balanceo y fases de las sustancias
 
-[Ver en Titkok](https://vt.tiktok.com/ZSSaX5t9h/)
+video: https://youtu.be/bmHEl-XBaV8?si=uJSjhvKMsRHPDeVQ
 
-**A. Definición**
+[Ver en Tiktok](https://vt.tiktok.com/ZSSacyaBw/)
 
-1. El **enlace covalente** es la unión que se forma debido a un **compartimiento de electrones**.
-2. A diferencia del enlace iónico que es por robo de electrones, el covalente se da generalmente **entre un no metal y otro no metal**.
-3. La representación utilizada para mostrar los enlaces covalentes y los electrones de valencia se conoce como la **representación de Lewis**.
+**A. Balanceo de ecuaciones químicas**
 
----
+1. **Verificación:**
+    - La tarea principal del balanceo es **verificar** si la ecuación química está ajustada.
+    - Se requiere tener la **misma cantidad** de todos los elementos (ej., nitrógeno e hidrógeno) a ambos lados: reactivos (izquierda) y productos (derecha).
+2. **Conteo:**
+    - Para contar el número de átomos de un elemento, se multiplica el **número de adelante**(coeficiente) por el **número de abajo** (subíndice).
+        - **Ejemplo de ajuste ($\text{N}_2 + \text{H}_2 \to \text{NH}_3$):**
+        - **Conteo inicial:** Nitrógeno: 2 (reactivos) contra 1 (productos). La ecuación no estaba balanceada.
+        - **Ajuste de Nitrógeno:** Para que el conteo de nitrógeno en productos diera 2, se cambió el coeficiente de $\text{NH}_3$ a 2.
+        - **Ajuste de Hidrógeno:** Al colocar el coeficiente 2, el hidrógeno en productos se convirtió en 6 ($2 \times 3$). Para igualarlo en reactivos, el coeficiente de $\text{H}_2$ se ajustó a 3, logrando 6 hidrógenos ($3 \times 2$).
+        - **Ecuación final ajustada:** $\text{N}_2 + 3\text{H}_2 \to 2\text{NH}_3$, quedando balanceada con 2 nitrógenos y 6 hidrógenos a ambos lados.
+    - **Regla clave:** Lo **único** que se puede tocar para ajustar o balancear una ecuación es el **número de adelante** (el coeficiente).
 
-**B. Reglas de enlace**
+**B. Fases de las sustancias**
 
-1. La mayoría de los átomos buscan cumplir la **regla del octeto**, lo que significa tener **ocho electrones** en su última capa o capa de valencia.
-2. El **hidrógeno** ($\text{H}$) es una excepción importante: no busca cumplir la regla del octeto, sino la **regla del dueto**, buscando tener **dos electrones** de valencia, ya que su gas noble más cercano es el helio, que solo posee dos electrones en su última capa.
+1. **Notación:** 
+    - (g): gas.
+    - (l): líquido.
+    - (ac): acuoso.
+    - (s): sólido
 
----
+### Balanceo - ejemplo 2
 
-**C. Enlace covalente especial (coordinado o dativo)**
+Balancea la siguiente ecuación química:
 
-1. El enlace covalente coordinado o **dativo** es un tipo especial de enlace covalente.
-2. Se define porque **el par de electrones que se comparte es aportado por uno solo de los átomos**.
+$$ \text{CH}_4 + \text{O}_2 \to \text{CO}_2 + \text{H}_2\text{O} $$
 
-### Enlace covalente doble
+video: https://youtu.be/omcm_uRhd2E?si=PTR-Y1ZknvFuC4mA
 
-video: https://youtu.be/Qlxxerax9i0?si=sOg_yodwx513WEgN
+[Ver en Tiktok](https://vt.tiktok.com/ZSSacyaBw/)
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSSaXADCq/)
+## Tipos de reacciones químicas
 
-**A. Definición**
+### Según el mecanismo
 
-1. El enlace covalente doble ocurre cuando se comparten **dos pares de electrones** entre los átomos (un total de cuatro electrones).
-2. La idea del enlace covalente doble es básicamente la misma que la del enlace covalente simple, pero se comparten dos pares de electrones en lugar de uno.
-3. En la representación, se visualiza con una **doble línea** entre los átomos enlazados.
+video: https://youtu.be/O1768cWh3Ls?si=8AJLklVbpKDvuNOJ
 
----
+[Ver en Tiktok](https://vt.tiktok.com/ZSSacRmXB/)
 
-**B. Ejemplos Moleculares**
+**A. Criterios de clasificación:**
 
-1. **Molécula de oxígeno ($\text{O}_2$):**
-    - Cada átomo de oxígeno tiene **seis electrones de valencia**.
-    - Cada oxígeno necesita dos electrones para cumplir la regla del octeto (llegar a ocho).
-    - El enlace doble se forma compartiendo dos pares de electrones, lo que permite que cada uno de los dos átomos de oxígeno cumpla su octeto (seis propios más dos compartidos).
-2. **Dióxido de carbono ($\text{CO}_2$):**
-    - La molécula se compone de un átomo de carbono y dos de oxígeno.
-    - El carbono tiene **cuatro electrones de valencia**, y el oxígeno tiene **seis**.
-    - El carbono forma **dos enlaces dobles** (uno con cada átomo de oxígeno).
-    - De esta manera, el carbono (4 electrones propios + 4 compartidos = 8) y cada oxígeno (6 electrones propios + 2 compartidos = 8) cumplen la ley del octeto.
+1. **Adición:**
+    - Dos o más sustancias se combinan para formar **un solo producto**.
+    - $$\text{Sustancia A} + \text{Sustancia B} \to \text{SustanciaAB}$$
+2. **Descomposición:**
+    - Una sustancia compleja se descompone en **dos o más sustancias simples**.
+    - $$\text{Sustancia Compleja} \to \text{Sustancia simple} + \text{Sustancia simple}$$
+3. **Sustitución simple o reemplazo:** 
+    - Un elemento **reemplaza a otro** elemento que se encuentra en un compuesto.
+    - $$\text{Elemento A} + \text{Compuesto BC} \to \text{Compuesto AC} + \text{Elemento B}$$
+4. **Sustitución Doble o Intercambio:** Dos compuestos **intercambian partes** entre sí. 
+    - **Diferencia Clave:** A diferencia de la sustitución simple, en este caso **nadie queda solo**; es un intercambio de parejas.
+    - $$\text{Compuesto AB} + \text{Compuesto CD} \to \text{Compuesto AD} + \text{Compuesto CB}$$
 
-### Enlace covalente triple
+### Redox y neutralización
 
-video: https://youtu.be/HXu3l8IPkTw?si=rgl9ZAo0awbuMiyh
+video: https://youtu.be/_IlLieVBvhY?si=3ZQfyzg-iXrfsnHi
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSSaXm38V/)
+[Ver en Tiktok](https://vt.tiktok.com/ZSSacr3kn/)
 
-**A. Definición**
+**A. Reacciones de óxido - reducción**
 
-1. El **enlace covalente triple** ocurre cuando los átomos que se enlazan se comparten **tres pares de electrones**.
-2. Esto implica que se están compartiendo un total de **seis electrones**.
+1. **Definición:** Las reacciones de óxido - reducción, también conocidas como reacciones **redox, s**on reacciones en las cuales ocurre una **transferencia de electrones** entre diferentes sustancias.
+2. **El número de oxidación:** La transferencia de electrones se evidencia por el **cambio en el número de oxidación** (el número que se encuentra arriba de cada elemento). El número de oxidación **indica cuántos electrones gana o pierde un elemento en la reacción.**
+3. **Proceso de oxidación:** Ocurre cuando el número de oxidación **aumenta** o se vuelve **más positivo**. Si el número de oxidación se vuelve más positivo (ej., de 0 a +2, como en el cobre), el átomo **pierde electrones**. El elemento que perdió electrones se dice que **se oxidó.**
+4. **Proceso de reducción:** Ocurre cuando el número de oxidación **disminuye** o se vuelve **más negativo**. Si el número de oxidación disminuye (ej., la plata, $\text{Ag}$, pasó de +1 a 0), el elemento **gana electrones**. El elemento que ganó electrones se dice que se **redujo.**
 
-## Enlace metálico
+**B. Reacciones de neutralización**
 
-video: https://youtu.be/xhe4-iKOaIE?si=mh9Qdz9nkzBuSlZB
+1. **Mecanismo:** Son aquellas reacciones en las cuales un **ácido reacciona con una base, produciendo una sal y agua**
+2. **Identificación:** El **ácido** se suele identificar con el grupo $\text{H}$, y la **base,** con el grupo $\text{OH}$.
+3. **Ecuación:** $$\text{Ácido} + \text{Base} \to \text{Sal} + \text{Agua}$$ 
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSSaXAKrc/)
+### Endotérmicas y exotérmicas
 
-**A. Naturaleza**
+video: https://youtu.be/liWjNcdfY8o?si=39w6gvPH8Q0u5BUC
 
-1. El **enlace metálico** es aquel que se produce debido al **compartimiento de muchos electrones**.
-2. Este enlace se da **entre metales**.
-3. El enlace metálico se explica por la **atracción** entre **iones metálicos positivos** (llamados cationes) y un **mar de electrones** o **nube de electrones**.
+[Ver en Tiktok](https://vt.tiktok.com/ZSSacTkf3/)
 
----
+**A. Reacciones exotérmicas**
 
-**B. Comparación**
+1. **Naturaleza:** Son aquellas reacciones que **liberan calor** al entorno, y se sienten **calientes al tacto**.
+2. **Ecuación:** El **calor** se anota del lado de los **productos** (lo que se produce). $$\text{Reactivos} \to \text{Producto} + \text{Calor}$$
+3. **Conservación de la energía(nivel energético):** La energía se conserva; la energía de los reactivos debe ser igual a la energía de los productos más el calor liberado.
+    
+    $$\text{E_Reactivos} \to \text{E_Producto} + \text{Calor_liberado}$$
+    
+4. **Gráfico de Energía (Energía vs. Avance de la Reacción):** • Los **reactivos** aparecen en un **nivel más alto de energía**. • Los **productos** aparecen en un **nivel más bajo de energía**. • La diferencia entre el nivel de energía de los reactivos y los productos es el **calor**. • El calor es lo que se debe sumar a la energía de los productos para igualar el nivel de energía de los reactivos.
 
-1. La idea del enlace metálico no es convencional, como en los enlaces covalentes donde se ven claramente los pares de electrones compartidos entre uno y otro átomo. En el enlace metálico se comparten **muchos pares, muchos electrones**.
+B. Reacciones Endotérmicas
 
-## Escala de electronegatividad
+1. **Naturaleza y Percepción:** • Son reacciones que **absorben calor**. • No liberan calor como las exotérmicas.
+2. **Representación en la Ecuación:** • El **calor** se anota del lado de los **reactivos**. $$\text{Reactivo} + \text{Calor} \to \text{Productos}$$
+3. **Conservación de la Energía (Nivel Energético):** • Se cumple el principio de conservación de la energía. • La energía de los reactivos, sumada al calor, debe ser igual a la energía de los productos. • Los **productos tienen más energía** que los reactivos. • El calor debe sumarse a los reactivos para que igualen en energía a los productos.
+4. **Gráfico de Energía (Energía vs. Avance de la Reacción):** • Los **productos** aparecen en un **nivel más alto de energía**. • Los **reactivos** aparecen en un **nivel más bajo de energía**. • El **calor** es la franja que separa el nivel de energía de los reactivos (abajo) del nivel de energía de los productos (arriba).
 
-### Escala de electronegativad
+### Reversibles e irreversibles
 
-video: https://youtu.be/XunxWycF4Q8?si=zCtVlG5prejIghHX
+video: https://youtu.be/_XhyclY8c4Q?si=kxIrE5JouABFJeu_
 
-[Ver en Tiktok](https://vt.tiktok.com/ZSSaXgAah/)
+[Ver en Tiktok](https://vt.tiktok.com/ZSSoe8G67/)
 
-**A. Clasificación según la diferencia de electronegatividad**
+**A. Criterios de Clasificación**
 
-La **diferencia de electronegatividad** (**ΔEₙ**) es la resta entre las electronegatividades de dos átomos enlazados, e indica qué tan equitativamente comparten los electrones. La **ΔEₙ** permite clasificar los enlaces en tres tipos principales, dependiendo de la intensidad con la que un átomo atrae los electrones compartidos.
+1. **Base de la división:** Al clasificarlas según el sentido,  los dos tipos son: reacciones **irreversibles** y reacciones **reversibles**.
 
-| TIPO DE ENLACE | RANGO DE **ΔEₙ** | MECANISMO Y SIGNIFICADO |
-| --- | --- | --- |
-| **Covalente no polar** | **0 hasta 0,4** | Se da cuando la diferencia es **cero o muy cercana a cero**. Los átomos atraen los electrones con una fuerza muy similar. Los electrones se comparten de forma **muy pareja** (no buscan un polo específico). *Ejemplos:* $\text{H}_2$ (**ΔEₙ** = 0); $\text{CH}_4$ (**ΔEₙ** = 0,35). |
-| **Covalente polar** | **0,4 hasta 1,7** | Hay más diferencia de electronegatividad. Un átomo atrae el par de electrones con **más fuerza**. El par de electrones se ubica **más cerca de un polo** (el átomo más electronegativo). *Ejemplo:*Nitrógeno con Hidrógeno (**ΔEₙ** = 0,84). |
-| **Iónico** | **Mayor a 1,7** | Hay **mucha diferencia** de electronegatividad. El átomo más electronegativo **roba** el electrón al otro átomo, lo que no es un compartimiento. *Ejemplo:* Sodio ($\text{Na}$) con Cloro ($\text{Cl}$) (**ΔEₙ** = 2,23). |
+**B. Reacciones irreversibles**
 
----
+1. **Definición:** Son aquellas reacciones donde los reactivos se convierten en productos, pero los productos **no pueden volver a formar los reactivos**.
+2. **Representación:** Se representan con una **flecha en un solo sentido**. Esta flecha está dirigida **hacia los productos**. Si se intenta ir del producto de vuelta a los reactivos, **no será posible** porque es irreversible. $$\text{Reactivos} \to \text{Producto}$$
 
-**B. La exclusión del enlace metálico**
+**C. Reacciones Reversibles**
 
-Es importante notar que el **enlace metálico no se incluye en esta escala de electronegatividad**.
-
-La razón para esta exclusión es que la escala se basa en la resta de electronegatividades de **dos átomos enlazados**. Sin embargo, en el enlace metálico, **muchos átomos** están compartiendo sus electrones. Los electrones se mueven de forma **deslocalizada** en un "mar de electrones", por lo que no se aplica la clasificación basada en la interacción de un par de átomos puntual.
-
-### Comparativo: iónico, covalente y metálico
-
-video: https://youtu.be/qV4P3PJCiFE?si=2j9ZfCI5YMWzhzOm
-
-[Ver en Tiktok](https://vt.tiktok.com/ZSSaXxCXs/)
-
-| ASPECTO | ENLACE IÓNICO | ENLACE COVALENTE | ENLACE METÁLICO |
-| --- | --- | --- | --- |
-| **Participantes** | Metales y no metales | Entre no metales | Entre metales |
-| **Mecanismo** | Robo de electrones | Compartimiento de electrones | Compartimiento de muchos electrones |
-| **Estado físico** | Sólidos cristalinos (ej. la sal de cocina, $\text{NaCl}$) | Sólidos, líquidos o gases (ej. el agua, el azúcar, el dióxido de carbono) | Sólidos (ej. una llave metálica o una tapa de alcantarilla) |
-| **Puntos de fusión y ebullición** | **Altos** (necesita mucha temperatura) | **Bajos** | **Muy altos** |
-| **Solubilidad en agua** | **Alta** (ej. la sal de cocina se disuelve de muy buena manera) | **Poco solubles** en agua (ej. el azúcar es menos soluble que la sal) | **Insolubles** o no solubles en general en agua |
-| **Conductividad eléctrica** | **Alta** (incrementa la conductividad eléctrica del agua) | En general, **baja conductividad**(ej. el agua pura) | **Muy alta conductividad eléctrica**(ej. el cobre, conductor por excelencia) |
+1. **Definición:** Son aquellas reacciones donde **sí se pueden devolver**. • El producto también puede formar de vuelta los reactivos.
+2. **Representación:** Se representan con una **doble flecha**. Una flecha va en el sentido hacia los productos (a la derecha) y la otra flecha va en el sentido hacia los reactivos (a la izquierda). $$\text{Reactivos} \rightleftharpoons \text{Producto}$$
