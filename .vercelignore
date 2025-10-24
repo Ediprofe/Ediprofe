@@ -1,0 +1,16 @@
+# Archivos de documentación
+*.md
+!README.md
+
+# Archivos de desarrollo
+.vscode/
+.idea/
+*.log
+.DS_Store
+
+# Cache de Next.js
+.next/
+out/
+
+# Node modules (se instalan en build)
+node_modules/

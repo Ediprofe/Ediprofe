@@ -222,7 +222,7 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
 
       {/* Contenido de la tab activa */}
       <div
-        className="tab-content animate-fade-in min-h-[60vh]"
+        className="tab-content animate-fade-in"
         role="tabpanel"
         aria-labelledby={activeTabId}
       >

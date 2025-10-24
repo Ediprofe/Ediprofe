@@ -6,22 +6,29 @@ const nextConfig = {
   trailingSlash: true,
   
   // Forzar rebuild completo - mostrar todas las materias
-  // Última actualización: 2025-10-14
+  // Última actualización: 2025-10-24
   
   // Configuración de compilación
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production', // Remover console.log en producción
   },
   
-  // Optimizar imágenes
+  // Optimizar imágenes para exportación estática
   images: {
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: true, // Necesario para exportación estática
+  },
+  
+  // Configuración de generación estática
+  generateBuildId: async () => {
+    // Usar timestamp para forzar invalidación de caché
+    return `build-${Date.now()}`;
   },
 }
 
 // Si se define OUTPUT_EXPORT, exportar como sitio estático
 if (process.env.OUTPUT_EXPORT === 'true') {
   nextConfig.output = 'export';
+  nextConfig.distDir = 'out';
 }
 
 module.exports = nextConfig

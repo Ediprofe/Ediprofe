@@ -26,7 +26,7 @@ export default function VideoEmbed({ video, className = '' }: VideoEmbedProps) {
 
     return (
       <div className={`youtube-embed group ${className}`}>
-        <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-slate-900/5 transition-all duration-300 hover:shadow-indigo-500/50" style={{ paddingBottom: '56.25%' }}>
+        <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-slate-900/5 transition-all duration-300 hover:shadow-indigo-500/50" style={{ paddingBottom: '56.25%', maxHeight: '80vh' }}>
           <iframe
             className="absolute top-0 left-0 w-full h-full border-0"
             src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0`}
@@ -35,7 +35,7 @@ export default function VideoEmbed({ video, className = '' }: VideoEmbedProps) {
             allowFullScreen
           />
         </div>
-        <div className="mt-4 flex items-center gap-2 text-sm text-slate-600">
+        <div className="mt-3 flex items-center gap-2 text-sm text-slate-600">
           <svg className="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
