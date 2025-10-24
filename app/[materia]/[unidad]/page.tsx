@@ -18,7 +18,7 @@ interface PageProps {
 }
 
 // Generar todas las rutas estáticas posibles
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return generateAllRouteParams();
 }
 
@@ -104,18 +104,18 @@ export default async function UnitPage({ params }: PageProps) {
         {/* Contenido principal */}
         <div className="flex-1 w-full lg:w-auto min-w-0 px-4 md:px-0">
           {/* Header de la unidad - Más compacto y elegante */}
-          <div className="card-modern p-6 md:p-8 mb-10 md:mb-14 relative overflow-hidden border-l-4 border-indigo-500">
+          <div className="card-modern p-5 md:p-8 mb-8 md:mb-12 relative overflow-hidden border-l-4 border-indigo-500">
             {/* Decoración de fondo sutil */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 rounded-full blur-3xl -z-0" />
             
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-4">
-                <span className="text-4xl md:text-5xl flex-shrink-0">{config.icon}</span>
+              <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                <span className="text-3xl md:text-4xl lg:text-5xl flex-shrink-0">{config.icon}</span>
                 <div className="min-w-0 flex-1">
                   <p className="text-xs md:text-sm font-bold text-indigo-600 uppercase tracking-wider mb-1">
                     {config.name}
                   </p>
-                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 break-words leading-tight">
+                  <h1 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-slate-900 break-words leading-tight">
                     {unit.metadata.title}
                   </h1>
                 </div>
@@ -130,9 +130,9 @@ export default async function UnitPage({ params }: PageProps) {
           </div>
 
           {/* Secciones con tabs - Diseño mejorado */}
-          <div className="space-y-10 md:space-y-14">
+          <div className="space-y-6 md:space-y-10">
             {unit.sections.map((section) => (
-              <section key={section.id} className="card-modern p-6 md:p-8 lg:p-10 border-l-4 border-purple-400 hover:border-purple-600 transition-colors duration-300">
+              <section key={section.id} className="card-modern p-5 md:p-8 lg:p-10 border-l-4 border-purple-400 hover:border-purple-600 transition-colors duration-300">
                 <TabsSystem section={section} />
               </section>
             ))}
@@ -140,8 +140,8 @@ export default async function UnitPage({ params }: PageProps) {
 
           {/* Recursos externos al final */}
           {unit.externalResources && unit.externalResources.length > 0 && (
-            <section className="card-modern p-6 md:p-8 lg:p-10 mt-10 md:mt-14 border-l-4 border-indigo-500">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-6 md:mb-8 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <section className="card-modern p-5 md:p-8 lg:p-10 mt-6 md:mt-10 border-l-4 border-indigo-500">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold mb-5 md:mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 Recursos externos
               </h2>
               <ExternalResources resources={unit.externalResources} />

@@ -14,7 +14,7 @@ interface PageProps {
 }
 
 // Generar rutas estáticas
-export async function generateStaticParams() {
+export function generateStaticParams() {
   // Generar páginas para todas las materias configuradas, aunque no tengan carpeta
   const subjects = Object.keys(SUBJECT_CONFIG);
   return subjects.map((materia) => ({ materia }));

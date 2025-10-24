@@ -144,27 +144,27 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
     // (eliminado: ya no usamos overlay flotante)
     <div className={`tabs-system ${className} min-h-[calc(100vh-20rem)]`}>
       {/* Título de la sección - Más prominente */}
-      <div className="mb-8 md:mb-10">
-        <h2 id={section.id} className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent scroll-mt-20 break-words leading-tight">
+      <div className="mb-6 md:mb-8">
+        <h2 id={section.id} className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent scroll-mt-20 break-words leading-tight">
           {section.title}
         </h2>
-        <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-full" />
+        <div className="h-1 w-20 md:w-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-full" />
       </div>
 
       {/* Navegación de tabs - Diseño mejorado con pills */}
-      <div className="tabs-nav-wrapper relative mb-8">
+      <div className="tabs-nav-wrapper relative mb-5">
         {/* Gradient para indicar scroll horizontal en móvil */}
         <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none md:hidden z-10" />
         
-        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-indigo-300 scrollbar-track-transparent">
-          <div ref={navRef} className="flex gap-3 min-w-max pb-2">
+        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-indigo-300 scrollbar-track-transparent -mx-1 px-1">
+          <div ref={navRef} className="flex gap-2 md:gap-3 min-w-max pb-2">
             {section.tabs.map((tab) => (
               <button
                 key={tab.id}
                 data-tab-id={tab.id}
                 onClick={() => activateTab(tab.id)}
                 className={`
-                  relative px-5 py-3 font-bold text-sm md:text-base whitespace-nowrap
+                  relative px-4 md:px-5 py-2.5 md:py-3 font-bold text-xs md:text-sm whitespace-nowrap
                   transition-all duration-300 rounded-xl
                   ${
                     activeTabId === tab.id
@@ -182,39 +182,44 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
         </div>
 
         {/* Controles superiores: notas + navegación - Diseño mejorado */}
-        <div className="mt-4 flex items-center justify-between gap-3 flex-wrap">
-          <div className="flex items-center gap-2">
+        <div className="mt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+          {/* Botón de notas - Siempre visible pero solo funcional si hay notas */}
+          <div className="flex items-center">
             {showNotesButton && (
               <button
                 type="button"
-                className="px-4 py-2 text-sm font-semibold rounded-lg border-2 border-amber-400 bg-amber-50 text-amber-900 hover:bg-amber-100 hover:border-amber-500 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
+                className="w-full sm:w-auto px-4 py-2.5 text-xs md:text-sm font-semibold rounded-lg border-2 border-amber-400 bg-amber-50 text-amber-900 hover:bg-amber-100 hover:border-amber-500 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2"
                 onClick={() => setIsNotesOpen(true)}
                 aria-label="Ver notas de clase"
                 title="Ver notas de clase"
               >
                 <span className="text-base">📝</span>
-                <span>Ver notas de clase</span>
+                <span>Ver notas</span>
               </button>
             )}
           </div>
-          <div className="flex items-center gap-2">
+          
+          {/* Botones de navegación */}
+          <div className="flex items-center gap-2 justify-end">
             <button
-              className="px-4 py-2.5 text-sm font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed shadow-sm hover:shadow-md transition-all duration-300"
+              className="flex-1 sm:flex-none px-4 py-2.5 text-xs md:text-sm font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed shadow-sm hover:shadow-md transition-all duration-300"
               onClick={() => goToIndex(Math.max(activeIndex - 1, 0))}
               disabled={activeIndex <= 0}
               aria-label="Anterior"
               title="Anterior"
             >
-              ← Anterior
+              <span className="hidden sm:inline">← Anterior</span>
+              <span className="sm:hidden">←</span>
             </button>
             <button
-              className="px-4 py-2.5 text-sm font-bold rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 disabled:opacity-40 disabled:cursor-not-allowed shadow-md hover:shadow-lg transition-all duration-300"
+              className="flex-1 sm:flex-none px-4 py-2.5 text-xs md:text-sm font-bold rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 disabled:opacity-40 disabled:cursor-not-allowed shadow-md hover:shadow-lg transition-all duration-300"
               onClick={() => goToIndex(Math.min(activeIndex + 1, section.tabs.length - 1))}
               disabled={activeIndex >= section.tabs.length - 1}
               aria-label="Siguiente"
               title="Siguiente"
             >
-              Siguiente →
+              <span className="hidden sm:inline">Siguiente →</span>
+              <span className="sm:hidden">→</span>
             </button>
           </div>
         </div>
