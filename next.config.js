@@ -19,7 +19,7 @@ const nextConfig = {
   },
   
   // Configuración de generación estática
-  generateBuildId: async () => {
+  generateBuildId: () => {
     // Usar timestamp para forzar invalidación de caché
     return `build-${Date.now()}`;
   },
