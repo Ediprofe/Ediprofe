@@ -1,6 +1,24 @@
-# Archivos de documentación
-*.md
-!README.md
+# Archivos de documentación (NO ignorar content/*.md)
+DEPLOY.md
+EJEMPLO-TABLAS.md
+FIX-BREADCRUMB-ZINDEX.md
+GUIA-ECUACIONES.md
+INSTRUCCIONES.md
+MEJORAS-BREADCRUMB.md
+MEJORAS-RESPONSIVE.md
+METODOLOGÍA-WINDSURF
+NAVEGACION-TABS.md
+REDISENO-MODERNO.md
+RENDIMIENTO.md
+RESUMEN-BREADCRUMB.md
+RESUMEN-OPTIMIZACION.md
+RESUMEN.md
+SISTEMA-ECUACIONES.md
+instrucciones-finales.md
+requerimientos.md
+Auditoria.md
+CONTENIDO-CREADO.md
+DIAGNOSTICO-CONECTIVIDAD.md
 
 # Archivos de desarrollo
 .vscode/
