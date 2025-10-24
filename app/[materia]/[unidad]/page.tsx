@@ -17,6 +17,9 @@ interface PageProps {
   }>;
 }
 
+// Deshabilitar parámetros dinámicos - solo rutas pre-generadas
+export const dynamicParams = false;
+
 // Generar todas las rutas estáticas posibles
 export function generateStaticParams() {
   return generateAllRouteParams();
