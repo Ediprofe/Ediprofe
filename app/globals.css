@@ -93,7 +93,7 @@ body {
   
   .prose strong {
     @apply font-semibold;
-    color: #4f46e5; /* Indigo para destacar conceptos clave */
+    color: #1e293b; /* Negro/gris oscuro para negritas */
     font-weight: 600;
   }
   
