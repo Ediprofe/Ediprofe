@@ -13,9 +13,9 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production', // Remover console.log en producción
   },
   
-  // Optimizar imágenes para exportación estática
+  // Optimizar imágenes
   images: {
-    unoptimized: true, // Necesario para exportación estática
+    formats: ['image/avif', 'image/webp'],
   },
   
   // Configuración de generación estática
@@ -25,10 +25,11 @@ const nextConfig = {
   },
 }
 
-// Si se define OUTPUT_EXPORT, exportar como sitio estático
-if (process.env.OUTPUT_EXPORT === 'true') {
-  nextConfig.output = 'export';
-  nextConfig.distDir = 'out';
-}
+// DESHABILITADO: output export causa problemas en Vercel con Next.js 15
+// Usar SSG normal de Next.js en su lugar
+// if (process.env.OUTPUT_EXPORT === 'true') {
+//   nextConfig.output = 'export';
+//   nextConfig.distDir = 'out';
+// }
 
 module.exports = nextConfig

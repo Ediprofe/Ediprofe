@@ -1,6 +1,5 @@
 {
-  "buildCommand": "npm run build:static",
-  "outputDirectory": "out",
+  "buildCommand": "npm run build",
   "framework": "nextjs",
   "installCommand": "npm install",
   "regions": ["iad1"],
