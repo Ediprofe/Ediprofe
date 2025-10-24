@@ -13,9 +13,6 @@ interface PageProps {
   }>;
 }
 
-// Deshabilitar parámetros dinámicos - solo rutas pre-generadas
-export const dynamicParams = false;
-
 // Generar rutas estáticas
 export function generateStaticParams() {
   // Generar páginas para todas las materias configuradas, aunque no tengan carpeta
