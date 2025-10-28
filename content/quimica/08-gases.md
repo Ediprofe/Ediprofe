@@ -120,8 +120,8 @@ El valor de **R** depende de las unidades de presión y volumen empleadas:
 
 | 🧮 **Unidades utilizadas** | ⚙️ **Valor de R** | 📏 **Unidades de R** |
 |----------------------------|-------------------|----------------------|
-| P en **Pa**, V en **m³** | 8.314 | $$\text{Pa·m³·mol⁻¹·K⁻¹}$$ |
-| P en **atm**, V en **L** | 0.082 | $$\text{atm·L·mol⁻¹·K⁻¹}$$ |
+| P en **Pa**, V en **m³** | 8.314 | $\text{Pa}\cdot\text{m}^3\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$ |
+| P en **atm**, V en **L** | 0.082 | $\text{atm}\cdot\text{L}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$ |
 
 ✅ **Consejo:** Usa el valor de **R** que coincida con las unidades de **P** y **V** para evitar conversiones.
 
