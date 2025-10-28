@@ -280,7 +280,7 @@ Las soluciones se pueden clasificar según **la cantidad de soluto disuelto** en
 video: https://youtu.be/abslSekO71U
 
 ```markdown
-# **Ejercicio: Curva de solubilidad del KClO₃**
+# Ejercicio: Curva de solubilidad del KClO₃
 
 Responda las siguientes preguntas utilizando la **curva de solubilidad del KClO₃ (clorato de potasio)**.  
 Determine la **solubilidad** (gramos de soluto por 100 g de agua) a las temperaturas indicadas.
@@ -299,7 +299,7 @@ video: https://youtu.be/sl2b_BbFRrA
 [Ver en Tiktok](https://vt.tiktok.com/ZSBQafS2d/)
 
 ```markdown
-# **Ejercicio: Curva de solubilidad del NaCl**
+# Ejercicio: Curva de solubilidad del NaCl
 
 Elija si cada una de las siguientes preparaciones forma una **solución insaturada, saturada o sobresaturada**.  
 La sal utilizada en todos los casos es **NaCl (Cloruro de Sodio)** y debe utilizarse la **curva de solubilidad** correspondiente.
@@ -318,7 +318,7 @@ video: https://youtu.be/KoHbSwohyKc
 [Ver en Tiktok](https://vt.tiktok.com/ZSBQaTx6V/)
 
 ```markdown
-# **Ejercicio: Curva de solubilidad del KClO₃**
+# Ejercicio: Curva de solubilidad del KClO₃
 
 3. **Calcule los gramos de KClO₃ que pueden disolverse como máximo en 200 g de agua a 30 °C.**
 
@@ -332,7 +332,7 @@ video: https://youtu.be/wZ5bELgg-5Y
 [Ver en Tiktok](https://vt.tiktok.com/ZSBQmFbuG/)
 
 ```markdown
-# **Ejercicio: Curva de solubilidad del KNO₃**
+# Ejercicio: Curva de solubilidad del KNO₃
 
 4. **Calcule los gramos de KNO₃ que pueden disolverse como máximo en 20 g de agua a 50 °C.**
 
@@ -346,7 +346,7 @@ video: https://youtu.be/LTx9t-Wu_gQ
 [Ver en Tiktok](https://vt.tiktok.com/ZSBQmjAfN/)
 
 ```markdown
-# **Ejercicio: Curva de solubilidad del KNO₃**
+# Ejercicio: Curva de solubilidad del KNO₃
 
 5. **¿Qué tipo de solución se forma al agregar 150 g de KNO₃ a 300 g de agua a 30 °C?**
 
@@ -360,7 +360,7 @@ video: https://youtu.be/P_5uVyjYViE
 [Ver en Tiktok](https://vt.tiktok.com/ZSBQmNeYp/)
 
 ```markdown
-# **Ejercicio: Curva de solubilidad del NaCl**
+# Ejercicio: Curva de solubilidad del NaCl
 
 6. **¿Qué tipo de solución se forma al agregar 80 g de NaCl a 250 g de agua a 70 °C?**
 
@@ -550,3 +550,5 @@ $$\text{Ácido} + \text{Base} \rightarrow \text{Sal} + \text{Agua}$$
   - 7.1–14 → Básica  
 - **Neutralización:** ácido + base → sal + agua.  
 ```
+
+### Práctica
