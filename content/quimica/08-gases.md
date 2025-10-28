@@ -353,7 +353,6 @@ Se pide calcular **la presión del gas**.
 
 - **Variable a encontrar:**  
   \( P \) (Presión)
-
 ```
 
 ### Ejercicios 3 y 4
@@ -368,13 +367,13 @@ Un recipiente de **5 L** contiene un gas a **2 atm** y **298 K**.
 Se pide determinar **cuántos moles de gas hay**.
 
 - **Datos conocidos:**  
-  \( V = 5\ \text{L} \) (Volumen)  
-  \( P = 2\ \text{atm} \) (Presión)  
-  \( T = 298\ \text{K} \) (Temperatura)  
-  **Constante de los gases ideales:** \( R = 0.082\ \text{atm}\cdot\text{L}\cdot\text{mol}^{-1}\cdot\text{K}^{-1} \)
+  $V = 5\ \text{L}$ (Volumen)  
+  $P = 2\ \text{atm}$ (Presión)  
+  $T = 298\ \text{K}$ (Temperatura)  
+  **Constante de los gases ideales:** $R = 0.082\ \text{atm}\cdot\text{L}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$
 
 - **Variable a encontrar:**  
-  \( n \) (Número de moles)
+  $n$ (Número de moles)
 
 ---
 
@@ -383,14 +382,13 @@ Se tienen **0.5 moles de un gas** en un **volumen de 4 L** a una **presión de 3
 Se pide determinar **la temperatura del gas**.
 
 - **Datos conocidos:**  
-  \( n = 0.5\ \text{mol} \) (Número de moles)  
-  \( V = 4\ \text{L} \) (Volumen)  
-  \( P = 3\ \text{atm} \) (Presión)  
-  **Constante de los gases ideales:** \( R = 0.082\ \text{atm}\cdot\text{L}\cdot\text{mol}^{-1}\cdot\text{K}^{-1} \)
+  $n = 0.5\ \text{mol}$ (Número de moles)  
+  $V = 4\ \text{L}$ (Volumen)  
+  $P = 3\ \text{atm}$ (Presión)  
+  **Constante de los gases ideales:** $R = 0.082\ \text{atm}\cdot\text{L}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$
 
 - **Variable a encontrar:**  
-  \( T \) (Temperatura)
-
+  $T$ (Temperatura)
 ```
 
 ## Leyes de los gases
