@@ -629,8 +629,9 @@ Esta parte del proceso debe grabarse como **primera sección del video de eviden
 📹 **Evidencia:**  
 Graben este proceso (máx. 1 min), mostrando los materiales, el hervor y el color final del extracto.
 
-🔗 **Video de referencia:**  
-[Indicador de pH casero / Repollo morado](https://www.youtube.com/watch?v=s_cK4BCu25c)
+🔗 **Video de referencia:**
+
+video: https://www.youtube.com/watch?v=s_cK4BCu25c
 
 ---
 
