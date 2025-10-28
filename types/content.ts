@@ -42,7 +42,8 @@ export interface ExternalResource {
 export interface Tab {
   id: string; // slug generado del label
   label: string; // Texto exacto del H3 (con emojis incluidos)
-  content?: string; // HTML renderizado del contenido
+  content?: string; // HTML renderizado del contenido (sin bloques markdown)
+  rawContent?: string; // Contenido markdown original (con bloques markdown para el modal)
   videos?: VideoLink[]; // Videos asociados a esta tab
   type: 'content' | 'videos' | 'mixed'; // Tipo de tab
 }

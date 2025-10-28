@@ -56,32 +56,24 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
   const tabIds = section.tabs.map((t) => t.id);
   const activeIndex = Math.max(0, tabIds.indexOf(activeTabId));
 
-  // Detecta si hay notas de clase: bloque ```markdown``` o texto no solo hipervínculo (basado en HTML)
-  const hasNotesContent = (html: string): boolean => {
-    if (!html) return false;
+  // Detecta si hay notas de clase: busca bloques ```markdown``` en el rawContent
+  const hasNotesContent = (rawContent?: string): boolean => {
+    if (!rawContent) return false;
 
-    // 1) Bloques de notas (fences) renderizados como <pre><code class="language-markdown|md">...</code></pre>
-    const fencePattern = /<pre>\s*<code[^>]*class=["'][^"']*(?:language-)?(?:markdown|md)[^"']*["'][^>]*>[\s\S]*?<\/code>\s*<\/pre>/i;
-    if (fencePattern.test(html)) return true;
-
-    // 2) Quitar headings y enlaces para detectar texto residual significativo
-    let stripped = html
-      .replace(/<h[1-6][^>]*>[\s\S]*?<\/h[1-6]>/gi, '')
-      .replace(/<a[^>]*>[\s\S]*?<\/a>/gi, '')
-      .replace(/<[^>]+>/g, ' ') // eliminar el resto de etiquetas
-      .replace(/[\s\-–—→↗↘↙↖…:;,.!?()]+/g, ' ')
-      .trim();
-
-    return /[A-Za-z0-9áéíóúüñ]/i.test(stripped);
-  };
-
-  // Limpia del HTML los bloques de notas (fences markdown/md) para que NO aparezcan en la página
-  const stripMarkdownFences = (html?: string): string => {
-    if (!html) return '';
-    return html
-      .replace(/<pre>\s*<code[^>]*class=["'][^"']*(?:language-)?(?:markdown|md)[^"']*["'][^>]*>[\s\S]*?<\/code>\s*<\/pre>/gi, '')
-      .replace(/<code[^>]*class=["'][^"']*(?:language-)?(?:markdown|md)[^"']*["'][^>]*>[\s\S]*?<\/code>/gi, '')
-      .trim();
+    const lines = rawContent.split('\n');
+    let inMarkdownFence = false;
+    
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (trimmed.startsWith('```')) {
+        const lang = trimmed.match(/^```\s*(\w+)?/)?.[1]?.toLowerCase();
+        if (!inMarkdownFence && (lang === 'markdown' || lang === 'md')) {
+          return true; // Encontramos un bloque markdown
+        }
+      }
+    }
+    
+    return false;
   };
 
   // Extrae (y remueve) el primer enlace a TikTok del HTML (SSR-safe)
@@ -114,7 +106,7 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
     return { href: tik.url, label: 'Ver en TikTok' };
   };
 
-  const showNotesButton = hasNotesContent(activeTab?.content || '');
+  const showNotesButton = hasNotesContent(activeTab?.rawContent);
 
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -183,18 +175,21 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
 
         {/* Controles superiores: notas + navegación - Diseño mejorado */}
         <div className="mt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-          {/* Botón de notas - Siempre visible pero solo funcional si hay notas */}
+          {/* Botón de notas - Estilo unificado y prominente */}
           <div className="flex items-center">
             {showNotesButton && (
               <button
                 type="button"
-                className="w-full sm:w-auto px-4 py-2.5 text-xs md:text-sm font-semibold rounded-lg border-2 border-amber-400 bg-amber-50 text-amber-900 hover:bg-amber-100 hover:border-amber-500 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-4 py-2.5 text-xs md:text-sm font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 border-2 border-indigo-500 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-900 hover:from-indigo-100 hover:to-purple-100 hover:border-indigo-600 shadow-md hover:shadow-lg"
                 onClick={() => setIsNotesOpen(true)}
                 aria-label="Ver notas de clase"
                 title="Ver notas de clase"
               >
                 <span className="text-base">📝</span>
                 <span>Ver notas</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </button>
             )}
           </div>
@@ -244,9 +239,9 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
                 const exAfter = extractTikTokLink(rawAfter);
                 const link = exBefore || exAfter || getTikTokFromVideos(activeTab.videos);
 
-                const contentBefore = stripMarkdownFences(exBefore ? exBefore.cleaned : rawBefore);
+                const contentBefore = exBefore ? exBefore.cleaned : rawBefore;
                 const contentAfterRaw = exAfter ? exAfter.cleaned : rawAfter;
-                const contentAfter = stripMarkdownFences(contentAfterRaw);
+                const contentAfter = contentAfterRaw;
                 
                 return (
                   <>
@@ -297,7 +292,7 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
               // Solo contenido: mostrar contenido, y el enlace (si existe) debajo
               (() => {
                 const ex = extractTikTokLink(activeTab.content);
-                const cleaned = stripMarkdownFences(ex ? ex.cleaned : activeTab.content);
+                const cleaned = ex ? ex.cleaned : activeTab.content;
                 return (
                   <>
                     <MarkdownContent
@@ -355,11 +350,12 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
 
       {/* Navegación flotante eliminada */}
 
-      {/* Modal de notas con el contenido de la pestaña activa */}
+      {/* Modal de notas con el contenido RAW de la pestaña activa (incluye bloques markdown) */}
       <NotesModal
+        key={activeTabId} // Forzar re-render cuando cambia la pestaña
         isOpen={isNotesOpen}
         onClose={() => setIsNotesOpen(false)}
-        content={activeTab?.content || ''}
+        content={activeTab?.rawContent || activeTab?.content || ''}
         title="Notas de clase"
       />
     </div>

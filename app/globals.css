@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos para tablas en el modal de notas */
+.notes-modal-content tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+.notes-modal-content tbody tr:nth-child(even) {
+  background-color: rgb(238 242 255 / 0.5); /* indigo-50/50 */
+}
+
+.notes-modal-content tbody tr:hover {
+  background-color: rgb(224 231 255 / 0.5); /* indigo-100/50 */
+}
 
 :root {
   --foreground-rgb: 15, 23, 42;

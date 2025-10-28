@@ -89,33 +89,85 @@ export function extractExternalResources(content: string): {
 }
 
 /**
- * Detecta videos en el contenido
+ * Detecta videos en el contenido que están FUERA de bloques ```markdown```
+ * Los videos dentro de bloques markdown se muestran en el modal "Ver notas"
  * Formato esperado: video: https://youtu.be/... o video: https://vt.tiktok.com/...
  */
 function extractVideos(content: string): VideoLink[] {
   const videos: VideoLink[] = [];
-  const videoRegex = /^video:\s+(https?:\/\/[^\s]+)/gm;
-  let match;
-
-  while ((match = videoRegex.exec(content)) !== null) {
-    const url = match[1].trim();
-
-    if (url.includes('youtu.be') || url.includes('youtube.com')) {
-      videos.push({
-        platform: 'youtube',
-        url,
-        embed: true,
-      });
-    } else if (url.includes('tiktok.com')) {
-      videos.push({
-        platform: 'tiktok',
-        url,
-        embed: false,
-      });
+  const lines = content.split('\n');
+  let inMarkdownFence = false;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+    
+    // Detectar apertura/cierre de fence ```markdown o ```md
+    if (trimmed.startsWith('```')) {
+      const lang = trimmed.match(/^```\s*(\w+)?/)?.[1]?.toLowerCase();
+      if (!inMarkdownFence && (lang === 'markdown' || lang === 'md')) {
+        inMarkdownFence = true;
+        continue;
+      } else if (inMarkdownFence) {
+        inMarkdownFence = false;
+        continue;
+      }
+    }
+    
+    // Solo extraer videos que están FUERA de bloques markdown
+    if (!inMarkdownFence && trimmed.startsWith('video:')) {
+      const url = trimmed.replace(/^video:\s*/, '').trim();
+      
+      if (url.includes('youtu.be') || url.includes('youtube.com')) {
+        videos.push({
+          platform: 'youtube',
+          url,
+          embed: true,
+        });
+      } else if (url.includes('tiktok.com')) {
+        videos.push({
+          platform: 'tiktok',
+          url,
+          embed: false,
+        });
+      }
     }
   }
 
   return videos;
+}
+
+/**
+ * Remueve bloques ```markdown``` y ```md``` del contenido
+ * Estos bloques se muestran solo en el modal "Ver notas"
+ */
+function removeMarkdownFences(content: string): string {
+  const lines = content.split('\n');
+  const result: string[] = [];
+  let inMarkdownFence = false;
+  
+  for (const line of lines) {
+    const trimmed = line.trim();
+    
+    // Detectar apertura/cierre de fence ```markdown o ```md
+    if (trimmed.startsWith('```')) {
+      const lang = trimmed.match(/^```\s*(\w+)?/)?.[1]?.toLowerCase();
+      if (!inMarkdownFence && (lang === 'markdown' || lang === 'md')) {
+        inMarkdownFence = true;
+        continue; // No incluir la línea de apertura
+      } else if (inMarkdownFence) {
+        inMarkdownFence = false;
+        continue; // No incluir la línea de cierre
+      }
+    }
+    
+    // Solo agregar líneas que NO están dentro de bloques markdown
+    if (!inMarkdownFence) {
+      result.push(line);
+    }
+  }
+  
+  return result.join('\n');
 }
 
 /**
@@ -174,15 +226,21 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
     if (currentTab && currentSection) {
       const content = currentContent.join('\n').trim();
       
-      // Extraer videos del contenido de esta tab
+      // Guardar contenido original (con bloques markdown) para el modal
+      currentTab.rawContent = content;
+      
+      // Extraer videos del contenido de esta tab (antes de remover markdown fences)
       const tabVideos = extractVideos(content);
       if (tabVideos.length > 0) {
         currentTab.videos = tabVideos;
         allVideos.push(...tabVideos);
       }
       
+      // Remover bloques ```markdown``` antes de procesar
+      const contentWithoutFences = removeMarkdownFences(content);
+      
       // Dividir contenido en: antes del video y después del video
-      const lines = content.split('\n');
+      const lines = contentWithoutFences.split('\n');
       const videoLineIndex = lines.findIndex(line => line.trim().startsWith('video:'));
       
       let contentBeforeVideo = '';
@@ -194,7 +252,7 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
         contentAfterVideo = lines.slice(videoLineIndex + 1).join('\n').trim();
       } else {
         // No hay video: todo el contenido va antes
-        contentBeforeVideo = content;
+        contentBeforeVideo = contentWithoutFences;
       }
       
       // Convertir ambas partes a HTML
@@ -232,23 +290,27 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
       const hasRealContent = currentContent.some(line => line.trim() !== '');
       
       if (hasRealContent) {
-        // Extraer videos del contenido
+        // Extraer videos del contenido (antes de remover markdown fences)
         const contentText = currentContent.join('\n');
         const videos = extractVideos(contentText);
         
+        // Remover bloques ```markdown``` antes de procesar
+        const contentWithoutFences = removeMarkdownFences(contentText);
+        
         // Dividir contenido en: antes del video y después del video
-        const videoLineIndex = currentContent.findIndex(line => line.trim().startsWith('video:'));
+        const lines = contentWithoutFences.split('\n');
+        const videoLineIndex = lines.findIndex(line => line.trim().startsWith('video:'));
         
         let contentBeforeVideo = '';
         let contentAfterVideo = '';
         
         if (videoLineIndex !== -1) {
           // Hay video: dividir contenido
-          contentBeforeVideo = currentContent.slice(0, videoLineIndex).join('\n').trim();
-          contentAfterVideo = currentContent.slice(videoLineIndex + 1).join('\n').trim();
+          contentBeforeVideo = lines.slice(0, videoLineIndex).join('\n').trim();
+          contentAfterVideo = lines.slice(videoLineIndex + 1).join('\n').trim();
         } else {
           // No hay video: todo el contenido va antes
-          contentBeforeVideo = contentText;
+          contentBeforeVideo = contentWithoutFences;
         }
         
         // Convertir ambas partes a HTML
@@ -274,6 +336,7 @@ export async function generateTabsFromMarkdown(rawContent: string): Promise<{
             label: currentSection.title,
             type: videos.length > 0 && htmlContent ? 'mixed' : videos.length > 0 ? 'videos' : 'content',
             videos: videos.length > 0 ? videos : undefined,
+            rawContent: contentText, // Guardar contenido original
           };
           
           if (htmlContent.trim()) {
