@@ -371,7 +371,7 @@ Se pide determinar **cuántos moles de gas hay**.
   \( V = 5\ \text{L} \) (Volumen)  
   \( P = 2\ \text{atm} \) (Presión)  
   \( T = 298\ \text{K} \) (Temperatura)  
-  **Constante de los gases ideales:** \( R = 0.082\ \text{atm·L·mol}^{-1}\text{·K}^{-1} \)
+  **Constante de los gases ideales:** \( R = 0.082\ \text{atm}\cdot\text{L}\cdot\text{mol}^{-1}\cdot\text{K}^{-1} \)
 
 - **Variable a encontrar:**  
   \( n \) (Número de moles)
@@ -386,7 +386,7 @@ Se pide determinar **la temperatura del gas**.
   \( n = 0.5\ \text{mol} \) (Número de moles)  
   \( V = 4\ \text{L} \) (Volumen)  
   \( P = 3\ \text{atm} \) (Presión)  
-  **Constante de los gases ideales:** \( R = 0.082\ \text{atm·L·mol}^{-1}\text{·K}^{-1} \)
+  **Constante de los gases ideales:** \( R = 0.082\ \text{atm}\cdot\text{L}\cdot\text{mol}^{-1}\cdot\text{K}^{-1} \)
 
 - **Variable a encontrar:**  
   \( T \) (Temperatura)
