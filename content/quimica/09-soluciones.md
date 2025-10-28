@@ -551,7 +551,7 @@ $$\text{Ácido} + \text{Base} \rightarrow \text{Sal} + \text{Agua}$$
 - **Neutralización:** ácido + base → sal + agua.  
 ```
 
-### Práctica de lab
+### Laboratorio
 
 ```markdown
 # 🧪 Práctica de laboratorio: indicador natural de pH con repollo morado
@@ -560,14 +560,14 @@ $$\text{Ácido} + \text{Base} \rightarrow \text{Sal} + \text{Agua}$$
 
 # 🎯 1. Objetivo
 
-El estudiante elaborará un **indicador natural de pH** utilizando **repollo morado**, y lo aplicará para **clasificar sustancias comunes y seguras** como **ácidas, básicas o neutras**, observando los **cambios de color** que se producen.
-Además, realizará un **cálculo sencillo** de la **concentración de iones H⁺** según el pH estimado, y presentará sus resultados mediante un **informe en PDF** y un **video de evidencias**.
+Los **grupos de 3 o 4 estudiantes** elaborarán un **indicador natural de pH** utilizando **repollo morado**, y lo aplicarán para **clasificar sustancias comunes y seguras** como **ácidas, básicas o neutras**, observando los **cambios de color** que se producen.  
+Además, realizarán un **cálculo sencillo** de la **concentración de iones H⁺** según el pH estimado, y presentarán sus resultados mediante un **informe en PDF** y un **video de evidencias grupal**.
 
 ---
 
 # ⚗️ 2. Contexto teórico
 
-El **repollo morado** contiene un pigmento natural llamado **antocianina**, que cambia de color según el **pH del medio**.
+El **repollo morado** contiene un pigmento natural llamado **antocianina**, que cambia de color según el **pH del medio**.  
 Este compuesto actúa como un **indicador natural**, mostrando una gama de colores que permite distinguir si una sustancia es **ácida**, **básica** o **neutra**.
 
 | 🧩 **Tipo de medio** | 🎨 **Color del indicador** | 💬 **Interpretación química**   |
@@ -576,7 +576,7 @@ Este compuesto actúa como un **indicador natural**, mostrando una gama de color
 | Neutro               | Morado                     | Igual concentración de H⁺ y OH⁻ |
 | Básico               | Verde / Azul               | Alta concentración de iones OH⁻ |
 
-💡 **Importante:**
+💡 **Importante:**  
 El cambio de color ocurre porque las **antocianinas** modifican su estructura molecular al interactuar con iones H⁺ (en medios ácidos) o OH⁻ (en medios básicos).
 
 ---
@@ -584,18 +584,17 @@ El cambio de color ocurre porque las **antocianinas** modifican su estructura mo
 # 🧰 3. Materiales y sustancias
 
 ## 🧪 **Materiales de laboratorio**
-
-* 6 vasos o tubos de ensayo.
-* Pipetas o goteros.
-* Vaso o frasco para el indicador.
-* Gradilla o soporte.
-* Guantes y gafas de seguridad.
-* Etiquetas o marcador.
-* Agua destilada o filtrada.
+- 6 vasos o tubos de ensayo.  
+- Pipetas o goteros.  
+- Vaso o frasco para el indicador.  
+- Gradilla o soporte.  
+- Guantes y gafas de seguridad.  
+- Etiquetas o marcador.  
+- Agua destilada o filtrada.  
 
 ## 🌿 **Indicador natural (preparado en casa)**
 
-Cada estudiante deberá traer **el indicador de repollo morado ya preparado**, siguiendo los pasos del video *“Indicador de pH casero / Repollo morado”*.
+Cada **grupo** deberá traer **el indicador de repollo morado ya preparado**, siguiendo los pasos del video *“Indicador de pH casero / Repollo morado”*.  
 Esta parte del proceso debe grabarse como **primera sección del video de evidencias**, mostrando materiales, hervor, filtrado y el color final del extracto.
 
 💡 *El indicador puede prepararse hasta 3 días antes y conservarse refrigerado en un recipiente cerrado.*
@@ -620,28 +619,27 @@ Esta parte del proceso debe grabarse como **primera sección del video de eviden
 
 ## 🥬 **Parte A: Preparación del indicador (en casa)**
 
-1. Corta hojas de **repollo morado** en trozos pequeños.
-2. Coloca en una olla con **500 mL de agua**.
-3. Hierve durante **5 minutos** con tapa.
-4. Deja enfriar completamente.
-5. **Cuela** el líquido resultante: será tu **indicador natural**.
-6. Guarda en un recipiente cerrado y refrigéralo hasta el día de la práctica.
+1. Corten hojas de **repollo morado** en trozos pequeños.  
+2. Colóquenlas en una olla con **500 mL de agua**.  
+3. Hiérvanlas durante **5 minutos** con tapa.  
+4. Dejen enfriar completamente.  
+5. **Cuelen** el líquido resultante: será su **indicador natural**.  
+6. Guárdenlo en un recipiente cerrado y refrigérenlo hasta el día de la práctica.  
 
-📹 **Evidencia:**
-Graba este proceso (máx. 1 min), mostrando los materiales, el hervor y el color final del extracto.
+📹 **Evidencia:**  
+Graben este proceso (máx. 1 min), mostrando los materiales, el hervor y el color final del extracto.
 
-Video de referencia
-
-video: https://www.youtube.com/watch?v=s_cK4BCu25c
+🔗 **Video de referencia:**  
+[Indicador de pH casero / Repollo morado](https://www.youtube.com/watch?v=s_cK4BCu25c)
 
 ---
 
 ## 🧫 **Parte B: Ensayo con sustancias (en laboratorio)**
 
-1. Coloca **15 mL del indicador** en cada vaso o tubo.
-2. Agrega **3 mL** de la sustancia a analizar.
-3. Observa el **cambio de color** y anótalo en la tabla.
-4. Usa la escala orientativa de colores para clasificar el resultado.
+1. Coloquen **15 mL del indicador** en cada vaso o tubo.  
+2. Agreguen **3 mL** de la sustancia a analizar.  
+3. Observen el **cambio de color** y anótenlo en la tabla.  
+4. Usen la escala orientativa de colores para clasificar el resultado.
 
 | 🎨 **Color observado** | 📈 **Rango estimado de pH** | ⚗️ **Clasificación** |
 | ---------------------- | --------------------------- | -------------------- |
@@ -649,14 +647,14 @@ video: https://www.youtube.com/watch?v=s_cK4BCu25c
 | Morado                 | 7                           | Neutra               |
 | Verde / Azul           | 8–12                        | Básica               |
 
-💡 **Nota técnica:**
-La proporción **indicador : muestra = 5:1** (15 mL : 3 mL) da resultados óptimos y colores bien definidos, sin alterar la intensidad del pigmento.
+💡 **Nota técnica:**  
+La proporción **indicador : muestra = 5:1** (15 mL : 3 mL) produce resultados óptimos, con colores definidos y buena visibilidad.
 
 ---
 
 # 📊 5. Registro de resultados
 
-Completa la siguiente tabla durante el experimento:
+Completen la siguiente tabla durante el experimento:
 
 | 🧴 **Sustancia** | 🎨 **Color observado** | 📈 **pH estimado** | ⚗️ **Clasificación** | 🧮 **[H⁺] (mol/L)** |
 | ---------------- | ---------------------- | ------------------ | -------------------- | ------------------- |
@@ -667,28 +665,26 @@ Completa la siguiente tabla durante el experimento:
 |                  |                        |                    |                      |                     |
 |                  |                        |                    |                      |                     |
 
-🧠 **Recuerda:**
-$$\text{pH} = -\log_{10}[\text{H}^+]$$
+🧠 **Recuerden:**  
+$$\text{pH} = -\log_{10}[\text{H}^+]$$  
 Por ejemplo, si pH = 4 → $[\text{H}^+] = 10^{-4}\ \text{mol/L}$
 
 ---
 
 # 🎥 6. Evidencia en video
 
-El video del grupo deberá durar entre **2 y 3 minutos** e incluir:
+El video grupal deberá tener una **duración de 2 a 3 minutos** e incluir:
 
-1. **Parte 1 (en casa):** preparación del indicador.
+1. **Parte 1 (en casa):** preparación del indicador.  
 2. **Parte 2 (en laboratorio):**
-
-   * Pruebas con las sustancias.
-   * Observación del cambio de color.
-   * Presentación de la tabla de resultados.
-   * Conclusión oral del grupo.
+   - Pruebas con las sustancias.  
+   - Observación de los cambios de color.  
+   - Presentación de la tabla de resultados.  
+   - Conclusión oral del grupo.
 
 📎 **Entrega:**
-
-* Subir el **informe en PDF** a la plataforma.
-* Incluir en él el **enlace al video** (YouTube o Google Drive).
+- Subir el **informe en PDF** a la plataforma institucional.  
+- Incluir el **enlace al video** (YouTube o Google Drive).
 
 ---
 
@@ -696,14 +692,14 @@ El video del grupo deberá durar entre **2 y 3 minutos** e incluir:
 
 | 🧱 **Sección**              | 📋 **Contenido esperado**                                 |
 | --------------------------- | --------------------------------------------------------- |
-| **Portada**                 | Nombre, grupo, fecha, asignatura, título del experimento. |
-| **Objetivo**                | Texto breve según el apartado 1.                          |
+| **Portada**                 | Nombre del grupo, integrantes, curso, fecha y título.     |
+| **Objetivo**                | Según el apartado 1.                                      |
 | **Fundamento teórico**      | Explicación del indicador natural y relación color–pH.    |
 | **Materiales y sustancias** | Lista completa usada en la práctica.                      |
 | **Procedimiento**           | Descripción resumida de las partes A y B.                 |
-| **Resultados**              | Tabla completada con datos observados.                    |
+| **Resultados**              | Tabla con los datos observados.                           |
 | **Cálculos**                | Estimación de [H⁺] según el pH.                           |
-| **Conclusiones**            | Interpretación de los resultados.                         |
+| **Conclusiones**            | Interpretación y análisis grupal de resultados.           |
 | **Evidencias**              | Capturas o fotos del video + enlace.                      |
 | **Bibliografía**            | Fuentes consultadas (incluye el video base).              |
 
@@ -714,29 +710,18 @@ El video del grupo deberá durar entre **2 y 3 minutos** e incluir:
 | 📋 **Criterio**                       | 💬 **Descripción**                              | 💯 **Valor (%)** |
 | ------------------------------------- | ----------------------------------------------- | ---------------- |
 | **Preparación del indicador (video)** | Evidencia clara y correcta del proceso en casa. | 20 %             |
-| **Desarrollo experimental**           | Ejecución ordenada, observaciones correctas.    | 25 %             |
-| **Tabla de resultados y cálculos**    | Registro completo, coherente y correcto.        | 25 %             |
-| **Informe PDF**                       | Organización, redacción y presentación final.   | 20 %             |
-| **Seguridad y responsabilidad**       | Uso de EPP, limpieza y cuidado del material.    | 10 %             |
+| **Desarrollo experimental**           | Ejecución ordenada y observaciones precisas.    | 25 %             |
+| **Tabla de resultados y cálculos**    | Registro completo y coherente.                  | 25 %             |
+| **Informe PDF grupal**                | Organización, redacción y presentación final.   | 20 %             |
+| **Seguridad y responsabilidad**       | Uso de EPP, limpieza y actitud colaborativa.    | 10 %             |
 
 ---
 
-# 🧠 9. Conclusiones esperadas
+# 🧹 9. Seguridad y descarte
 
-* El **indicador de repollo morado** es un método seguro y eficaz para reconocer el **pH** de distintas sustancias.
-* Los **cambios de color** permiten distinguir visualmente los medios **ácidos, neutros y básicos**.
-* A partir del pH, se puede **calcular la concentración de iones H⁺**.
-* La práctica integra **experimentación**, **análisis de datos** y **comunicación científica**.
-
----
-
-# 🧹 10. Seguridad y descarte
-
-* Usa **guantes y gafas** en todo momento.
-* No mezcles sustancias diferentes.
-* La **lejía diluida** debe manejarse con precaución y desecharse con abundante agua.
-* Los restos de repollo se eliminan como **residuos orgánicos**.
-
----
+- Utilicen **guantes y gafas** durante todo el experimento.  
+- No mezclen sustancias entre sí.  
+- La **lejía diluida** se maneja con cuidado y se desecha con abundante agua.  
+- Los restos de repollo se eliminan como **residuos orgánicos**.  
 
 ```
