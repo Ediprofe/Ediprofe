@@ -551,7 +551,7 @@ $$\text{Ácido} + \text{Base} \rightarrow \text{Sal} + \text{Agua}$$
 - **Neutralización:** ácido + base → sal + agua.  
 ```
 
-### Práctica
+### Práctica de lab
 
 ```markdown
 # 🧪 Práctica de laboratorio: indicador natural de pH con repollo morado
@@ -738,7 +738,5 @@ El video del grupo deberá durar entre **2 y 3 minutos** e incluir:
 * Los restos de repollo se eliminan como **residuos orgánicos**.
 
 ---
-
-¿Quieres que te lo convierta en **HTML con formato visual** (colores, iconos, tablas responsive) para que lo publiques directamente en tu sitio web docente?
 
 ```
