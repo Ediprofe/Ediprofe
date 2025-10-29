@@ -590,7 +590,8 @@ El cambio de color ocurre porque las **antocianinas** modifican su estructura mo
 - Gradilla o soporte.  
 - Guantes y gafas de seguridad.  
 - Etiquetas o marcador.  
-- Agua destilada o filtrada.  
+- Agua destilada o filtrada.
+- Alcohol, jabón y trapo para limpiar.
 
 ## 🌿 **Indicador natural (preparado en casa)**
 
@@ -629,8 +630,7 @@ Esta parte del proceso debe grabarse como **primera sección del video de eviden
 📹 **Evidencia:**  
 Graben este proceso (máx. 1 min), mostrando los materiales, el hervor y el color final del extracto.
 
-🔗 **Video de referencia:**
-
+🔗 **Video de referencia:**  
 video: https://www.youtube.com/watch?v=s_cK4BCu25c
 
 ---
