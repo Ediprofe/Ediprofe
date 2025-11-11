@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import MarkdownContent from './MarkdownContent';
 import VideoEmbed from './VideoEmbed';
 import { remark } from 'remark';
@@ -247,6 +247,94 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
 
   const simplifiedHtml = useMemo(() => simplifyHtml(content), [content]);
 
+  // Función para normalizar sintaxis matemática
+  const normalizeMathSyntax = useCallback((markdown: string): string => {
+    // Primero, des-escapar cualquier $ que esté escapado como \$
+    let cleaned = markdown.replace(/\\\$/g, '$');
+    
+    // Convertir \( ... \) a $ ... $ (inline math)
+    // También convierte ( ... ) sin backslash cuando contiene comandos LaTeX
+    // Usar un enfoque más robusto que maneja paréntesis anidados
+    let result = '';
+    let i = 0;
+    
+    while (i < cleaned.length) {
+      // Caso 1: Buscar inicio de expresión inline \(
+      if (i < cleaned.length - 1 && cleaned[i] === '\\' && cleaned[i + 1] === '(') {
+        // Encontrar el cierre correspondiente \)
+        let depth = 1;
+        let j = i + 2;
+        let content = '';
+        
+        while (j < cleaned.length && depth > 0) {
+          if (j < cleaned.length - 1 && cleaned[j] === '\\' && cleaned[j + 1] === ')') {
+            depth--;
+            if (depth === 0) {
+              // Encontramos el cierre
+              result += '$' + content + '$';
+              i = j + 2;
+              break;
+            } else {
+              content += cleaned[j] + cleaned[j + 1];
+              j += 2;
+            }
+          } else if (j < cleaned.length - 1 && cleaned[j] === '\\' && cleaned[j + 1] === '(') {
+            depth++;
+            content += cleaned[j] + cleaned[j + 1];
+            j += 2;
+          } else {
+            content += cleaned[j];
+            j++;
+          }
+        }
+        
+        // Si no encontramos cierre, copiar tal cual
+        if (depth > 0) {
+          result += cleaned[i];
+          i++;
+        }
+      }
+      // Caso 2: Buscar paréntesis normales ( que contengan comandos LaTeX
+      // Esto maneja el caso donde los backslashes se perdieron
+      else if (cleaned[i] === '(' && i < cleaned.length - 1) {
+        // Verificar si el contenido parece ser LaTeX (contiene \text, \mathrm, \dfrac, etc.)
+        let j = i + 1;
+        let content = '';
+        let foundClosing = false;
+        
+        // Buscar el cierre )
+        while (j < cleaned.length && cleaned[j] !== ')') {
+          content += cleaned[j];
+          j++;
+        }
+        
+        if (j < cleaned.length && cleaned[j] === ')') {
+          foundClosing = true;
+        }
+        
+        // Verificar si el contenido parece ser LaTeX
+        const hasLatexCommands = /\\(text|mathrm|mathbf|dfrac|frac|times|cdot|,)/.test(content);
+        // IMPORTANTE: No convertir si ya contiene $ (significa que ya tiene expresiones matemáticas)
+        const alreadyHasMath = content.includes('$');
+        
+        if (foundClosing && hasLatexCommands && !alreadyHasMath) {
+          // Es una expresión LaTeX, convertir a $ ... $
+          result += '$' + content + '$';
+          i = j + 1;
+        } else {
+          // No es LaTeX o ya tiene $, mantener el paréntesis normal
+          result += cleaned[i];
+          i++;
+        }
+      } else {
+        result += cleaned[i];
+        i++;
+      }
+    }
+    
+    return result;
+  }, []);
+
   // Renderizar Markdown (con títulos y ecuaciones) cuando haya bloque detectado
   useEffect(() => {
     let cancelled = false;
@@ -259,13 +347,20 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
       try {
         // Renderizar la parte antes del video
         if (cleanedBefore) {
+          const normalizedBefore = normalizeMathSyntax(cleanedBefore);
           const resultBefore = await remark()
             .use(remarkGfm)
-            .use(remarkMath)
+            .use(remarkMath, {
+              singleDollarTextMath: true // Permitir $ ... $ para inline math
+            })
             .use(remarkRehype, { allowDangerousHtml: true })
-            .use(rehypeKatex)
+            .use(rehypeKatex, {
+              strict: false, // Permitir comandos no estándar como \mathrm
+              trust: true, // Permitir comandos avanzados
+              throwOnError: false // No fallar en errores de LaTeX
+            })
             .use(rehypeStringify, { allowDangerousHtml: true })
-            .process(cleanedBefore);
+            .process(normalizedBefore);
           if (!cancelled) {
             setHtmlBefore(resultBefore.toString());
           }
@@ -273,18 +368,26 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
         
         // Renderizar la parte después del video
         if (cleanedAfter) {
+          const normalizedAfter = normalizeMathSyntax(cleanedAfter);
           const resultAfter = await remark()
             .use(remarkGfm)
-            .use(remarkMath)
+            .use(remarkMath, {
+              singleDollarTextMath: true // Permitir $ ... $ para inline math
+            })
             .use(remarkRehype, { allowDangerousHtml: true })
-            .use(rehypeKatex)
+            .use(rehypeKatex, {
+              strict: false, // Permitir comandos no estándar como \mathrm
+              trust: true, // Permitir comandos avanzados
+              throwOnError: false // No fallar en errores de LaTeX
+            })
             .use(rehypeStringify, { allowDangerousHtml: true })
-            .process(cleanedAfter);
+            .process(normalizedAfter);
           if (!cancelled) {
             setHtmlAfter(resultAfter.toString());
           }
         }
       } catch (err) {
+        console.error('Error rendering markdown:', err);
         // Si falla el render, mostrar texto plano
         if (!cancelled) {
           setHtmlBefore('');
@@ -296,7 +399,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
     return () => {
       cancelled = true;
     };
-  }, [cleanedBefore, cleanedAfter]);
+  }, [cleanedBefore, cleanedAfter, normalizeMathSyntax]);
 
   if (!isOpen) return null;
 

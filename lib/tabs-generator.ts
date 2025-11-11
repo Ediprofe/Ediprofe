@@ -171,19 +171,122 @@ function removeMarkdownFences(content: string): string {
 }
 
 /**
+ * Normaliza la sintaxis matemática en el markdown
+ * Convierte \( ... \) a $ ... $ para compatibilidad con remark-math
+ * También convierte ( ... ) sin backslash cuando contiene comandos LaTeX
+ * Mantiene $$ ... $$ sin cambios
+ * Maneja correctamente paréntesis anidados dentro de comandos LaTeX
+ */
+function normalizeMathSyntax(markdown: string): string {
+  // Primero, des-escapar cualquier $ que esté escapado como \$
+  let cleaned = markdown.replace(/\\\$/g, '$');
+  
+  let result = '';
+  let i = 0;
+  
+  while (i < cleaned.length) {
+    // Caso 1: Buscar inicio de expresión inline \(
+    if (i < cleaned.length - 1 && cleaned[i] === '\\' && cleaned[i + 1] === '(') {
+      // Encontrar el cierre correspondiente \)
+      let depth = 1;
+      let j = i + 2;
+      let content = '';
+      
+      while (j < cleaned.length && depth > 0) {
+        if (j < cleaned.length - 1 && cleaned[j] === '\\' && cleaned[j + 1] === ')') {
+          depth--;
+          if (depth === 0) {
+            // Encontramos el cierre
+            result += '$' + content + '$';
+            i = j + 2;
+            break;
+          } else {
+            content += cleaned[j] + cleaned[j + 1];
+            j += 2;
+          }
+        } else if (j < cleaned.length - 1 && cleaned[j] === '\\' && cleaned[j + 1] === '(') {
+          depth++;
+          content += cleaned[j] + cleaned[j + 1];
+          j += 2;
+        } else {
+          content += cleaned[j];
+          j++;
+        }
+      }
+      
+      // Si no encontramos cierre, copiar tal cual
+      if (depth > 0) {
+        result += cleaned[i];
+        i++;
+      }
+    }
+    // Caso 2: Buscar paréntesis normales ( que contengan comandos LaTeX
+    // Esto maneja el caso donde los backslashes se perdieron
+    else if (cleaned[i] === '(' && i < cleaned.length - 1) {
+      // Verificar si el contenido parece ser LaTeX (contiene \text, \mathrm, \dfrac, etc.)
+      let j = i + 1;
+      let content = '';
+      let foundClosing = false;
+      
+      // Buscar el cierre )
+      while (j < cleaned.length && cleaned[j] !== ')') {
+        content += cleaned[j];
+        j++;
+      }
+      
+      if (j < cleaned.length && cleaned[j] === ')') {
+        foundClosing = true;
+      }
+      
+      // Verificar si el contenido parece ser LaTeX
+      const hasLatexCommands = /\\(text|mathrm|mathbf|dfrac|frac|times|cdot|,)/.test(content);
+      // IMPORTANTE: No convertir si ya contiene $ (significa que ya tiene expresiones matemáticas)
+      const alreadyHasMath = content.includes('$');
+      
+      if (foundClosing && hasLatexCommands && !alreadyHasMath) {
+        // Es una expresión LaTeX, convertir a $ ... $
+        result += '$' + content + '$';
+        i = j + 1;
+      } else {
+        // No es LaTeX o ya tiene $, mantener el paréntesis normal
+        result += cleaned[i];
+        i++;
+      }
+    } else {
+      result += cleaned[i];
+      i++;
+    }
+  }
+  
+  return result;
+}
+
+/**
  * Convierte contenido Markdown a HTML con soporte para ecuaciones matemáticas y tablas
  * Usa KaTeX para renderizar ecuaciones en formato LaTeX
  * Usa GFM (GitHub Flavored Markdown) para tablas, strikethrough, etc.
- * Sintaxis: $ecuación inline$ o $$ecuación en bloque$$
+ * Sintaxis soportada: 
+ * - Inline: $ecuación$ o \(ecuación\)
+ * - Display: $$ecuación$$ (con o sin saltos de línea)
+ * - Comandos: \text{}, \mathrm{}, etc.
  */
 async function markdownToHtml(markdown: string): Promise<string> {
+  // Normalizar sintaxis matemática antes de procesar
+  const normalizedMarkdown = normalizeMathSyntax(markdown);
+  
   const result = await remark()
     .use(remarkGfm) // Soporte para tablas, strikethrough, task lists, etc.
-    .use(remarkMath) // Parsear sintaxis matemática ($...$, $$...$$)
+    .use(remarkMath, {
+      singleDollarTextMath: true // Permitir $ ... $ para inline math
+    }) // Parsear sintaxis matemática ($...$, $$...$$)
     .use(remarkRehype, { allowDangerousHtml: true }) // Convertir a rehype (HTML AST) con soporte completo
-    .use(rehypeKatex) // Renderizar ecuaciones con KaTeX
+    .use(rehypeKatex, {
+      strict: false, // Permitir comandos no estándar como \mathrm
+      trust: true, // Permitir comandos avanzados
+      throwOnError: false // No fallar en errores de LaTeX
+    }) // Renderizar ecuaciones con KaTeX
     .use(rehypeStringify, { allowDangerousHtml: true }) // Convertir a HTML string
-    .process(markdown);
+    .process(normalizedMarkdown);
   return result.toString();
 }
 
