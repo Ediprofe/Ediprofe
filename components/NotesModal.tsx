@@ -405,17 +405,18 @@ export default function NotesModal({
         aria-label={title}
         className={`absolute inset-x-2 md:inset-x-8 lg:inset-x-12 top-2 md:top-4 lg:top-6 bottom-2 md:bottom-4 lg:bottom-6 z-[65] ${themeStyles.modal} rounded-xl md:rounded-2xl shadow-2xl border overflow-hidden flex flex-col transition-all duration-300 ${isDarkMode ? 'dark-mode-modal' : ''}`}
       >
-        {/* Header - Diseño mejorado y responsive */}
-        <div ref={headerRef} className={`px-3 md:px-6 py-3 md:py-4 border-b ${themeStyles.header}`}>
-          {/* Fila superior: Contexto + Controles */}
-          <div className="flex items-start justify-between gap-3 mb-4">
-            {/* Información contextual - Compacta */}
-            <div className="flex-1 min-w-0">
+        {/* Header - Compacto y discreto */}
+        <div ref={headerRef} className={`px-3 md:px-4 py-2 md:py-2.5 border-b ${themeStyles.header}`}>
+          {/* Fila única: Todo en una línea */}
+          <div className="flex items-center justify-between gap-2 md:gap-3">
+            {/* Izquierda: Contexto + Títulos */}
+            <div className="flex-1 min-w-0 flex items-center gap-3">
+              {/* Contexto muy compacto */}
               {(subjectName || unitTitle) && (
-                <div className="flex items-center gap-1.5 flex-wrap text-xs md:text-sm">
-                  {subjectIcon && <span className="text-lg md:text-xl">{subjectIcon}</span>}
+                <div className="hidden md:flex items-center gap-1.5 text-xs">
+                  {subjectIcon && <span className="text-base">{subjectIcon}</span>}
                   {subjectName && (
-                    <span className={`font-semibold truncate ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
+                    <span className={`font-semibold truncate ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                       {subjectName}
                     </span>
                   )}
@@ -423,90 +424,89 @@ export default function NotesModal({
                     <span className={isDarkMode ? 'text-slate-600' : 'text-slate-400'}>•</span>
                   )}
                   {unitTitle && (
-                    <span className={`font-medium truncate ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+                    <span className={`font-medium truncate ${isDarkMode ? 'text-slate-500' : 'text-slate-400'}`}>
                       {unitTitle}
                     </span>
                   )}
                 </div>
               )}
+              
+              {/* Títulos compactos */}
+              <div className="flex items-center gap-1.5 md:gap-2 min-w-0">
+                <h2 className={`text-sm md:text-lg font-bold truncate ${themeStyles.headerText}`}>
+                  {sectionTitle || title}
+                </h2>
+                {currentTabLabel && (
+                  <>
+                    <span className={`text-xs ${isDarkMode ? 'text-slate-600' : 'text-slate-400'}`}>•</span>
+                    <span className={`text-xs md:text-sm font-medium truncate ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+                      {currentTabLabel}
+                    </span>
+                  </>
+                )}
+              </div>
             </div>
 
-            {/* Controles - Compactos */}
-            <div className="flex items-center gap-1.5 flex-shrink-0">
+            {/* Derecha: Navegación + Controles */}
+            <div className="flex items-center gap-1 md:gap-1.5 flex-shrink-0">
+              {/* Navegación inline - Siempre visible */}
+              {(hasPrevious || hasNext) && (
+                <div className="flex items-center gap-0.5 md:gap-1">
+                  <button
+                    onClick={onPrevious}
+                    disabled={!hasPrevious}
+                    className={`p-1 md:p-1.5 rounded ${
+                      hasPrevious
+                        ? isDarkMode
+                          ? 'hover:bg-slate-700 text-slate-300'
+                          : 'hover:bg-slate-200 text-slate-600'
+                        : 'text-slate-400 cursor-not-allowed opacity-40'
+                    } transition-colors`}
+                    aria-label="Anterior"
+                    title="Anterior"
+                  >
+                    <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={onNext}
+                    disabled={!hasNext}
+                    className={`p-1 md:p-1.5 rounded ${
+                      hasNext
+                        ? isDarkMode
+                          ? 'hover:bg-slate-700 text-slate-300'
+                          : 'hover:bg-slate-200 text-slate-600'
+                        : 'text-slate-400 cursor-not-allowed opacity-40'
+                    } transition-colors`}
+                    aria-label="Siguiente"
+                    title="Siguiente"
+                  >
+                    <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              )}
+              
+              {/* Controles */}
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
-                className={`p-2 rounded-lg ${themeStyles.button} transition-all duration-200 hover:scale-105`}
+                className={`p-1 md:p-1.5 rounded ${themeStyles.button} transition-all duration-200 hover:scale-105`}
                 title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
                 aria-label={isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
               >
-                <span className="text-lg">{isDarkMode ? '☀️' : '🌙'}</span>
+                <span className="text-sm md:text-base">{isDarkMode ? '☀️' : '🌙'}</span>
               </button>
               <button
                 onClick={onClose}
                 aria-label="Cerrar"
-                className={`p-2 rounded-lg ${themeStyles.button} transition-all duration-200 hover:scale-105`}
+                className={`p-1 md:p-1.5 rounded ${themeStyles.button} transition-all duration-200 hover:scale-105`}
               >
-                <span className="text-lg">✕</span>
+                <span className="text-sm md:text-base">✕</span>
               </button>
             </div>
           </div>
-
-          {/* Jerarquía: Sección → Pestaña */}
-          <div className="mb-3 space-y-1">
-            {/* Título de la sección - Principal */}
-            <h2 className={`text-xl md:text-3xl font-bold ${themeStyles.headerText}`}>
-              {sectionTitle || title}
-            </h2>
-            
-            {/* Nombre de la pestaña - Secundario pero visible */}
-            {currentTabLabel && (
-              <div className={`flex items-center gap-2 text-sm md:text-base font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                <span className="text-base">📍</span>
-                <span>{currentTabLabel}</span>
-              </div>
-            )}
-          </div>
-
-          {/* Navegación entre tabs - Optimizada */}
-          {(hasPrevious || hasNext) && (
-            <div className="flex items-center justify-between gap-2">
-              <button
-                onClick={onPrevious}
-                disabled={!hasPrevious}
-                className={`flex items-center justify-center gap-2 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                  hasPrevious
-                    ? isDarkMode
-                      ? 'bg-slate-700 hover:bg-slate-600 text-white active:scale-95'
-                      : 'bg-slate-200 hover:bg-slate-300 text-slate-700 active:scale-95'
-                    : 'bg-slate-100 text-slate-400 cursor-not-allowed opacity-40'
-                }`}
-                aria-label="Tema anterior"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-                <span className="text-xs md:text-sm">Anterior</span>
-              </button>
-
-              <button
-                onClick={onNext}
-                disabled={!hasNext}
-                className={`flex items-center justify-center gap-2 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                  hasNext
-                    ? isDarkMode
-                      ? 'bg-slate-700 hover:bg-slate-600 text-white active:scale-95'
-                      : 'bg-slate-200 hover:bg-slate-300 text-slate-700 active:scale-95'
-                    : 'bg-slate-100 text-slate-400 cursor-not-allowed opacity-40'
-                }`}
-                aria-label="Tema siguiente"
-              >
-                <span className="text-xs md:text-sm">Siguiente</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          )}
         </div>
 
         {/* Body */}

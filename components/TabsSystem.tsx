@@ -400,14 +400,17 @@ export default function TabsSystem({ section, className = '', subjectName, subje
         // Navegación
         onPrevious={handlePreviousTab}
         onNext={handleNextTab}
-        hasPrevious={allTabs.findIndex((tab: any) => tab.id === activeTabId) > 0}
-        hasNext={allTabs.findIndex((tab: any) => tab.id === activeTabId) < allTabs.length - 1}
+        hasPrevious={allTabs.findIndex(tab => tab.id === activeTabId) > 0}
+        hasNext={allTabs.findIndex(tab => tab.id === activeTabId) < allTabs.length - 1}
         // Contexto
         subjectName={subjectName}
         subjectIcon={subjectIcon}
         unitTitle={unitTitle}
         currentTabLabel={activeTab?.label}
-        sectionTitle={allTabs.find((tab: any) => tab.id === activeTabId)?.sectionTitle || section.title}
+        sectionTitle={(() => {
+          const currentTab = allTabs.find(tab => tab.id === activeTabId);
+          return (currentTab && 'sectionTitle' in currentTab) ? (currentTab as any).sectionTitle : section.title;
+        })()}
       />
     </div>
   );
