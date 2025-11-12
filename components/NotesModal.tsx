@@ -231,9 +231,42 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
   const cleanedBefore = useMemo(() => cleanMarkdownLinks(markdownBefore), [markdownBefore]);
   const cleanedAfter = useMemo(() => cleanMarkdownLinks(markdownAfter), [markdownAfter]);
   const [sizeIdx, setSizeIdx] = useState(1); // 0: pequeño, 1: normal, 2: grande
+  const [isDarkMode, setIsDarkMode] = useState(false); // Estado para modo oscuro
   const [htmlBefore, setHtmlBefore] = useState<string>('');
   const [htmlAfter, setHtmlAfter] = useState<string>('');
   const hasVideo = youtubeVideos.length > 0;
+
+  // Estilos del tema según el modo
+  const themeStyles = useMemo(() => {
+    if (isDarkMode) {
+      return {
+        modal: 'bg-black border-slate-700',
+        header: 'border-slate-700',
+        headerText: 'text-white',
+        button: 'bg-slate-800 hover:bg-slate-700 text-white',
+        contentBg: 'bg-black',
+        contentBorder: 'border-slate-700',
+        titleBorder: 'border-slate-700',
+        titleGradient: 'from-indigo-400 to-purple-400',
+        prose: 'prose-headings:text-white prose-p:text-white prose-strong:text-indigo-400 prose-li:text-white prose-th:text-white prose-td:text-white',
+        linkBg: 'from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600',
+        fallbackBg: 'bg-slate-800 border-slate-700 text-white'
+      };
+    }
+    return {
+      modal: 'bg-white border-slate-200',
+      header: 'border-slate-200',
+      headerText: 'text-slate-900',
+      button: 'bg-slate-100 hover:bg-slate-200 text-slate-700',
+      contentBg: 'bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50',
+      contentBorder: 'border-indigo-200',
+      titleBorder: 'border-indigo-200',
+      titleGradient: 'from-indigo-600 to-purple-600',
+      prose: 'prose-headings:text-indigo-900 prose-p:text-slate-800 prose-strong:text-indigo-800 prose-li:text-slate-800',
+      linkBg: 'from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700',
+      fallbackBg: 'bg-amber-50 border-amber-200 text-amber-900'
+    };
+  }, [isDarkMode]);
 
   // Cerrar con Escape
   useEffect(() => {
@@ -355,7 +388,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
             })
             .use(remarkRehype, { allowDangerousHtml: true })
             .use(rehypeKatex, {
-              strict: false, // Permitir comandos no estándar como \mathrm
+              strict: false, // Permitir comandos no estándar
               trust: true, // Permitir comandos avanzados
               throwOnError: false // No fallar en errores de LaTeX
             })
@@ -376,7 +409,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
             })
             .use(remarkRehype, { allowDangerousHtml: true })
             .use(rehypeKatex, {
-              strict: false, // Permitir comandos no estándar como \mathrm
+              strict: false, // Permitir comandos no estándar
               trust: true, // Permitir comandos avanzados
               throwOnError: false // No fallar en errores de LaTeX
             })
@@ -415,34 +448,38 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className="absolute inset-x-4 md:inset-x-16 top-8 bottom-8 z-[65] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col"
+        className={`absolute inset-x-4 md:inset-x-16 top-8 bottom-8 z-[65] ${themeStyles.modal} rounded-2xl shadow-2xl border overflow-hidden flex flex-col transition-all duration-300 ${isDarkMode ? 'dark-mode-modal' : ''}`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-4 md:px-6 py-3 border-b border-slate-200">
+        <div className={`flex items-center justify-between px-4 md:px-6 py-3 border-b ${themeStyles.header}`}>
           <div className="flex items-center gap-3">
-            <h3 className="text-lg md:text-xl font-bold">{title}</h3>
+            <h3 className={`text-lg md:text-xl font-bold ${themeStyles.headerText}`}>{title}</h3>
           </div>
 
-          {/* Controles de tamaño */}
+          {/* Controles */}
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setSizeIdx((s) => Math.max(0, s - 1))}
-              className="px-2 py-1.5 rounded-lg text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700"
-              title="Reducir tamaño"
+              onClick={() => setIsDarkMode(!isDarkMode)}
+              className={`px-3 py-1.5 rounded-lg text-sm font-semibold ${themeStyles.button} transition-all duration-300 flex items-center gap-2`}
+              title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
+              aria-label={isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
             >
-              A−
-            </button>
-            <button
-              onClick={() => setSizeIdx((s) => Math.min(2, s + 1))}
-              className="px-2 py-1.5 rounded-lg text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700"
-              title="Aumentar tamaño"
-            >
-              A+
+              {isDarkMode ? (
+                <>
+                  <span className="text-base">☀️</span>
+                  <span className="hidden sm:inline">Claro</span>
+                </>
+              ) : (
+                <>
+                  <span className="text-base">🌙</span>
+                  <span className="hidden sm:inline">Oscuro</span>
+                </>
+              )}
             </button>
             <button
               onClick={onClose}
               aria-label="Cerrar"
-              className="px-3 py-1.5 rounded-lg text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700"
+              className={`px-3 py-1.5 rounded-lg text-sm font-semibold ${themeStyles.button} transition-all duration-300`}
             >
               ✕
             </button>
@@ -452,11 +489,11 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
         {/* Body */}
         <div className="flex-1 overflow-y-auto px-4 md:px-6 py-6">
           {/* Layout unificado con contenedor destacado - ancho completo */}
-          <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-2xl p-6 md:p-10 shadow-lg border-2 border-indigo-200">
+          <div className={`${themeStyles.contentBg} rounded-2xl p-6 md:p-10 shadow-lg border-2 ${themeStyles.contentBorder} transition-all duration-300`}>
             {/* Título de notas - siempre visible */}
-            <div className="mb-8 flex items-center gap-3 pb-4 border-b-2 border-indigo-200">
+            <div className={`mb-8 flex items-center gap-3 pb-4 border-b-2 ${themeStyles.titleBorder}`}>
               <div className="text-4xl">📝</div>
-              <h4 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <h4 className={`text-3xl font-bold bg-gradient-to-r ${themeStyles.titleGradient} bg-clip-text text-transparent`}>
                 Notas de clase
               </h4>
             </div>
@@ -465,7 +502,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
             {htmlBefore && (
               <MarkdownContent 
                 content={htmlBefore} 
-                className="notes-modal-content prose prose-lg max-w-none prose-headings:text-indigo-900 prose-headings:font-bold prose-p:text-slate-800 prose-p:leading-relaxed prose-strong:text-indigo-800 prose-strong:font-bold prose-table:w-full prose-table:border-collapse prose-thead:bg-gradient-to-r prose-thead:from-indigo-600 prose-thead:to-purple-600 prose-th:text-white prose-th:font-bold prose-th:p-4 prose-th:text-left prose-td:p-4 prose-td:border-b prose-td:border-indigo-100 prose-tr:transition-colors prose-ul:space-y-2 prose-ol:space-y-2 prose-li:text-slate-800" 
+                className={`notes-modal-content prose prose-lg max-w-none prose-headings:font-bold prose-p:leading-relaxed prose-strong:font-bold prose-table:w-full prose-table:border-collapse prose-thead:bg-gradient-to-r prose-th:font-bold prose-th:p-4 prose-th:text-left prose-td:p-4 prose-td:border-b prose-tr:transition-colors prose-ul:space-y-2 prose-ol:space-y-2 ${themeStyles.prose}`} 
               />
             )}
             
@@ -489,7 +526,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                    className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${themeStyles.linkBg} text-white font-semibold rounded-lg transition-all duration-300 shadow-md hover:shadow-lg`}
                   >
                     <span>{link.label}</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -504,18 +541,18 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
             {htmlAfter && (
               <MarkdownContent 
                 content={htmlAfter} 
-                className="notes-modal-content prose prose-lg max-w-none prose-headings:text-indigo-900 prose-headings:font-bold prose-p:text-slate-800 prose-p:leading-relaxed prose-strong:text-indigo-800 prose-strong:font-bold prose-table:w-full prose-table:border-collapse prose-thead:bg-gradient-to-r prose-thead:from-indigo-600 prose-thead:to-purple-600 prose-th:text-white prose-th:font-bold prose-th:p-4 prose-th:text-left prose-td:p-4 prose-td:border-b prose-td:border-indigo-100 prose-tr:transition-colors prose-ul:space-y-2 prose-ol:space-y-2 prose-li:text-slate-800" 
+                className={`notes-modal-content prose prose-lg max-w-none prose-headings:font-bold prose-p:leading-relaxed prose-strong:font-bold prose-table:w-full prose-table:border-collapse prose-thead:bg-gradient-to-r prose-th:font-bold prose-th:p-4 prose-th:text-left prose-td:p-4 prose-td:border-b prose-tr:transition-colors prose-ul:space-y-2 prose-ol:space-y-2 ${themeStyles.prose}`} 
               />
             )}
             
             {/* Fallback si no hay contenido procesado */}
             {!htmlBefore && !htmlAfter && plainMarkdown && (
-              <div className="whitespace-pre-wrap break-words text-slate-900 text-base md:text-lg">
+              <div className={`whitespace-pre-wrap break-words text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
                 {plainMarkdown}
               </div>
             )}
             {!htmlBefore && !htmlAfter && !plainMarkdown && (
-              <div className="p-4 bg-amber-50 border border-amber-200 rounded-lg text-amber-900">
+              <div className={`p-4 border rounded-lg ${themeStyles.fallbackBg}`}>
                 <p className="font-semibold mb-2">⚠️ No se encontró contenido markdown</p>
                 <p className="text-sm">Esta pestaña no contiene un bloque markdown con notas de clase.</p>
               </div>

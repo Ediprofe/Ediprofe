@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos para tablas en el modal de notas */
+/* Estilos para tablas en el modal de notas - Modo claro */
 .notes-modal-content tbody tr:nth-child(odd) {
   background-color: white;
 }
@@ -15,6 +15,107 @@
 
 .notes-modal-content tbody tr:hover {
   background-color: rgb(224 231 255 / 0.5); /* indigo-100/50 */
+}
+
+/* ========================================
+   MODO OSCURO DEL MODAL DE NOTAS
+   ======================================== */
+
+/* Tablas en modo oscuro */
+.dark-mode-modal .notes-modal-content tbody tr:nth-child(odd) {
+  background-color: rgb(30 41 59);
+}
+
+.dark-mode-modal .notes-modal-content tbody tr:nth-child(even) {
+  background-color: rgb(51 65 85);
+}
+
+.dark-mode-modal .notes-modal-content tbody tr:hover {
+  background-color: rgb(71 85 105);
+}
+
+.dark-mode-modal .prose td {
+  background-color: transparent;
+}
+
+.dark-mode-modal .prose tr:hover td {
+  background-color: transparent;
+}
+
+.dark-mode-modal .prose tbody tr:hover {
+  background-color: rgb(71 85 105);
+}
+
+/* Ecuaciones LaTeX en modo oscuro */
+.dark-mode-modal .katex-display {
+  background: linear-gradient(135deg, rgb(30 41 59) 0%, rgb(15 23 42) 100%);
+  border: 2px solid rgb(71 85 105);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode-modal .katex,
+.dark-mode-modal .katex-html,
+.dark-mode-modal .katex .base,
+.dark-mode-modal .katex .strut,
+.dark-mode-modal .katex .mord,
+.dark-mode-modal .katex .mrel,
+.dark-mode-modal .katex .mop,
+.dark-mode-modal .katex .mbin,
+.dark-mode-modal .katex .mopen,
+.dark-mode-modal .katex .mclose,
+.dark-mode-modal .katex .mpunct,
+.dark-mode-modal .katex .minner {
+  color: white;
+}
+
+/* Blockquotes en modo oscuro */
+.dark-mode-modal .prose blockquote {
+  background-color: rgb(30 41 59);
+  border-left-color: rgb(99 102 241);
+  color: white;
+}
+
+/* Texto general en modo oscuro */
+.dark-mode-modal .notes-modal-content {
+  color: white;
+}
+
+.dark-mode-modal .notes-modal-content h1,
+.dark-mode-modal .notes-modal-content h2,
+.dark-mode-modal .notes-modal-content h3,
+.dark-mode-modal .notes-modal-content h4,
+.dark-mode-modal .notes-modal-content h5,
+.dark-mode-modal .notes-modal-content h6 {
+  color: white;
+}
+
+.dark-mode-modal .notes-modal-content p,
+.dark-mode-modal .notes-modal-content li,
+.dark-mode-modal .notes-modal-content span,
+.dark-mode-modal .notes-modal-content strong,
+.dark-mode-modal .notes-modal-content em,
+.dark-mode-modal .notes-modal-content td,
+.dark-mode-modal .notes-modal-content th,
+.dark-mode-modal .notes-modal-content blockquote,
+.dark-mode-modal .notes-modal-content blockquote p,
+.dark-mode-modal .notes-modal-content blockquote strong {
+  color: white;
+}
+
+/* Code blocks en modo oscuro */
+.dark-mode-modal .prose code {
+  background-color: rgb(30 41 59);
+  color: rgb(196 181 253);
+}
+
+.dark-mode-modal .prose pre {
+  background-color: rgb(15 23 42);
+  border: 1px solid rgb(51 65 85);
+}
+
+.dark-mode-modal .prose pre code {
+  background-color: transparent;
+  color: rgb(226 232 240);
 }
 
 :root {
@@ -252,6 +353,7 @@ body {
     color: var(--table-header-text) !important;
     font-size: 0.75rem;
     text-shadow: var(--table-header-shadow);
+    text-align: center;
   }
   
   @media (min-width: 768px) {
@@ -268,6 +370,7 @@ body {
   .prose td {
     @apply p-3 md:p-4 border-b border-slate-200 text-xs md:text-sm bg-white;
     min-width: 100px;
+    text-align: center;
   }
   
   .prose tr:last-child td {

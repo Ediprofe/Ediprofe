@@ -808,10 +808,463 @@ $$
 
 ### Escalares y vectores
 
+```markdown
+## Escalares y vectores
+
+En física, las magnitudes se dividen en **escalares** y **vectoriales**, según la información necesaria para describirlas por completo.
+
+### Magnitudes escalares
+
+Las **magnitudes escalares** se definen únicamente por **un número y una unidad de medida**.  
+No necesitan dirección ni sentido.
+
+Por ejemplo:
+
+- **Tiempo:** $t = 5\,\mathrm{s}$
+- **Masa:** $m = 2\,\mathrm{kg}$
+- **Temperatura:** $T = 25\,^\circ\mathrm{C}$
+
+En estos casos, basta con conocer el valor numérico y la unidad.  
+No tiene sentido decir que la masa o el tiempo “apuntan” hacia algún lugar.
+
+### Magnitudes vectoriales
+
+Las **magnitudes vectoriales**, además del número y la unidad, requieren **dirección y sentido** para quedar completamente definidas.
+
+Por ejemplo:
+
+- **Desplazamiento:** indica *cuánto* y *hacia dónde* se mueve un objeto.  
+  Si una persona camina 10 metros hacia el norte, su desplazamiento es:
+
+  $$
+  \vec{d} = 10\,\mathrm{m}\ \mathrm{(norte)}
+  $$
+
+- **Velocidad:** indica *qué tan rápido* y *en qué dirección* se mueve un cuerpo.  
+  Si un auto viaja a $60\,\mathrm{km/h}$ hacia el este, su velocidad es:
+
+  $$
+  \vec{v} = 60\,\mathrm{km/h}\ \mathrm{(este)}
+  $$
+
+En cambio, la **distancia** y la **rapidez** son escalares, porque solo expresan *cuánto* se recorrió o *qué tan rápido* se mueve algo, sin importar la dirección.
+
+### Comparación entre escalares y vectores
+
+| Tipo de magnitud | Qué necesita para definirse | Ejemplos | Representación |
+|------------------|-----------------------------|-----------|----------------|
+| Escalar | Número y unidad | tiempo, masa, temperatura, distancia, rapidez | $5\,\mathrm{s}$, $2\,\mathrm{kg}$ |
+| Vectorial | Número, unidad, dirección y sentido | desplazamiento, velocidad, fuerza, aceleración | $\vec{v}$, flecha con dirección y sentido |
+
+> 💡 **Recuerda:**  
+> Las magnitudes vectoriales se representan con una flecha encima del símbolo, como $\vec{v}$, y gráficamente con un vector que indica su dirección y sentido.
+```
+
 ### Elementos de un vector
+
+```markdown
+## Elementos de un vector
+
+Un **vector** es una magnitud que tiene **módulo (magnitud)**, **dirección** y **sentido**.  
+Se representa mediante una **flecha**.  
+La longitud de la flecha indica la magnitud, la inclinación muestra la dirección y la punta señala el sentido.
+
+### 1. Magnitud (o módulo)
+
+La **magnitud** de un vector es el valor numérico que indica *cuánto mide* la cantidad física que representa.  
+Por ejemplo, si un objeto se desplaza 5 metros, la magnitud del vector desplazamiento es:
+
+$$
+|\vec{d}| = 5\,\mathrm{m}
+$$
+
+La magnitud **siempre es positiva** y **se mide con la unidad correspondiente** (metros, newtons, metros por segundo, etc.).
+
+### 2. Dirección
+
+La **dirección** indica la **línea sobre la que actúa el vector**.  
+Puede describirse mediante un ángulo, una orientación en el plano (por ejemplo, “norte-sur”, “este-oeste”) o con respecto a un eje de referencia.
+
+Por ejemplo, si un vector forma un ángulo de $30^\circ$ con el eje $x$, decimos que su dirección es de $30^\circ$ respecto a dicho eje.
+
+### 3. Sentido
+
+El **sentido** señala **hacia dónde apunta el vector** a lo largo de su dirección.  
+Por ejemplo, un vector velocidad hacia el norte y otro hacia el sur tienen la misma dirección (vertical), pero **sentidos opuestos**.
+
+### 4. Representación simbólica
+
+Los vectores se representan con una **letra y una flecha encima**, como $\vec{v}$ o $\vec{F}$.  
+A veces también se escriben con una letra en **negrita**, por ejemplo **v** o **F**, especialmente en textos impresos.
+
+> 💡 **Ejemplo:**  
+> Si un cuerpo se desplaza 8 metros hacia el este, su vector desplazamiento puede expresarse como:
+>
+> $$
+> \vec{d} = 8\,\mathrm{m}\ \mathrm{(este)}
+> $$
+>
+> Aquí, $8\,\mathrm{m}$ es la magnitud, la “línea este-oeste” es la dirección y “hacia el este” es el sentido.
+
+### 5. Flecha representativa
+
+Gráficamente, un vector se dibuja como una **flecha**:
+
+- El **origen** (cola) indica el punto donde actúa la magnitud.
+- La **punta** (cabeza) indica hacia dónde se dirige.
+- La **longitud** es proporcional a la magnitud.
+- La **orientación** muestra su dirección y sentido.
+
+---
+
+| Elemento | Qué indica | Cómo se representa |
+|-----------|-------------|--------------------|
+| Magnitud | Tamaño o valor numérico | Longitud de la flecha |
+| Dirección | Línea o ángulo de acción | Inclinación del vector |
+| Sentido | Hacia dónde apunta | Punta de la flecha |
+| Origen | Punto donde comienza el vector | Cola del vector |
+
+---
+
+> 📘 **En resumen:**  
+> Un vector combina *cuánto*, *en qué línea* y *hacia dónde*.  
+> Por eso se diferencia de una magnitud escalar, que solo indica *cuánto*.
+```
 
 ### Representación de vectores en el plano
 
+```markdown
+## Representación de vectores en el plano
+
+Los vectores pueden representarse **gráficamente** en un **plano cartesiano**, lo que permite visualizar su magnitud, dirección y sentido de manera precisa.
+
+Un vector en el plano se puede ubicar a partir de dos puntos:
+
+- **Punto de origen (cola):** donde empieza el vector.  
+- **Punta o extremo (cabeza):** hacia donde apunta.
+
+Por ejemplo, si un vector $\vec{A}$ parte del punto $O(0,0)$ y llega hasta el punto $P(4,3)$, puede representarse así:
+
+$$
+\vec{A} = \overrightarrow{OP}
+$$
+
+Esto significa que el vector va desde el origen hasta el punto $(4,3)$.
+
+---
+
+### 1. Representación gráfica
+
+En el plano cartesiano, el vector $\vec{A}$ se dibuja como una **flecha** desde $(0,0)$ hasta $(4,3)$:
+
+- La **longitud de la flecha** representa la **magnitud**.  
+- La **inclinación** con respecto al eje $x$ muestra la **dirección**.  
+- La **punta** indica el **sentido**.
+
+La magnitud del vector se calcula con el **teorema de Pitágoras**:
+
+$$
+|\vec{A}| = \sqrt{A_x^2 + A_y^2}
+$$
+
+donde $A_x$ y $A_y$ son las **componentes** del vector en los ejes $x$ y $y$.
+
+---
+
+### 2. Componentes de un vector
+
+Todo vector en el plano puede descomponerse en dos **componentes perpendiculares**:
+
+$$
+\vec{A} = A_x\,\hat{i} + A_y\,\hat{j}
+$$
+
+donde:
+
+- $A_x$ es la **proyección del vector sobre el eje $x$**,  
+- $A_y$ es la **proyección del vector sobre el eje $y$**,  
+- $\hat{i}$ y $\hat{j}$ son los **vectores unitarios** en las direcciones de los ejes $x$ y $y$ respectivamente.
+
+Si el vector forma un ángulo $\theta$ con el eje $x$, entonces:
+
+$$
+A_x = |\vec{A}|\cos{\theta}
+$$
+
+$$
+A_y = |\vec{A}|\sin{\theta}
+$$
+
+---
+
+### 3. Ejemplo
+
+Un vector $\vec{B}$ tiene una magnitud de $10\,\mathrm{m}$ y forma un ángulo de $37^\circ$ con el eje $x$.  
+Sus componentes son:
+
+$$
+B_x = 10\cos{37^\circ} = 8\,\mathrm{m}
+$$
+
+$$
+B_y = 10\sin{37^\circ} = 6\,\mathrm{m}
+$$
+
+Por lo tanto:
+
+$$
+\vec{B} = 8\,\hat{i} + 6\,\hat{j}
+$$
+
+Este vector puede representarse gráficamente con una flecha que parte del origen $(0,0)$ y llega al punto $(8,6)$.
+
+---
+
+### 4. Observaciones importantes
+
+- Un vector **puede trasladarse** paralelamente sin cambiar su valor (solo importa su magnitud, dirección y sentido).  
+- Los vectores se **suman o restan** gráficamente utilizando sus componentes o con métodos geométricos (esto se estudiará en la siguiente sección).  
+- El sistema cartesiano facilita comparar, sumar y proyectar vectores con precisión.
+
+---
+
+> 📘 **En resumen:**  
+> En el plano, un vector se describe mediante sus componentes $(A_x, A_y)$ o mediante su magnitud y ángulo $(|\vec{A}|, \theta)$.  
+> Ambas formas representan la misma información: *cuánto mide, hacia dónde apunta y en qué dirección actúa*.
+```
+
 ### Suma y resta de vectores
 
+```markdown
+## Suma y resta de vectores
+
+En física, muchas veces se necesita combinar varias magnitudes vectoriales.  
+Para hacerlo, utilizamos la **suma** y la **resta de vectores**, que pueden representarse **gráfica** o **analíticamente**.
+
+---
+
+### 1. Suma de vectores
+
+La **suma de vectores** consiste en obtener un **vector resultante** que tiene el mismo efecto que todos los vectores originales actuando juntos.
+
+#### a) Método gráfico: regla del triángulo
+
+Si se quieren sumar dos vectores $\vec{A}$ y $\vec{B}$:
+
+1. Dibuja el vector $\vec{A}$.  
+2. Coloca la **cola de $\vec{B}$ en la punta de $\vec{A}$**.  
+3. El vector resultante $\vec{R}$ se traza desde la **cola de $\vec{A}$** hasta la **punta de $\vec{B}$**.
+
+$$
+\vec{R} = \vec{A} + \vec{B}
+$$
+
+> 💡 Este método también puede extenderse para tres o más vectores, colocando cada uno a continuación del anterior.
+
+#### b) Método gráfico: regla del paralelogramo
+
+Si los vectores $\vec{A}$ y $\vec{B}$ parten del mismo punto, se completa un **paralelogramo** con ellos como lados adyacentes.  
+La **diagonal del paralelogramo** representa el vector resultante $\vec{R}$.
+
+#### c) Método analítico (por componentes)
+
+Cuando los vectores están en el plano cartesiano, se suman sus **componentes** en cada eje:
+
+$$
+\vec{R} = \vec{A} + \vec{B}
+$$
+
+Si $\vec{A} = A_x\,\hat{i} + A_y\,\hat{j}$ y $\vec{B} = B_x\,\hat{i} + B_y\,\hat{j}$, entonces:
+
+$$
+\vec{R} = (A_x + B_x)\,\hat{i} + (A_y + B_y)\,\hat{j}
+$$
+
+La **magnitud** del vector resultante es:
+
+$$
+|\vec{R}| = \sqrt{R_x^2 + R_y^2}
+$$
+
+y la **dirección** con respecto al eje $x$ se obtiene con:
+
+$$
+\theta = \arctan\left(\frac{R_y}{R_x}\right)
+$$
+
+---
+
+### 2. Resta de vectores
+
+La **resta de vectores** consiste en encontrar la diferencia entre dos vectores, es decir:
+
+$$
+\vec{R} = \vec{A} - \vec{B}
+$$
+
+Restar un vector equivale a **sumar su opuesto**, que tiene la **misma magnitud** pero **sentido contrario**:
+
+$$
+\vec{A} - \vec{B} = \vec{A} + (-\vec{B})
+$$
+
+#### Ejemplo gráfico
+
+1. Dibuja $\vec{A}$.  
+2. Invierte el sentido de $\vec{B}$ para obtener $-\vec{B}$.  
+3. Suma $\vec{A}$ y $-\vec{B}$ con la regla del triángulo.
+
+---
+
+### 3. Ejemplo analítico
+
+Sean los vectores:
+
+$$
+\vec{A} = 6\,\hat{i} + 3\,\hat{j}
+$$
+
+$$
+\vec{B} = 2\,\hat{i} + 5\,\hat{j}
+$$
+
+Entonces:
+
+$$
+\vec{R} = \vec{A} + \vec{B} = (6 + 2)\,\hat{i} + (3 + 5)\,\hat{j}
+$$
+
+$$
+\vec{R} = 8\,\hat{i} + 8\,\hat{j}
+$$
+
+La **magnitud** del vector resultante es:
+
+$$
+|\vec{R}| = \sqrt{8^2 + 8^2} = 11.3\,\mathrm{u}
+$$
+
+y la **dirección**:
+
+$$
+\theta = \arctan\left(\frac{8}{8}\right) = 45^\circ
+$$
+
+Por lo tanto, el vector resultante tiene una **magnitud de $11.3\,\mathrm{u}$** y una **dirección de $45^\circ$** respecto al eje $x$.
+
+---
+
+> 📘 **En resumen:**  
+> - Los vectores se **suman y restan** respetando su dirección y sentido.  
+> - En el plano cartesiano, se combinan **por componentes**.  
+> - El vector resultante indica el **efecto combinado** de todas las magnitudes vectoriales.
+
+```
+
 ### Multiplicación de vectores
+
+```markdown
+## Multiplicación de vectores
+
+La **multiplicación de vectores** puede entenderse de forma sencilla como una **manera de cambiar el tamaño o el sentido de un vector**.  
+En el nivel escolar, estudiaremos principalmente **la multiplicación de un vector por un número (escalar)** y cómo esto se refleja en sus componentes.
+
+---
+
+### 1. Multiplicación de un vector por un número (escalar)
+
+Cuando un vector se multiplica por un **número real** (llamado **escalar**), se obtiene **otro vector en la misma dirección**, pero con una **magnitud diferente**.
+
+Si $\vec{A}$ es un vector y $k$ es un número (escalar), entonces:
+
+$$
+\vec{B} = k\,\vec{A}
+$$
+
+#### Casos:
+- Si $k > 1$, el nuevo vector $\vec{B}$ es **más largo** (su magnitud aumenta).  
+- Si $0 < k < 1$, el vector $\vec{B}$ es **más corto**.  
+- Si $k = -1$, el vector mantiene la **misma magnitud** pero **cambia de sentido**.
+
+#### Ejemplo:
+
+Supón que $\vec{A}$ representa una velocidad de $4\,\mathrm{m/s}$ hacia el este.  
+Entonces:
+
+- $2\vec{A}$ representa una velocidad de $8\,\mathrm{m/s}$ hacia el este.  
+- $\tfrac{1}{2}\vec{A}$ representa una velocidad de $2\,\mathrm{m/s}$ hacia el este.  
+- $-1\vec{A}$ representa una velocidad de $4\,\mathrm{m/s}$ hacia el **oeste** (sentido contrario).
+
+$$
+\vec{A} = 4\,\mathrm{m/s}\ \mathrm{(este)} \quad \Rightarrow \quad -\vec{A} = 4\,\mathrm{m/s}\ \mathrm{(oeste)}
+$$
+
+---
+
+### 2. Multiplicación por componentes
+
+Todo vector en el plano puede escribirse en términos de sus **componentes**:
+
+$$
+\vec{A} = A_x\,\hat{i} + A_y\,\hat{j}
+$$
+
+Si multiplicamos este vector por un número $k$, el resultado es:
+
+$$
+k\vec{A} = (kA_x)\,\hat{i} + (kA_y)\,\hat{j}
+$$
+
+Esto significa que **cada componente** del vector también se multiplica por el mismo número.
+
+#### Ejemplo:
+
+Sea $\vec{A} = 3\,\hat{i} + 2\,\hat{j}$ y $k = 2$.  
+Entonces:
+
+$$
+2\vec{A} = (2)(3)\,\hat{i} + (2)(2)\,\hat{j}
+$$
+
+$$
+2\vec{A} = 6\,\hat{i} + 4\,\hat{j}
+$$
+
+El nuevo vector tiene **el doble de magnitud**, pero mantiene **la misma dirección y sentido**.
+
+---
+
+### 3. Interpretación gráfica
+
+Al representar $\vec{A}$ y $k\vec{A}$ en el plano:
+
+- Ambos tienen la **misma dirección**.  
+- Si $k > 0$, apuntan al **mismo lado**.  
+- Si $k < 0$, apuntan al **lado opuesto**.  
+- La **longitud de la flecha** cambia según el valor de $|k|$.
+
+> 💡 **En resumen:**  
+> - Multiplicar un vector por un número **cambia su tamaño** (magnitud).  
+> - Si el número es negativo, también **invierte su sentido**.  
+> - Cada **componente** del vector se multiplica por ese número.
+
+---
+
+### 4. Aplicación práctica
+
+En física, este tipo de multiplicación se usa frecuentemente, por ejemplo:
+
+- Para calcular una **fuerza total** si se duplica la masa ($\vec{F} = m\vec{a}$).  
+- Para encontrar una **velocidad final** a partir de una aceleración constante ($\vec{v} = \vec{a}t$).  
+- Para ajustar la **escala de un vector** en un gráfico o simulación.
+
+$$
+\vec{v} = \vec{a}t \quad \Rightarrow \quad \text{si } t \text{ aumenta, } \vec{v} \text{ también crece en magnitud.}
+$$
+
+---
+
+> 📘 **Conclusión:**  
+> En esta etapa, la multiplicación de vectores se entiende como **multiplicar un vector por un número**, lo que permite **modificar su tamaño y sentido**.  
+> Más adelante, aprenderás otras formas de multiplicación entre vectores (producto punto y cruz), pero por ahora basta con comprender cómo los escalares afectan a un vector.
+```
