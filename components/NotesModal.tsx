@@ -282,12 +282,27 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
 
   // Función para normalizar sintaxis matemática
   const normalizeMathSyntax = useCallback((markdown: string): string => {
-    // Primero, des-escapar cualquier $ que esté escapado como \$
-    let cleaned = markdown.replace(/\\\$/g, '$');
+    // Estrategia: Proteger las expresiones matemáticas existentes antes de normalizar
     
-    // Convertir \( ... \) a $ ... $ (inline math)
-    // También convierte ( ... ) sin backslash cuando contiene comandos LaTeX
-    // Usar un enfoque más robusto que maneja paréntesis anidados
+    // Paso 1: Extraer y proteger expresiones de bloque ($$...$$)
+    const blockMathPlaceholders: string[] = [];
+    let withProtectedBlocks = markdown.replace(/\$\$([\s\S]*?)\$\$/g, (match, content) => {
+      const placeholder = `__BLOCK_MATH_${blockMathPlaceholders.length}__`;
+      blockMathPlaceholders.push(content);
+      return placeholder;
+    });
+    
+    // Paso 2: Extraer y proteger expresiones inline ($...$)
+    const inlineMathPlaceholders: string[] = [];
+    let withProtectedInline = withProtectedBlocks.replace(/\$([^$\n]+?)\$/g, (match, content) => {
+      const placeholder = `__INLINE_MATH_${inlineMathPlaceholders.length}__`;
+      inlineMathPlaceholders.push(content);
+      return placeholder;
+    });
+    
+    // Paso 3: Ahora procesar \( ... \) sin afectar las expresiones ya protegidas
+    let cleaned = withProtectedInline.replace(/\\\$/g, '$');
+    
     let result = '';
     let i = 0;
     
@@ -364,6 +379,18 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
         i++;
       }
     }
+    
+    // Paso 4: Restaurar expresiones inline protegidas
+    inlineMathPlaceholders.forEach((content, index) => {
+      const placeholder = `__INLINE_MATH_${index}__`;
+      result = result.replace(placeholder, `$${content}$`);
+    });
+    
+    // Paso 5: Restaurar expresiones de bloque protegidas
+    blockMathPlaceholders.forEach((content, index) => {
+      const placeholder = `__BLOCK_MATH_${index}__`;
+      result = result.replace(placeholder, `$$${content}$$`);
+    });
     
     return result;
   }, []);
