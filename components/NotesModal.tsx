@@ -280,119 +280,18 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
 
   const simplifiedHtml = useMemo(() => simplifyHtml(content), [content]);
 
-  // Función para normalizar sintaxis matemática
-  const normalizeMathSyntax = useCallback((markdown: string): string => {
-    // Estrategia: Proteger las expresiones matemáticas existentes antes de normalizar
-    
-    // Paso 1: Extraer y proteger expresiones de bloque ($$...$$)
-    const blockMathPlaceholders: string[] = [];
-    let withProtectedBlocks = markdown.replace(/\$\$([\s\S]*?)\$\$/g, (match, content) => {
-      const placeholder = `__BLOCK_MATH_${blockMathPlaceholders.length}__`;
-      blockMathPlaceholders.push(content);
-      return placeholder;
-    });
-    
-    // Paso 2: Extraer y proteger expresiones inline ($...$)
-    const inlineMathPlaceholders: string[] = [];
-    let withProtectedInline = withProtectedBlocks.replace(/\$([^$\n]+?)\$/g, (match, content) => {
-      const placeholder = `__INLINE_MATH_${inlineMathPlaceholders.length}__`;
-      inlineMathPlaceholders.push(content);
-      return placeholder;
-    });
-    
-    // Paso 3: Ahora procesar \( ... \) sin afectar las expresiones ya protegidas
-    let cleaned = withProtectedInline.replace(/\\\$/g, '$');
-    
-    let result = '';
-    let i = 0;
-    
-    while (i < cleaned.length) {
-      // Caso 1: Buscar inicio de expresión inline \(
-      if (i < cleaned.length - 1 && cleaned[i] === '\\' && cleaned[i + 1] === '(') {
-        // Encontrar el cierre correspondiente \)
-        let depth = 1;
-        let j = i + 2;
-        let content = '';
-        
-        while (j < cleaned.length && depth > 0) {
-          if (j < cleaned.length - 1 && cleaned[j] === '\\' && cleaned[j + 1] === ')') {
-            depth--;
-            if (depth === 0) {
-              // Encontramos el cierre
-              result += '$' + content + '$';
-              i = j + 2;
-              break;
-            } else {
-              content += cleaned[j] + cleaned[j + 1];
-              j += 2;
-            }
-          } else if (j < cleaned.length - 1 && cleaned[j] === '\\' && cleaned[j + 1] === '(') {
-            depth++;
-            content += cleaned[j] + cleaned[j + 1];
-            j += 2;
-          } else {
-            content += cleaned[j];
-            j++;
-          }
-        }
-        
-        // Si no encontramos cierre, copiar tal cual
-        if (depth > 0) {
-          result += cleaned[i];
-          i++;
-        }
+  // Función para preprocesar matemáticas
+  const preprocessMath = useCallback((markdown: string): string => {
+    // Convertir $$ecuación$$ en la misma línea a formato multilínea
+    // Esto asegura que remark-math las reconozca como display math
+    return markdown.replace(/\$\$([^$]+?)\$\$/g, (match, content) => {
+      // Si ya tiene saltos de línea, dejarlo como está
+      if (content.includes('\n')) {
+        return match;
       }
-      // Caso 2: Buscar paréntesis normales ( que contengan comandos LaTeX
-      // Esto maneja el caso donde los backslashes se perdieron
-      else if (cleaned[i] === '(' && i < cleaned.length - 1) {
-        // Verificar si el contenido parece ser LaTeX (contiene \text, \mathrm, \dfrac, etc.)
-        let j = i + 1;
-        let content = '';
-        let foundClosing = false;
-        
-        // Buscar el cierre )
-        while (j < cleaned.length && cleaned[j] !== ')') {
-          content += cleaned[j];
-          j++;
-        }
-        
-        if (j < cleaned.length && cleaned[j] === ')') {
-          foundClosing = true;
-        }
-        
-        // Verificar si el contenido parece ser LaTeX
-        const hasLatexCommands = /\\(text|mathrm|mathbf|dfrac|frac|times|cdot|,)/.test(content);
-        // IMPORTANTE: No convertir si ya contiene $ (significa que ya tiene expresiones matemáticas)
-        const alreadyHasMath = content.includes('$');
-        
-        if (foundClosing && hasLatexCommands && !alreadyHasMath) {
-          // Es una expresión LaTeX, convertir a $ ... $
-          result += '$' + content + '$';
-          i = j + 1;
-        } else {
-          // No es LaTeX o ya tiene $, mantener el paréntesis normal
-          result += cleaned[i];
-          i++;
-        }
-      } else {
-        result += cleaned[i];
-        i++;
-      }
-    }
-    
-    // Paso 4: Restaurar expresiones inline protegidas
-    inlineMathPlaceholders.forEach((content, index) => {
-      const placeholder = `__INLINE_MATH_${index}__`;
-      result = result.replace(placeholder, `$${content}$`);
+      // Si no, convertir a formato multilínea
+      return `$$\n${content.trim()}\n$$`;
     });
-    
-    // Paso 5: Restaurar expresiones de bloque protegidas
-    blockMathPlaceholders.forEach((content, index) => {
-      const placeholder = `__BLOCK_MATH_${index}__`;
-      result = result.replace(placeholder, `$$${content}$$`);
-    });
-    
-    return result;
   }, []);
 
   // Renderizar Markdown (con títulos y ecuaciones) cuando haya bloque detectado
@@ -407,12 +306,10 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
       try {
         // Renderizar la parte antes del video
         if (cleanedBefore) {
-          const normalizedBefore = normalizeMathSyntax(cleanedBefore);
+          const processedBefore = preprocessMath(cleanedBefore);
           const resultBefore = await remark()
             .use(remarkGfm)
-            .use(remarkMath, {
-              singleDollarTextMath: true // Permitir $ ... $ para inline math
-            })
+            .use(remarkMath)
             .use(remarkRehype, { allowDangerousHtml: true })
             .use(rehypeKatex, {
               strict: false, // Permitir comandos no estándar
@@ -420,7 +317,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
               throwOnError: false // No fallar en errores de LaTeX
             })
             .use(rehypeStringify, { allowDangerousHtml: true })
-            .process(normalizedBefore);
+            .process(processedBefore);
           if (!cancelled) {
             setHtmlBefore(resultBefore.toString());
           }
@@ -428,12 +325,10 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
         
         // Renderizar la parte después del video
         if (cleanedAfter) {
-          const normalizedAfter = normalizeMathSyntax(cleanedAfter);
+          const processedAfter = preprocessMath(cleanedAfter);
           const resultAfter = await remark()
             .use(remarkGfm)
-            .use(remarkMath, {
-              singleDollarTextMath: true // Permitir $ ... $ para inline math
-            })
+            .use(remarkMath)
             .use(remarkRehype, { allowDangerousHtml: true })
             .use(rehypeKatex, {
               strict: false, // Permitir comandos no estándar
@@ -441,7 +336,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
               throwOnError: false // No fallar en errores de LaTeX
             })
             .use(rehypeStringify, { allowDangerousHtml: true })
-            .process(normalizedAfter);
+            .process(processedAfter);
           if (!cancelled) {
             setHtmlAfter(resultAfter.toString());
           }
@@ -459,7 +354,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
     return () => {
       cancelled = true;
     };
-  }, [cleanedBefore, cleanedAfter, normalizeMathSyntax]);
+  }, [cleanedBefore, cleanedAfter, preprocessMath]);
 
   if (!isOpen) return null;
 

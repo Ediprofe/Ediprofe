@@ -170,7 +170,8 @@ Ver en Tiktok
 
 **Medir** consiste en comparar una propiedad de un objeto con una **unidad de referencia** para determinar **cuántas veces** dicha unidad está contenida en el objeto.
 
-> **Ejemplo:** al decir que una mesa mide *2 metros*, estamos comparando su longitud con la unidad “metro”.
+> **Ejemplo:**  
+> Al decir que una mesa mide $2\,\mathrm{m}$, estamos comparando su longitud con la unidad “metro”.
 
 ---
 
@@ -178,15 +179,15 @@ Ver en Tiktok
 
 Una **cantidad física** es toda propiedad que puede **medirse** y expresarse mediante un **número** y una **unidad**:
 
-\[
+$$
 \text{Cantidad física} = \text{valor numérico} + \text{unidad}
-\]
+$$
 
 **Ejemplos:**
 
-- \( 5\,\text{m} \) → mide longitud  
-- \( 3\,\text{kg} \) → mide masa  
-- \( 12\,\text{s} \) → mide tiempo  
+- $5\,\mathrm{m}$ → mide longitud  
+- $3\,\mathrm{kg}$ → mide masa  
+- $12\,\mathrm{s}$ → mide tiempo  
 
 > El número **indica cuánto**, y la unidad **indica qué** se mide.
 
@@ -194,7 +195,7 @@ Una **cantidad física** es toda propiedad que puede **medirse** y expresarse me
 
 ## 🧮 **Magnitudes físicas**
 
-Las magnitudes se clasifican en dos tipos:
+Las magnitudes se clasifican en dos tipos principales:
 
 ---
 
@@ -204,13 +205,13 @@ No dependen de otras; son las fundamentales del **Sistema Internacional de Unida
 
 | **Magnitud** | **Símbolo** | **Unidad** | **Símbolo de unidad** |
 |:--------------|:-------------:|:-------------|:-----------------------:|
-| Longitud | \( l \) | metro | \( \text{m} \) |
-| Masa | \( m \) | kilogramo | \( \text{kg} \) |
-| Tiempo | \( t \) | segundo | \( \text{s} \) |
-| Temperatura | \( T \) | kelvin | \( \text{K} \) |
-| Corriente eléctrica | \( I \) | amperio | \( \text{A} \) |
-| Cantidad de sustancia | \( n \) | mol | \( \text{mol} \) |
-| Intensidad luminosa | \( I_v \) | candela | \( \text{cd} \) |
+| Longitud | $l$ | metro | $\mathrm{m}$ |
+| Masa | $m$ | kilogramo | $\mathrm{kg}$ |
+| Tiempo | $t$ | segundo | $\mathrm{s}$ |
+| Temperatura | $T$ | kelvin | $\mathrm{K}$ |
+| Corriente eléctrica | $I$ | amperio | $\mathrm{A}$ |
+| Cantidad de sustancia | $n$ | mol | $\mathrm{mol}$ |
+| Intensidad luminosa | $I_v$ | candela | $\mathrm{cd}$ |
 
 ---
 
@@ -220,9 +221,9 @@ Surgen de combinar magnitudes básicas mediante operaciones matemáticas.
 
 | **Magnitud derivada** | **Expresión** | **Unidad SI** | **Ejemplo** |
 |:------------------------|:---------------:|:---------------|:-------------|
-| Velocidad | \( \dfrac{l}{t} \) | \( \text{m/s} \) | \( 60\,\text{km/h} = 16.7\,\text{m/s} \) |
-| Densidad | \( \dfrac{m}{V} \) | \( \text{kg/m}^3 \) | Agua: \( 1000\,\text{kg/m}^3 \) |
-| Fuerza | \( m \times a \) | newton (N) | Peso, empuje |
+| Velocidad | $\dfrac{l}{t}$ | $\mathrm{m/s}$ | $60\,\mathrm{km/h} = 16.7\,\mathrm{m/s}$ |
+| Densidad | $\dfrac{m}{V}$ | $\mathrm{kg/m^3}$ | Agua: $1000\,\mathrm{kg/m^3}$ |
+| Fuerza | $m \times a$ | newton (N) | Peso, empuje |
 
 ---
 
@@ -242,19 +243,19 @@ Surgen de combinar magnitudes básicas mediante operaciones matemáticas.
 
 | **Magnitud** | **Instrumento** | **Unidad** |
 |:--------------|:----------------|:-------------|
-| Longitud | Regla, calibrador, cinta métrica | \( \text{m, cm, mm} \) |
-| Masa | Balanza, báscula | \( \text{kg, g} \) |
-| Tiempo | Cronómetro, reloj | \( \text{s, min, h} \) |
-| Temperatura | Termómetro | \( ^\circ\text{C},\, \text{K} \) |
-| Volumen | Probeta, pipeta, vaso medidor | \( \text{L, mL} \) |
-| Corriente eléctrica | Amperímetro | \( \text{A} \) |
-| Tensión eléctrica | Voltímetro | \( \text{V} \) |
+| Longitud | Regla, calibrador, cinta métrica | $\mathrm{m,\ cm,\ mm}$ |
+| Masa | Balanza, báscula | $\mathrm{kg,\ g}$ |
+| Tiempo | Cronómetro, reloj | $\mathrm{s,\ min,\ h}$ |
+| Temperatura | Termómetro | $^\circ\mathrm{C},\ \mathrm{K}$ |
+| Volumen | Probeta, pipeta, vaso medidor | $\mathrm{L,\ mL}$ |
+| Corriente eléctrica | Amperímetro | $\mathrm{A}$ |
+| Tensión eléctrica | Voltímetro | $\mathrm{V}$ |
 
 > Cada instrumento tiene un **rango de medición** y una **precisión** específicos que deben considerarse al registrar datos.
 
 ---
 
-### 💡 **Conclusión**
+## 💡 **Conclusión**
 
 > Medir es **cuantificar propiedades del mundo físico** con base en **unidades estandarizadas**,  
 > lo que permite **comparar, analizar y reproducir** los fenómenos con rigor científico.
@@ -351,29 +352,29 @@ Ver en Tiktok
 
 ## ⚙️ **¿Por qué usar notación científica?**
 
-En física trabajamos con **cantidades muy grandes o muy pequeñas**:  
-- La masa del Sol → $1{,}989\times10^{30}\,\mathrm{kg}$  
-- La carga de un electrón → $1{,}602\times10^{-19}\,\mathrm{C}$
+En física trabajamos con **cantidades muy grandes o muy pequeñas**, por ejemplo:
+
+- Masa del Sol: $1.989\times10^{30}\,\mathrm{kg}$
+- Carga de un electrón: $1.602\times10^{-19}\,\mathrm{C}$
 
 > Es incómodo y poco práctico escribir tantos ceros.  
-> Por eso usamos la **notación científica**.
+> Por eso usamos la **notación científica**, una manera más simple y ordenada de expresar números extremos.
 
 ---
 
 ## 🧩 **Definición**
 
-La **notación científica** es una forma abreviada de escribir números  
-como el producto de un número **entre 1 y 10**,  
-multiplicado por una **potencia de 10**:
+La **notación científica** es una forma abreviada de escribir números como el producto de un número **entre 1 y 10**, multiplicado por una **potencia de 10**:
 
 $$
 N = a \times 10^n
 $$
 
-donde:  
+donde:
+
 - $a$ → número decimal tal que $1 \leq a < 10$  
-  (es decir, **una sola cifra distinta de cero antes del punto**)  
-- $n$ → exponente entero que indica cuántos lugares se movió el punto decimal
+  (es decir, **una sola cifra distinta de cero antes del punto decimal**)
+- $n$ → exponente entero que indica **cuántos lugares se movió el punto decimal**
 
 ---
 
@@ -385,10 +386,10 @@ porque movemos el punto decimal **hacia la izquierda**.
 **Ejemplo:**
 
 $$
-1500000 = 1{,}5\times10^6
+1\,500\,000 = 1.5\times10^6
 $$
 
-> Se movió el punto 6 lugares a la izquierda.
+> Se movió el punto **6 lugares hacia la izquierda**.
 
 ---
 
@@ -400,38 +401,37 @@ porque movemos el punto decimal **hacia la derecha**.
 **Ejemplo:**
 
 $$
-0{,}00032 = 3{,}2\times10^{-4}
+0.00032 = 3.2\times10^{-4}
 $$
 
-> Se movió el punto 4 lugares a la derecha.
+> Se movió el punto **4 lugares hacia la derecha**.
 
 ---
 
 ## 🧮 **Ejemplos mixtos**
 
-| **Número decimal** | **Notación científica** | **Explicación** |
-|:--------------------|:------------------------|:----------------|
-| 45000 | $$4{,}5\times10^4$$ | 4 lugares a la izquierda |
-| 0{,}00076 | $$7{,}6\times10^{-4}$$ | 4 lugares a la derecha |
-| 3000000000 | $$3{,}0\times10^9$$ | 9 lugares a la izquierda |
-| 0{,}00420 | $$4{,}20\times10^{-3}$$ | 3 lugares a la derecha |
+| **Número decimal** | **Notación científica** | **Movimiento del punto** |
+|:--------------------|:------------------------|:-------------------------|
+| 45 000 | $4.5\times10^4$ | 4 lugares a la izquierda |
+| 0.00076 | $7.6\times10^{-4}$ | 4 lugares a la derecha |
+| 3 000 000 000 | $3.0\times10^9$ | 9 lugares a la izquierda |
+| 0.00420 | $4.20\times10^{-3}$ | 3 lugares a la derecha |
 
 ---
 
 ## 📏 **Ventajas**
 
-- Facilita **operaciones matemáticas** con números extremos.  
-- Permite **comparar órdenes de magnitud**.  
-- Muestra claramente la **precisión de una medición** (cifras significativas).  
-- Expresa los resultados de forma **breve, ordenada y universal**.
+- Facilita las **operaciones matemáticas** con números muy grandes o muy pequeños.  
+- Permite **comparar órdenes de magnitud** de forma rápida.  
+- Indica con claridad la **precisión de una medición** (cifras significativas).  
+- Expresa los resultados de manera **breve, ordenada y universal**.
 
 ---
 
 ## 🧾 **Conclusión**
 
-La **notación científica** simplifica el trabajo con números muy grandes o muy pequeños,  
-manteniendo el número base entre **1 y 10**, y permite expresar los datos de forma **clara y precisa**,  
-preparando el camino para comprender las **cifras significativas** y la **precisión en los resultados experimentales**.
+La **notación científica** simplifica el trabajo con números extremos, manteniendo el número base entre **1 y 10** y expresando la escala mediante potencias de diez.  
+Esto permite **mayor claridad, precisión y uniformidad** en los resultados, preparando el camino para el estudio de las **cifras significativas** y la **precisión experimental**.
 
 ```
 
@@ -454,7 +454,7 @@ más **uno adicional estimado** que indica la **precisión del instrumento** uti
 > En otras palabras, son los **números que realmente aportan información** sobre la medición.
 
 **Ejemplo:**  
-Si una regla graduada en milímetros marca $12,34\,\mathrm{cm}$,  
+Si una regla graduada en milímetros marca $12.34\,\mathrm{cm}$,  
 las cifras significativas son **1, 2, 3 y 4**,  
 porque el último dígito (4) es una **estimación**.
 
@@ -477,14 +477,14 @@ porque el último dígito (4) es una **estimación**.
  ↳ Ejemplo: $2003$ → **4 cifras significativas**
 
 3. **Los ceros a la izquierda** del primer número distinto de cero **no cuentan**.  
- ↳ Ejemplo: $0,0045$ → **2 cifras significativas**
+ ↳ Ejemplo: $0.0045$ → **2 cifras significativas**
 
 4. **Los ceros a la derecha del número decimal** son significativos.  
- ↳ Ejemplo: $3,200$ → **4 cifras significativas**
+ ↳ Ejemplo: $3.200$ → **4 cifras significativas**
 
 5. **Los ceros al final sin punto decimal** pueden o no ser significativos.  
  ↳ Ejemplo: $1500$ → puede tener **2, 3 o 4** cifras significativas  
-  (depende del instrumento o si se expresa como $1,50\times10^3$).
+  (depende del instrumento o si se expresa como $1.50\times10^3$).
 
 ---
 
@@ -492,10 +492,10 @@ porque el último dígito (4) es una **estimación**.
 
 | **Número** | **Cifras significativas** | **Notación científica** |
 |:-----------|:-------------------------:|:-----------------------:|
-| $0,0045$   | 2                         | $$4,5\times10^{-3}$$    |
-| $3200$     | 2 (o 3 si se especifica)  | $$3,2\times10^3$$       |
-| $0,00320$  | 3                         | $$3,20\times10^{-3}$$   |
-| $450,60$   | 5                         | $$4,506\times10^2$$     |
+| $0.0045$   | 2                         | $4.5\times10^{-3}$      |
+| $3200$     | 2 (o 3 si se especifica)  | $3.2\times10^3$         |
+| $0.00320$  | 3                         | $3.20\times10^{-3}$     |
+| $450.60$   | 5                         | $4.506\times10^2$       |
 
 ---
 
@@ -506,10 +506,10 @@ porque el último dígito (4) es una **estimación**.
 El resultado debe tener **tantas cifras significativas como el número con menos cifras significativas**.
 
 $$
-2,5\times3,42=8,6
+2.5\times3.42 = 8.6
 $$
 
-> (porque $2,5$ tiene 2 cifras significativas)
+> (porque $2.5$ tiene 2 cifras significativas)
 
 ---
 
@@ -519,7 +519,7 @@ El resultado debe conservar **el mismo número de decimales**
 que la medición con **menos decimales**.
 
 $$
-12,11+0,3=12,4
+12.11 + 0.3 = 12.4
 $$
 
 ---
@@ -529,9 +529,9 @@ $$
 Al limitar cifras en un resultado:
 
 - Si el primer dígito que se elimina es **menor que 5**, el último se deja igual.  
- ↳ $3,243 \rightarrow 3,24$  
+ ↳ $3.243 \rightarrow 3.24$  
 - Si es **mayor o igual que 5**, el último se incrementa en uno.  
- ↳ $3,246 \rightarrow 3,25$
+ ↳ $3.246 \rightarrow 3.25$
 
 ---
 
@@ -547,7 +547,7 @@ Al limitar cifras en un resultado:
 
 - Las **cifras significativas** expresan la **precisión real** de una medición.  
 - Nos ayudan a **evitar falsos niveles de exactitud**.  
-- Son esenciales para **comunicar resultados confiables** en física y ciencias experimentales.
+- Son esenciales para **comunicar resultados confiables** en física y otras ciencias experimentales.
 
 ```
 
@@ -1089,7 +1089,7 @@ $$
 y la **dirección** con respecto al eje $x$ se obtiene con:
 
 $$
-\theta = \arctan\left(\frac{R_y}{R_x}\right)
+\theta = \tan^{-1}\!\left(\frac{R_y}{R_x}\right)
 $$
 
 ---
@@ -1147,7 +1147,7 @@ $$
 y la **dirección**:
 
 $$
-\theta = \arctan\left(\frac{8}{8}\right) = 45^\circ
+\theta = \tan^{-1}\!\left(\frac{8}{8}\right) = 45^\circ
 $$
 
 Por lo tanto, el vector resultante tiene una **magnitud de $11.3\,\mathrm{u}$** y una **dirección de $45^\circ$** respecto al eje $x$.

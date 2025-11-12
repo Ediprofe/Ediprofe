@@ -31,9 +31,10 @@ La solución utiliza un patrón de **protección temporal** de las expresiones m
 ```typescript
 function normalizeMathSyntax(markdown: string): string {
   // Paso 1: Extraer y proteger expresiones de bloque ($$...$$)
+  // Importante: Preservar saltos de línea para que remark-math las reconozca como display math
   const blockMathPlaceholders: string[] = [];
-  let withProtectedBlocks = markdown.replace(/\$\$([\s\S]*?)\$\$/g, (match, content) => {
-    const placeholder = `__BLOCK_MATH_${blockMathPlaceholders.length}__`;
+  let withProtectedBlocks = markdown.replace(/\n?\$\$([\s\S]*?)\$\$\n?/g, (match, content) => {
+    const placeholder = `\n__BLOCK_MATH_${blockMathPlaceholders.length}__\n`;
     blockMathPlaceholders.push(content);
     return placeholder;
   });
@@ -120,6 +121,31 @@ HTML Final
 - ✅ Comandos LaTeX complejos funcionan correctamente
 - ✅ Paréntesis `\left(` y `\right)` no se corrompen
 - ✅ Compatible con modo claro y oscuro
+- ✅ Saltos de línea preservados para estilos visuales correctos
+
+## 🎨 Estilos Visuales
+
+### Ecuaciones de Bloque (Display Math)
+
+Las ecuaciones `$$...$$` se renderizan con un estilo visual elegante:
+
+**Modo Claro:**
+- Fondo: Gradiente suave (gris claro)
+- Borde: 1px sólido gris
+- Sombra: Sutil para profundidad
+- Centrado: Automático
+- Padding: 1.25rem
+
+**Modo Oscuro:**
+- Fondo: Gradiente oscuro (slate)
+- Borde: 2px sólido slate-600
+- Sombra: Más pronunciada
+- Texto: Blanco
+- Centrado: Automático
+
+### Ecuaciones Inline
+
+Las ecuaciones `$...$` se integran naturalmente en el texto sin estilos adicionales, manteniendo el flujo de lectura.
 
 ## 📊 Casos de Prueba
 
