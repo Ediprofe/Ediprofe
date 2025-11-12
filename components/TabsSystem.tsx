@@ -3,7 +3,7 @@
 // components/TabsSystem.tsx
 // Sistema de tabs interactivo con estado client-side
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import type { Section } from '@/types/content';
 import VideoEmbed from './VideoEmbed';
 import MarkdownContent from './MarkdownContent';
@@ -12,12 +12,41 @@ import NotesModal from './NotesModal';
 interface TabsSystemProps {
   section: Section;
   className?: string;
+  // Información contextual para el modal
+  subjectName?: string;
+  subjectIcon?: string;
+  unitTitle?: string;
+  // Para navegación global
+  allSections?: Section[];
 }
 
-export default function TabsSystem({ section, className = '' }: TabsSystemProps) {
+export default function TabsSystem({ section, className = '', subjectName, subjectIcon, unitTitle, allSections = [] }: TabsSystemProps) {
   const [activeTabId, setActiveTabId] = useState(section.tabs[0]?.id || '');
   // Modal de notas de clase por pestaña activa
   const [isNotesOpen, setIsNotesOpen] = useState(false);
+
+  // Crear lista plana de todas las tabs de todas las secciones para navegación global
+  const allTabs = useMemo(() => {
+    if (allSections.length === 0) return section.tabs;
+    return allSections.flatMap(sec => 
+      sec.tabs.map(tab => ({ ...tab, sectionTitle: sec.title, sectionId: sec.id }))
+    );
+  }, [allSections, section.tabs]);
+
+  // Funciones de navegación global entre todas las tabs
+  const handlePreviousTab = () => {
+    const currentIndex = allTabs.findIndex(tab => tab.id === activeTabId);
+    if (currentIndex > 0) {
+      setActiveTabId(allTabs[currentIndex - 1].id);
+    }
+  };
+
+  const handleNextTab = () => {
+    const currentIndex = allTabs.findIndex(tab => tab.id === activeTabId);
+    if (currentIndex < allTabs.length - 1) {
+      setActiveTabId(allTabs[currentIndex + 1].id);
+    }
+  };
 
 
 
@@ -52,7 +81,18 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
 
   // Overlay flotante eliminado: sin observer ni estado asociado.
 
-  const activeTab = section.tabs.find((tab) => tab.id === activeTabId);
+  // Buscar la tab activa en todas las tabs (no solo en la sección actual)
+  const activeTab = useMemo(() => {
+    // Primero buscar en allTabs si está disponible
+    if (allSections.length > 0) {
+      for (const sec of allSections) {
+        const found = sec.tabs.find((tab) => tab.id === activeTabId);
+        if (found) return found;
+      }
+    }
+    // Fallback a la sección actual
+    return section.tabs.find((tab) => tab.id === activeTabId);
+  }, [activeTabId, allSections, section.tabs]);
   const tabIds = section.tabs.map((t) => t.id);
   const activeIndex = Math.max(0, tabIds.indexOf(activeTabId));
 
@@ -357,6 +397,17 @@ export default function TabsSystem({ section, className = '' }: TabsSystemProps)
         onClose={() => setIsNotesOpen(false)}
         content={activeTab?.rawContent || activeTab?.content || ''}
         title="Notas de clase"
+        // Navegación
+        onPrevious={handlePreviousTab}
+        onNext={handleNextTab}
+        hasPrevious={allTabs.findIndex((tab: any) => tab.id === activeTabId) > 0}
+        hasNext={allTabs.findIndex((tab: any) => tab.id === activeTabId) < allTabs.length - 1}
+        // Contexto
+        subjectName={subjectName}
+        subjectIcon={subjectIcon}
+        unitTitle={unitTitle}
+        currentTabLabel={activeTab?.label}
+        sectionTitle={allTabs.find((tab: any) => tab.id === activeTabId)?.sectionTitle || section.title}
       />
     </div>
   );

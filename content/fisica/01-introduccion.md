@@ -339,102 +339,6 @@ Imagina que lanzas dardos hacia el centro de una diana:
 > 🔎 **Recordatorio:** toda medición implica un **margen de error**, pero aplicar buenas prácticas experimentales permite reducirlo significativamente.
 ```
 
-### Notación científica
-
-video:
-
-Ver en Tiktok
-
-```markdown
-# 🚀 **Notación científica**
-
----
-
-## ⚙️ **¿Por qué usar notación científica?**
-
-En física trabajamos con **cantidades muy grandes o muy pequeñas**, por ejemplo:
-
-- Masa del Sol: $1.989\times10^{30}\,\mathrm{kg}$
-- Carga de un electrón: $1.602\times10^{-19}\,\mathrm{C}$
-
-> Es incómodo y poco práctico escribir tantos ceros.  
-> Por eso usamos la **notación científica**, una manera más simple y ordenada de expresar números extremos.
-
----
-
-## 🧩 **Definición**
-
-La **notación científica** es una forma abreviada de escribir números como el producto de un número **entre 1 y 10**, multiplicado por una **potencia de 10**:
-
-$$
-N = a \times 10^n
-$$
-
-donde:
-
-- $a$ → número decimal tal que $1 \leq a < 10$  
-  (es decir, **una sola cifra distinta de cero antes del punto decimal**)
-- $n$ → exponente entero que indica **cuántos lugares se movió el punto decimal**
-
----
-
-## 🔼 **Si el número es grande**
-
-El exponente $n$ es **positivo**,  
-porque movemos el punto decimal **hacia la izquierda**.
-
-**Ejemplo:**
-
-$$
-1\,500\,000 = 1.5\times10^6
-$$
-
-> Se movió el punto **6 lugares hacia la izquierda**.
-
----
-
-## 🔽 **Si el número es pequeño**
-
-El exponente $n$ es **negativo**,  
-porque movemos el punto decimal **hacia la derecha**.
-
-**Ejemplo:**
-
-$$
-0.00032 = 3.2\times10^{-4}
-$$
-
-> Se movió el punto **4 lugares hacia la derecha**.
-
----
-
-## 🧮 **Ejemplos mixtos**
-
-| **Número decimal** | **Notación científica** | **Movimiento del punto** |
-|:--------------------|:------------------------|:-------------------------|
-| 45 000 | $4.5\times10^4$ | 4 lugares a la izquierda |
-| 0.00076 | $7.6\times10^{-4}$ | 4 lugares a la derecha |
-| 3 000 000 000 | $3.0\times10^9$ | 9 lugares a la izquierda |
-| 0.00420 | $4.20\times10^{-3}$ | 3 lugares a la derecha |
-
----
-
-## 📏 **Ventajas**
-
-- Facilita las **operaciones matemáticas** con números muy grandes o muy pequeños.  
-- Permite **comparar órdenes de magnitud** de forma rápida.  
-- Indica con claridad la **precisión de una medición** (cifras significativas).  
-- Expresa los resultados de manera **breve, ordenada y universal**.
-
----
-
-## 🧾 **Conclusión**
-
-La **notación científica** simplifica el trabajo con números extremos, manteniendo el número base entre **1 y 10** y expresando la escala mediante potencias de diez.  
-Esto permite **mayor claridad, precisión y uniformidad** en los resultados, preparando el camino para el estudio de las **cifras significativas** y la **precisión experimental**.
-
-```
-
 ### Cifras significativas
 
 video: 
@@ -551,21 +455,911 @@ Al limitar cifras en un resultado:
 
 ```
 
-## Conversión de unidades
+## Notación científica
 
-### Método de factores de conversión
+### Notación científica
 
 video:
 
 Ver en Tiktok
 
 ```markdown
+# 🚀 **Notación científica**
+
+---
+
+## 📘 **¿Qué es la notación científica?**
+
+La **notación científica** es una forma de **escribir números muy grandes o muy pequeños**  
+de manera **más corta, ordenada y práctica**.  
+
+Consiste en expresar un número como el producto de un **número base** (entre 1 y 9)  
+multiplicado por una **potencia de diez**, que indica cuántas veces se ha movido el punto decimal.
+
+> En otras palabras, la notación científica nos permite representar magnitudes extremas  
+> sin perder precisión y evitando escribir muchos ceros.
+
+**Ejemplo general:**
+
+$$
+N = a\times10^n
+$$
+
+donde:
+- $a$ es el número base, con $1 \leq a < 10$  
+- $n$ es un número entero (positivo o negativo) que indica el movimiento del punto decimal
+
+---
+
+## ⚙️ **¿Por qué usar notación científica?**
+
+En física trabajamos con **cantidades muy grandes o muy pequeñas**, por ejemplo:
+
+- Masa del Sol: $1.989\times10^{30}\,\mathrm{kg}$
+- Carga de un electrón: $1.602\times10^{-19}\,\mathrm{C}$
+
+> Es incómodo y poco práctico escribir tantos ceros.  
+> Por eso usamos la **notación científica**, una manera más simple y ordenada de expresar números extremos.
+
+---
+
+## 🧩 **Definición**
+
+La **notación científica** es una forma abreviada de escribir números como el producto de un número **entre 1 y 10**, multiplicado por una **potencia de 10**:
+
+$$
+N = a \times 10^n
+$$
+
+donde:
+
+- $a$ → número decimal tal que $1 \leq a < 10$  
+  (es decir, **una sola cifra distinta de cero antes del punto decimal**)  
+- $n$ → exponente entero que indica **cuántos lugares se movió el punto decimal**
+
+---
+
+## 🔼 **Si el número es grande**
+
+El exponente $n$ es **positivo**,  
+porque movemos el punto decimal **hacia la izquierda**.
+
+**Ejemplo:**
+
+$$
+1\,500\,000 = 1.5\times10^6
+$$
+
+> Se movió el punto **6 lugares hacia la izquierda**.
+
+---
+
+## 🔽 **Si el número es pequeño**
+
+El exponente $n$ es **negativo**,  
+porque movemos el punto decimal **hacia la derecha**.
+
+**Ejemplo:**
+
+$$
+0.00032 = 3.2\times10^{-4}
+$$
+
+> Se movió el punto **4 lugares hacia la derecha**.
+
+---
+
+## 🧮 **Ejemplos mixtos**
+
+| **Número decimal** | **Notación científica** | **Movimiento del punto** |
+|:--------------------|:------------------------|:-------------------------|
+| 45 000 | $4.5\times10^4$ | 4 lugares a la izquierda |
+| 0.00076 | $7.6\times10^{-4}$ | 4 lugares a la derecha |
+| 3 000 000 000 | $3.0\times10^9$ | 9 lugares a la izquierda |
+| 0.00420 | $4.20\times10^{-3}$ | 3 lugares a la derecha |
+
+---
+
+## 📏 **Ventajas**
+
+- Facilita las **operaciones matemáticas** con números muy grandes o muy pequeños.  
+- Permite **comparar órdenes de magnitud** de forma rápida.  
+- Indica con claridad la **precisión de una medición** (cifras significativas).  
+- Expresa los resultados de manera **breve, ordenada y universal**.
+
+---
+
+## 🧾 **Conclusión**
+
+La **notación científica** simplifica el trabajo con números extremos,  
+manteniendo el número base entre **1 y 9** y expresando la escala mediante potencias de diez.  
+Esto permite **mayor claridad, precisión y uniformidad** en los resultados,  
+preparando el camino para el estudio de las **cifras significativas** y la **precisión experimental**.
 
 ```
 
-### Ejercicios
+### Forma estándar y notación científica
 
-### Factores de conversión compuestos - Ej. 1
+video:
+
+Ver en Tiktok
+
+```markdown
+## 🧮 **Conversión entre forma estándar y notación científica**
+
+En esta sección aprenderás a **convertir un número común (forma estándar)** en **notación científica**,  
+y también cómo **volver** de la notación científica a la **forma decimal original**.
+
+---
+
+### 🔹 **1. De forma estándar a notación científica**
+
+Para convertir un número común en notación científica:
+
+1. Coloca el punto decimal de modo que quede **una sola cifra distinta de cero antes del punto**.  
+2. Cuenta **cuántos lugares se movió el punto**:  
+   - Si se movió **a la izquierda**, el exponente de 10 es **positivo**.  
+   - Si se movió **a la derecha**, el exponente de 10 es **negativo**.  
+3. Escribe el número en la forma $a\times10^n$.
+
+---
+
+#### ✏️ **Ejemplo 1: número grande**
+
+Convierte $4500000$ a notación científica.
+
+**Solución paso a paso:**
+
+1. Mueve el punto decimal después del primer dígito no nulo:  
+   $4.5$
+2. Contamos los lugares movidos: **6 lugares a la izquierda**.  
+3. El exponente será positivo: $n = +6$.
+
+$$
+4500000 = 4.5\times10^6
+$$
+
+---
+
+#### ✏️ **Ejemplo 2: número pequeño**
+
+Convierte $0.00037$ a notación científica.
+
+**Solución paso a paso:**
+
+1. Mueve el punto decimal hasta después del primer dígito no nulo:  
+   $3.7$
+2. Se movió **4 lugares a la derecha**, por lo tanto el exponente será negativo: $n = -4$.
+
+$$
+0.00037 = 3.7\times10^{-4}
+$$
+
+---
+
+### 🔹 **2. De notación científica a forma estándar**
+
+Para convertir un número expresado como $a\times10^n$ a su forma decimal:
+
+1. Si el exponente $n$ es **positivo**, mueve el punto decimal **a la derecha** $n$ lugares.  
+2. Si el exponente $n$ es **negativo**, mueve el punto decimal **a la izquierda** $n$ lugares.  
+3. Completa con ceros si es necesario.
+
+---
+
+#### ✏️ **Ejemplo 3: exponente positivo**
+
+Convierte $3.25\times10^4$ a forma estándar.
+
+**Solución paso a paso:**
+
+1. El exponente $n=4$ indica que se mueve el punto **4 lugares a la derecha**.  
+2. Desplazamos el punto:  
+   $3.25 \rightarrow 32500$
+
+$$
+3.25\times10^4 = 32500
+$$
+
+---
+
+#### ✏️ **Ejemplo 4: exponente negativo**
+
+Convierte $6.5\times10^{-3}$ a forma estándar.
+
+**Solución paso a paso:**
+
+1. El exponente $n=-3$ indica que se mueve el punto **3 lugares a la izquierda**.  
+2. Colocamos el punto:  
+   $6.5 \rightarrow 0.0065$
+
+$$
+6.5\times10^{-3} = 0.0065
+$$
+
+---
+
+### 💡 **Resumen**
+
+| **Conversión** | **Movimiento del punto decimal** | **Ejemplo** |
+|:----------------|:---------------------------------|:-------------|
+| De número grande → notación científica | A la izquierda → exponente positivo | $4500000 = 4.5\times10^6$ |
+| De número pequeño → notación científica | A la derecha → exponente negativo | $0.00037 = 3.7\times10^{-4}$ |
+| De notación científica → forma estándar (n positivo) | A la derecha | $3.25\times10^4 = 32500$ |
+| De notación científica → forma estándar (n negativo) | A la izquierda | $6.5\times10^{-3} = 0.0065$ |
+
+---
+
+> 📘 **En conclusión:**  
+> La notación científica permite expresar cualquier número como el producto de un número base entre **1 y 9** multiplicado por una potencia de 10.  
+> Saber convertir **en ambas direcciones** es esencial para comprender las operaciones y comparaciones con magnitudes muy grandes o muy pequeñas.
+
+```
+
+### Suma y resta en notación científica
+
+video:
+
+Ver en Tiktok
+
+```markdown
+## ➕ **Suma y resta en notación científica**
+
+En notación científica, **no se pueden sumar o restar directamente** números si sus potencias de 10 son diferentes.  
+Primero es necesario que ambos números tengan **el mismo exponente**.
+
+---
+
+### ⚙️ **Regla general**
+
+Para sumar o restar:
+
+1. **Igualar los exponentes** de 10 (ajustando uno de los números).  
+2. **Operar los números base** (sumar o restar).  
+3. **Ajustar el resultado final** para que el número base quede entre 1 y 9.  
+4. **Conservar el exponente común** (modificado si el ajuste lo requiere).
+
+$$
+(a\times10^n) + (b\times10^n) = (a+b)\times10^n
+$$
+
+$$
+(a\times10^n) - (b\times10^n) = (a-b)\times10^n
+$$
+
+---
+
+### ✏️ **Ejemplo 1: Suma con exponentes distintos**
+
+Suma los siguientes números:
+
+$$
+(3.2\times10^5) + (4.8\times10^4)
+$$
+
+**Solución paso a paso:**
+
+1. Los exponentes son diferentes ($5$ y $4$).  
+   Igualamos los exponentes expresando ambos con $10^5$:
+
+   $$
+   4.8\times10^4 = 0.48\times10^5
+   $$
+
+2. Sumamos los números base:
+
+   $$
+   3.2\times10^5 + 0.48\times10^5 = (3.68)\times10^5
+   $$
+
+3. El número base $3.68$ ya está entre 1 y 9,  
+   así que el resultado final es:
+
+   $$
+   \boxed{3.68\times10^5}
+   $$
+
+---
+
+### ✏️ **Ejemplo 2: Resta con números pequeños**
+
+Resta los siguientes números:
+
+$$
+(2.3\times10^{-3}) - (1.1\times10^{-2})
+$$
+
+**Solución paso a paso:**
+
+1. Igualamos los exponentes.  
+   Ambos deben tener $10^{-2}$, así que reescribimos:
+
+   $$
+   2.3\times10^{-3} = 0.23\times10^{-2}
+   $$
+
+2. Restamos los números base:
+
+   $$
+   (0.23 - 1.1)\times10^{-2} = (-0.87)\times10^{-2}
+   $$
+
+3. Ajustamos el número base para que quede entre 1 y 9:  
+   movemos el punto una posición a la derecha y reducimos el exponente en 1.
+
+   $$
+   (-0.87)\times10^{-2} = (-8.7)\times10^{-3}
+   $$
+
+4. Resultado final:
+
+   $$
+   \boxed{-8.7\times10^{-3}}
+   $$
+
+---
+
+### 💡 **Resumen visual**
+
+| **Caso** | **Qué se hace** | **Ejemplo simplificado** | **Resultado** |
+|:----------|:----------------|:--------------------------|:--------------|
+| Exponentes iguales | Se suman o restan directamente | $(5.2+1.3)\times10^4$ | $6.5\times10^4$ |
+| Exponentes distintos | Se ajusta uno de los números | $(3.2\times10^5)+(4.8\times10^4)$ | $3.68\times10^5$ |
+| Resultado menor que 1 | Se ajusta exponente y base | $(-0.87)\times10^{-2}$ | $-8.7\times10^{-3}$ |
+
+---
+
+> 📘 **En resumen:**  
+> Para sumar o restar en notación científica, **igualar los exponentes es esencial**.  
+> Luego, se realiza la operación con los números base y se ajusta el resultado  
+> para que el número base quede entre **1 y 9**, manteniendo la coherencia con la notación científica.
+```
+
+### Multiplicación y división en notación científica
+
+video:
+
+Ver en Tiktok
+
+```markdown
+## ✖️➗ **Multiplicación y división en notación científica**
+
+La notación científica facilita las operaciones con números muy grandes o muy pequeños,  
+ya que permite **trabajar por separado** con los números base y con las potencias de 10.
+
+---
+
+### ⚙️ **Regla general de multiplicación**
+
+Para multiplicar dos números en notación científica:
+
+1. Multiplica los **números base**.  
+2. **Suma los exponentes** de 10.  
+3. Ajusta el número base si es necesario para que quede entre 1 y 9.
+
+$$
+(a\times10^n)\times(b\times10^m) = (a\cdot b)\times10^{n+m}
+$$
+
+---
+
+#### ✏️ **Ejemplo 1: Multiplicación**
+
+Multiplica los siguientes números:
+
+$$
+(2.5\times10^{3})\times(4.0\times10^{2})
+$$
+
+**Solución paso a paso:**
+
+1. Multiplicamos los números base:  
+   $2.5\times4.0=10.0$
+
+2. Sumamos los exponentes:  
+   $3+2=5$
+
+3. El número base $10.0$ no está entre 1 y 9,  
+   así que movemos el punto una posición a la izquierda y aumentamos el exponente en 1:
+
+   $$
+   10.0\times10^{5} = 1.0\times10^{6}
+   $$
+
+**Resultado final:**
+
+$$
+\boxed{1.0\times10^{6}}
+$$
+
+---
+
+### ⚙️ **Regla general de división**
+
+Para dividir dos números en notación científica:
+
+1. Divide los **números base**.  
+2. **Resta los exponentes** del numerador y denominador.  
+3. Ajusta el número base para que quede entre 1 y 9.
+
+$$
+\dfrac{a\times10^{n}}{b\times10^{m}} = \left(\dfrac{a}{b}\right)\times10^{\,n-m}
+$$
+
+---
+
+#### ✏️ **Ejemplo 2: División**
+
+Divide los siguientes números:
+
+$$
+\dfrac{6.0\times10^{8}}{3.0\times10^{4}}
+$$
+
+**Solución paso a paso:**
+
+1. Dividimos los números base:  
+   $6.0\div3.0=2.0$
+
+2. Restamos los exponentes:  
+   $8-4=4$
+
+3. El número base $2.0$ ya está entre 1 y 9, por lo tanto el resultado es:
+
+$$
+\boxed{2.0\times10^{4}}
+$$
+
+---
+
+### 💡 **Resumen visual**
+
+| **Operación** | **Regla** | **Ejemplo** | **Resultado** |
+|:---------------|:-----------|:-------------|:--------------|
+| Multiplicación | $(a\times10^n)(b\times10^m)=(a\cdot b)\times10^{n+m}$ | $(2.5\times10^3)(4.0\times10^2)$ | $1.0\times10^6$ |
+| División | $\dfrac{a\times10^n}{b\times10^m}=\left(\dfrac{a}{b}\right)\times10^{n-m}$ | $\dfrac{6.0\times10^8}{3.0\times10^4}$ | $2.0\times10^4$ |
+
+---
+
+> 📘 **En resumen:**  
+> En la **multiplicación**, se **suman los exponentes** de 10.  
+> En la **división**, se **restan los exponentes**.  
+> En ambos casos, asegúrate de que el número base esté entre **1 y 9** antes de escribir el resultado final.
+
+```
+
+### Taller: Notación científica
+
+video:
+
+Ver en Tiktok
+
+```markdown
+# 🧪 **Taller: Operaciones con notación científica**
+
+> **Instrucciones generales:**  
+> - Escribe todos los resultados en **notación científica**, con el número base $a$ tal que $1 \leq a < 10$.  
+> - Usa potencias de 10 con su exponente **positivo o negativo** según corresponda.  
+> - Redondea los resultados a **dos cifras significativas** salvo que se indique lo contrario.  
+> - Recuerda que el número base solo puede tener **una cifra distinta de cero antes del punto decimal**.
+
+---
+
+## 🧩 **Parte 1 — De forma estándar a notación científica**
+
+Convierte los siguientes números a notación científica.
+
+1. $1250000$  
+2. $0.000045$  
+3. $45200$  
+4. $0.00081$  
+5. $0.00320$
+
+> 💡 *Recuerda:* mueve el punto decimal hasta dejar **una sola cifra distinta de cero antes del punto**.
+
+---
+
+## 🔁 **Parte 2 — De notación científica a forma estándar**
+
+Expresa en forma decimal (extendida) los siguientes números:
+
+6. $4.2\times10^3$  
+7. $7.5\times10^{-4}$  
+8. $1.09\times10^6$  
+9. $3.2\times10^{-2}$  
+10. $6.7\times10^7$
+
+> 💡 *Tip:* si el exponente es positivo, mueve el punto **a la derecha**;  
+> si es negativo, muévelo **a la izquierda**.
+
+---
+
+## ➕ **Parte 3 — Suma y resta en notación científica**
+
+Para sumar o restar, primero **igualar los exponentes** de 10, luego operar los números base.
+
+11. $(3.2\times10^5) + (4.8\times10^4)$  
+12. $(7.5\times10^6) - (2.0\times10^5)$  
+13. $(2.3\times10^{-3}) + (1.1\times10^{-2})$  
+14. $(9.8\times10^3) - (7.5\times10^2)$  
+15. $(5.4\times10^{-4}) + (8.0\times10^{-5})$
+
+> 💡 *Ejemplo:*  
+> $(3.2\times10^5) + (4.8\times10^4) = (3.2\times10^5) + (0.48\times10^5)$  
+> $= 3.68\times10^5$
+
+---
+
+## ✖️ **Parte 4 — Multiplicación en notación científica**
+
+Multiplica los números base y **suma los exponentes** de 10.
+
+16. $(2.5\times10^{3})\times(4.0\times10^{2})$  
+17. $(3.6\times10^{-4})\times(2.0\times10^{5})$  
+18. $(6.0\times10^{1})\times(1.5\times10^{-3})$  
+19. $(9.0\times10^{2})\times(7.0\times10^{3})$  
+20. $(4.5\times10^{-2})\times(8.0\times10^{-6})$
+
+> 💡 **Regla:**
+>
+> $$
+> (a\times10^{n})(b\times10^{m})=(a\cdot b)\times10^{\,n+m}
+> $$
+
+> **Ejemplo guiado:**
+>
+> $$
+> (3.2\times10^{4})(2.0\times10^{3})=(6.4)\times10^{7}=6.4\times10^{7}
+> $$
+
+---
+
+## ➗ **Parte 5 — División en notación científica**
+
+Divide los números base y **resta los exponentes**.
+
+21. $\dfrac{6.0\times10^{8}}{3.0\times10^{4}}$  
+22. $\dfrac{4.5\times10^{-3}}{1.5\times10^{-6}}$  
+23. $\dfrac{2.4\times10^{7}}{4.0\times10^{2}}$  
+24. $\dfrac{5.0\times10^{-5}}{2.5\times10^{-3}}$  
+25. $\dfrac{8.1\times10^{9}}{9.0\times10^{3}}$
+
+> 💡 **Regla:**
+>
+> $$
+> \frac{a\times10^{n}}{\,b\times10^{m}\,}=\left(\frac{a}{b}\right)\times10^{\,n-m}
+> $$
+
+> **Ejemplo guiado:**
+>
+> $$
+> \frac{9.0\times10^{5}}{3.0\times10^{2}}=(3.0)\times10^{3}=3.0\times10^{3}
+> $$
+
+---
+
+## 🧠 **Parte 6 — Aplicaciones y comparación de magnitudes**
+
+26. La velocidad de la luz es $3.0\times10^8\,\mathrm{m/s}$  
+    y la del sonido es $3.4\times10^2\,\mathrm{m/s}$.  
+    ¿Cuántas veces más rápida es la luz que el sonido?
+
+27. La masa del Sol es $1.99\times10^{30}\,\mathrm{kg}$  
+    y la masa de la Tierra es $5.97\times10^{24}\,\mathrm{kg}$.  
+    ¿Cuántas veces más masivo es el Sol?
+
+28. La densidad del agua es $1.0\times10^{3}\,\mathrm{kg/m^3}$  
+    y la del aire es $1.2\times10^{0}\,\mathrm{kg/m^3}$.  
+    ¿Cuál es la razón entre ambas densidades?
+
+29. La carga de un electrón es $1.602\times10^{-19}\,\mathrm{C}$  
+    ¿Cuál sería la carga total de $5.0\times10^{18}$ electrones?
+
+30. Una lámpara emite $2.4\times10^{5}\,\mathrm{J}$ de energía  
+    en $8.0\times10^{2}\,\mathrm{s}$. Calcula la potencia promedio en $\mathrm{W}$  
+    usando notación científica.
+
+> 💡 *Consejo:*  
+> En estas situaciones, **usa las reglas de multiplicación o división** según corresponda,  
+> y verifica que el número base siempre quede **entre 1 y 10**.
+
+---
+
+## 📘 **Conclusión del taller**
+
+- La notación científica permite manejar **números extremos** de forma compacta y ordenada.  
+- En las operaciones:
+  - se **suman exponentes** al multiplicar,  
+  - se **restan exponentes** al dividir,  
+  - y se **igualan exponentes** al sumar o restar.  
+- Siempre verifica que el número base quede **entre 1 y 9**.
+
+```
+
+## Conversión de unidades
+
+### Método de factores de los conversión
+
+video:
+
+Ver en Tiktok
+
+```markdown
+# 🧪 **Factores de conversión: qué son y cómo usarlos**
+
+Los **factores de conversión** son **relaciones de equivalencia entre dos unidades que representan la misma magnitud física**, por ejemplo:
+
+$$
+1\,\mathrm{lb} = 0.45359237\,\mathrm{kg}
+$$
+
+Estas relaciones permiten **expresar una cantidad en diferentes unidades sin alterar su valor físico**, solo cambiando la forma en que se describe numéricamente.
+
+Aplicar un factor de conversión consiste en **multiplicar la cantidad original por una relación de unidades equivalente**, dispuesta de tal forma que la unidad inicial **se cancele** y la unidad deseada **permanezca**.  
+De este modo, las unidades se comportan como variables algebraicas, garantizando coherencia y corrección en el resultado final.
+
+---
+
+## ⚙️ **Ejercicio 1 — Masa**
+
+Convertir $12.5\,\mathrm{lb}$ a $\mathrm{kg}$.
+
+$$
+1\,\mathrm{lb} = 0.45359237\,\mathrm{kg}
+$$
+
+**Paso a paso:**
+
+1️⃣ **Dato:** $12.5\,\mathrm{lb}$  
+2️⃣ **Factor de conversión:** $\dfrac{0.45359237\,\mathrm{kg}}{1\,\mathrm{lb}}$  
+3️⃣ **Multiplicamos y cancelamos unidades:**
+
+$$
+12.5\,\mathrm{lb} \times \dfrac{0.45359237\,\mathrm{kg}}{1\,\mathrm{lb}} = 5.669904625\,\mathrm{kg}
+$$
+
+$$
+\boxed{5.67\,\mathrm{kg}}
+$$
+
+---
+
+## ⚙️ **Ejercicio 2 — Tiempo**
+
+Convertir $3.6\,\mathrm{h}$ a $\mathrm{s}$.
+
+$$
+1\,\mathrm{h} = 3600\,\mathrm{s}
+$$
+
+**Paso a paso:**
+
+1️⃣ **Dato:** $3.6\,\mathrm{h}$  
+2️⃣ **Factor de conversión:** $\dfrac{3600\,\mathrm{s}}{1\,\mathrm{h}}$  
+3️⃣ **Multiplicamos y cancelamos unidades:**
+
+$$
+3.6\,\mathrm{h} \times \dfrac{3600\,\mathrm{s}}{1\,\mathrm{h}} = 12960\,\mathrm{s}
+$$
+
+$$
+\boxed{1.296\times10^{4}\,\mathrm{s}}
+$$
+
+---
+
+## ⚙️ **Ejercicio 3 — Volumen**
+
+Convertir $750\,\mathrm{L}$ a $\mathrm{m^3}$.
+
+$$
+1000\,\mathrm{L} = 1\,\mathrm{m^3}
+$$
+
+**Paso a paso:**
+
+1️⃣ **Dato:** $750\,\mathrm{L}$  
+2️⃣ **Factor de conversión:** $\dfrac{1\,\mathrm{m^3}}{1000\,\mathrm{L}}$  
+3️⃣ **Multiplicamos y cancelamos unidades:**
+
+$$
+750\,\mathrm{L} \times \dfrac{1\,\mathrm{m^3}}{1000\,\mathrm{L}} = 0.75\,\mathrm{m^3}
+$$
+
+$$
+\boxed{0.75\,\mathrm{m^3}}
+$$
+
+---
+
+> 💡 **Conclusión:**  
+> Los factores de conversión permiten cambiar unidades sin alterar el valor físico de una magnitud.  
+> Basta multiplicar por una **razón de equivalencia** y cancelar las unidades correctamente.
+
+```
+
+### Taller 1
+
+video:
+
+Ver en Tiktok
+
+```markdown
+# 🧪 **Taller: Factores de conversión simples**
+
+> **Instrucciones:**  
+> En cada ejercicio, realiza la conversión **usando únicamente las equivalencias indicadas** (y solo esas).  
+> Escribe la cadena de factores y **cancela unidades** hasta llegar a la unidad objetivo.
+
+---
+
+### ⚙️ **Ejercicio 1 — Longitud**
+
+Convertir $7.2\,\mathrm{km}$ a $\mathrm{m}$.
+
+$$
+1\,\mathrm{km} = 1000\,\mathrm{m}
+$$
+
+---
+
+### ⚙️ **Ejercicio 2 — Masa**
+
+Convertir $0.035\,\mathrm{kg}$ a $\mathrm{g}$.
+
+$$
+1\,\mathrm{kg} = 1000\,\mathrm{g}
+$$
+
+---
+
+### ⚙️ **Ejercicio 3 — Tiempo**
+
+Convertir $3.5\,\mathrm{h}$ a $\mathrm{s}$.
+
+$$
+1\,\mathrm{h} = 3600\,\mathrm{s}
+$$
+
+---
+
+### ⚙️ **Ejercicio 4 — Energía**
+
+Convertir $2.4\,\mathrm{MJ}$ a $\mathrm{J}$.
+
+$$
+1\,\mathrm{MJ} = 10^{6}\,\mathrm{J}
+$$
+
+---
+
+### ⚙️ **Ejercicio 5 — Volumen**
+
+Convertir $0.75\,\mathrm{m^3}$ a $\mathrm{cm^3}$.
+
+$$
+1\,\mathrm{m} = 100\,\mathrm{cm}
+$$
+
+> 💡 **Ten en cuenta:**  
+> Al ser una conversión de volumen, **debes elevar al cubo**:
+>
+> $$
+> (1\,\mathrm{m})^3 = (100\,\mathrm{cm})^3
+> $$
+
+---
+
+### ⚙️ **Ejercicio 6 — Velocidad**
+
+Convertir $90\,\mathrm{km/h}$ a $\mathrm{m/s}$.
+
+$$
+1\,\mathrm{km} = 1000\,\mathrm{m} \qquad 1\,\mathrm{h} = 3600\,\mathrm{s}
+$$
+
+> 💡 **Consejo:**  
+> Aplica ambos factores (para distancia y tiempo) de forma que las unidades $\mathrm{km}$ y $\mathrm{h}$ se cancelen.
+
+---
+
+### ⚙️ **Ejercicio 7 — Área**
+
+Convertir $4500\,\mathrm{cm^2}$ a $\mathrm{m^2}$.
+
+$$
+1\,\mathrm{m} = 100\,\mathrm{cm}
+$$
+
+> 💡 **Recuerda:**  
+> Al ser una conversión de área, **debes elevar al cuadrado**:
+>
+> $$
+> (1\,\mathrm{m})^2 = (100\,\mathrm{cm})^2
+> $$
+
+---
+
+### ⚙️ **Ejercicio 8 — Volumen**
+
+Convertir $1\,250\,000\,\mathrm{mm^3}$ a $\mathrm{m^3}$.
+
+$$
+1\,\mathrm{m} = 1000\,\mathrm{mm}
+$$
+
+> 💡 **Recuerda:**  
+> En este caso también debes **elevar al cubo**:
+>
+> $$
+> (1\,\mathrm{m})^3 = (1000\,\mathrm{mm})^3
+> $$
+
+---
+
+### ⚙️ **Ejercicio 9 — Flujo o tasa**
+
+Convertir $120\,\mathrm{m/min}$ a $\mathrm{m/s}$.
+
+$$
+1\,\mathrm{min} = 60\,\mathrm{s}
+$$
+
+> 💡 **Consejo:**  
+> Como el tiempo está en el denominador, **el factor de conversión debe colocarse invertido** para que las unidades de $\mathrm{min}$ se cancelen correctamente.
+
+---
+
+### ⚙️ **Ejercicio 10 — Velocidad angular**
+
+Convertir $6000\,\mathrm{rev/min}$ a $\mathrm{rad/s}$.
+
+$$
+1\,\mathrm{rev} = 2\pi\,\mathrm{rad} \qquad 1\,\mathrm{min} = 60\,\mathrm{s}
+$$
+
+> 💡 **Consejo:**  
+> Una revolución equivale a $2\pi$ radianes; recuerda convertir tanto **las vueltas** como **el tiempo** para obtener $\mathrm{rad/s}$.
+
+---
+
+### ⚙️ **Ejercicio 11 — Volumen**
+
+Convertir $12.5\,\mathrm{L}$ a $\mathrm{m^3}$.
+
+$$
+1000\,\mathrm{L} = 1\,\mathrm{m^3}
+$$
+
+---
+
+### ⚙️ **Ejercicio 12 — Presión**
+
+Convertir $2.5\,\mathrm{bar}$ a $\mathrm{kPa}$.
+
+$$
+1\,\mathrm{bar} = 100\,\mathrm{kPa}
+$$
+
+---
+
+### ⚙️ **Ejercicio 13 — Energía**
+
+Convertir $300\,\mathrm{cal}$ a $\mathrm{J}$.
+
+$$
+1\,\mathrm{cal} = 4.184\,\mathrm{J}
+$$
+
+---
+
+> 📘 **Nota final:**  
+> - En los ejercicios **5, 7 y 8**, eleva el factor lineal al **cuadrado o cubo** según corresponda.  
+> - En los ejercicios **6, 9 y 10**, ten en cuenta que hay **dos tipos de unidades** (distancia y tiempo, o vueltas y tiempo), por lo que deberás aplicar **más de un factor de conversión** para obtener la unidad final correcta.
+
+```
+
+### Factores de conversión - Ejemplo 2
 
 video: https://youtu.be/QudhDwJRmZ0?si=wFMB9qnCMpNhULGR
 
@@ -586,7 +1380,7 @@ $$
 
 ```
 
-### Factores de conversión compuestos - Ej. 2
+### Factores de conversión - Ejemplo 3
 
 video: https://youtu.be/rW2oJDXcgzY?si=S0UOaEN7J6Gau7IM
 
@@ -607,18 +1401,16 @@ $$
 
 ```
 
-### Taller - Factores de conversión compuestos
+### Taller 2
 
 ```markdown
 # 🧪 **Taller: Factores de conversión compuestos (con unidades intermedias)**
 
 > **Instrucciones:** En cada ejercicio, realiza la conversión **usando únicamente las equivalencias indicadas** (y solo esas).  
-> Escribe la cadena de factores y **cancela unidades** hasta llegar a la unidad objetivo.  
-> Usa **coma decimal** en tus cálculos si lo prefieres, pero en el **LaTeX** usa **punto decimal**.
-
+> Escribe la cadena de factores y **cancela unidades** hasta llegar a la unidad objetivo.
 ---
 
-### ⚙️ **Ejercicio 3 — Longitud**
+### ⚙️ **Ejercicio 1 — Longitud**
 
 Convertir $25\,\mathrm{mi}$ a $\mathrm{m}$
 
@@ -632,7 +1424,7 @@ $$
 
 ---
 
-### ⚙️ **Ejercicio 4 — Velocidad**
+### ⚙️ **Ejercicio 2 — Velocidad**
 
 Convertir $90\,\dfrac{\mathrm{km}}{\mathrm{h}}$ a $\dfrac{\mathrm{m}}{\mathrm{s}}$
 
@@ -646,7 +1438,7 @@ $$
 
 ---
 
-### ⚙️ **Ejercicio 5 — Densidad**
+### ⚙️ **Ejercicio 3 — Densidad**
 
 Convertir $7.5\,\dfrac{\mathrm{g}}{\mathrm{cm}^3}$ a $\dfrac{\mathrm{kg}}{\mathrm{m}^3}$
 
@@ -664,7 +1456,7 @@ $$
 
 ---
 
-### ⚙️ **Ejercicio 6 — Caudal volumétrico**
+### ⚙️ **Ejercicio 4 — Caudal volumétrico**
 
 Convertir $3.2\,\dfrac{\mathrm{L}}{\mathrm{min}}$ a $\dfrac{\mathrm{m}^3}{\mathrm{s}}$
 
@@ -678,7 +1470,7 @@ $$
 
 ---
 
-### ⚙️ **Ejercicio 7 — Área**
+### ⚙️ **Ejercicio 5 — Área**
 
 Convertir $12\,\mathrm{in}^2$ a $\mathrm{m}^2$
 
@@ -696,7 +1488,7 @@ $$
 
 ---
 
-### ⚙️ **Ejercicio 8 — Volumen**
+### ⚙️ **Ejercicio 6 — Volumen**
 
 Convertir $5.0\,\mathrm{gal\,(US)}$ a $\mathrm{m}^3$
 
@@ -710,7 +1502,7 @@ $$
 
 ---
 
-### ⚙️ **Ejercicio 9 — Densidad**
+### ⚙️ **Ejercicio 7 — Densidad**
 
 Convertir $0.85\,\dfrac{\mathrm{kg}}{\mathrm{L}}$ a $\dfrac{\mathrm{g}}{\mathrm{cm}^3}$
 
@@ -728,7 +1520,7 @@ $$
 
 ---
 
-### ⚙️ **Ejercicio 10 — Volumen**
+### ⚙️ **Ejercicio 8 — Volumen**
 
 Convertir $2.5\,\mathrm{ft}^3$ a $\mathrm{m}^3$
 
@@ -746,7 +1538,7 @@ $$
 
 ---
 
-### ⚙️ **Ejercicio 11 — Densidad**
+### ⚙️ **Ejercicio 9 — Densidad**
 
 Convertir $0.50\,\dfrac{\mathrm{lb}}{\mathrm{ft}^3}$ a $\dfrac{\mathrm{kg}}{\mathrm{m}^3}$
 
@@ -768,7 +1560,7 @@ $$
 
 ---
 
-### ⚙️ **Ejercicio 12 — Presión**
+### ⚙️ **Ejercicio 10 — Presión**
 
 Convertir $760\,\mathrm{mmHg}$ a $\mathrm{kPa}$
 
@@ -790,7 +1582,7 @@ $$
 
 ---
 
-### ⚙️ **Ejercicio 13 — Energía**
+### ⚙️ **Ejercicio 11 — Energía**
 
 Convertir $2500\,\mathrm{cal}$ a $\mathrm{kJ}$
 
@@ -813,10 +1605,11 @@ $$
 
 En física, las magnitudes se dividen en **escalares** y **vectoriales**, según la información necesaria para describirlas por completo.
 
+---
+
 ### Magnitudes escalares
 
-Las **magnitudes escalares** se definen únicamente por **un número y una unidad de medida**.  
-No necesitan dirección ni sentido.
+Las **magnitudes escalares** se definen únicamente por **un número y una unidad de medida**. No necesitan dirección ni sentido.
 
 Por ejemplo:
 
@@ -824,8 +1617,9 @@ Por ejemplo:
 - **Masa:** $m = 2\,\mathrm{kg}$
 - **Temperatura:** $T = 25\,^\circ\mathrm{C}$
 
-En estos casos, basta con conocer el valor numérico y la unidad.  
-No tiene sentido decir que la masa o el tiempo “apuntan” hacia algún lugar.
+En estos casos, basta con conocer el valor numérico y la unidad. No tiene sentido decir que la masa o el tiempo "apuntan" hacia algún lugar.
+
+---
 
 ### Magnitudes vectoriales
 
@@ -833,31 +1627,32 @@ Las **magnitudes vectoriales**, además del número y la unidad, requieren **dir
 
 Por ejemplo:
 
-- **Desplazamiento:** indica *cuánto* y *hacia dónde* se mueve un objeto.  
-  Si una persona camina 10 metros hacia el norte, su desplazamiento es:
+- **Desplazamiento:** indica *cuánto* y *hacia dónde* se mueve un objeto. Si una persona camina 10 metros hacia el norte, su desplazamiento es:
 
-  $$
-  \vec{d} = 10\,\mathrm{m}\ \mathrm{(norte)}
-  $$
+$$
+\vec{d} = 10\,\mathrm{m}\text{ (norte)}
+$$
 
-- **Velocidad:** indica *qué tan rápido* y *en qué dirección* se mueve un cuerpo.  
-  Si un auto viaja a $60\,\mathrm{km/h}$ hacia el este, su velocidad es:
+- **Velocidad:** indica *qué tan rápido* y *en qué dirección* se mueve un cuerpo. Si un auto viaja a $60\,\mathrm{km/h}$ hacia el este, su velocidad es:
 
-  $$
-  \vec{v} = 60\,\mathrm{km/h}\ \mathrm{(este)}
-  $$
+$$
+\vec{v} = 60\,\mathrm{km/h}\text{ (este)}
+$$
 
 En cambio, la **distancia** y la **rapidez** son escalares, porque solo expresan *cuánto* se recorrió o *qué tan rápido* se mueve algo, sin importar la dirección.
+
+---
 
 ### Comparación entre escalares y vectores
 
 | Tipo de magnitud | Qué necesita para definirse | Ejemplos | Representación |
-|------------------|-----------------------------|-----------|----------------|
+|------------------|------------------------------|----------|----------------|
 | Escalar | Número y unidad | tiempo, masa, temperatura, distancia, rapidez | $5\,\mathrm{s}$, $2\,\mathrm{kg}$ |
 | Vectorial | Número, unidad, dirección y sentido | desplazamiento, velocidad, fuerza, aceleración | $\vec{v}$, flecha con dirección y sentido |
 
 > 💡 **Recuerda:**  
 > Las magnitudes vectoriales se representan con una flecha encima del símbolo, como $\vec{v}$, y gráficamente con un vector que indica su dirección y sentido.
+
 ```
 
 ### Elementos de un vector

@@ -133,7 +133,13 @@ export default async function UnitPage({ params }: PageProps) {
           <div className="space-y-6 md:space-y-10">
             {unit.sections.map((section) => (
               <section key={section.id} className="card-modern p-5 md:p-8 lg:p-10 border-l-4 border-purple-400 hover:border-purple-600 transition-colors duration-300">
-                <TabsSystem section={section} />
+                <TabsSystem 
+                  section={section}
+                  subjectName={config.name}
+                  subjectIcon={config.icon}
+                  unitTitle={unit.metadata.title}
+                  allSections={unit.sections}
+                />
               </section>
             ))}
           </div>

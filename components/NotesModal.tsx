@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState, useRef } from 'react';
 import MarkdownContent from './MarkdownContent';
 import VideoEmbed from './VideoEmbed';
 import { remark } from 'remark';
@@ -17,6 +17,17 @@ interface NotesModalProps {
   onClose: () => void;
   content: string;
   title?: string;
+  // Navegación
+  onPrevious?: () => void;
+  onNext?: () => void;
+  hasPrevious?: boolean;
+  hasNext?: boolean;
+  // Contexto
+  subjectName?: string;
+  subjectIcon?: string;
+  unitTitle?: string;
+  currentTabLabel?: string;
+  sectionTitle?: string; // Título de la sección (H2)
 }
 
 // Extrae videos de YouTube del contenido markdown
@@ -169,7 +180,21 @@ function simplifyHtml(html: string): string {
   }
 }
 
-export default function NotesModal({ isOpen, onClose, content, title = 'Notas de clase' }: NotesModalProps) {
+export default function NotesModal({ 
+  isOpen, 
+  onClose, 
+  content, 
+  title = 'Notas de clase',
+  onPrevious,
+  onNext,
+  hasPrevious = false,
+  hasNext = false,
+  subjectName,
+  subjectIcon,
+  unitTitle,
+  currentTabLabel,
+  sectionTitle
+}: NotesModalProps) {
   // Modal component for displaying class notes
   // Intentar extraer markdown del HTML (para compatibilidad con contenido antiguo)
   // o usar directamente el contenido si ya es markdown raw
@@ -235,6 +260,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
   const [htmlBefore, setHtmlBefore] = useState<string>('');
   const [htmlAfter, setHtmlAfter] = useState<string>('');
   const hasVideo = youtubeVideos.length > 0;
+  const headerRef = useRef<HTMLDivElement>(null);
 
   // Estilos del tema según el modo
   const themeStyles = useMemo(() => {
@@ -356,6 +382,13 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
     };
   }, [cleanedBefore, cleanedAfter, preprocessMath]);
 
+  // Scroll al header cuando cambia la navegación
+  useEffect(() => {
+    if (isOpen && headerRef.current) {
+      headerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [currentTabLabel, isOpen]);
+
   if (!isOpen) return null;
 
   const proseSizeClass = sizeIdx === 0 ? 'prose-sm' : sizeIdx === 2 ? 'prose-lg' : 'prose';
@@ -365,47 +398,115 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
 
-      {/* Modal */}
+      {/* Modal - Optimizado para todos los tamaños */}
       <div
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className={`absolute inset-x-4 md:inset-x-16 top-8 bottom-8 z-[65] ${themeStyles.modal} rounded-2xl shadow-2xl border overflow-hidden flex flex-col transition-all duration-300 ${isDarkMode ? 'dark-mode-modal' : ''}`}
+        className={`absolute inset-x-2 md:inset-x-8 lg:inset-x-12 top-2 md:top-4 lg:top-6 bottom-2 md:bottom-4 lg:bottom-6 z-[65] ${themeStyles.modal} rounded-xl md:rounded-2xl shadow-2xl border overflow-hidden flex flex-col transition-all duration-300 ${isDarkMode ? 'dark-mode-modal' : ''}`}
       >
-        {/* Header */}
-        <div className={`flex items-center justify-between px-4 md:px-6 py-3 border-b ${themeStyles.header}`}>
-          <div className="flex items-center gap-3">
-            <h3 className={`text-lg md:text-xl font-bold ${themeStyles.headerText}`}>{title}</h3>
+        {/* Header - Diseño mejorado y responsive */}
+        <div ref={headerRef} className={`px-3 md:px-6 py-3 md:py-4 border-b ${themeStyles.header}`}>
+          {/* Fila superior: Contexto + Controles */}
+          <div className="flex items-start justify-between gap-3 mb-4">
+            {/* Información contextual - Compacta */}
+            <div className="flex-1 min-w-0">
+              {(subjectName || unitTitle) && (
+                <div className="flex items-center gap-1.5 flex-wrap text-xs md:text-sm">
+                  {subjectIcon && <span className="text-lg md:text-xl">{subjectIcon}</span>}
+                  {subjectName && (
+                    <span className={`font-semibold truncate ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
+                      {subjectName}
+                    </span>
+                  )}
+                  {subjectName && unitTitle && (
+                    <span className={isDarkMode ? 'text-slate-600' : 'text-slate-400'}>•</span>
+                  )}
+                  {unitTitle && (
+                    <span className={`font-medium truncate ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+                      {unitTitle}
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* Controles - Compactos */}
+            <div className="flex items-center gap-1.5 flex-shrink-0">
+              <button
+                onClick={() => setIsDarkMode(!isDarkMode)}
+                className={`p-2 rounded-lg ${themeStyles.button} transition-all duration-200 hover:scale-105`}
+                title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
+                aria-label={isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+              >
+                <span className="text-lg">{isDarkMode ? '☀️' : '🌙'}</span>
+              </button>
+              <button
+                onClick={onClose}
+                aria-label="Cerrar"
+                className={`p-2 rounded-lg ${themeStyles.button} transition-all duration-200 hover:scale-105`}
+              >
+                <span className="text-lg">✕</span>
+              </button>
+            </div>
           </div>
 
-          {/* Controles */}
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className={`px-3 py-1.5 rounded-lg text-sm font-semibold ${themeStyles.button} transition-all duration-300 flex items-center gap-2`}
-              title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
-              aria-label={isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
-            >
-              {isDarkMode ? (
-                <>
-                  <span className="text-base">☀️</span>
-                  <span className="hidden sm:inline">Claro</span>
-                </>
-              ) : (
-                <>
-                  <span className="text-base">🌙</span>
-                  <span className="hidden sm:inline">Oscuro</span>
-                </>
-              )}
-            </button>
-            <button
-              onClick={onClose}
-              aria-label="Cerrar"
-              className={`px-3 py-1.5 rounded-lg text-sm font-semibold ${themeStyles.button} transition-all duration-300`}
-            >
-              ✕
-            </button>
+          {/* Jerarquía: Sección → Pestaña */}
+          <div className="mb-3 space-y-1">
+            {/* Título de la sección - Principal */}
+            <h2 className={`text-xl md:text-3xl font-bold ${themeStyles.headerText}`}>
+              {sectionTitle || title}
+            </h2>
+            
+            {/* Nombre de la pestaña - Secundario pero visible */}
+            {currentTabLabel && (
+              <div className={`flex items-center gap-2 text-sm md:text-base font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+                <span className="text-base">📍</span>
+                <span>{currentTabLabel}</span>
+              </div>
+            )}
           </div>
+
+          {/* Navegación entre tabs - Optimizada */}
+          {(hasPrevious || hasNext) && (
+            <div className="flex items-center justify-between gap-2">
+              <button
+                onClick={onPrevious}
+                disabled={!hasPrevious}
+                className={`flex items-center justify-center gap-2 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  hasPrevious
+                    ? isDarkMode
+                      ? 'bg-slate-700 hover:bg-slate-600 text-white active:scale-95'
+                      : 'bg-slate-200 hover:bg-slate-300 text-slate-700 active:scale-95'
+                    : 'bg-slate-100 text-slate-400 cursor-not-allowed opacity-40'
+                }`}
+                aria-label="Tema anterior"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                <span className="text-xs md:text-sm">Anterior</span>
+              </button>
+
+              <button
+                onClick={onNext}
+                disabled={!hasNext}
+                className={`flex items-center justify-center gap-2 px-3 md:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  hasNext
+                    ? isDarkMode
+                      ? 'bg-slate-700 hover:bg-slate-600 text-white active:scale-95'
+                      : 'bg-slate-200 hover:bg-slate-300 text-slate-700 active:scale-95'
+                    : 'bg-slate-100 text-slate-400 cursor-not-allowed opacity-40'
+                }`}
+                aria-label="Tema siguiente"
+              >
+                <span className="text-xs md:text-sm">Siguiente</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Body */}
