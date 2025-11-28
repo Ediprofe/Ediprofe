@@ -8,9 +8,49 @@ import 'katex/dist/katex.min.css'; // Estilos de KaTeX para ecuaciones matemáti
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Ediprofe',
-  description: 'Guía educativa para ciencias y matemáticas',
-  keywords: ['educación', 'química', 'física', 'matemáticas', 'ciencias'],
+  metadataBase: new URL('https://ediprofe.com'),
+  title: {
+    default: 'Ediprofe - Guía Educativa de Ciencias y Matemáticas',
+    template: '%s | Ediprofe',
+  },
+  description: 'Plataforma educativa interactiva con contenido de química, física, matemáticas y ciencias. Aprende con videos, ejercicios y recursos didácticos.',
+  keywords: ['educación', 'química', 'física', 'matemáticas', 'ciencias', 'aprendizaje', 'recursos educativos', 'guía de estudio'],
+  authors: [{ name: 'Ediprofe' }],
+  creator: 'Ediprofe',
+  publisher: 'Ediprofe',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_ES',
+    url: 'https://ediprofe.com',
+    siteName: 'Ediprofe',
+    title: 'Ediprofe - Guía Educativa de Ciencias y Matemáticas',
+    description: 'Plataforma educativa interactiva con contenido de química, física, matemáticas y ciencias.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Ediprofe - Plataforma Educativa',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ediprofe - Guía Educativa de Ciencias y Matemáticas',
+    description: 'Plataforma educativa interactiva con contenido de química, física, matemáticas y ciencias.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function RootLayout({
