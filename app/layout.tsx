@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import './globals.css';
-import 'katex/dist/katex.min.css'; // Estilos de KaTeX para ecuaciones matemáticas
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +19,36 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        {/* MathJax Configuration - Renderiza LaTeX en el cliente */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.MathJax = {
+                tex: {
+                  inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+                  displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
+                  processEscapes: true,
+                  processEnvironments: true
+                },
+                options: {
+                  skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                },
+                startup: {
+                  pageReady: () => {
+                    return MathJax.startup.defaultPageReady();
+                  }
+                }
+              };
+            `,
+          }}
+        />
+        <script
+          id="MathJax-script"
+          async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        />
+      </head>
       <body className={inter.className}>
         <header className="sticky top-0 z-50 glass-effect border-b border-slate-200/50 shadow-md backdrop-blur-lg bg-white/95">
           <div className="container mx-auto px-4 py-3 md:py-4">
@@ -54,3 +83,4 @@ export default function RootLayout({
     </html>
   );
 }
+

@@ -5,9 +5,7 @@ import MarkdownContent from './MarkdownContent';
 import VideoEmbed from './VideoEmbed';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';
 import remarkRehype from 'remark-rehype';
-import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
 import { getYouTubeId } from '@/lib/utils';
 import type { VideoLink } from '@/types/content';
@@ -306,21 +304,7 @@ export default function NotesModal({
 
   const simplifiedHtml = useMemo(() => simplifyHtml(content), [content]);
 
-  // Función para preprocesar matemáticas
-  const preprocessMath = useCallback((markdown: string): string => {
-    // Convertir $$ecuación$$ en la misma línea a formato multilínea
-    // Esto asegura que remark-math las reconozca como display math
-    return markdown.replace(/\$\$([^$]+?)\$\$/g, (match, content) => {
-      // Si ya tiene saltos de línea, dejarlo como está
-      if (content.includes('\n')) {
-        return match;
-      }
-      // Si no, convertir a formato multilínea
-      return `$$\n${content.trim()}\n$$`;
-    });
-  }, []);
-
-  // Renderizar Markdown (con títulos y ecuaciones) cuando haya bloque detectado
+  // Renderizar Markdown (MathJax se encarga del LaTeX en el cliente)
   useEffect(() => {
     let cancelled = false;
     async function renderMd() {
@@ -332,18 +316,11 @@ export default function NotesModal({
       try {
         // Renderizar la parte antes del video
         if (cleanedBefore) {
-          const processedBefore = preprocessMath(cleanedBefore);
           const resultBefore = await remark()
             .use(remarkGfm)
-            .use(remarkMath)
             .use(remarkRehype, { allowDangerousHtml: true })
-            .use(rehypeKatex, {
-              strict: false, // Permitir comandos no estándar
-              trust: true, // Permitir comandos avanzados
-              throwOnError: false // No fallar en errores de LaTeX
-            })
             .use(rehypeStringify, { allowDangerousHtml: true })
-            .process(processedBefore);
+            .process(cleanedBefore);
           if (!cancelled) {
             setHtmlBefore(resultBefore.toString());
           }
@@ -351,25 +328,17 @@ export default function NotesModal({
         
         // Renderizar la parte después del video
         if (cleanedAfter) {
-          const processedAfter = preprocessMath(cleanedAfter);
           const resultAfter = await remark()
             .use(remarkGfm)
-            .use(remarkMath)
             .use(remarkRehype, { allowDangerousHtml: true })
-            .use(rehypeKatex, {
-              strict: false, // Permitir comandos no estándar
-              trust: true, // Permitir comandos avanzados
-              throwOnError: false // No fallar en errores de LaTeX
-            })
             .use(rehypeStringify, { allowDangerousHtml: true })
-            .process(processedAfter);
+            .process(cleanedAfter);
           if (!cancelled) {
             setHtmlAfter(resultAfter.toString());
           }
         }
       } catch (err) {
         console.error('Error rendering markdown:', err);
-        // Si falla el render, mostrar texto plano
         if (!cancelled) {
           setHtmlBefore('');
           setHtmlAfter('');
@@ -380,7 +349,37 @@ export default function NotesModal({
     return () => {
       cancelled = true;
     };
-  }, [cleanedBefore, cleanedAfter, preprocessMath]);
+  }, [cleanedBefore, cleanedAfter]);
+
+  // Key para forzar re-render de MathJax
+  const mathJaxKey = `${isOpen}-${htmlBefore?.length || 0}-${htmlAfter?.length || 0}`;
+  
+  // Re-renderizar MathJax cuando cambia el contenido HTML o cuando se abre el modal
+  useEffect(() => {
+    if (!isOpen) return;
+    if (!htmlBefore && !htmlAfter) return;
+    if (typeof window === 'undefined') return;
+
+    const typesetMathJax = async () => {
+      try {
+        // Esperar a que MathJax esté completamente cargado
+        if (window.MathJax?.startup?.promise) {
+          await window.MathJax.startup.promise;
+        }
+        
+        // Ahora sí hacer el typeset
+        if (window.MathJax?.typesetPromise) {
+          await window.MathJax.typesetPromise();
+        }
+      } catch (err) {
+        console.warn('MathJax typeset error:', err);
+      }
+    };
+
+    // Pequeño delay para asegurar que el DOM esté actualizado
+    const timer = setTimeout(typesetMathJax, 150);
+    return () => clearTimeout(timer);
+  }, [mathJaxKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Scroll al header cuando cambia la navegación
   useEffect(() => {

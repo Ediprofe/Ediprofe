@@ -1,13 +1,5 @@
-En cada foto verás el error en el renderizado de ecuaciones latex bien sea en tablas, o en bloque o inline. Necesito que mires cada imagen y por favor hagas esté código más robusto para que sea cual sea la expresión de latex que se mande, esta se renderice sin errores.
+Quiero que ya con el conocimiento que tienes de este proyecto, me generes un plan para migrar este sitio y bajarle su complejidad, es decir, migrar el sitio a Mkdocs, bajo la siguiente lógica de navegación.
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
-![alt text](image-8.png)
+MATERIA -> UNIDAD -> BLOQUE -> LECCIÓN
 
-Lee el código, analízalo profundamente y por favor arregla para que ese renderizado de latex y markdown sea robusto e inteligente. Mantén las buenas prácticas.
+Que sea muy fácilmente mantenible para que yo solo tenga que pegar y copiar los contenidos que ya tengo en markdown desde mi web (que este repositorio de código) hacia el nuevo sitio en Mkdocs, manteniendo la buena experiencia para el cliente, pero tambien la buena experiencia para mí, de tal manera que yo solo tenga que alimentar los arhcivos markdown y se haga todo.
