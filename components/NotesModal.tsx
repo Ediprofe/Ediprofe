@@ -1,13 +1,11 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState, useRef } from 'react';
 import MarkdownContent from './MarkdownContent';
 import VideoEmbed from './VideoEmbed';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';
 import remarkRehype from 'remark-rehype';
-import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
 import { getYouTubeId } from '@/lib/utils';
 import type { VideoLink } from '@/types/content';
@@ -17,6 +15,17 @@ interface NotesModalProps {
   onClose: () => void;
   content: string;
   title?: string;
+  // Navegación
+  onPrevious?: () => void;
+  onNext?: () => void;
+  hasPrevious?: boolean;
+  hasNext?: boolean;
+  // Contexto
+  subjectName?: string;
+  subjectIcon?: string;
+  unitTitle?: string;
+  currentTabLabel?: string;
+  sectionTitle?: string; // Título de la sección (H2)
 }
 
 // Extrae videos de YouTube del contenido markdown
@@ -169,7 +178,21 @@ function simplifyHtml(html: string): string {
   }
 }
 
-export default function NotesModal({ isOpen, onClose, content, title = 'Notas de clase' }: NotesModalProps) {
+export default function NotesModal({ 
+  isOpen, 
+  onClose, 
+  content, 
+  title = 'Notas de clase',
+  onPrevious,
+  onNext,
+  hasPrevious = false,
+  hasNext = false,
+  subjectName,
+  subjectIcon,
+  unitTitle,
+  currentTabLabel,
+  sectionTitle
+}: NotesModalProps) {
   // Modal component for displaying class notes
   // Intentar extraer markdown del HTML (para compatibilidad con contenido antiguo)
   // o usar directamente el contenido si ya es markdown raw
@@ -231,9 +254,43 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
   const cleanedBefore = useMemo(() => cleanMarkdownLinks(markdownBefore), [markdownBefore]);
   const cleanedAfter = useMemo(() => cleanMarkdownLinks(markdownAfter), [markdownAfter]);
   const [sizeIdx, setSizeIdx] = useState(1); // 0: pequeño, 1: normal, 2: grande
+  const [isDarkMode, setIsDarkMode] = useState(false); // Estado para modo oscuro
   const [htmlBefore, setHtmlBefore] = useState<string>('');
   const [htmlAfter, setHtmlAfter] = useState<string>('');
   const hasVideo = youtubeVideos.length > 0;
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  // Estilos del tema según el modo
+  const themeStyles = useMemo(() => {
+    if (isDarkMode) {
+      return {
+        modal: 'bg-black border-slate-700',
+        header: 'border-slate-700',
+        headerText: 'text-white',
+        button: 'bg-slate-800 hover:bg-slate-700 text-white',
+        contentBg: 'bg-black',
+        contentBorder: 'border-slate-700',
+        titleBorder: 'border-slate-700',
+        titleGradient: 'from-indigo-400 to-purple-400',
+        prose: 'prose-headings:text-white prose-p:text-white prose-strong:text-indigo-400 prose-li:text-white prose-th:text-white prose-td:text-white',
+        linkBg: 'from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600',
+        fallbackBg: 'bg-slate-800 border-slate-700 text-white'
+      };
+    }
+    return {
+      modal: 'bg-white border-slate-200',
+      header: 'border-slate-200',
+      headerText: 'text-slate-900',
+      button: 'bg-slate-100 hover:bg-slate-200 text-slate-700',
+      contentBg: 'bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50',
+      contentBorder: 'border-indigo-200',
+      titleBorder: 'border-indigo-200',
+      titleGradient: 'from-indigo-600 to-purple-600',
+      prose: 'prose-headings:text-indigo-900 prose-p:text-slate-800 prose-strong:text-indigo-800 prose-li:text-slate-800',
+      linkBg: 'from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700',
+      fallbackBg: 'bg-amber-50 border-amber-200 text-amber-900'
+    };
+  }, [isDarkMode]);
 
   // Cerrar con Escape
   useEffect(() => {
@@ -247,7 +304,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
 
   const simplifiedHtml = useMemo(() => simplifyHtml(content), [content]);
 
-  // Renderizar Markdown (con títulos y ecuaciones) cuando haya bloque detectado
+  // Renderizar Markdown (MathJax se encarga del LaTeX en el cliente)
   useEffect(() => {
     let cancelled = false;
     async function renderMd() {
@@ -261,9 +318,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
         if (cleanedBefore) {
           const resultBefore = await remark()
             .use(remarkGfm)
-            .use(remarkMath)
             .use(remarkRehype, { allowDangerousHtml: true })
-            .use(rehypeKatex)
             .use(rehypeStringify, { allowDangerousHtml: true })
             .process(cleanedBefore);
           if (!cancelled) {
@@ -275,9 +330,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
         if (cleanedAfter) {
           const resultAfter = await remark()
             .use(remarkGfm)
-            .use(remarkMath)
             .use(remarkRehype, { allowDangerousHtml: true })
-            .use(rehypeKatex)
             .use(rehypeStringify, { allowDangerousHtml: true })
             .process(cleanedAfter);
           if (!cancelled) {
@@ -285,7 +338,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
           }
         }
       } catch (err) {
-        // Si falla el render, mostrar texto plano
+        console.error('Error rendering markdown:', err);
         if (!cancelled) {
           setHtmlBefore('');
           setHtmlAfter('');
@@ -298,6 +351,43 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
     };
   }, [cleanedBefore, cleanedAfter]);
 
+  // Key para forzar re-render de MathJax
+  const mathJaxKey = `${isOpen}-${htmlBefore?.length || 0}-${htmlAfter?.length || 0}`;
+  
+  // Re-renderizar MathJax cuando cambia el contenido HTML o cuando se abre el modal
+  useEffect(() => {
+    if (!isOpen) return;
+    if (!htmlBefore && !htmlAfter) return;
+    if (typeof window === 'undefined') return;
+
+    const typesetMathJax = async () => {
+      try {
+        // Esperar a que MathJax esté completamente cargado
+        if (window.MathJax?.startup?.promise) {
+          await window.MathJax.startup.promise;
+        }
+        
+        // Ahora sí hacer el typeset
+        if (window.MathJax?.typesetPromise) {
+          await window.MathJax.typesetPromise();
+        }
+      } catch (err) {
+        console.warn('MathJax typeset error:', err);
+      }
+    };
+
+    // Pequeño delay para asegurar que el DOM esté actualizado
+    const timer = setTimeout(typesetMathJax, 150);
+    return () => clearTimeout(timer);
+  }, [mathJaxKey]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Scroll al header cuando cambia la navegación
+  useEffect(() => {
+    if (isOpen && headerRef.current) {
+      headerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [currentTabLabel, isOpen]);
+
   if (!isOpen) return null;
 
   const proseSizeClass = sizeIdx === 0 ? 'prose-sm' : sizeIdx === 2 ? 'prose-lg' : 'prose';
@@ -307,53 +397,125 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
 
-      {/* Modal */}
+      {/* Modal - Optimizado para todos los tamaños */}
       <div
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className="absolute inset-x-4 md:inset-x-16 top-8 bottom-8 z-[65] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col"
+        className={`absolute inset-x-2 md:inset-x-8 lg:inset-x-12 top-2 md:top-4 lg:top-6 bottom-2 md:bottom-4 lg:bottom-6 z-[65] ${themeStyles.modal} rounded-xl md:rounded-2xl shadow-2xl border overflow-hidden flex flex-col transition-all duration-300 ${isDarkMode ? 'dark-mode-modal' : ''}`}
       >
-        {/* Header */}
-        <div className="flex items-center justify-between px-4 md:px-6 py-3 border-b border-slate-200">
-          <div className="flex items-center gap-3">
-            <h3 className="text-lg md:text-xl font-bold">{title}</h3>
-          </div>
+        {/* Header - Compacto y discreto */}
+        <div ref={headerRef} className={`px-3 md:px-4 py-2 md:py-2.5 border-b ${themeStyles.header}`}>
+          {/* Fila única: Todo en una línea */}
+          <div className="flex items-center justify-between gap-2 md:gap-3">
+            {/* Izquierda: Contexto + Títulos */}
+            <div className="flex-1 min-w-0 flex items-center gap-3">
+              {/* Contexto muy compacto */}
+              {(subjectName || unitTitle) && (
+                <div className="hidden md:flex items-center gap-1.5 text-xs">
+                  {subjectIcon && <span className="text-base">{subjectIcon}</span>}
+                  {subjectName && (
+                    <span className={`font-semibold truncate ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+                      {subjectName}
+                    </span>
+                  )}
+                  {subjectName && unitTitle && (
+                    <span className={isDarkMode ? 'text-slate-600' : 'text-slate-400'}>•</span>
+                  )}
+                  {unitTitle && (
+                    <span className={`font-medium truncate ${isDarkMode ? 'text-slate-500' : 'text-slate-400'}`}>
+                      {unitTitle}
+                    </span>
+                  )}
+                </div>
+              )}
+              
+              {/* Títulos compactos */}
+              <div className="flex items-center gap-1.5 md:gap-2 min-w-0">
+                <h2 className={`text-sm md:text-lg font-bold truncate ${themeStyles.headerText}`}>
+                  {sectionTitle || title}
+                </h2>
+                {currentTabLabel && (
+                  <>
+                    <span className={`text-xs ${isDarkMode ? 'text-slate-600' : 'text-slate-400'}`}>•</span>
+                    <span className={`text-xs md:text-sm font-medium truncate ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+                      {currentTabLabel}
+                    </span>
+                  </>
+                )}
+              </div>
+            </div>
 
-          {/* Controles de tamaño */}
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setSizeIdx((s) => Math.max(0, s - 1))}
-              className="px-2 py-1.5 rounded-lg text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700"
-              title="Reducir tamaño"
-            >
-              A−
-            </button>
-            <button
-              onClick={() => setSizeIdx((s) => Math.min(2, s + 1))}
-              className="px-2 py-1.5 rounded-lg text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700"
-              title="Aumentar tamaño"
-            >
-              A+
-            </button>
-            <button
-              onClick={onClose}
-              aria-label="Cerrar"
-              className="px-3 py-1.5 rounded-lg text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700"
-            >
-              ✕
-            </button>
+            {/* Derecha: Navegación + Controles */}
+            <div className="flex items-center gap-1 md:gap-1.5 flex-shrink-0">
+              {/* Navegación inline - Siempre visible */}
+              {(hasPrevious || hasNext) && (
+                <div className="flex items-center gap-0.5 md:gap-1">
+                  <button
+                    onClick={onPrevious}
+                    disabled={!hasPrevious}
+                    className={`p-1 md:p-1.5 rounded ${
+                      hasPrevious
+                        ? isDarkMode
+                          ? 'hover:bg-slate-700 text-slate-300'
+                          : 'hover:bg-slate-200 text-slate-600'
+                        : 'text-slate-400 cursor-not-allowed opacity-40'
+                    } transition-colors`}
+                    aria-label="Anterior"
+                    title="Anterior"
+                  >
+                    <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={onNext}
+                    disabled={!hasNext}
+                    className={`p-1 md:p-1.5 rounded ${
+                      hasNext
+                        ? isDarkMode
+                          ? 'hover:bg-slate-700 text-slate-300'
+                          : 'hover:bg-slate-200 text-slate-600'
+                        : 'text-slate-400 cursor-not-allowed opacity-40'
+                    } transition-colors`}
+                    aria-label="Siguiente"
+                    title="Siguiente"
+                  >
+                    <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              )}
+              
+              {/* Controles */}
+              <button
+                onClick={() => setIsDarkMode(!isDarkMode)}
+                className={`p-1 md:p-1.5 rounded ${themeStyles.button} transition-all duration-200 hover:scale-105`}
+                title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
+                aria-label={isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+              >
+                <span className="text-sm md:text-base">{isDarkMode ? '☀️' : '🌙'}</span>
+              </button>
+              <button
+                onClick={onClose}
+                aria-label="Cerrar"
+                className={`p-1 md:p-1.5 rounded ${themeStyles.button} transition-all duration-200 hover:scale-105`}
+              >
+                <span className="text-sm md:text-base">✕</span>
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Body */}
         <div className="flex-1 overflow-y-auto px-4 md:px-6 py-6">
           {/* Layout unificado con contenedor destacado - ancho completo */}
-          <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-2xl p-6 md:p-10 shadow-lg border-2 border-indigo-200">
+          <div className={`${themeStyles.contentBg} rounded-2xl p-6 md:p-10 shadow-lg border-2 ${themeStyles.contentBorder} transition-all duration-300`}>
             {/* Título de notas - siempre visible */}
-            <div className="mb-8 flex items-center gap-3 pb-4 border-b-2 border-indigo-200">
+            <div className={`mb-8 flex items-center gap-3 pb-4 border-b-2 ${themeStyles.titleBorder}`}>
               <div className="text-4xl">📝</div>
-              <h4 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <h4 className={`text-3xl font-bold bg-gradient-to-r ${themeStyles.titleGradient} bg-clip-text text-transparent`}>
                 Notas de clase
               </h4>
             </div>
@@ -362,7 +524,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
             {htmlBefore && (
               <MarkdownContent 
                 content={htmlBefore} 
-                className="notes-modal-content prose prose-lg max-w-none prose-headings:text-indigo-900 prose-headings:font-bold prose-p:text-slate-800 prose-p:leading-relaxed prose-strong:text-indigo-800 prose-strong:font-bold prose-table:w-full prose-table:border-collapse prose-thead:bg-gradient-to-r prose-thead:from-indigo-600 prose-thead:to-purple-600 prose-th:text-white prose-th:font-bold prose-th:p-4 prose-th:text-left prose-td:p-4 prose-td:border-b prose-td:border-indigo-100 prose-tr:transition-colors prose-ul:space-y-2 prose-ol:space-y-2 prose-li:text-slate-800" 
+                className={`notes-modal-content prose prose-lg max-w-none prose-headings:font-bold prose-p:leading-relaxed prose-strong:font-bold prose-table:w-full prose-table:border-collapse prose-thead:bg-gradient-to-r prose-th:font-bold prose-th:p-4 prose-th:text-left prose-td:p-4 prose-td:border-b prose-tr:transition-colors prose-ul:space-y-2 prose-ol:space-y-2 ${themeStyles.prose}`} 
               />
             )}
             
@@ -386,7 +548,7 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                    className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${themeStyles.linkBg} text-white font-semibold rounded-lg transition-all duration-300 shadow-md hover:shadow-lg`}
                   >
                     <span>{link.label}</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -401,18 +563,18 @@ export default function NotesModal({ isOpen, onClose, content, title = 'Notas de
             {htmlAfter && (
               <MarkdownContent 
                 content={htmlAfter} 
-                className="notes-modal-content prose prose-lg max-w-none prose-headings:text-indigo-900 prose-headings:font-bold prose-p:text-slate-800 prose-p:leading-relaxed prose-strong:text-indigo-800 prose-strong:font-bold prose-table:w-full prose-table:border-collapse prose-thead:bg-gradient-to-r prose-thead:from-indigo-600 prose-thead:to-purple-600 prose-th:text-white prose-th:font-bold prose-th:p-4 prose-th:text-left prose-td:p-4 prose-td:border-b prose-td:border-indigo-100 prose-tr:transition-colors prose-ul:space-y-2 prose-ol:space-y-2 prose-li:text-slate-800" 
+                className={`notes-modal-content prose prose-lg max-w-none prose-headings:font-bold prose-p:leading-relaxed prose-strong:font-bold prose-table:w-full prose-table:border-collapse prose-thead:bg-gradient-to-r prose-th:font-bold prose-th:p-4 prose-th:text-left prose-td:p-4 prose-td:border-b prose-tr:transition-colors prose-ul:space-y-2 prose-ol:space-y-2 ${themeStyles.prose}`} 
               />
             )}
             
             {/* Fallback si no hay contenido procesado */}
             {!htmlBefore && !htmlAfter && plainMarkdown && (
-              <div className="whitespace-pre-wrap break-words text-slate-900 text-base md:text-lg">
+              <div className={`whitespace-pre-wrap break-words text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
                 {plainMarkdown}
               </div>
             )}
             {!htmlBefore && !htmlAfter && !plainMarkdown && (
-              <div className="p-4 bg-amber-50 border border-amber-200 rounded-lg text-amber-900">
+              <div className={`p-4 border rounded-lg ${themeStyles.fallbackBg}`}>
                 <p className="font-semibold mb-2">⚠️ No se encontró contenido markdown</p>
                 <p className="text-sm">Esta pestaña no contiene un bloque markdown con notas de clase.</p>
               </div>

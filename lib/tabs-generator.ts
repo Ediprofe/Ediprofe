@@ -6,8 +6,6 @@ import { slugify, getYouTubeId } from './utils';
 import { remark } from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
 import remarkRehype from 'remark-rehype';
 
@@ -171,17 +169,18 @@ function removeMarkdownFences(content: string): string {
 }
 
 /**
- * Convierte contenido Markdown a HTML con soporte para ecuaciones matemáticas y tablas
- * Usa KaTeX para renderizar ecuaciones en formato LaTeX
+ * Convierte contenido Markdown a HTML
+ * 
+ * El renderizado de LaTeX se hace en el cliente con MathJax.
+ * MathJax detecta $...$ y $$...$$ directamente en el HTML final,
+ * evitando conflictos con el parser de tablas GFM.
+ * 
  * Usa GFM (GitHub Flavored Markdown) para tablas, strikethrough, etc.
- * Sintaxis: $ecuación inline$ o $$ecuación en bloque$$
  */
 async function markdownToHtml(markdown: string): Promise<string> {
   const result = await remark()
     .use(remarkGfm) // Soporte para tablas, strikethrough, task lists, etc.
-    .use(remarkMath) // Parsear sintaxis matemática ($...$, $$...$$)
-    .use(remarkRehype, { allowDangerousHtml: true }) // Convertir a rehype (HTML AST) con soporte completo
-    .use(rehypeKatex) // Renderizar ecuaciones con KaTeX
+    .use(remarkRehype, { allowDangerousHtml: true }) // Convertir a rehype (HTML AST)
     .use(rehypeStringify, { allowDangerousHtml: true }) // Convertir a HTML string
     .process(markdown);
   return result.toString();

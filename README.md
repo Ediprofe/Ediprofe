@@ -6,7 +6,9 @@ Plataforma educativa interactiva construida con **Next.js 15.5**, que convierte 
 
 - ✅ **Arquitectura de 3 niveles**: Catálogo → Índice de unidades → Contenido con tabs
 - ✅ **Generación automática de tabs** desde H2/H3 en Markdown
+- ✅ **Ecuaciones LaTeX** con renderizado elegante y modo claro/oscuro
 - ✅ **Sistema de videos inteligente**: YouTube embebido, TikTok con botón discreto
+- ✅ **Modal de notas** con contenido markdown completo
 - ✅ **Tabla de contenidos lateral** con scroll spy y navegación suave
 - ✅ **Completamente estático (SSG)** con rutas generadas en build-time
 - ✅ **Diseño responsive** mobile-first con Tailwind CSS
@@ -20,6 +22,9 @@ Plataforma educativa interactiva construida con **Next.js 15.5**, que convierte 
 - **TypeScript 5.5**
 - **Tailwind CSS 3.4**
 - **Remark/Unified** para procesar Markdown
+- **remark-math** para detectar ecuaciones
+- **rehype-katex** para renderizar LaTeX
+- **KaTeX** para ecuaciones matemáticas
 - **Gray-matter** para frontmatter
 - **Rehype-highlight** para syntax highlighting
 
@@ -331,18 +336,56 @@ MIT License - puedes usar este proyecto libremente.
 
 ---
 
+## 📚 Documentación
+
+Toda la documentación está organizada en la carpeta `/docs`:
+
+- **[README-DOCUMENTACION.md](./docs/README-DOCUMENTACION.md)** - Índice completo de documentación
+- **[PROMPT-IA-GENERACION-CONTENIDO.md](./docs/PROMPT-IA-GENERACION-CONTENIDO.md)** - Prompt para generar contenido con IA
+- **[GUIA-ECUACIONES-PROFESORES.md](./docs/GUIA-ECUACIONES-PROFESORES.md)** - Guía para escribir ecuaciones
+- **[ARQUITECTURA-ECUACIONES.md](./docs/ARQUITECTURA-ECUACIONES.md)** - Documentación técnica del sistema
+
+### 🤖 Generar Contenido con IA
+
+Para generar contenido educativo con ChatGPT/Claude/Gemini:
+
+1. Abre `docs/PROMPT-IA-GENERACION-CONTENIDO.md`
+2. Copia el prompt completo
+3. Pégalo en tu IA favorita
+4. Especifica el tema deseado
+5. Valida el resultado con el checklist
+
+### 📐 Escribir Ecuaciones LaTeX
+
+```markdown
+Ecuación de bloque (con estilos visuales):
+
+$$
+\theta = \arctan\left(\frac{R_y}{R_x}\right)
+$$
+
+Ecuación inline: $E = mc^2$
+```
+
+**Reglas importantes:**
+- `$$` en líneas separadas para ecuaciones de bloque
+- Usar `\arctan` en vez de `\tan^{-1}`
+- Líneas en blanco antes y después de ecuaciones de bloque
+
+Ver guía completa en `docs/GUIA-ECUACIONES-PROFESORES.md`
+
 ## 🎯 Próximas Características
 
-- [ ] Dark mode
+- [x] ~~Dark mode~~ ✅ Implementado en modal de notas
+- [x] ~~Soporte para LaTeX/Math equations~~ ✅ Implementado
 - [ ] Búsqueda global
 - [ ] Sistema de progreso por usuario
 - [ ] Exportar a PDF
 - [ ] Comentarios por sección
 - [ ] Quiz interactivos con puntuación
-- [ ] Soporte para LaTeX/Math equations
 
 ---
 
-**¿Preguntas?** Abre un Issue en GitHub o contáctame directamente.
+**¿Preguntas?** Consulta la documentación en `/docs` o abre un Issue en GitHub.
 
 **¡Gracias por usar Ediprofe!** 🎓✨
